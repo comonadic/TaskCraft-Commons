@@ -1,0 +1,17 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "患者精确集合F1",
+      "weight": 0.65,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/sa_aki_patients.csv'"
+    },
+    {
+      "name": "720次住院起始与边界证据",
+      "weight": 0.35,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/phenotype_audit.csv'"
+    }
+  ]
+}

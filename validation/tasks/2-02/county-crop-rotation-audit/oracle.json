@@ -1,0 +1,20 @@
+{
+  "reward": 1.0,
+  "checks": [
+    {
+      "name": "八字段与资格",
+      "weight": 0.6,
+      "score": 1.0
+    },
+    {
+      "name": "原字段几何CRS保真",
+      "weight": 0.2,
+      "score": 1.0
+    },
+    {
+      "name": "风险精确子集",
+      "weight": 0.2,
+      "score": 1.0
+    }
+  ]
+}

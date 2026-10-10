@@ -1,0 +1,207 @@
+{
+  "version": "0.3.0",
+  "framework": "Harbor 0.22.0",
+  "environment": "Docker Linux ARM64",
+  "tasks": [
+    {
+      "taskId": "2-06/chenghai-balance-sheet-2024",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-balance-sheet-r2",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-01/ecg-rhythm-conduction-classification",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-02/xinglan-cloud-cost-review",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-06/cn-equity-five-factor-model",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-02/payment-api-incident-analysis",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-02/county-crop-rotation-audit",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-06/enterprise-annual-report-analysis",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-02/building-model-predictive-control",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-01/ecg-diagnostic-superclasses",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-06/chenghai-equity-research-summary",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-01/regional-influenza-hospital-forecast",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-06/influenza-forecast-scoring",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-06/individual-income-tax-return",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-06/agent-plugin-data-policy-audit",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-02/icu-sa-aki-phenotyping",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-06/yunheng-investment-screening",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-01/chinese-ai-experience-text-coding",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-06/retail-remarketing-audience",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-07/equity-transfer-consistency-review",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "4-08/factory-tower-3d-reconstruction",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-01/survey-confounder-sensitivity",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-10/library-marc-folio-remediation",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-02/medical-allocation-proxy-audit",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-02/10kv-feeder-reliability",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-01/lake-temperature-calibration",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-files-oracle",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "4-02/odoo-manufacturing-fulfillment",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-stateful-oracle",
+      "verifierMode": "shared",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-02/orders-compose-kubernetes-migration",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-stateful-oracle",
+      "verifierMode": "shared",
+      "nopReward": 0.0
+    },
+    {
+      "taskId": "2-02/unitree-g1-policy-review",
+      "oracleReward": 1.0,
+      "oracleJob": "v03-robot-oracle-r2",
+      "verifierMode": "separate",
+      "nopReward": 0.0
+    }
+  ],
+  "referencePassed": 28,
+  "emptySubmissionsZero": 28,
+  "runtimeAssetDownload": "Verified from a standalone task folder using the public release URL and SHA-256 lock",
+  "originalPackagesUnchanged": 11477
+}

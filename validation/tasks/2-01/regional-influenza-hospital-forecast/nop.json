@@ -1,0 +1,17 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "相对naive预测技能",
+      "weight": 0.9,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/submission.csv'"
+    },
+    {
+      "name": "预测代码隔离复跑",
+      "weight": 0.1,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/method.md'"
+    }
+  ]
+}

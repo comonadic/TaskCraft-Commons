@@ -6,12 +6,14 @@ import json
 import os
 from pathlib import Path
 import shutil
+import ssl
 import subprocess
 import sys
 import tarfile
 import tempfile
 import tomllib
 import urllib.request
+import urllib.error
 
 TASK = Path(__file__).resolve().parent
 
@@ -47,8 +49,15 @@ def prepare():
     with tempfile.TemporaryDirectory(prefix='taskcraft-assets-') as temp:
         archive = Path(temp) / 'assets.tar.gz'
         print(f"Downloading {lock['archive']['url']}", flush=True)
-        with urllib.request.urlopen(lock['archive']['url'], timeout=120) as response, archive.open('wb') as output:
-            shutil.copyfileobj(response, output)
+        try:
+            with urllib.request.urlopen(lock['archive']['url'], timeout=120) as response, archive.open('wb') as output:
+                shutil.copyfileobj(response, output)
+        except urllib.error.URLError as error:
+            # macOS system curl uses the OS trust store when Python lacks its CA bundle.
+            curl = shutil.which('curl')
+            if not isinstance(error.reason, ssl.SSLCertVerificationError) or not curl:
+                raise
+            subprocess.run([curl, '--fail', '--location', '--retry', '2', '--connect-timeout', '20', '--max-time', '1800', '--silent', '--show-error', '--output', str(archive), lock['archive']['url']], check=True)
         if sha256(archive) != lock['archive']['sha256']:
             raise ValueError('Runtime archive checksum mismatch')
         with tarfile.open(archive) as bundle:
@@ -56,9 +65,13 @@ def prepare():
                 target = (TASK / member.name).resolve()
                 if not target.is_relative_to(TASK / 'environment/assets') or not (member.isfile() or member.isdir()):
                     raise ValueError('Unexpected path in runtime archive')
-            bundle.extractall(TASK)
+            if hasattr(tarfile, 'data_filter'):
+                bundle.extractall(TASK, filter='data')
+            else:
+                bundle.extractall(TASK)
     if not complete():
         raise ValueError('Runtime assets checksum mismatch')
+    print('Runtime assets downloaded and verified.')
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -83,6 +96,6 @@ def main():
 if __name__ == '__main__':
     try:
         main()
-    except (ValueError, OSError) as error:
+    except (ValueError, OSError, subprocess.CalledProcessError) as error:
         print(str(error), file=sys.stderr)
         raise SystemExit(1)

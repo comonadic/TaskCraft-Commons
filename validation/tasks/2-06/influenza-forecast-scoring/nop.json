@@ -1,0 +1,17 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "全部共同cell的评分",
+      "weight": 0.75,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/per_cell_scores.csv'"
+    },
+    {
+      "name": "模型汇总和相对WIS",
+      "weight": 0.25,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/submission.csv'"
+    }
+  ]
+}

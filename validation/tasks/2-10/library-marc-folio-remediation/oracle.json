@@ -1,0 +1,30 @@
+{
+  "reward": 1.0,
+  "checks": [
+    {
+      "name": "400条字段修复",
+      "weight": 0.3,
+      "score": 1.0
+    },
+    {
+      "name": "覆盖/创建/隔离决策",
+      "weight": 0.2,
+      "score": 1.0
+    },
+    {
+      "name": "导入计划",
+      "weight": 0.1,
+      "score": 1.0
+    },
+    {
+      "name": "QA与CLI材料",
+      "weight": 0.1,
+      "score": 1.0
+    },
+    {
+      "name": "80条隐藏案例CLI复跑",
+      "weight": 0.3,
+      "score": 1.0
+    }
+  ]
+}

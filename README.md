@@ -90,6 +90,10 @@ python3 infra/suite.py nop --task 2-06/chenghai-balance-sheet-2024
 | [企业年度报告批量抽取与跨报告问答](tasks/2-06/enterprise-annual-report-analysis) | 会计专业人员 | [Evaluation](tasks/2-06/enterprise-annual-report-analysis/evaluation.md) |
 | [居民个人综合所得年度汇算申报](tasks/2-06/individual-income-tax-return) | 税务专业人员 | [Evaluation](tasks/2-06/individual-income-tax-return/evaluation.md) |
 
+## 执行验证
+
+28 道参考解均取得 reward 1，28 道空提交均为 0。逐题分项日志与验证环境见 [validation/README.md](validation/README.md)。
+
 ## 格式与参考
 
 任务格式遵循 [Harbor 任务规范](https://docs.harborframework.com/tasks/overview)。Task Card 的专业场景与评测预览参考 [Agents’ Last Exam](https://github.com/rdi-berkeley/agents-last-exam) 的任务组织方式，界面与中文内容由 TaskCraft Commons 编写。文件与模型的第三方许可见 [NOTICE.md](NOTICE.md) 及任务内许可证。

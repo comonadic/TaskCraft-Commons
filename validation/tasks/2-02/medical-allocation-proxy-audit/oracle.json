@@ -1,0 +1,25 @@
+{
+  "reward": 1.0,
+  "checks": [
+    {
+      "name": "原分数与两种排序",
+      "weight": 0.65,
+      "score": 1.0
+    },
+    {
+      "name": "baseline人群需要与构成",
+      "weight": 0.15,
+      "score": 1.0
+    },
+    {
+      "name": "revised人群需要与构成",
+      "weight": 0.15,
+      "score": 1.0
+    },
+    {
+      "name": "机制及外推限制说明",
+      "weight": 0.05,
+      "score": 1.0
+    }
+  ]
+}

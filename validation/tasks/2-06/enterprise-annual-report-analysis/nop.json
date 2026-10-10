@@ -1,0 +1,29 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "18份完整字段抽取",
+      "weight": 0.6,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/extractions/CN001_2022.json'"
+    },
+    {
+      "name": "证据覆盖",
+      "weight": 0.1,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/raw_extractions/CN001_2022.txt'"
+    },
+    {
+      "name": "三项跨报告问答",
+      "weight": 0.2,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/qa_answers.json'"
+    },
+    {
+      "name": "五份复跑内容正确且一致",
+      "weight": 0.1,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/run2_extractions/CN001_2022.json'"
+    }
+  ]
+}

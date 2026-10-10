@@ -1,0 +1,17 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "三人申报字段与税额",
+      "weight": 0.95,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/returns/T001.json'"
+    },
+    {
+      "name": "提交截图可读取",
+      "weight": 0.05,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/screenshots/T001.png'"
+    }
+  ]
+}

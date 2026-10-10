@@ -1,0 +1,23 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "字段级违规与条款",
+      "weight": 0.65,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/policy_violations.json'"
+    },
+    {
+      "name": "严重性汇总",
+      "weight": 0.1,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/policy_violations.json'"
+    },
+    {
+      "name": "跨域放大率",
+      "weight": 0.25,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/cross_domain_exposure_report.csv'"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "reward": 1.0,
+  "checks": [
+    {
+      "name": "独立MuJoCo回放、视频内容、中文证据与分类",
+      "weight": 1,
+      "score": 1.0
+    }
+  ]
+}

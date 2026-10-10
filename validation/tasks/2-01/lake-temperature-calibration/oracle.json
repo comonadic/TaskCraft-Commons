@@ -1,0 +1,10 @@
+{
+  "reward": 1.0,
+  "checks": [
+    {
+      "name": "参数约束、独立模型回放、完整NetCDF与观测RMSE",
+      "weight": 1,
+      "score": 1.0
+    }
+  ]
+}

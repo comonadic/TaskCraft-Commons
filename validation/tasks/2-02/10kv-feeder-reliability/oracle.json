@@ -1,0 +1,25 @@
+{
+  "reward": 1.0,
+  "checks": [
+    {
+      "name": "负荷点路径累计",
+      "weight": 0.4,
+      "score": 1.0
+    },
+    {
+      "name": "等权指标",
+      "weight": 0.25,
+      "score": 1.0
+    },
+    {
+      "name": "用户加权及计划停电",
+      "weight": 0.3,
+      "score": 1.0
+    },
+    {
+      "name": "方法说明",
+      "weight": 0.05,
+      "score": 1.0
+    }
+  ]
+}

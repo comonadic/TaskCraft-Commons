@@ -1,0 +1,23 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "八字段与资格",
+      "weight": 0.6,
+      "score": 0.0,
+      "error": "DataSourceError: /app/output/eligible_units.gpkg: No such file or directory"
+    },
+    {
+      "name": "原字段几何CRS保真",
+      "weight": 0.2,
+      "score": 0.0,
+      "error": "DataSourceError: /app/output/eligible_units.gpkg: No such file or directory"
+    },
+    {
+      "name": "风险精确子集",
+      "weight": 0.2,
+      "score": 0.0,
+      "error": "DataSourceError: /app/output/flagged_units.gpkg: No such file or directory"
+    }
+  ]
+}

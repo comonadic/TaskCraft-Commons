@@ -1,0 +1,55 @@
+{
+  "reward": 1.0,
+  "checks": [
+    {
+      "name": "8项Helm资源覆盖",
+      "weight": 0.2,
+      "score": 1.0
+    },
+    {
+      "name": "结构与资源配置",
+      "weight": 0.25,
+      "score": 1.0
+    },
+    {
+      "name": "Terraform静态合同",
+      "weight": 0.1,
+      "score": 1.0
+    },
+    {
+      "name": "Jenkins五阶段静态合同",
+      "weight": 0.1,
+      "score": 1.0
+    },
+    {
+      "name": "快照与中文报告",
+      "weight": 0.05,
+      "score": 1.0
+    },
+    {
+      "name": "实时Pod可用性",
+      "weight": 0.12,
+      "score": 1.0
+    },
+    {
+      "name": "实时Service",
+      "weight": 0.045,
+      "score": 1.0
+    },
+    {
+      "name": "实时Flask与数据库结果",
+      "weight": 0.045,
+      "score": 1.0
+    },
+    {
+      "name": "HPA真实CPU指标",
+      "weight": 0.045,
+      "score": 1.0
+    },
+    {
+      "name": "实际网络策略正反向连接",
+      "weight": 0.045,
+      "score": 1.0
+    }
+  ]
+}

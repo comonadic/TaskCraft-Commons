@@ -1,0 +1,17 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "独立测试macro-F1",
+      "weight": 0.98,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/predictions.csv'"
+    },
+    {
+      "name": "方法与限制说明",
+      "weight": 0.02,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/model_report.md'"
+    }
+  ]
+}

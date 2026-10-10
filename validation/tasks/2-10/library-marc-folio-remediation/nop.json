@@ -1,0 +1,35 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "400条字段修复",
+      "weight": 0.3,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/submission/outputs/public_case/remediated_records.xml'"
+    },
+    {
+      "name": "覆盖/创建/隔离决策",
+      "weight": 0.2,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/submission/outputs/public_case/overlay_decisions.csv'"
+    },
+    {
+      "name": "导入计划",
+      "weight": 0.1,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/submission/outputs/public_case/folio_import_plan.json'"
+    },
+    {
+      "name": "QA与CLI材料",
+      "weight": 0.1,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/submission/outputs/public_case/qa_report.json'"
+    },
+    {
+      "name": "80条隐藏案例CLI复跑",
+      "weight": 0.3,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/submission/scripts/remediate_catalog.py'"
+    }
+  ]
+}

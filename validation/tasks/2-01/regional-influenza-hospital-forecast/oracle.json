@@ -1,0 +1,15 @@
+{
+  "reward": 1.0,
+  "checks": [
+    {
+      "name": "相对naive预测技能",
+      "weight": 0.9,
+      "score": 1.0
+    },
+    {
+      "name": "预测代码隔离复跑",
+      "weight": 0.1,
+      "score": 1.0
+    }
+  ]
+}

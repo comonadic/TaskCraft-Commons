@@ -1,0 +1,11 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "独立MuJoCo回放、视频内容、中文证据与分类",
+      "weight": 1,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/policy_evaluation_report.json'"
+    }
+  ]
+}

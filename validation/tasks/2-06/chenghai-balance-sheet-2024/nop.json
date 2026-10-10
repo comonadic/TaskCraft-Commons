@@ -1,0 +1,17 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "期间口径与22个金额",
+      "weight": 0.8,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/balance_sheet.json'"
+    },
+    {
+      "name": "逐字段可定位证据",
+      "weight": 0.2,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/evidence.json'"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "负荷点路径累计",
+      "weight": 0.4,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/loadpoint_metrics.csv'"
+    },
+    {
+      "name": "等权指标",
+      "weight": 0.25,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/reliability_indices.json'"
+    },
+    {
+      "name": "用户加权及计划停电",
+      "weight": 0.3,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/cn_reliability_report.json'"
+    },
+    {
+      "name": "方法说明",
+      "weight": 0.05,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/method.md'"
+    }
+  ]
+}

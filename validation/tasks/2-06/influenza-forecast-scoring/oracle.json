@@ -1,0 +1,15 @@
+{
+  "reward": 1.0,
+  "checks": [
+    {
+      "name": "全部共同cell的评分",
+      "weight": 0.75,
+      "score": 1.0
+    },
+    {
+      "name": "模型汇总和相对WIS",
+      "weight": 0.25,
+      "score": 1.0
+    }
+  ]
+}

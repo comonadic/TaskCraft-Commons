@@ -1,0 +1,29 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "浪费资源覆盖F1",
+      "weight": 0.3,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/savings_summary.csv'"
+    },
+    {
+      "name": "动作",
+      "weight": 0.3,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/savings_summary.csv'"
+    },
+    {
+      "name": "逐资源费用与节约",
+      "weight": 0.25,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/savings_summary.csv'"
+    },
+    {
+      "name": "摘要与双产物完整性",
+      "weight": 0.15,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/optimization_report.json'"
+    }
+  ]
+}

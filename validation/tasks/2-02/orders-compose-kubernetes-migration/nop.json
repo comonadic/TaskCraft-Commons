@@ -1,0 +1,10 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "Helm与Secret硬门槛",
+      "weight": 1,
+      "score": 0.0
+    }
+  ]
+}

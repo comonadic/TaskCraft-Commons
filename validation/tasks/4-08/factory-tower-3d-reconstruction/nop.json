@@ -1,0 +1,17 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "原生模型毫米坐标与全部实体",
+      "weight": 0.5,
+      "score": 0.0,
+      "error": "AttributeError: 'NoneType' object has no attribute 'Settings'"
+    },
+    {
+      "name": "OBJ实体与几何一致",
+      "weight": 0.5,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/model.obj'"
+    }
+  ]
+}

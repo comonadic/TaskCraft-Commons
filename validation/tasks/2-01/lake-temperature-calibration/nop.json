@@ -1,0 +1,11 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "参数约束、独立模型回放、完整NetCDF与观测RMSE",
+      "weight": 1,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/calibrated.nml'"
+    }
+  ]
+}

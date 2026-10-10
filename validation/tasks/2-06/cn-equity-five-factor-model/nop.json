@@ -1,0 +1,17 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "134个月五因子数值与集合",
+      "weight": 0.9,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/ff5_factors_monthly_2015_onward.csv'"
+    },
+    {
+      "name": "时点筛选审计",
+      "weight": 0.1,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/method_audit.json'"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "全部输入与派生数值",
+      "weight": 0.65,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/CN_Financial_Summary.xlsx'"
+    },
+    {
+      "name": "动态公式四组扰动等价",
+      "weight": 0.25,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/CN_Financial_Summary.xlsx'"
+    },
+    {
+      "name": "来源与时点",
+      "weight": 0.1,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/sources.json'"
+    }
+  ]
+}

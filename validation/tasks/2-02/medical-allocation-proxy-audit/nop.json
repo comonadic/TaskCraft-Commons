@@ -1,0 +1,29 @@
+{
+  "reward": 0.0,
+  "checks": [
+    {
+      "name": "原分数与两种排序",
+      "weight": 0.65,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/full_predictions.csv'"
+    },
+    {
+      "name": "baseline人群需要与构成",
+      "weight": 0.15,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/baseline_report.json'"
+    },
+    {
+      "name": "revised人群需要与构成",
+      "weight": 0.15,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/revised_report.json'"
+    },
+    {
+      "name": "机制及外推限制说明",
+      "weight": 0.05,
+      "score": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/app/output/analysis.md'"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "reward": 1.0,
+  "checks": [
+    {
+      "name": "独立测试macro-F1",
+      "weight": 0.98,
+      "score": 1.0
+    },
+    {
+      "name": "方法与限制说明",
+      "weight": 0.02,
+      "score": 1.0
+    }
+  ]
+}
