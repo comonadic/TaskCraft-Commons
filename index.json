@@ -2359,7 +2359,7 @@
         "description": "G1 机器人模型资源，共 60 个文件。"
       }
     ],
-    "inputFileCount": 12,
+    "inputFileCount": 63,
     "inputManifest": "materials.json",
     "referenceFiles": [
       {
