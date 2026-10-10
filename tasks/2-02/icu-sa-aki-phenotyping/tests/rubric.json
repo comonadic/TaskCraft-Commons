@@ -1,0 +1,5 @@
+{
+  "patient_f1": 0.65,
+  "event_audit": 0.35,
+  "clinical_validation": "合成操作协议，需临床专家复核"
+}

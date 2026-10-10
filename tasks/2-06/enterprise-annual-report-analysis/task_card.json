@@ -3,14 +3,14 @@
   "title": "企业年度报告批量抽取与跨报告问答",
   "brief": "批量整理企业年度报告中的财务指标与原文依据，回答跨公司、跨年度问题，并检查重复处理的一致性。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-06",
   "occupation": {
     "code": "2-06-03-00",
     "name": "会计专业人员"
   },
   "scene": "你是财务数据分析人员，需要把六家企业三年的报告整理为结构化数据，为研究团队提供可追溯的分析结果。",
-  "taskPrompt": "你是财务数据分析人员，需要把六家企业三年的报告整理为结构化数据，为研究团队提供可追溯的分析结果。\n\n1. 从 18 份年报提取指定财务指标，统一数值与单位\n2. 保留原文并完成三项跨报告分析问题\n3. 重复处理指定五份报告，检查结果一致性\n\n交付成果：\n- extractions/：18 份结构化财务指标 JSON。\n- raw_extractions/：对应报告的原文摘录。\n- qa_answers.json：三项跨报告问题的答案。\n- run2_extractions/：指定五份报告再次处理的结果。",
+  "taskPrompt": "# 企业年度报告批量抽取与跨报告问答\n\n你是财务数据分析人员，需要把六家企业三年的报告整理为结构化数据，为研究团队提供可追溯的分析结果。\n\n1. 从 18 份年报提取指定财务指标，统一数值与单位\n2. 保留原文并完成三项跨报告分析问题\n3. 重复处理指定五份报告，检查结果一致性\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/extractions/`：18 份结构化财务指标 JSON。\n- `/app/output/raw_extractions/`：对应报告的原文摘录。\n- `/app/output/qa_answers.json`：三项跨报告问题的答案。\n- `/app/output/run2_extractions/`：指定五份报告再次处理的结果。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n## 运行与提交\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`extractions/<id>.json`、`raw_extractions/<id>.txt`（18份），`qa_answers.json`，`run2_extractions/<id>.json`（5份）。\n",
   "agentMustDo": [
     "从 18 份年报提取指定财务指标，统一数值与单位",
     "保留原文并完成三项跨报告分析问题",
@@ -24,28 +24,28 @@
   "inputFiles": [
     {
       "name": "分析问题清单",
-      "path": "input/questions.json",
+      "path": "environment/input/questions.json",
       "format": "JSON",
       "bytes": 218,
       "description": "分析问题清单，用于企业年度报告批量抽取与跨报告问答。"
     },
     {
       "name": "结果字段说明",
-      "path": "input/schema.json",
+      "path": "environment/input/schema.json",
       "format": "JSON",
       "bytes": 410,
       "description": "结果字段说明，用于企业年度报告批量抽取与跨报告问答。"
     },
     {
       "name": "重复处理清单",
-      "path": "input/validation.json",
+      "path": "environment/input/validation.json",
       "format": "JSON",
       "bytes": 83,
       "description": "重复处理清单，用于企业年度报告批量抽取与跨报告问答。"
     },
     {
       "name": "企业年度报告资料",
-      "path": "input/filings/",
+      "path": "environment/input/filings/",
       "format": "目录",
       "bytes": 574959,
       "description": "企业年度报告资料，共 19 个文件。"
@@ -55,32 +55,253 @@
   "inputManifest": "materials.json",
   "referenceFiles": [
     {
-      "name": "extractions/",
-      "path": "output/extractions/",
-      "format": "目录",
-      "description": "18 份结构化财务指标 JSON。"
+      "name": "extractions/CN001_2022.json",
+      "path": "reference/extractions/CN001_2022.json",
+      "format": "JSON",
+      "bytes": 404,
+      "description": "参考解生成的交付文件。"
     },
     {
-      "name": "raw_extractions/",
-      "path": "output/raw_extractions/",
-      "format": "目录",
-      "description": "对应报告的原文摘录。"
+      "name": "extractions/CN001_2023.json",
+      "path": "reference/extractions/CN001_2023.json",
+      "format": "JSON",
+      "bytes": 404,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN001_2024.json",
+      "path": "reference/extractions/CN001_2024.json",
+      "format": "JSON",
+      "bytes": 404,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN002_2022.json",
+      "path": "reference/extractions/CN002_2022.json",
+      "format": "JSON",
+      "bytes": 403,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN002_2023.json",
+      "path": "reference/extractions/CN002_2023.json",
+      "format": "JSON",
+      "bytes": 396,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN002_2024.json",
+      "path": "reference/extractions/CN002_2024.json",
+      "format": "JSON",
+      "bytes": 403,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN003_2022.json",
+      "path": "reference/extractions/CN003_2022.json",
+      "format": "JSON",
+      "bytes": 406,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN003_2023.json",
+      "path": "reference/extractions/CN003_2023.json",
+      "format": "JSON",
+      "bytes": 413,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN003_2024.json",
+      "path": "reference/extractions/CN003_2024.json",
+      "format": "JSON",
+      "bytes": 406,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN004_2022.json",
+      "path": "reference/extractions/CN004_2022.json",
+      "format": "JSON",
+      "bytes": 422,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN004_2023.json",
+      "path": "reference/extractions/CN004_2023.json",
+      "format": "JSON",
+      "bytes": 408,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN004_2024.json",
+      "path": "reference/extractions/CN004_2024.json",
+      "format": "JSON",
+      "bytes": 421,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN005_2022.json",
+      "path": "reference/extractions/CN005_2022.json",
+      "format": "JSON",
+      "bytes": 409,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN005_2023.json",
+      "path": "reference/extractions/CN005_2023.json",
+      "format": "JSON",
+      "bytes": 409,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN005_2024.json",
+      "path": "reference/extractions/CN005_2024.json",
+      "format": "JSON",
+      "bytes": 409,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN006_2022.json",
+      "path": "reference/extractions/CN006_2022.json",
+      "format": "JSON",
+      "bytes": 420,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN006_2023.json",
+      "path": "reference/extractions/CN006_2023.json",
+      "format": "JSON",
+      "bytes": 409,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "extractions/CN006_2024.json",
+      "path": "reference/extractions/CN006_2024.json",
+      "format": "JSON",
+      "bytes": 436,
+      "description": "参考解生成的交付文件。"
     },
     {
       "name": "qa_answers.json",
-      "path": "output/qa_answers.json",
+      "path": "reference/qa_answers.json",
       "format": "JSON",
+      "bytes": 309,
       "description": "三项跨报告问题的答案。"
     },
     {
-      "name": "run2_extractions/",
-      "path": "output/run2_extractions/",
-      "format": "目录",
-      "description": "指定五份报告再次处理的结果。"
+      "name": "raw_extractions/CN001_2022.txt",
+      "path": "reference/raw_extractions/CN001_2022.txt",
+      "format": "TXT",
+      "bytes": 1471,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "raw_extractions/CN001_2023.txt",
+      "path": "reference/raw_extractions/CN001_2023.txt",
+      "format": "TXT",
+      "bytes": 1420,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "raw_extractions/CN001_2024.txt",
+      "path": "reference/raw_extractions/CN001_2024.txt",
+      "format": "TXT",
+      "bytes": 1472,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "raw_extractions/CN002_2022.txt",
+      "path": "reference/raw_extractions/CN002_2022.txt",
+      "format": "TXT",
+      "bytes": 1413,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "raw_extractions/CN002_2023.txt",
+      "path": "reference/raw_extractions/CN002_2023.txt",
+      "format": "TXT",
+      "bytes": 1459,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "raw_extractions/CN002_2024.txt",
+      "path": "reference/raw_extractions/CN002_2024.txt",
+      "format": "TXT",
+      "bytes": 1413,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "raw_extractions/CN003_2022.txt",
+      "path": "reference/raw_extractions/CN003_2022.txt",
+      "format": "TXT",
+      "bytes": 1475,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "raw_extractions/CN003_2023.txt",
+      "path": "reference/raw_extractions/CN003_2023.txt",
+      "format": "TXT",
+      "bytes": 1423,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "raw_extractions/CN003_2024.txt",
+      "path": "reference/raw_extractions/CN003_2024.txt",
+      "format": "TXT",
+      "bytes": 1475,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "raw_extractions/CN004_2022.txt",
+      "path": "reference/raw_extractions/CN004_2022.txt",
+      "format": "TXT",
+      "bytes": 1425,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "raw_extractions/CN004_2023.txt",
+      "path": "reference/raw_extractions/CN004_2023.txt",
+      "format": "TXT",
+      "bytes": 1477,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "raw_extractions/CN004_2024.txt",
+      "path": "reference/raw_extractions/CN004_2024.txt",
+      "format": "TXT",
+      "bytes": 1425,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "raw_extractions/CN005_2022.txt",
+      "path": "reference/raw_extractions/CN005_2022.txt",
+      "format": "TXT",
+      "bytes": 1478,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "raw_extractions/CN005_2023.txt",
+      "path": "reference/raw_extractions/CN005_2023.txt",
+      "format": "TXT",
+      "bytes": 1426,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "raw_extractions/CN005_2024.txt",
+      "path": "reference/raw_extractions/CN005_2024.txt",
+      "format": "TXT",
+      "bytes": 1478,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "raw_extractions/CN006_2022.txt",
+      "path": "reference/raw_extractions/CN006_2022.txt",
+      "format": "TXT",
+      "bytes": 1429,
+      "description": "参考解生成的交付文件。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "指标抽取",
@@ -107,6 +328,132 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "核对 18 份报告的结构化字段、金额与证据。",
+      "检查逐字段定位证据和三项跨报告问答。",
+      "比较五份再次运行的提取结果，验证正确性与一致性。"
+    ],
+    "metrics": [
+      "抽取 60%、证据 10%、跨报告问答 20%、五份复跑 10%。",
+      "金额与问答绝对容差 0.01、默认相对容差 1e−5；复跑以五份正确率平均。"
+    ],
+    "gates": [],
+    "checks": [
+      {
+        "name": "18份完整字段抽取",
+        "weight": 60.0,
+        "implementation": "extracts"
+      },
+      {
+        "name": "证据覆盖",
+        "weight": 10.0,
+        "implementation": "evidence"
+      },
+      {
+        "name": "三项跨报告问答",
+        "weight": 20.0,
+        "implementation": "lambda: tree_score(read_json(OUTPUT / 'qa_answers.json'), expected['qa'], atol=0.01)"
+      },
+      {
+        "name": "五份复跑内容正确且一致",
+        "weight": 10.0,
+        "implementation": "lambda: sum((tree_score(read_json(OUTPUT / 'run2_extractions' / f'{k}.json'), expected['filings'][k], atol=0.01) for k in expected['validation'])) / 5"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "extractions/",
+      "path": "output/extractions/",
+      "format": "目录",
+      "description": "18 份结构化财务指标 JSON。"
+    },
+    {
+      "name": "raw_extractions/",
+      "path": "output/raw_extractions/",
+      "format": "目录",
+      "description": "对应报告的原文摘录。"
+    },
+    {
+      "name": "qa_answers.json",
+      "path": "output/qa_answers.json",
+      "format": "JSON",
+      "description": "三项跨报告问题的答案。"
+    },
+    {
+      "name": "run2_extractions/",
+      "path": "output/run2_extractions/",
+      "format": "目录",
+      "description": "指定五份报告再次处理的结果。"
+    }
+  ],
+  "referenceFileCount": 42,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/filings/manifest.json",
+      "content": "[\n  {\n    \"id\": \"CN001_2022\",\n    \"company\": \"澄海精密\",\n    \"year\": 2022,\n    \"file\": \"CN001_2022.pdf\",\n    \"amount_unit\": \"元\"\n  },\n  {\n    \"id\": \"CN001_2023\",\n    \"company\": \"澄海精密\",\n    \"year\": 2023,\n    \"file\": \"CN001_2023.pdf\",\n    \"amount_unit\": \"万元\"\n  },\n  {\n    \"id\": \"CN001_2024\",\n    \"company\": \"澄海精密\",\n    \"year\": 2024,\n    \"file\": \"CN001_2024.pdf\",\n    \"amount_unit\": \"元\"\n  },\n  {\n    \"id\": \"CN002_2022\",\n    \"company\": \"松岳软件\",\n    \"year\": 2022,\n    \"file\": \"CN002_2022.pdf\",\n    \"amount_unit\": \"万元\"\n  },\n  {\n    \"id\": \"CN002_2023\",\n    \"company\": \"松岳软件\",\n    \"year\": 2023,\n    \"file\": \"CN002_2023.pdf\",\n    \"amount_unit\": \"元\"\n  },\n  {\n    \"id\": \"CN002_2024\",\n    \"company\": \"松岳软件\",\n    \"year\": 2024,\n    \"file\": \"CN002_2024.pdf\",\n    \"amount_unit\": \"万元\"\n  },\n  {\n    \"id\": \"CN003_2022\",\n    \"company\": \"青禾设备\",\n    \"year\": 2022,\n    \"file\": \"CN003_2022.pdf\",\n    \"amount_unit\": \"元\"\n  },\n  {\n    \"id\": \"CN003_2023\",\n    \"company\": \"青禾设备\",\n    \"year\": 2023,\n    \"file\": \"CN003_2023.pdf\",\n    \"amount_unit\": \"万元\"\n  },\n  {\n    \"id\": \"CN003_2024\",\n    \"company\": \"青禾设备\",\n    \"year\": 2024,\n    \"file\": \"CN003_2024.pdf\",\n    \"amount_unit\": \"元\"\n  },\n  {\n    \"id\": \"CN004_2022\",\n    \"company\": \"岚川材料\",\n    \"year\": 2022,\n    \"file\": \"CN004_2022.pdf\",\n    \"amount_unit\": \"万元\"\n  },\n  {\n    \"id\": \"CN004_2023\",\n    \"company\": \"岚川材料\",\n    \"year\": 2023,\n    \"file\": \"CN004_2023.pdf\",\n    \"amount_unit\": \"元\"\n  },\n  {\n    \"id\": \"CN004_2024\",\n    \"company\": \"岚川材料\",\n    \"year\": 2024,\n    \"file\": \"CN004_2024.pdf\",\n    \"amount_unit\": \"万元\"\n  },\n  {\n    \"id\": \"CN005_2022\",\n    \"company\": \"沐辰服务\",\n    \"year\": 2022,\n    \"file\": \"CN005_2022.pdf\",\n    \"amount_unit\": \"元\"\n  },\n  {\n    \"id\": \"CN005_2023\",\n    \"company\": \"沐辰服务\",\n    \"year\": 2023,\n    \"file\": \"CN005_2023.pdf\",\n    \"amount_unit\": \"万元\"\n  },\n  {\n    \"id\": \"CN005_2024\",\n    \"company\": \"沐辰服务\",\n    \"year\": 2024,\n    \"file\": \"CN005_2024.pdf\",\n    \"amount_unit\": \"元\"\n  },\n  {\n    \"id\": \"CN006_2022\",\n    \"company\": \"云岫物流\",\n    \"year\": 2022,\n    \"file\": \"CN006_2022.pdf\",\n    \"amount_unit\": \"万元\"\n  },\n  {\n    \"id\": \"CN006_2023\",\n    \"company\": \"云岫物流\",\n    \"year\": 2023,\n    \"file\": \"CN006_2023.pdf\",\n    \"amount_unit\": \"元\"\n  },\n  {\n    \"id\": \"CN006_2024\",\n    \"company\": \"云岫物流\",\n    \"year\": 2024,\n    \"file\": \"CN006_2024.pdf\",\n    \"amount_unit\": \"万元\"\n  }\n]\n",
+      "truncated": false
+    },
+    {
+      "path": "environment/input/questions.json",
+      "content": "{\n  \"q1\": \"2024年营业收入最高的公司名\",\n  \"q2\": \"六家公司2024经营现金净流量合计（元）\",\n  \"q3\": \"各公司2022至2024收入复合年增长率，按公司名称作为JSON键，小数比例\"\n}\n",
+      "truncated": false
+    },
+    {
+      "path": "environment/input/schema.json",
+      "content": "{\n  \"revenue\": \"营业收入\",\n  \"net_income\": \"归母净利润\",\n  \"assets\": \"资产总额\",\n  \"liabilities\": \"负债总额\",\n  \"cash\": \"货币资金\",\n  \"equity\": \"归母权益\",\n  \"operating_cashflow\": \"经营现金净流量\",\n  \"capex\": \"购建长期资产现金支出\",\n  \"debt\": \"有息债务\",\n  \"shares\": \"加权平均股数\",\n  \"eps\": \"基本每股收益\",\n  \"dividends\": \"分配股利现金支出\"\n}\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/extractions/CN001_2022.json",
+      "content": "{\n  \"filing_id\": \"CN001_2022\",\n  \"company\": \"澄海精密\",\n  \"year\": 2022,\n  \"currency\": \"CNY\",\n  \"revenue\": 308650000.0,\n  \"net_income\": 24692000.0,\n  \"assets\": 617300000.0,\n  \"liabilities\": 259266000.0,\n  \"cash\": 55557000.0,\n  \"equity\": 358034000.0,\n  \"operating_cashflow\": 29630400.0,\n  \"capex\": 13889250.0,\n  \"debt\": 181486200.0,\n  \"shares\": 100000000.0,\n  \"eps\": 0.2469,\n  \"dividends\": 4938400.0\n}\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/extractions/CN001_2023.json",
+      "content": "{\n  \"filing_id\": \"CN001_2023\",\n  \"company\": \"澄海精密\",\n  \"year\": 2023,\n  \"currency\": \"CNY\",\n  \"revenue\": 325820000.0,\n  \"net_income\": 26065600.0,\n  \"assets\": 651640000.0,\n  \"liabilities\": 273688800.0,\n  \"cash\": 58647600.0,\n  \"equity\": 377951200.0,\n  \"operating_cashflow\": 31278720.0,\n  \"capex\": 14661900.0,\n  \"debt\": 191582160.0,\n  \"shares\": 100000000.0,\n  \"eps\": 0.2607,\n  \"dividends\": 5213120.0\n}\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/extractions/CN001_2024.json",
+      "content": "{\n  \"filing_id\": \"CN001_2024\",\n  \"company\": \"澄海精密\",\n  \"year\": 2024,\n  \"currency\": \"CNY\",\n  \"revenue\": 337380000.0,\n  \"net_income\": 26990400.0,\n  \"assets\": 674760000.0,\n  \"liabilities\": 283399200.0,\n  \"cash\": 60728400.0,\n  \"equity\": 391360800.0,\n  \"operating_cashflow\": 32388480.0,\n  \"capex\": 15182100.0,\n  \"debt\": 198379440.0,\n  \"shares\": 100000000.0,\n  \"eps\": 0.2699,\n  \"dividends\": 5398080.0\n}\n",
+      "truncated": false
+    }
+  ]
 }

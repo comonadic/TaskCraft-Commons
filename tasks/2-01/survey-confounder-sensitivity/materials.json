@@ -1,26 +1,26 @@
 [
   {
-    "path": "input/demographics.csv",
+    "path": "environment/input/demographics.csv",
     "bytes": 153994,
     "sha256": "14032f402e684d8159dfb86ad938cc012ef0b22f47e7c29102c4403fd6a8577b"
   },
   {
-    "path": "input/labs.csv",
+    "path": "environment/input/labs.csv",
     "bytes": 52863,
     "sha256": "bd4fd3022e3f78276c6db40b49684551f5e993a8874747338840fe0cc4622268"
   },
   {
-    "path": "input/medications.csv",
+    "path": "environment/input/medications.csv",
     "bytes": 170038,
     "sha256": "ab5266eda3c426f34d43b2395491d52b7ee7a22d7ff4e9dc0429ab9fd0ab034f"
   },
   {
-    "path": "input/protocol.md",
+    "path": "environment/input/protocol.md",
     "bytes": 666,
     "sha256": "0cd7d447637a2a32c0f89b0a0d94b74d0847f92c05ae2a9c770c6139f0726ea4"
   },
   {
-    "path": "input/questionnaire.csv",
+    "path": "environment/input/questionnaire.csv",
     "bytes": 148031,
     "sha256": "0166ccba699add34b0754124c219c1f4fbce0a292eeb010c6e0201cddb8853a9"
   }

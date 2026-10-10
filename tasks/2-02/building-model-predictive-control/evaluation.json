@@ -1,0 +1,77 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "温度与指标",
+      "weight": 60,
+      "rule": "独立执行 672 步动力学，逐步比对温度、动作及指标；数值绝对容差为 0.00001，并检查舒适度约束。"
+    },
+    {
+      "name": "节费与削峰",
+      "weight": 25,
+      "rule": "费用与峰值改进各占本项一半；相对基线改进达到 1% 时该半项满分，较低改进按比例计分。"
+    },
+    {
+      "name": "模型辨识",
+      "weight": 10,
+      "rule": "比对模型系数，绝对容差为 0.000001。"
+    },
+    {
+      "name": "程序复现与诊断",
+      "weight": 5,
+      "rule": "训练 RMSE 小于 0.00001，并重新执行控制器、比对指标结果。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "使用 BuildingRC 动力学独立回放提交控制量，重算室温、用电与舒适度。",
+    "与固定基线比较电费和峰值负荷，核对模型识别系数。",
+    "在新目录复跑控制器并检查诊断产物。"
+  ],
+  "metrics": [
+    "动力学与指标 60%、节费与削峰 25%、模型识别 10%、控制器复跑和诊断 5%。",
+    "模型系数绝对容差 1e−6；动力学、性能归一化与舒适度阈值见对应 dynamics、performance 函数。"
+  ],
+  "gates": [],
+  "checks": [
+    {
+      "name": "独立动力学回放与指标重算",
+      "weight": 60.0,
+      "implementation": "dynamics"
+    },
+    {
+      "name": "节费与削峰",
+      "weight": 25.0,
+      "implementation": "performance"
+    },
+    {
+      "name": "RC模型识别",
+      "weight": 10.0,
+      "implementation": "lambda: tree_score(read_json(OUTPUT / 'identified_model.json'), {'air_coefficients': [0.9, 0.05, 0.05, 0.0012, 0.12, -0.28], 'wall_coefficients': [0.02, 0.97, 0.01, 0, 0, 0]}, atol=1e-06)"
+    },
+    {
+      "name": "控制器隔离复跑与诊断",
+      "weight": 5.0,
+      "implementation": "rerun"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

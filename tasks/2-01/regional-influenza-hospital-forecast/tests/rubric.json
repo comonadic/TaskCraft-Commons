@@ -1,0 +1,5 @@
+{
+  "forecast_skill": 0.9,
+  "method_artifacts": 0.1,
+  "threshold": "相对naive WIS和MAE改进35%得该项满分；非临床阈值"
+}

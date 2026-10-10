@@ -1,0 +1,4 @@
+NAME               TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+backend-service    ClusterIP   10.43.235.175   <none>        5000/TCP         33s
+db-service         ClusterIP   10.43.27.124    <none>        5432/TCP         33s
+frontend-service   NodePort    10.43.129.246   <none>        3000:30087/TCP   33s

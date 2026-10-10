@@ -1,0 +1,7 @@
+{
+  "roots_evidence": 0.5,
+  "resources": 0.1,
+  "remediation": 0.25,
+  "rollback": 0.1,
+  "explanation": 0.05
+}

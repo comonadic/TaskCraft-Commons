@@ -1,0 +1,58 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "金额与报表信息",
+      "weight": 80,
+      "rule": "逐字段比对报告期、币种、单位及金额。金额采用 0.01 元绝对容差，并结合相对容差 0.001%；本项按正确字段比例计分。"
+    },
+    {
+      "name": "报告依据",
+      "weight": 20,
+      "rule": "比对每个字段的文件、页码与原文摘录，按证据字段的正确比例计分。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "读取 balance_sheet.json，核对公司、期间、币种、金额单位和 22 个资产负债字段。",
+    "将数值与指定期间合并口径的评分数据逐字段比较。",
+    "读取 evidence.json，逐字段核对报告页码、原文引句和材料文件名。"
+  ],
+  "metrics": [
+    "金额相等条件：|提交值−目标值| ≤ 0.01 + 0.00001 × |目标值|。",
+    "结构化字典使用实际与目标字段的并集作为分母，多余或缺少字段会降低字段匹配得分。",
+    "金额与期间口径占 80%；可定位证据占 20%。"
+  ],
+  "gates": [],
+  "checks": [
+    {
+      "name": "期间口径与22个金额",
+      "weight": 80.0,
+      "implementation": "lambda: tree_score(read_json(OUTPUT / 'balance_sheet.json'), read_json(TESTS / 'expected.json'), atol=0.01)"
+    },
+    {
+      "name": "逐字段可定位证据",
+      "weight": 20.0,
+      "implementation": "lambda: tree_score(read_json(OUTPUT / 'evidence.json'), read_json(TESTS / 'quotes.json'))"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

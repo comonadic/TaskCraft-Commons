@@ -1,0 +1,57 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "五因子序列",
+      "weight": 90,
+      "rule": "按月份比对全部五因子数值及月份集合，绝对容差为 0.00001，按正确比例计分。"
+    },
+    {
+      "name": "样本审计",
+      "weight": 10,
+      "rule": "按月份比对合格样本数与迟到披露剔除数，按正确比例计分。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "按月份读取五因子结果，核对 134 个月的集合和唯一性。",
+    "逐月逐因子比较市场、规模、价值、盈利与投资结果。",
+    "核对时点筛选审计中的股票池与会计信息使用窗口。"
+  ],
+  "metrics": [
+    "因子数值占 90%，时点审计占 10%。",
+    "因子数值绝对容差 1e−5，rtol=0；月份按 date 主键比较。"
+  ],
+  "gates": [],
+  "checks": [
+    {
+      "name": "134个月五因子数值与集合",
+      "weight": 90.0,
+      "implementation": "lambda: record_score(read_csv(OUTPUT / 'ff5_factors_monthly_2015_onward.csv'), read_json(TESTS / 'expected.json'), ['date'], atol=1e-05, rtol=0)"
+    },
+    {
+      "name": "时点筛选审计",
+      "weight": 10.0,
+      "implementation": "lambda: record_score(read_json(OUTPUT / 'method_audit.json'), read_json(TESTS / 'audit.json'), ['date'])"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

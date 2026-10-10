@@ -1,0 +1,6387 @@
+[
+  {
+    "action_id": "ACT000",
+    "field": "field_00",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT000",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT000",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT000",
+    "field": "field_03",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT000",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT001",
+    "field": "field_00",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT001",
+    "field": "field_01",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT001",
+    "field": "field_02",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT001",
+    "field": "field_03",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT001",
+    "field": "field_04",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT001",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT002",
+    "field": "field_00",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT002",
+    "field": "field_01",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT002",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT002",
+    "field": "field_03",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT002",
+    "field": "field_04",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT002",
+    "field": "field_05",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT002",
+    "field": "field_06",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT003",
+    "field": "field_00",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT003",
+    "field": "field_01",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT003",
+    "field": "field_02",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT003",
+    "field": "field_03",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT003",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT003",
+    "field": "field_05",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT003",
+    "field": "field_06",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT003",
+    "field": "field_07",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT004",
+    "field": "field_00",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT004",
+    "field": "field_01",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT004",
+    "field": "field_02",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT004",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT004",
+    "field": "field_04",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT004",
+    "field": "field_05",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT004",
+    "field": "field_06",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT004",
+    "field": "field_07",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT004",
+    "field": "field_08",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT005",
+    "field": "field_00",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT005",
+    "field": "field_01",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT005",
+    "field": "field_02",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT005",
+    "field": "field_03",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT005",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT005",
+    "field": "field_05",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT005",
+    "field": "field_06",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT005",
+    "field": "field_07",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT005",
+    "field": "field_08",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT005",
+    "field": "field_09",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT006",
+    "field": "field_00",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT006",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT006",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT006",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT006",
+    "field": "field_04",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT006",
+    "field": "field_05",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT006",
+    "field": "field_06",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT006",
+    "field": "field_07",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT006",
+    "field": "field_08",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT006",
+    "field": "field_09",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT006",
+    "field": "field_10",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT007",
+    "field": "field_00",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT007",
+    "field": "field_01",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT007",
+    "field": "field_02",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT007",
+    "field": "field_03",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT007",
+    "field": "field_04",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT008",
+    "field": "field_00",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT008",
+    "field": "field_01",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT008",
+    "field": "field_02",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT008",
+    "field": "field_03",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT008",
+    "field": "field_04",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT008",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT009",
+    "field": "field_00",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT009",
+    "field": "field_01",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT009",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT009",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT009",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT009",
+    "field": "field_05",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT009",
+    "field": "field_06",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT010",
+    "field": "field_00",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT010",
+    "field": "field_01",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT010",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT010",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT010",
+    "field": "field_04",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT010",
+    "field": "field_05",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT010",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT010",
+    "field": "field_07",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT011",
+    "field": "field_00",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT011",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT011",
+    "field": "field_02",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT011",
+    "field": "field_03",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT011",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT011",
+    "field": "field_05",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT011",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT011",
+    "field": "field_07",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT011",
+    "field": "field_08",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT012",
+    "field": "field_00",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT012",
+    "field": "field_01",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT012",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT012",
+    "field": "field_03",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT012",
+    "field": "field_04",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT012",
+    "field": "field_05",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT012",
+    "field": "field_06",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT012",
+    "field": "field_07",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT012",
+    "field": "field_08",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT012",
+    "field": "field_09",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT013",
+    "field": "field_00",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT013",
+    "field": "field_01",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT013",
+    "field": "field_02",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT013",
+    "field": "field_03",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT013",
+    "field": "field_04",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT013",
+    "field": "field_05",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT013",
+    "field": "field_06",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT013",
+    "field": "field_07",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT013",
+    "field": "field_08",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT013",
+    "field": "field_09",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT013",
+    "field": "field_10",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT014",
+    "field": "field_00",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT014",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT014",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT014",
+    "field": "field_03",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT014",
+    "field": "field_04",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT015",
+    "field": "field_00",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT015",
+    "field": "field_01",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT015",
+    "field": "field_02",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT015",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT015",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT015",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT016",
+    "field": "field_00",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT016",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT016",
+    "field": "field_02",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT016",
+    "field": "field_03",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT016",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT016",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT016",
+    "field": "field_06",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT017",
+    "field": "field_00",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT017",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT017",
+    "field": "field_02",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT017",
+    "field": "field_03",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT017",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT017",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT017",
+    "field": "field_06",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT017",
+    "field": "field_07",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT018",
+    "field": "field_00",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT018",
+    "field": "field_01",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT018",
+    "field": "field_02",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT018",
+    "field": "field_03",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT018",
+    "field": "field_04",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT018",
+    "field": "field_05",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT018",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT018",
+    "field": "field_07",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT018",
+    "field": "field_08",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT019",
+    "field": "field_00",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT019",
+    "field": "field_01",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT019",
+    "field": "field_02",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT019",
+    "field": "field_03",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT019",
+    "field": "field_04",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT019",
+    "field": "field_05",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT019",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT019",
+    "field": "field_07",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT019",
+    "field": "field_08",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT019",
+    "field": "field_09",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT020",
+    "field": "field_00",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT020",
+    "field": "field_01",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT020",
+    "field": "field_02",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT020",
+    "field": "field_03",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT020",
+    "field": "field_04",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT020",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT020",
+    "field": "field_06",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT020",
+    "field": "field_07",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT020",
+    "field": "field_08",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT020",
+    "field": "field_09",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT020",
+    "field": "field_10",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT021",
+    "field": "field_00",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT021",
+    "field": "field_01",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT021",
+    "field": "field_02",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT021",
+    "field": "field_03",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT021",
+    "field": "field_04",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT022",
+    "field": "field_00",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT022",
+    "field": "field_01",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT022",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT022",
+    "field": "field_03",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT022",
+    "field": "field_04",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT022",
+    "field": "field_05",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT023",
+    "field": "field_00",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT023",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT023",
+    "field": "field_02",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT023",
+    "field": "field_03",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT023",
+    "field": "field_04",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT023",
+    "field": "field_05",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT023",
+    "field": "field_06",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT024",
+    "field": "field_00",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT024",
+    "field": "field_01",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT024",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT024",
+    "field": "field_03",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT024",
+    "field": "field_04",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT024",
+    "field": "field_05",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT024",
+    "field": "field_06",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT024",
+    "field": "field_07",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT025",
+    "field": "field_00",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT025",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT025",
+    "field": "field_02",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT025",
+    "field": "field_03",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT025",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT025",
+    "field": "field_05",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT025",
+    "field": "field_06",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT025",
+    "field": "field_07",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT025",
+    "field": "field_08",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT026",
+    "field": "field_00",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT026",
+    "field": "field_01",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT026",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT026",
+    "field": "field_03",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT026",
+    "field": "field_04",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT026",
+    "field": "field_05",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT026",
+    "field": "field_06",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT026",
+    "field": "field_07",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT026",
+    "field": "field_08",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT026",
+    "field": "field_09",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT027",
+    "field": "field_00",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT027",
+    "field": "field_01",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT027",
+    "field": "field_02",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT027",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT027",
+    "field": "field_04",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT027",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT027",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT027",
+    "field": "field_07",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT027",
+    "field": "field_08",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT027",
+    "field": "field_09",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT027",
+    "field": "field_10",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT028",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT028",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT028",
+    "field": "field_02",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT028",
+    "field": "field_03",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT028",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT029",
+    "field": "field_00",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT029",
+    "field": "field_01",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT029",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT029",
+    "field": "field_03",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT029",
+    "field": "field_04",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT029",
+    "field": "field_05",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT030",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT030",
+    "field": "field_01",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT030",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT030",
+    "field": "field_03",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT030",
+    "field": "field_04",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT030",
+    "field": "field_05",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT030",
+    "field": "field_06",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT031",
+    "field": "field_00",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT031",
+    "field": "field_01",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT031",
+    "field": "field_02",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT031",
+    "field": "field_03",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT031",
+    "field": "field_04",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT031",
+    "field": "field_05",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT031",
+    "field": "field_06",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT031",
+    "field": "field_07",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT032",
+    "field": "field_00",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT032",
+    "field": "field_01",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT032",
+    "field": "field_02",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT032",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT032",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT032",
+    "field": "field_05",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT032",
+    "field": "field_06",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT032",
+    "field": "field_07",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT032",
+    "field": "field_08",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT033",
+    "field": "field_00",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT033",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT033",
+    "field": "field_02",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT033",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT033",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT033",
+    "field": "field_05",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT033",
+    "field": "field_06",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT033",
+    "field": "field_07",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT033",
+    "field": "field_08",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT033",
+    "field": "field_09",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT034",
+    "field": "field_00",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT034",
+    "field": "field_01",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT034",
+    "field": "field_02",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT034",
+    "field": "field_03",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT034",
+    "field": "field_04",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT034",
+    "field": "field_05",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT034",
+    "field": "field_06",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT034",
+    "field": "field_07",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT034",
+    "field": "field_08",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT034",
+    "field": "field_09",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT034",
+    "field": "field_10",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT035",
+    "field": "field_00",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT035",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT035",
+    "field": "field_02",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT035",
+    "field": "field_03",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT035",
+    "field": "field_04",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT036",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT036",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT036",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT036",
+    "field": "field_03",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT036",
+    "field": "field_04",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT036",
+    "field": "field_05",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT037",
+    "field": "field_00",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT037",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT037",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT037",
+    "field": "field_03",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT037",
+    "field": "field_04",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT037",
+    "field": "field_05",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT037",
+    "field": "field_06",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT038",
+    "field": "field_00",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT038",
+    "field": "field_01",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT038",
+    "field": "field_02",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT038",
+    "field": "field_03",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT038",
+    "field": "field_04",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT038",
+    "field": "field_05",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT038",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT038",
+    "field": "field_07",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT039",
+    "field": "field_00",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT039",
+    "field": "field_01",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT039",
+    "field": "field_02",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT039",
+    "field": "field_03",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT039",
+    "field": "field_04",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT039",
+    "field": "field_05",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT039",
+    "field": "field_06",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT039",
+    "field": "field_07",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT039",
+    "field": "field_08",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT040",
+    "field": "field_00",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT040",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT040",
+    "field": "field_02",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT040",
+    "field": "field_03",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT040",
+    "field": "field_04",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT040",
+    "field": "field_05",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT040",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT040",
+    "field": "field_07",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT040",
+    "field": "field_08",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT040",
+    "field": "field_09",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT041",
+    "field": "field_00",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT041",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT041",
+    "field": "field_02",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT041",
+    "field": "field_03",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT041",
+    "field": "field_04",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT041",
+    "field": "field_05",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT041",
+    "field": "field_06",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT041",
+    "field": "field_07",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT041",
+    "field": "field_08",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT041",
+    "field": "field_09",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT041",
+    "field": "field_10",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT042",
+    "field": "field_00",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT042",
+    "field": "field_01",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT042",
+    "field": "field_02",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT042",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT042",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT043",
+    "field": "field_00",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT043",
+    "field": "field_01",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT043",
+    "field": "field_02",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT043",
+    "field": "field_03",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT043",
+    "field": "field_04",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT043",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT044",
+    "field": "field_00",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT044",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT044",
+    "field": "field_02",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT044",
+    "field": "field_03",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT044",
+    "field": "field_04",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT044",
+    "field": "field_05",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT044",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT045",
+    "field": "field_00",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT045",
+    "field": "field_01",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT045",
+    "field": "field_02",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT045",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT045",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT045",
+    "field": "field_05",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT045",
+    "field": "field_06",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT045",
+    "field": "field_07",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT046",
+    "field": "field_00",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT046",
+    "field": "field_01",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT046",
+    "field": "field_02",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT046",
+    "field": "field_03",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT046",
+    "field": "field_04",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT046",
+    "field": "field_05",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT046",
+    "field": "field_06",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT046",
+    "field": "field_07",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT046",
+    "field": "field_08",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT047",
+    "field": "field_00",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT047",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT047",
+    "field": "field_02",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT047",
+    "field": "field_03",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT047",
+    "field": "field_04",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT047",
+    "field": "field_05",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT047",
+    "field": "field_06",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT047",
+    "field": "field_07",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT047",
+    "field": "field_08",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT047",
+    "field": "field_09",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT048",
+    "field": "field_00",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT048",
+    "field": "field_01",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT048",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT048",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT048",
+    "field": "field_04",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT048",
+    "field": "field_05",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT048",
+    "field": "field_06",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT048",
+    "field": "field_07",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT048",
+    "field": "field_08",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT048",
+    "field": "field_09",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT048",
+    "field": "field_10",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT049",
+    "field": "field_00",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT049",
+    "field": "field_01",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT049",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT049",
+    "field": "field_03",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT049",
+    "field": "field_04",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT050",
+    "field": "field_00",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT050",
+    "field": "field_01",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT050",
+    "field": "field_02",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT050",
+    "field": "field_03",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT050",
+    "field": "field_04",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT050",
+    "field": "field_05",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT051",
+    "field": "field_00",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT051",
+    "field": "field_01",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT051",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT051",
+    "field": "field_03",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT051",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT051",
+    "field": "field_05",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT051",
+    "field": "field_06",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT052",
+    "field": "field_00",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT052",
+    "field": "field_01",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT052",
+    "field": "field_02",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT052",
+    "field": "field_03",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT052",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT052",
+    "field": "field_05",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT052",
+    "field": "field_06",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT052",
+    "field": "field_07",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT053",
+    "field": "field_00",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT053",
+    "field": "field_01",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT053",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT053",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT053",
+    "field": "field_04",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT053",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT053",
+    "field": "field_06",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT053",
+    "field": "field_07",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT053",
+    "field": "field_08",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT054",
+    "field": "field_00",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT054",
+    "field": "field_01",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT054",
+    "field": "field_02",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT054",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT054",
+    "field": "field_04",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT054",
+    "field": "field_05",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT054",
+    "field": "field_06",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT054",
+    "field": "field_07",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT054",
+    "field": "field_08",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT054",
+    "field": "field_09",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT055",
+    "field": "field_00",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT055",
+    "field": "field_01",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT055",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT055",
+    "field": "field_03",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT055",
+    "field": "field_04",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT055",
+    "field": "field_05",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT055",
+    "field": "field_06",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT055",
+    "field": "field_07",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT055",
+    "field": "field_08",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT055",
+    "field": "field_09",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT055",
+    "field": "field_10",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT056",
+    "field": "field_00",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT056",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT056",
+    "field": "field_02",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT056",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT056",
+    "field": "field_04",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT057",
+    "field": "field_00",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT057",
+    "field": "field_01",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT057",
+    "field": "field_02",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT057",
+    "field": "field_03",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT057",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT057",
+    "field": "field_05",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT058",
+    "field": "field_00",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT058",
+    "field": "field_01",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT058",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT058",
+    "field": "field_03",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT058",
+    "field": "field_04",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT058",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT058",
+    "field": "field_06",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT059",
+    "field": "field_00",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT059",
+    "field": "field_01",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT059",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT059",
+    "field": "field_03",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT059",
+    "field": "field_04",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT059",
+    "field": "field_05",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT059",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT059",
+    "field": "field_07",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT060",
+    "field": "field_00",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT060",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT060",
+    "field": "field_02",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT060",
+    "field": "field_03",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT060",
+    "field": "field_04",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT060",
+    "field": "field_05",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT060",
+    "field": "field_06",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT060",
+    "field": "field_07",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT060",
+    "field": "field_08",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT061",
+    "field": "field_00",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT061",
+    "field": "field_01",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT061",
+    "field": "field_02",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT061",
+    "field": "field_03",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT061",
+    "field": "field_04",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT061",
+    "field": "field_05",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT061",
+    "field": "field_06",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT061",
+    "field": "field_07",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT061",
+    "field": "field_08",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT061",
+    "field": "field_09",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT062",
+    "field": "field_00",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT062",
+    "field": "field_01",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT062",
+    "field": "field_02",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT062",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT062",
+    "field": "field_04",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT062",
+    "field": "field_05",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT062",
+    "field": "field_06",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT062",
+    "field": "field_07",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT062",
+    "field": "field_08",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT062",
+    "field": "field_09",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT062",
+    "field": "field_10",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT063",
+    "field": "field_00",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT063",
+    "field": "field_01",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT063",
+    "field": "field_02",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT063",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT063",
+    "field": "field_04",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT064",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT064",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT064",
+    "field": "field_02",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT064",
+    "field": "field_03",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT064",
+    "field": "field_04",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT064",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT065",
+    "field": "field_00",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT065",
+    "field": "field_01",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT065",
+    "field": "field_02",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT065",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT065",
+    "field": "field_04",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT065",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT065",
+    "field": "field_06",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT066",
+    "field": "field_00",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT066",
+    "field": "field_01",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT066",
+    "field": "field_02",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT066",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT066",
+    "field": "field_04",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT066",
+    "field": "field_05",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT066",
+    "field": "field_06",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT066",
+    "field": "field_07",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT067",
+    "field": "field_00",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT067",
+    "field": "field_01",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT067",
+    "field": "field_02",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT067",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT067",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT067",
+    "field": "field_05",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT067",
+    "field": "field_06",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT067",
+    "field": "field_07",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT067",
+    "field": "field_08",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT068",
+    "field": "field_00",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT068",
+    "field": "field_01",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT068",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT068",
+    "field": "field_03",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT068",
+    "field": "field_04",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT068",
+    "field": "field_05",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT068",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT068",
+    "field": "field_07",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT068",
+    "field": "field_08",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT068",
+    "field": "field_09",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT069",
+    "field": "field_00",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT069",
+    "field": "field_01",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT069",
+    "field": "field_02",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT069",
+    "field": "field_03",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT069",
+    "field": "field_04",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT069",
+    "field": "field_05",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT069",
+    "field": "field_06",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT069",
+    "field": "field_07",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT069",
+    "field": "field_08",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT069",
+    "field": "field_09",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT069",
+    "field": "field_10",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT070",
+    "field": "field_00",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT070",
+    "field": "field_01",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT070",
+    "field": "field_02",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT070",
+    "field": "field_03",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT070",
+    "field": "field_04",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT071",
+    "field": "field_00",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT071",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT071",
+    "field": "field_02",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT071",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT071",
+    "field": "field_04",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT071",
+    "field": "field_05",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT072",
+    "field": "field_00",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT072",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT072",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT072",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT072",
+    "field": "field_04",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT072",
+    "field": "field_05",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT072",
+    "field": "field_06",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT073",
+    "field": "field_00",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT073",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT073",
+    "field": "field_02",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT073",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT073",
+    "field": "field_04",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT073",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT073",
+    "field": "field_06",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT073",
+    "field": "field_07",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT074",
+    "field": "field_00",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT074",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT074",
+    "field": "field_02",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT074",
+    "field": "field_03",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT074",
+    "field": "field_04",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT074",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT074",
+    "field": "field_06",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT074",
+    "field": "field_07",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT074",
+    "field": "field_08",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT075",
+    "field": "field_00",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT075",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT075",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT075",
+    "field": "field_03",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT075",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT075",
+    "field": "field_05",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT075",
+    "field": "field_06",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT075",
+    "field": "field_07",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT075",
+    "field": "field_08",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT075",
+    "field": "field_09",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT076",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT076",
+    "field": "field_01",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT076",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT076",
+    "field": "field_03",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT076",
+    "field": "field_04",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT076",
+    "field": "field_05",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT076",
+    "field": "field_06",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT076",
+    "field": "field_07",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT076",
+    "field": "field_08",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT076",
+    "field": "field_09",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT076",
+    "field": "field_10",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT077",
+    "field": "field_00",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT077",
+    "field": "field_01",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT077",
+    "field": "field_02",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT077",
+    "field": "field_03",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT077",
+    "field": "field_04",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT078",
+    "field": "field_00",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT078",
+    "field": "field_01",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT078",
+    "field": "field_02",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT078",
+    "field": "field_03",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT078",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT078",
+    "field": "field_05",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT079",
+    "field": "field_00",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT079",
+    "field": "field_01",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT079",
+    "field": "field_02",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT079",
+    "field": "field_03",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT079",
+    "field": "field_04",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT079",
+    "field": "field_05",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT079",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT080",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT080",
+    "field": "field_01",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT080",
+    "field": "field_02",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT080",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT080",
+    "field": "field_04",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT080",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT080",
+    "field": "field_06",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT080",
+    "field": "field_07",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT081",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT081",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT081",
+    "field": "field_02",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT081",
+    "field": "field_03",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT081",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT081",
+    "field": "field_05",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT081",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT081",
+    "field": "field_07",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT081",
+    "field": "field_08",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT082",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT082",
+    "field": "field_01",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT082",
+    "field": "field_02",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT082",
+    "field": "field_03",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT082",
+    "field": "field_04",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT082",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT082",
+    "field": "field_06",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT082",
+    "field": "field_07",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT082",
+    "field": "field_08",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT082",
+    "field": "field_09",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT083",
+    "field": "field_00",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT083",
+    "field": "field_01",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT083",
+    "field": "field_02",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT083",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT083",
+    "field": "field_04",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT083",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT083",
+    "field": "field_06",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT083",
+    "field": "field_07",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT083",
+    "field": "field_08",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT083",
+    "field": "field_09",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT083",
+    "field": "field_10",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT084",
+    "field": "field_00",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT084",
+    "field": "field_01",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT084",
+    "field": "field_02",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT084",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT084",
+    "field": "field_04",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT085",
+    "field": "field_00",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT085",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT085",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT085",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT085",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT085",
+    "field": "field_05",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT086",
+    "field": "field_00",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT086",
+    "field": "field_01",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT086",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT086",
+    "field": "field_03",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT086",
+    "field": "field_04",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT086",
+    "field": "field_05",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT086",
+    "field": "field_06",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT087",
+    "field": "field_00",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT087",
+    "field": "field_01",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT087",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT087",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT087",
+    "field": "field_04",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT087",
+    "field": "field_05",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT087",
+    "field": "field_06",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT087",
+    "field": "field_07",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT088",
+    "field": "field_00",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT088",
+    "field": "field_01",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT088",
+    "field": "field_02",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT088",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT088",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT088",
+    "field": "field_05",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT088",
+    "field": "field_06",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT088",
+    "field": "field_07",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT088",
+    "field": "field_08",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT089",
+    "field": "field_00",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT089",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT089",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT089",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT089",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT089",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT089",
+    "field": "field_06",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT089",
+    "field": "field_07",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT089",
+    "field": "field_08",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT089",
+    "field": "field_09",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT090",
+    "field": "field_00",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT090",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT090",
+    "field": "field_02",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT090",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT090",
+    "field": "field_04",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT090",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT090",
+    "field": "field_06",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT090",
+    "field": "field_07",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT090",
+    "field": "field_08",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT090",
+    "field": "field_09",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT090",
+    "field": "field_10",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT091",
+    "field": "field_00",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT091",
+    "field": "field_01",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT091",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT091",
+    "field": "field_03",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT091",
+    "field": "field_04",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT092",
+    "field": "field_00",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT092",
+    "field": "field_01",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT092",
+    "field": "field_02",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT092",
+    "field": "field_03",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT092",
+    "field": "field_04",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT092",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT093",
+    "field": "field_00",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT093",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT093",
+    "field": "field_02",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT093",
+    "field": "field_03",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT093",
+    "field": "field_04",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT093",
+    "field": "field_05",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT093",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT094",
+    "field": "field_00",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT094",
+    "field": "field_01",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT094",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT094",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT094",
+    "field": "field_04",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT094",
+    "field": "field_05",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT094",
+    "field": "field_06",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT094",
+    "field": "field_07",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT095",
+    "field": "field_00",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT095",
+    "field": "field_01",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT095",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT095",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT095",
+    "field": "field_04",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT095",
+    "field": "field_05",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT095",
+    "field": "field_06",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT095",
+    "field": "field_07",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT095",
+    "field": "field_08",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT096",
+    "field": "field_00",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT096",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT096",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT096",
+    "field": "field_03",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT096",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT096",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT096",
+    "field": "field_06",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT096",
+    "field": "field_07",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT096",
+    "field": "field_08",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT096",
+    "field": "field_09",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT097",
+    "field": "field_00",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT097",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT097",
+    "field": "field_02",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT097",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT097",
+    "field": "field_04",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT097",
+    "field": "field_05",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT097",
+    "field": "field_06",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT097",
+    "field": "field_07",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT097",
+    "field": "field_08",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT097",
+    "field": "field_09",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT097",
+    "field": "field_10",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT098",
+    "field": "field_00",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT098",
+    "field": "field_01",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT098",
+    "field": "field_02",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT098",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT098",
+    "field": "field_04",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT099",
+    "field": "field_00",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT099",
+    "field": "field_01",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT099",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT099",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT099",
+    "field": "field_04",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT099",
+    "field": "field_05",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT100",
+    "field": "field_00",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT100",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT100",
+    "field": "field_02",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT100",
+    "field": "field_03",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT100",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT100",
+    "field": "field_05",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT100",
+    "field": "field_06",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT101",
+    "field": "field_00",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT101",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT101",
+    "field": "field_02",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT101",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT101",
+    "field": "field_04",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT101",
+    "field": "field_05",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT101",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT101",
+    "field": "field_07",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT102",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT102",
+    "field": "field_01",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT102",
+    "field": "field_02",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT102",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT102",
+    "field": "field_04",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT102",
+    "field": "field_05",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT102",
+    "field": "field_06",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT102",
+    "field": "field_07",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT102",
+    "field": "field_08",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT103",
+    "field": "field_00",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT103",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT103",
+    "field": "field_02",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT103",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT103",
+    "field": "field_04",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT103",
+    "field": "field_05",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT103",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT103",
+    "field": "field_07",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT103",
+    "field": "field_08",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT103",
+    "field": "field_09",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT104",
+    "field": "field_00",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT104",
+    "field": "field_01",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT104",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT104",
+    "field": "field_03",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT104",
+    "field": "field_04",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT104",
+    "field": "field_05",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT104",
+    "field": "field_06",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT104",
+    "field": "field_07",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT104",
+    "field": "field_08",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT104",
+    "field": "field_09",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT104",
+    "field": "field_10",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT105",
+    "field": "field_00",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT105",
+    "field": "field_01",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT105",
+    "field": "field_02",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT105",
+    "field": "field_03",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT105",
+    "field": "field_04",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT106",
+    "field": "field_00",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT106",
+    "field": "field_01",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT106",
+    "field": "field_02",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT106",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT106",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT106",
+    "field": "field_05",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT107",
+    "field": "field_00",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT107",
+    "field": "field_01",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT107",
+    "field": "field_02",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT107",
+    "field": "field_03",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT107",
+    "field": "field_04",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT107",
+    "field": "field_05",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT107",
+    "field": "field_06",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT108",
+    "field": "field_00",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT108",
+    "field": "field_01",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT108",
+    "field": "field_02",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT108",
+    "field": "field_03",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT108",
+    "field": "field_04",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT108",
+    "field": "field_05",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT108",
+    "field": "field_06",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT108",
+    "field": "field_07",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT109",
+    "field": "field_00",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT109",
+    "field": "field_01",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT109",
+    "field": "field_02",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT109",
+    "field": "field_03",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT109",
+    "field": "field_04",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT109",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT109",
+    "field": "field_06",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT109",
+    "field": "field_07",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT109",
+    "field": "field_08",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT110",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT110",
+    "field": "field_01",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT110",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT110",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT110",
+    "field": "field_04",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT110",
+    "field": "field_05",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT110",
+    "field": "field_06",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT110",
+    "field": "field_07",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT110",
+    "field": "field_08",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT110",
+    "field": "field_09",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT111",
+    "field": "field_00",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT111",
+    "field": "field_01",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT111",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT111",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT111",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT111",
+    "field": "field_05",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT111",
+    "field": "field_06",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT111",
+    "field": "field_07",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT111",
+    "field": "field_08",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT111",
+    "field": "field_09",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT111",
+    "field": "field_10",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT112",
+    "field": "field_00",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT112",
+    "field": "field_01",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT112",
+    "field": "field_02",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT112",
+    "field": "field_03",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT112",
+    "field": "field_04",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT113",
+    "field": "field_00",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT113",
+    "field": "field_01",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT113",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT113",
+    "field": "field_03",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT113",
+    "field": "field_04",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT113",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT114",
+    "field": "field_00",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT114",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT114",
+    "field": "field_02",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT114",
+    "field": "field_03",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT114",
+    "field": "field_04",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT114",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT114",
+    "field": "field_06",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT115",
+    "field": "field_00",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT115",
+    "field": "field_01",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT115",
+    "field": "field_02",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT115",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT115",
+    "field": "field_04",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT115",
+    "field": "field_05",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT115",
+    "field": "field_06",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT115",
+    "field": "field_07",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT116",
+    "field": "field_00",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT116",
+    "field": "field_01",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT116",
+    "field": "field_02",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT116",
+    "field": "field_03",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT116",
+    "field": "field_04",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT116",
+    "field": "field_05",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT116",
+    "field": "field_06",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT116",
+    "field": "field_07",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT116",
+    "field": "field_08",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT117",
+    "field": "field_00",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT117",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT117",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT117",
+    "field": "field_03",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT117",
+    "field": "field_04",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT117",
+    "field": "field_05",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT117",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT117",
+    "field": "field_07",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT117",
+    "field": "field_08",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT117",
+    "field": "field_09",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT118",
+    "field": "field_00",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT118",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT118",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT118",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT118",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT118",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT118",
+    "field": "field_06",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT118",
+    "field": "field_07",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT118",
+    "field": "field_08",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT118",
+    "field": "field_09",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT118",
+    "field": "field_10",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT119",
+    "field": "field_00",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT119",
+    "field": "field_01",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT119",
+    "field": "field_02",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT119",
+    "field": "field_03",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT119",
+    "field": "field_04",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT120",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT120",
+    "field": "field_01",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT120",
+    "field": "field_02",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT120",
+    "field": "field_03",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT120",
+    "field": "field_04",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT120",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT121",
+    "field": "field_00",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT121",
+    "field": "field_01",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT121",
+    "field": "field_02",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT121",
+    "field": "field_03",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT121",
+    "field": "field_04",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT121",
+    "field": "field_05",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT121",
+    "field": "field_06",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT122",
+    "field": "field_00",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT122",
+    "field": "field_01",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT122",
+    "field": "field_02",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT122",
+    "field": "field_03",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT122",
+    "field": "field_04",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT122",
+    "field": "field_05",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT122",
+    "field": "field_06",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT122",
+    "field": "field_07",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT123",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT123",
+    "field": "field_01",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT123",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT123",
+    "field": "field_03",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT123",
+    "field": "field_04",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT123",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT123",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT123",
+    "field": "field_07",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT123",
+    "field": "field_08",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT124",
+    "field": "field_00",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT124",
+    "field": "field_01",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT124",
+    "field": "field_02",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT124",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT124",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT124",
+    "field": "field_05",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT124",
+    "field": "field_06",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT124",
+    "field": "field_07",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT124",
+    "field": "field_08",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT124",
+    "field": "field_09",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT125",
+    "field": "field_00",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT125",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT125",
+    "field": "field_02",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT125",
+    "field": "field_03",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT125",
+    "field": "field_04",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT125",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT125",
+    "field": "field_06",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT125",
+    "field": "field_07",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT125",
+    "field": "field_08",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT125",
+    "field": "field_09",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT125",
+    "field": "field_10",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT126",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT126",
+    "field": "field_01",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT126",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT126",
+    "field": "field_03",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT126",
+    "field": "field_04",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT127",
+    "field": "field_00",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT127",
+    "field": "field_01",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT127",
+    "field": "field_02",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT127",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT127",
+    "field": "field_04",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT127",
+    "field": "field_05",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT128",
+    "field": "field_00",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT128",
+    "field": "field_01",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT128",
+    "field": "field_02",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT128",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT128",
+    "field": "field_04",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT128",
+    "field": "field_05",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT128",
+    "field": "field_06",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT129",
+    "field": "field_00",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT129",
+    "field": "field_01",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT129",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT129",
+    "field": "field_03",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT129",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT129",
+    "field": "field_05",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT129",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT129",
+    "field": "field_07",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT130",
+    "field": "field_00",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT130",
+    "field": "field_01",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT130",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT130",
+    "field": "field_03",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT130",
+    "field": "field_04",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT130",
+    "field": "field_05",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT130",
+    "field": "field_06",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT130",
+    "field": "field_07",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT130",
+    "field": "field_08",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT131",
+    "field": "field_00",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT131",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT131",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT131",
+    "field": "field_03",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT131",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT131",
+    "field": "field_05",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT131",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT131",
+    "field": "field_07",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT131",
+    "field": "field_08",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT131",
+    "field": "field_09",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT132",
+    "field": "field_00",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT132",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT132",
+    "field": "field_02",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT132",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT132",
+    "field": "field_04",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT132",
+    "field": "field_05",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT132",
+    "field": "field_06",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT132",
+    "field": "field_07",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT132",
+    "field": "field_08",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT132",
+    "field": "field_09",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT132",
+    "field": "field_10",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT133",
+    "field": "field_00",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT133",
+    "field": "field_01",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT133",
+    "field": "field_02",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT133",
+    "field": "field_03",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT133",
+    "field": "field_04",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT134",
+    "field": "field_00",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT134",
+    "field": "field_01",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT134",
+    "field": "field_02",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT134",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT134",
+    "field": "field_04",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT134",
+    "field": "field_05",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT135",
+    "field": "field_00",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT135",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT135",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT135",
+    "field": "field_03",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT135",
+    "field": "field_04",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT135",
+    "field": "field_05",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT135",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT136",
+    "field": "field_00",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT136",
+    "field": "field_01",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT136",
+    "field": "field_02",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT136",
+    "field": "field_03",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT136",
+    "field": "field_04",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT136",
+    "field": "field_05",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT136",
+    "field": "field_06",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT136",
+    "field": "field_07",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT137",
+    "field": "field_00",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT137",
+    "field": "field_01",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT137",
+    "field": "field_02",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT137",
+    "field": "field_03",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT137",
+    "field": "field_04",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT137",
+    "field": "field_05",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT137",
+    "field": "field_06",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT137",
+    "field": "field_07",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT137",
+    "field": "field_08",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT138",
+    "field": "field_00",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT138",
+    "field": "field_01",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT138",
+    "field": "field_02",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT138",
+    "field": "field_03",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT138",
+    "field": "field_04",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT138",
+    "field": "field_05",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT138",
+    "field": "field_06",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT138",
+    "field": "field_07",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT138",
+    "field": "field_08",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT138",
+    "field": "field_09",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT139",
+    "field": "field_00",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT139",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT139",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT139",
+    "field": "field_03",
+    "type": "USAGE"
+  },
+  {
+    "action_id": "ACT139",
+    "field": "field_04",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT139",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT139",
+    "field": "field_06",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT139",
+    "field": "field_07",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT139",
+    "field": "field_08",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT139",
+    "field": "field_09",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT139",
+    "field": "field_10",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT140",
+    "field": "field_00",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT140",
+    "field": "field_01",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT140",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT140",
+    "field": "field_03",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT140",
+    "field": "field_04",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT141",
+    "field": "field_00",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT141",
+    "field": "field_01",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT141",
+    "field": "field_02",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT141",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT141",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT141",
+    "field": "field_05",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT142",
+    "field": "field_00",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT142",
+    "field": "field_01",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT142",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT142",
+    "field": "field_03",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT142",
+    "field": "field_04",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT142",
+    "field": "field_05",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT142",
+    "field": "field_06",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT143",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT143",
+    "field": "field_01",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT143",
+    "field": "field_02",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT143",
+    "field": "field_03",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT143",
+    "field": "field_04",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT143",
+    "field": "field_05",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT143",
+    "field": "field_06",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT143",
+    "field": "field_07",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT144",
+    "field": "field_00",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT144",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT144",
+    "field": "field_02",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT144",
+    "field": "field_03",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT144",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT144",
+    "field": "field_05",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT144",
+    "field": "field_06",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT144",
+    "field": "field_07",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT144",
+    "field": "field_08",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT145",
+    "field": "field_00",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT145",
+    "field": "field_01",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT145",
+    "field": "field_02",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT145",
+    "field": "field_03",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT145",
+    "field": "field_04",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT145",
+    "field": "field_05",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT145",
+    "field": "field_06",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT145",
+    "field": "field_07",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT145",
+    "field": "field_08",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT145",
+    "field": "field_09",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT146",
+    "field": "field_00",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT146",
+    "field": "field_01",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT146",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT146",
+    "field": "field_03",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT146",
+    "field": "field_04",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT146",
+    "field": "field_05",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT146",
+    "field": "field_06",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT146",
+    "field": "field_07",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT146",
+    "field": "field_08",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT146",
+    "field": "field_09",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT146",
+    "field": "field_10",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT147",
+    "field": "field_00",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT147",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT147",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT147",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT147",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT148",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT148",
+    "field": "field_01",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT148",
+    "field": "field_02",
+    "type": "contact"
+  },
+  {
+    "action_id": "ACT148",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT148",
+    "field": "field_04",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT148",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT149",
+    "field": "field_00",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT149",
+    "field": "field_01",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT149",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT149",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT149",
+    "field": "field_04",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT149",
+    "field": "field_05",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT149",
+    "field": "field_06",
+    "type": "CONTACT"
+  },
+  {
+    "action_id": "ACT150",
+    "field": "field_00",
+    "type": "ID_NUMBER"
+  },
+  {
+    "action_id": "ACT150",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT150",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT150",
+    "field": "field_03",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT150",
+    "field": "field_04",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT150",
+    "field": "field_05",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT150",
+    "field": "field_06",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT150",
+    "field": "field_07",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT151",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT151",
+    "field": "field_01",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT151",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT151",
+    "field": "field_03",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT151",
+    "field": "field_04",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT151",
+    "field": "field_05",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT151",
+    "field": "field_06",
+    "type": "PROFILE"
+  },
+  {
+    "action_id": "ACT151",
+    "field": "field_07",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT151",
+    "field": "field_08",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT152",
+    "field": "field_00",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT152",
+    "field": "field_01",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT152",
+    "field": "field_02",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT152",
+    "field": "field_03",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT152",
+    "field": "field_04",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT152",
+    "field": "field_05",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT152",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT152",
+    "field": "field_07",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT152",
+    "field": "field_08",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT152",
+    "field": "field_09",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT153",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT153",
+    "field": "field_01",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT153",
+    "field": "field_02",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT153",
+    "field": "field_03",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT153",
+    "field": "field_04",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT153",
+    "field": "field_05",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT153",
+    "field": "field_06",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT153",
+    "field": "field_07",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT153",
+    "field": "field_08",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT153",
+    "field": "field_09",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT153",
+    "field": "field_10",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT154",
+    "field": "field_00",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT154",
+    "field": "field_01",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT154",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT154",
+    "field": "field_03",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT154",
+    "field": "field_04",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT155",
+    "field": "field_00",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT155",
+    "field": "field_01",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT155",
+    "field": "field_02",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT155",
+    "field": "field_03",
+    "type": "BIOMETRIC"
+  },
+  {
+    "action_id": "ACT155",
+    "field": "field_04",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT155",
+    "field": "field_05",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT156",
+    "field": "field_00",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT156",
+    "field": "field_01",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT156",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT156",
+    "field": "field_03",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT156",
+    "field": "field_04",
+    "type": "usage"
+  },
+  {
+    "action_id": "ACT156",
+    "field": "field_05",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT156",
+    "field": "field_06",
+    "type": "BANK_ACCOUNT"
+  },
+  {
+    "action_id": "ACT157",
+    "field": "field_00",
+    "type": "PUBLIC"
+  },
+  {
+    "action_id": "ACT157",
+    "field": "field_01",
+    "type": "biometric"
+  },
+  {
+    "action_id": "ACT157",
+    "field": "field_02",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT157",
+    "field": "field_03",
+    "type": "DEVICE"
+  },
+  {
+    "action_id": "ACT157",
+    "field": "field_04",
+    "type": "precise_location"
+  },
+  {
+    "action_id": "ACT157",
+    "field": "field_05",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT157",
+    "field": "field_06",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT157",
+    "field": "field_07",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT158",
+    "field": "field_00",
+    "type": "HEALTH"
+  },
+  {
+    "action_id": "ACT158",
+    "field": "field_01",
+    "type": "credential"
+  },
+  {
+    "action_id": "ACT158",
+    "field": "field_02",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT158",
+    "field": "field_03",
+    "type": "PRECISE_LOCATION"
+  },
+  {
+    "action_id": "ACT158",
+    "field": "field_04",
+    "type": "profile"
+  },
+  {
+    "action_id": "ACT158",
+    "field": "field_05",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT158",
+    "field": "field_06",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT158",
+    "field": "field_07",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT158",
+    "field": "field_08",
+    "type": "health"
+  },
+  {
+    "action_id": "ACT159",
+    "field": "field_00",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT159",
+    "field": "field_01",
+    "type": "id_number"
+  },
+  {
+    "action_id": "ACT159",
+    "field": "field_02",
+    "type": "bank_account"
+  },
+  {
+    "action_id": "ACT159",
+    "field": "field_03",
+    "type": "CREDENTIAL"
+  },
+  {
+    "action_id": "ACT159",
+    "field": "field_04",
+    "type": "public"
+  },
+  {
+    "action_id": "ACT159",
+    "field": "field_05",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT159",
+    "field": "field_06",
+    "type": "PAYMENT"
+  },
+  {
+    "action_id": "ACT159",
+    "field": "field_07",
+    "type": "device"
+  },
+  {
+    "action_id": "ACT159",
+    "field": "field_08",
+    "type": "payment"
+  },
+  {
+    "action_id": "ACT159",
+    "field": "field_09",
+    "type": "CREDENTIAL"
+  }
+]

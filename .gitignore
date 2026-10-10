@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+runs/
+jobs/
+.pytest_cache/
+tasks/**/environment/assets/

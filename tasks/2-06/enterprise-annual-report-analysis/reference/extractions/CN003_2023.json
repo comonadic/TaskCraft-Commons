@@ -1,0 +1,18 @@
+{
+  "filing_id": "CN003_2023",
+  "company": "青禾设备",
+  "year": 2023,
+  "currency": "CNY",
+  "revenue": 525370000.0,
+  "net_income": 63044399.99999999,
+  "assets": 1050740000.0,
+  "liabilities": 441310800.0,
+  "cash": 94566600.0,
+  "equity": 609429200.0,
+  "operating_cashflow": 75653280.0,
+  "capex": 23641650.0,
+  "debt": 308917560.0,
+  "shares": 100000000.0,
+  "eps": 0.6304,
+  "dividends": 12608880.0
+}

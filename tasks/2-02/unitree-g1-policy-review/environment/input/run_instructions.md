@@ -1,0 +1,2 @@
+逐例运行：python /app/software/g1_runner.py --model-dir /app/input/g1 --cases /app/input/cases.json --case-id G1-01 --output-dir /app/output/visual_demos/G1-01
+对第1秒之后的轨迹计算：min_base_height为最小base_height；tracking_rmse=sqrt(mean(joint_rmse²))；fall_time是base_height首次<0.45的time，未跌倒为null。failed：发生跌倒或tracking_rmse>0.35；successful：未跌倒且tracking_rmse<=0.15；其余nearly_successful。说明中用中文描述保持站立/跌倒/跟随滞后，至少给出一个相关时间或数值。其他PNG仅便于检查，正式产物是MP4和轨迹。

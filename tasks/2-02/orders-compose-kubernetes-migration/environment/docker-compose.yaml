@@ -1,0 +1,11 @@
+services:
+  main:
+    privileged: true
+    environment:
+      KUBECONFIG: /etc/rancher/k3s/k3s.yaml
+    tmpfs:
+      - /run
+      - /var/run
+networks:
+  default:
+    internal: true

@@ -3,14 +3,14 @@
   "title": "10kV 馈线双口径可靠性分析",
   "brief": "依据馈线拓扑与设备参数计算负荷点可靠性，分别整理等权和用户加权口径下的系统指标。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-02",
   "occupation": {
     "code": "2-02-12-02",
     "name": "供用电工程技术人员"
   },
   "scene": "你是供用电工程人员，需要分析一条 10kV 馈线的停电风险，说明指标口径与计划停电的处理。",
-  "taskPrompt": "你是供用电工程人员，需要分析一条 10kV 馈线的停电风险，说明指标口径与计划停电的处理。\n\n1. 读取 CIM/XML 和拓扑图，确认路径与设备参数\n2. 累计各负荷点的故障率、停电时长与供电参数\n3. 计算 SAIFI、SAIDI、CAIDI、ASAI 和 ENS，交付双口径报告\n\n交付成果：\n- loadpoint_metrics.csv：逐变压器故障率、停电时长、用户数与负荷。\n- reliability_indices.json：等权口径的系统可靠性指标。\n- cn_reliability_report.json：用户加权口径指标及用户总数。\n- method.md：路径累计、计划停电和指标口径说明。",
+  "taskPrompt": "# 10kV 馈线双口径可靠性分析\n\n你是供用电工程人员，需要分析一条 10kV 馈线的停电风险，说明指标口径与计划停电的处理。\n\n1. 读取 CIM/XML 和拓扑图，确认路径与设备参数\n2. 累计各负荷点的故障率、停电时长与供电参数\n3. 计算 SAIFI、SAIDI、CAIDI、ASAI 和 ENS，交付双口径报告\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/loadpoint_metrics.csv`：逐变压器故障率、停电时长、用户数与负荷。\n- `/app/output/reliability_indices.json`：等权口径的系统可靠性指标。\n- `/app/output/cn_reliability_report.json`：用户加权口径指标及用户总数。\n- `/app/output/method.md`：路径累计、计划停电和指标口径说明。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`reliability_indices.json`：SAIFI,SAIDI,CAIDI,ASAI,ENS_kWh；`cn_reliability_report.json`同字段加total_customers；`loadpoint_metrics.csv`列transformer_id,lambda_per_year,outage_hours,customers,kw；`method.md`。\n",
   "agentMustDo": [
     "读取 CIM/XML 和拓扑图，确认路径与设备参数",
     "累计各负荷点的故障率、停电时长与供电参数",
@@ -24,28 +24,28 @@
   "inputFiles": [
     {
       "name": "feeder_cim.xml",
-      "path": "input/feeder_cim.xml",
+      "path": "environment/input/feeder_cim.xml",
       "format": "XML",
       "bytes": 10636,
       "description": "feeder_cim.xml，用于10kV 馈线双口径可靠性分析。"
     },
     {
       "name": "业务规则说明",
-      "path": "input/rules.md",
+      "path": "environment/input/rules.md",
       "format": "MD",
       "bytes": 728,
       "description": "业务规则说明，用于10kV 馈线双口径可靠性分析。"
     },
     {
       "name": "topology.svg",
-      "path": "input/topology.svg",
+      "path": "environment/input/topology.svg",
       "format": "SVG",
       "bytes": 8436,
       "description": "topology.svg，用于10kV 馈线双口径可靠性分析。"
     },
     {
       "name": "transformers.csv",
-      "path": "input/transformers.csv",
+      "path": "environment/input/transformers.csv",
       "format": "CSV",
       "bytes": 1360,
       "description": "transformers.csv，用于10kV 馈线双口径可靠性分析。"
@@ -55,32 +55,36 @@
   "inputManifest": "materials.json",
   "referenceFiles": [
     {
-      "name": "loadpoint_metrics.csv",
-      "path": "output/loadpoint_metrics.csv",
-      "format": "CSV",
-      "description": "逐变压器故障率、停电时长、用户数与负荷。"
-    },
-    {
-      "name": "reliability_indices.json",
-      "path": "output/reliability_indices.json",
-      "format": "JSON",
-      "description": "等权口径的系统可靠性指标。"
-    },
-    {
       "name": "cn_reliability_report.json",
-      "path": "output/cn_reliability_report.json",
+      "path": "reference/cn_reliability_report.json",
       "format": "JSON",
+      "bytes": 185,
       "description": "用户加权口径指标及用户总数。"
     },
     {
+      "name": "loadpoint_metrics.csv",
+      "path": "reference/loadpoint_metrics.csv",
+      "format": "CSV",
+      "bytes": 3291,
+      "description": "逐变压器故障率、停电时长、用户数与负荷。"
+    },
+    {
       "name": "method.md",
-      "path": "output/method.md",
+      "path": "reference/method.md",
       "format": "MD",
+      "bytes": 249,
       "description": "路径累计、计划停电和指标口径说明。"
+    },
+    {
+      "name": "reliability_indices.json",
+      "path": "reference/reliability_indices.json",
+      "format": "JSON",
+      "bytes": 136,
+      "description": "等权口径的系统可靠性指标。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "负荷点结果",
@@ -107,6 +111,117 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "按 transformer_id 核对每个负荷点的供电路径与累计指标。",
+      "比较等权可靠性指标。",
+      "重算用户加权及计划停电指标，再检查方法说明。"
+    ],
+    "metrics": [
+      "负荷点 40%、等权指标 25%、用户加权与计划停电 30%、说明 5%。",
+      "逐记录和结构化数值比较采用默认 atol=1e−6、rtol=1e−5。"
+    ],
+    "gates": [],
+    "checks": [
+      {
+        "name": "负荷点路径累计",
+        "weight": 40.0,
+        "implementation": "lambda: record_score(read_csv(OUTPUT / 'loadpoint_metrics.csv'), e['points'], ['transformer_id'])"
+      },
+      {
+        "name": "等权指标",
+        "weight": 25.0,
+        "implementation": "lambda: tree_score(read_json(OUTPUT / 'reliability_indices.json'), e['original'])"
+      },
+      {
+        "name": "用户加权及计划停电",
+        "weight": 30.0,
+        "implementation": "lambda: tree_score(read_json(OUTPUT / 'cn_reliability_report.json'), e['cn'])"
+      },
+      {
+        "name": "方法说明",
+        "weight": 5.0,
+        "implementation": "lambda: len((OUTPUT / 'method.md').read_text()) >= 60"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "loadpoint_metrics.csv",
+      "path": "output/loadpoint_metrics.csv",
+      "format": "CSV",
+      "description": "逐变压器故障率、停电时长、用户数与负荷。"
+    },
+    {
+      "name": "reliability_indices.json",
+      "path": "output/reliability_indices.json",
+      "format": "JSON",
+      "description": "等权口径的系统可靠性指标。"
+    },
+    {
+      "name": "cn_reliability_report.json",
+      "path": "output/cn_reliability_report.json",
+      "format": "JSON",
+      "description": "用户加权口径指标及用户总数。"
+    },
+    {
+      "name": "method.md",
+      "path": "output/method.md",
+      "format": "MD",
+      "description": "路径累计、计划停电和指标口径说明。"
+    }
+  ],
+  "referenceFileCount": 4,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/transformers.csv",
+      "content": "transformer_id,node,customers,kw\nT001,1,289,567\nT002,2,116,585\nT003,3,134,559\nT004,4,160,453\nT005,5,111,223\nT006,6,71,266\nT007,7,178,337\nT008,8,92,582\nT009,9,129,214\nT010,10,202,543\nT011,11,288,456\nT012,12,91,245\nT013,13,53,176\nT014,14,284,305\nT015,15,68,508\nT016,16,84,102\nT017,17,162,184\nT018,18,283,286\nT019,19,20,579\nT020,20,186,85\nT021,21,192,412\nT022,22,156,114\nT023,23,211,504\nT024,24,256,321\nT025,25,23,505\nT026,26,168,232\nT027,27,78,364\nT028,28,122,425\nT029,29,102,454\nT030,30,246,275\nT031,31,64,538\nT032,32,224,291\nT033,33,31,341\nT034,34,193,366\nT035,35,55,171\nT036,36,254,248\nT037,37,133,595\nT038,38,23,219\nT039,39,294,134\nT040,40,160,396\nT041,41,70,580\nT042,42,70,165\nT043,43,243,543\nT044,44,237,598\nT045,45,277,583\nT046,46,144,584\nT047,47,176,229\nT048,48,63,501\nT049,49,199,274\nT050,50,96,162\nT051,51,268,394\nT052,52,82,234\nT053,53,135,319\nT054,54,105,179\nT055,55,203,332\nT056,56,99,493\nT057,57,156,593\nT058,58,277,144\nT059,59,199,145\nT060,60,255,521\nT061,61,138,583\nT062,62,235,367\nT063,63,233,150\nT064,64,132,93\nT065,65,72,580\nT066,66,283,273\nT067,67,204,306\nT068,68,187,361\nT069,69,52,143\nT070,70,298,334\nT071,71,230,270\nT072,72,270,309\nT073,73,38,465\nT074,74,104,212\nT075,75,104,94\nT076,76,282,414\nT077,77,244,506\nT078,78,145,560\nT079,79,154,218\nT080,80,201,598\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/cn_reliability_report.json",
+      "content": "{\n  \"SAIFI\": 0.3795151784334929,\n  \"SAIDI\": 2.432262963772594,\n  \"CAIDI\": 6.408868740934506,\n  \"ASAI\": 0.9997223444105282,\n  \"ENS_kWh\": 40496.649617999996,\n  \"total_customers\": 12946\n}\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/loadpoint_metrics.csv",
+      "content": "transformer_id,lambda_per_year,outage_hours,customers,kw\nT001,0.1124,0.62944,289,567.0\nT002,0.0274,0.143302,116,585.0\nT003,0.1797,0.646265,134,559.0\nT004,0.1686,0.850868,160,453.0\nT005,0.1112,0.336042,111,223.0\nT006,0.10370000000000001,0.16237700000000002,71,266.0\nT007,0.3023,1.074139,178,337.0\nT008,0.2643,0.9592849999999999,92,582.0\nT009,0.2151,0.862493,129,214.0\nT010,0.22970000000000002,1.2034150000000001,202,543.0\nT011,0.2009,0.5916870000000001,288,456.0\nT012,0.1818,0.353692,91,245.0\nT013,0.2009,0.641573,53,176.0\nT014,0.2235,0.7434069999999999,284,305.0\nT015,0.3937,1.096989,68,508.0\nT016,0.3372,1.175349,84,102.0\nT017,0.2931,1.1015570000000001,162,184.0\nT018,0.41340000000000005,0.99656,283,286.0\nT019,0.2491,0.967553,20,579.0\nT020,0.2629,1.085719,186,85.0\nT021,0.3185,1.225615,192,412.0\nT022,0.2655,1.414635,156,114.0\nT023,0.23629999999999998,0.7782450000000001,211,504.0\nT024,0.32099999999999995,0.621712,256,321.0\nT025,0.27969999999999995,0.672846,23,505.0\nT026,0.24500000000000002,0.49462800000000007,168,232.0\nT027,0.3368,0.6755479999999999,78,364.0\nT028,0.32009999999999994,1.1958529999999998,122,425.0\nT029,0.3383,1.094695,102,454.0\nT030,0.2635,0.7534069999999999,246,275.0\nT031,0.5287999999999999,1.610369,64,538.0\nT032,0.4745,1.287677,224,291.0\nT033,0.46259999999999996,1.206699,31,341.0\nT034,0.43729999999999997,1.685859,193,366.0\nT035,0.4068,1.7416880000000001,55,171.0\nT036,0.44249999999999995,1.1389070000000001,254,248.0\nT037,0.49269999999999997,1.3986109999999998,133,595.0\nT038,0.538,1.498698,23,219.0\nT039,0.35209999999999997,0.993303,294,134.0\nT040,0.2736,1.027823,160,396.0\nT041,0.33509999999999995,1.408453,70,580.0\nT042,0.362,1.110494,70,165.0\nT043,0.46779999999999994,1.887014,243,543.0\nT044,0.42560000000000003,1.508359,237,598.0\nT045,0.38389999999999996,1.444235,277,583.0\nT046,0.2908,1.5332919999999999,144,584.0\nT047,0.2787,0.9999970000000001,176,229.0\nT048,0.3339,0.802645,63,501.0\nT049,0.3858,0.8705440000000001,199,274.0\nT050,0.37239999999999995,0.7265680000000001,96,162.0\nT051,0.358,0.6924210000000001,268,394.0\nT052,0.32639999999999997,0.766713,82,234.0\nT053,0.3732,0.9215340000000002,135,319.0\nT054,0.2875,0.5052530000000001,105,179.0\nT055,0.3883,0.9690979999999999,203,332.0\nT056,0.3832,0.9098679999999999,99,493.0\nT057,0.39869999999999994,1.215503,156,593.0\nT058,0.4666,1.696883,277,144.0\nT059,0.4161,1.4953649999999998,199,145.0\nT060,0.4869,1.131845,255,521.0\nT061,0.38749999999999996,1.1365669999999999,138,583.0\nT062,0.37439999999999996,1.131576,235,367.0\nT063,0.5751999999999999,1.621969,233,150.0\nT064,0.6159999999999999,1.8405770000000001,132,93.0\nT065,0.5684,1.480172,72,580.0\nT066,0.5733999999999999,1.312402,283,273.0\nT067,0.5455000000000001,1.6211989999999998,204,306.0\nT068,0.5991,1.515189,187,361.0\nT069,0.5295000000000001,1.708909,52,143.0\nT070,0.5603,2.176629,298,334.0\nT071,0.4411,1.81509,230,270.0\nT072,0.435,1.7487380000000001,270,309.0\nT073,0.5728,1.630138,38,465.0\nT074,0.467,1.241562,104,212.0\nT075,0.5642,1.416486,104,94.0\nT076,0.5233000000000001,1.5513050000000002,282,414.0\nT077,0.6120000000000001,1.8124580000000001,244,506.0\nT078,0.6102000000000001,1.5167480000000002,145,560.0\nT079,0.4392,1.360865,154,218.0\nT080,0.4751,1.375833,201,598.0\n",
+      "truncated": false
+    }
+  ]
 }

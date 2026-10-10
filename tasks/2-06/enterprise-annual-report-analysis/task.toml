@@ -1,0 +1,28 @@
+schema_version = "1.4"
+artifacts = ["/app/output"]
+[task]
+name = "TaskCraft/enterprise-annual-report-analysis"
+version = "0.3.0"
+description = "批量整理企业年度报告中的财务指标与原文依据，回答跨公司、跨年度问题，并检查重复处理的一致性。"
+keywords = ["knowledge-work", "zh-CN", "deterministic"]
+[metadata]
+difficulty = "hard"
+category = "2-06"
+occupation = "2-06-03-00"
+[agent]
+timeout_sec = 3600.0
+[environment]
+build_timeout_sec = 2400.0
+network_mode = "public"
+cpus = 2
+memory_mb = 6144
+storage_mb = 16384
+[verifier]
+timeout_sec = 1200.0
+environment_mode = "separate"
+[verifier.environment]
+build_timeout_sec = 2400.0
+network_mode = "public"
+cpus = 2
+memory_mb = 6144
+storage_mb = 16384

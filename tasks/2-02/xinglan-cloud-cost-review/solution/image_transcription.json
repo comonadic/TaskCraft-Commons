@@ -1,0 +1,32 @@
+[
+  {
+    "resource_id": "EIP-img-901",
+    "resource_type": "EIP",
+    "name": "orphan-ip-image",
+    "billable_units": 720,
+    "utilization_pct": 0,
+    "inactive_days": 45,
+    "attached": false,
+    "retention_days": 0
+  },
+  {
+    "resource_id": "LOG-img-902",
+    "resource_type": "LOG",
+    "name": "debug-log-image",
+    "billable_units": 4000,
+    "utilization_pct": 0,
+    "inactive_days": 0,
+    "attached": true,
+    "retention_days": 180
+  },
+  {
+    "resource_id": "CVM-img-903",
+    "resource_type": "CVM",
+    "name": "idle-dev-image",
+    "billable_units": 720,
+    "utilization_pct": 1,
+    "inactive_days": 40,
+    "attached": true,
+    "retention_days": 0
+  }
+]

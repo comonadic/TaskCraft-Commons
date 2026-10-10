@@ -1,0 +1,3 @@
+# 迁移报告
+
+使用题内ARM64 K3s，保持三层应用与合成订单；chart参数化副本，Secret提供密码，PVC持久化。后端探针真实访问数据库；HPA使用metrics-server，NetworkPolicy限制DB来源。Terraform和Jenkins为面向企业Runner的交付配置，本地未部署Jenkins也未terraform apply；实际部署通过Helm完成。镜像离线固定以避免国内获取路径不稳定，非对现行云平台的仿真。

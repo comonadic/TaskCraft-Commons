@@ -1,0 +1,82 @@
+[
+  {
+    "subject": "云汐设备股权转让",
+    "field": "amount",
+    "values": [
+      "24000万元",
+      "2.6亿元"
+    ],
+    "evidence": [
+      {
+        "document": "A.pdf",
+        "page": 1,
+        "quote": "本次交易对价为人民币24000万元。"
+      },
+      {
+        "document": "B.pdf",
+        "page": 1,
+        "quote": "本次交易对价为人民币2.6亿元。"
+      }
+    ]
+  },
+  {
+    "subject": "云汐设备股权转让",
+    "field": "ownership",
+    "values": [
+      "30%",
+      "35%"
+    ],
+    "evidence": [
+      {
+        "document": "A.pdf",
+        "page": 1,
+        "quote": "受让方拟取得标的公司30%股权。"
+      },
+      {
+        "document": "C.pdf",
+        "page": 1,
+        "quote": "权益变动完成后青岚产业持股比例为35%。"
+      }
+    ]
+  },
+  {
+    "subject": "云汐设备股权转让",
+    "field": "share_count",
+    "values": [
+      "3000万股",
+      "3200万股"
+    ],
+    "evidence": [
+      {
+        "document": "A.pdf",
+        "page": 2,
+        "quote": "转让股数为3000万股，每股价格8元。"
+      },
+      {
+        "document": "D.pdf",
+        "page": 1,
+        "quote": "受让股数为3200万股。"
+      }
+    ]
+  },
+  {
+    "subject": "云汐设备股权转让",
+    "field": "approval_date",
+    "values": [
+      "2024年11月18日",
+      "2024年11月19日"
+    ],
+    "evidence": [
+      {
+        "document": "A.pdf",
+        "page": 2,
+        "quote": "董事会审议日期为2024年11月18日。"
+      },
+      {
+        "document": "D.pdf",
+        "page": 2,
+        "quote": "董事会审议日期为2024年11月19日。"
+      }
+    ]
+  }
+]

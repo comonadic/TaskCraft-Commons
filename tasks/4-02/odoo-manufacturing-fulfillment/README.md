@@ -2,26 +2,32 @@
 
 在 Odoo 中完成采购、制造、交付、收款与退款流程，处理分包、缺料与成本分摊，并整理业务记录。
 
-职业：供应链管理师（4-02-06-05）
+职业：供应链管理师 · `4-02-06-05`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是供应链业务人员，需要完成一组关联的订单与财务流程，使库存、制造和会计记录相互对应。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-Odoo 业务环境、产品与订单资料、业务操作要求及汇率信息。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**业务处理 · 95 分**
-
-直接读取 Odoo 业务记录：估值 5 分、成本分摊 10 分、制造 10 分、交付 8 分、收款 10 分、退款 7 分、库存 12 分、分包 9 分、直运 5 分、报废补购 5 分、供应商发票 7 分、报销 7 分。
-
-**记录与报告 · 5 分**
-
-中文操作报告超过 100 字，记录索引至少列出 10 项，取得本项分数。
-
-先检查业务环境与提交入口；金额检查容差为 0.01。
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

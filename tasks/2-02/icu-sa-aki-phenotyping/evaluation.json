@@ -1,0 +1,57 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "患者名单",
+      "weight": 65,
+      "rule": "与参考患者集合计算 F1，按 65 × F1 计分；患者 ID 唯一且列名为 subject_id。"
+    },
+    {
+      "name": "时间线与判定",
+      "weight": 35,
+      "rule": "按住院 ID 比对起始时间、资格和理由，按记录与字段正确比例计分。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "按感染、SOFA、肌酐和尿量规则确定符合条件的患者。",
+    "对 patient_ids.txt 与目标患者集合计算 F1。",
+    "按 stay_id 核对 720 次住院的事件起始、边界与定位证据。"
+  ],
+  "metrics": [
+    "患者集合 F1 占 65%，住院级审计占 35%。",
+    "F1 = 2 × 两集合交集大小 /（提交集合大小 + 目标集合大小）。"
+  ],
+  "gates": [],
+  "checks": [
+    {
+      "name": "患者精确集合F1",
+      "weight": 65.0,
+      "implementation": "ids"
+    },
+    {
+      "name": "720次住院起始与边界证据",
+      "weight": 35.0,
+      "implementation": "lambda: record_score(read_csv(OUTPUT / 'phenotype_audit.csv'), e['audit'], ['stay_id'])"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

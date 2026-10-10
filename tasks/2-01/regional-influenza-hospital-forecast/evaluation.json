@@ -1,0 +1,58 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "预测表现",
+      "weight": 90,
+      "rule": "分别计算相对朴素基线的 WIS 与 MAE 改进率，两者按 70% 和 30% 加权；改进率除以 35% 并截在 0～1 后计分。"
+    },
+    {
+      "name": "结果复现",
+      "weight": 10,
+      "rule": "重新执行预测程序，将生成结果与提交表逐记录比较；方法说明至少 30 个字符。"
+    }
+  ],
+  "notes": "预测表覆盖全部 212 个目标，区间与点预测满足 0 ≤ 下界 ≤ 点预测 ≤ 上界。",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "读取完整地点、周次与分位数预测，检查概率顺序和结果结构。",
+    "用评分期真实值重算 WIS 与 MAE，并与 naive 基线比较。",
+    "在新工作目录复跑提交代码，比较重新生成的预测。"
+  ],
+  "metrics": [
+    "技能得分 = 0.7 × clip((1−WIS/基线WIS)/0.35,0,1) + 0.3 × clip((1−MAE/基线MAE)/0.35,0,1)。",
+    "预测技能占 90%，代码复跑一致性占 10%。",
+    "每份预测须恰好包含 212 个唯一地点与周次组合；区间须满足 0 ≤ lower95 ≤ point ≤ upper95。"
+  ],
+  "gates": [],
+  "checks": [
+    {
+      "name": "相对naive预测技能",
+      "weight": 90.0,
+      "implementation": "skill"
+    },
+    {
+      "name": "预测代码隔离复跑",
+      "weight": 10.0,
+      "implementation": "rerun"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

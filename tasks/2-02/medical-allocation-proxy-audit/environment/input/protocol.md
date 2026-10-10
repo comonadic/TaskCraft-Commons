@@ -1,0 +1,1 @@
+合成生成机制：同等需要下B组历史费用较低，故费用代理可漏选需要。需要指数need=2*chronic_count+3*acute_events+functional_limitations。总名额1200（20%）。baseline按baseline_score降序，revised按需要指数降序，分数相同按patient_id升序。baseline_score逐行原样保留；revised_score可以任何与需要排序一致的数值。报告selected_count、两组在入选者中占比、mean_need、total_need_captured。禁止因希望均衡而任意篡改need或配额；群体均衡不是独立满分条件。

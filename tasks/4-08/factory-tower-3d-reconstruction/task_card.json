@@ -3,14 +3,14 @@
   "title": "厂房与塔楼图纸三维重建",
   "brief": "根据建筑平面、立面和剖面图重建厂房与塔楼，整理构件名称与尺寸，并交付可继续编辑的三维模型。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "4-08",
   "occupation": {
     "code": "4-08-08-23",
     "name": "建筑信息模型技术员"
   },
   "scene": "你是建筑信息模型技术员，需要依据六张建筑图纸搭建包含大厅与塔楼的三维模型，供设计团队查看和后续使用。",
-  "taskPrompt": "你是建筑信息模型技术员，需要依据六张建筑图纸搭建包含大厅与塔楼的三维模型，供设计团队查看和后续使用。\n\n1. 阅读总平面、楼层、立面与剖面图，确认轴网和构件尺寸\n2. 在统一毫米坐标系中建立柱、梁、楼板、墙体、玻璃与塔楼构件\n3. 按图纸标签命名构件，导出 Rhino 原生模型和 OBJ 模型\n\n交付成果：\n- model.3dm：Rhino 原生模型，采用毫米单位并保留命名构件。\n- model.obj：与原生模型对应的实体模型，供跨工具查看。",
+  "taskPrompt": "# 厂房与塔楼图纸三维重建\n\n你是建筑信息模型技术员，需要依据六张建筑图纸搭建包含大厅与塔楼的三维模型，供设计团队查看和后续使用。\n\n1. 阅读总平面、楼层、立面与剖面图，确认轴网和构件尺寸\n2. 在统一毫米坐标系中建立柱、梁、楼板、墙体、玻璃与塔楼构件\n3. 按图纸标签命名构件，导出 Rhino 原生模型和 OBJ 模型\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/model.3dm`：Rhino 原生模型，采用毫米单位并保留命名构件。\n- `/app/output/model.obj`：与原生模型对应的实体模型，供跨工具查看。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`model.3dm`（Rhino v8、Millimeters）、`model.obj`（ASCII、>=1000顶点），每个构件对象名称与图纸规则一致。\n",
   "agentMustDo": [
     "阅读总平面、楼层、立面与剖面图，确认轴网和构件尺寸",
     "在统一毫米坐标系中建立柱、梁、楼板、墙体、玻璃与塔楼构件",
@@ -24,49 +24,49 @@
   "inputFiles": [
     {
       "name": "01总平面.pdf",
-      "path": "input/01总平面.pdf",
+      "path": "environment/input/01总平面.pdf",
       "format": "PDF",
       "bytes": 15739,
       "description": "01总平面.pdf，用于厂房与塔楼图纸三维重建。"
     },
     {
       "name": "02首层平面.pdf",
-      "path": "input/02首层平面.pdf",
+      "path": "environment/input/02首层平面.pdf",
       "format": "PDF",
       "bytes": 15853,
       "description": "02首层平面.pdf，用于厂房与塔楼图纸三维重建。"
     },
     {
       "name": "03屋面平面.pdf",
-      "path": "input/03屋面平面.pdf",
+      "path": "environment/input/03屋面平面.pdf",
       "format": "PDF",
       "bytes": 15738,
       "description": "03屋面平面.pdf，用于厂房与塔楼图纸三维重建。"
     },
     {
       "name": "04南立面.pdf",
-      "path": "input/04南立面.pdf",
+      "path": "environment/input/04南立面.pdf",
       "format": "PDF",
       "bytes": 15655,
       "description": "04南立面.pdf，用于厂房与塔楼图纸三维重建。"
     },
     {
       "name": "05东立面.pdf",
-      "path": "input/05东立面.pdf",
+      "path": "environment/input/05东立面.pdf",
       "format": "PDF",
       "bytes": 15551,
       "description": "05东立面.pdf，用于厂房与塔楼图纸三维重建。"
     },
     {
       "name": "06剖面.pdf",
-      "path": "input/06剖面.pdf",
+      "path": "environment/input/06剖面.pdf",
       "format": "PDF",
       "bytes": 15565,
       "description": "06剖面.pdf，用于厂房与塔楼图纸三维重建。"
     },
     {
       "name": "建筑构件与尺寸说明",
-      "path": "input/drawing_schedule.md",
+      "path": "environment/input/drawing_schedule.md",
       "format": "MD",
       "bytes": 998,
       "description": "建筑构件与尺寸说明，用于厂房与塔楼图纸三维重建。"
@@ -77,19 +77,21 @@
   "referenceFiles": [
     {
       "name": "model.3dm",
-      "path": "output/model.3dm",
+      "path": "reference/model.3dm",
       "format": "3DM",
+      "bytes": 284274,
       "description": "Rhino 原生模型，采用毫米单位并保留命名构件。"
     },
     {
       "name": "model.obj",
-      "path": "output/model.obj",
+      "path": "reference/model.obj",
       "format": "OBJ",
+      "bytes": 80672,
       "description": "与原生模型对应的实体模型，供跨工具查看。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "原生模型",
@@ -106,6 +108,79 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "打开 3DM 与 OBJ 文件，读取单位、构件名称和实体网格。",
+      "按图纸构件索引匹配实体，计算包围盒位置与尺寸差。",
+      "分别统计正确构件比例，原生模型和 OBJ 各占 50%。"
+    ],
+    "metrics": [
+      "几何比较允许 1 mm 绝对误差；构件完整性按预期名称逐项计算。",
+      "OBJ 须含至少 1,000 个顶点，构件须组成闭合实体。"
+    ],
+    "gates": [],
+    "checks": [
+      {
+        "name": "原生模型毫米坐标与全部实体",
+        "weight": 50.0,
+        "implementation": "native"
+      },
+      {
+        "name": "OBJ实体与几何一致",
+        "weight": 50.0,
+        "implementation": "obj"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "model.3dm",
+      "path": "output/model.3dm",
+      "format": "3DM",
+      "description": "Rhino 原生模型，采用毫米单位并保留命名构件。"
+    },
+    {
+      "name": "model.obj",
+      "path": "output/model.obj",
+      "format": "OBJ",
+      "description": "与原生模型对应的实体模型，供跨工具查看。"
+    }
+  ],
+  "referenceFileCount": 2,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 7200.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": []
 }

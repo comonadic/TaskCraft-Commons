@@ -1,0 +1,7 @@
+{
+  "coverage_f1": 0.3,
+  "actions": 0.3,
+  "money": 0.25,
+  "completeness": 0.15,
+  "oracle_image_handling": "参考解使用作者逐字转录，转录仅在solution目录，agent须读图"
+}

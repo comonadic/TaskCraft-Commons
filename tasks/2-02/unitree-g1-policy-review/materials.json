@@ -1,316 +1,61 @@
 [
   {
-    "path": "input/THIRD_PARTY.md",
+    "path": "environment/input/THIRD_PARTY.md",
     "bytes": 372,
     "sha256": "de12d25177e246a6b6755508a90095a87742b0f5c1a31982be4f388afcc4980e"
   },
   {
-    "path": "input/cases.json",
+    "path": "environment/input/cases.json",
     "bytes": 1094,
     "sha256": "25c3db368182694264199102ca2ed487db71402798f02f449f54c2464ae6e857"
   },
   {
-    "path": "input/g1/CHANGELOG.md",
+    "path": "environment/input/g1/CHANGELOG.md",
     "bytes": 951,
     "sha256": "d565c3f15f4ea776fea95d9da6dee29ee7c2d450b48d5adf585a27390ac3ff2c"
   },
   {
-    "path": "input/g1/LICENSE",
+    "path": "environment/input/g1/LICENSE",
     "bytes": 1537,
     "sha256": "98335465f43a20b5850e4651db6e74c4aa1e9fc8e8813d38f345178045c0da50"
   },
   {
-    "path": "input/g1/README.md",
+    "path": "environment/input/g1/README.md",
     "bytes": 2202,
     "sha256": "e0ca5e85f68ff9554631c3ea6ac624b469d6018a37e273daa1234e43e3ad4395"
   },
   {
-    "path": "input/g1/assets/head_link.STL",
-    "bytes": 932784,
-    "sha256": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411"
-  },
-  {
-    "path": "input/g1/assets/left_ankle_pitch_link.STL",
-    "bytes": 71184,
-    "sha256": "d49e3abc6f5b12e532062cd575b87b5ef40cd2a3fc18f54a1ca5bba4f773d51d"
-  },
-  {
-    "path": "input/g1/assets/left_ankle_roll_link.STL",
-    "bytes": 653384,
-    "sha256": "c4092af943141d4d9f74232f3cfa345afc6565f46a077793b8ae0e68b39dc33f"
-  },
-  {
-    "path": "input/g1/assets/left_elbow_link.STL",
-    "bytes": 88784,
-    "sha256": "fa752198accd104d5c4c3a01382e45165b944fbbc5acce085059223324e5bed3"
-  },
-  {
-    "path": "input/g1/assets/left_hand_index_0_link.STL",
-    "bytes": 475984,
-    "sha256": "6b35f2f77211d5a366f0b9a4e47c4ee35e536731266f1a34e9efa12db579b892"
-  },
-  {
-    "path": "input/g1/assets/left_hand_index_1_link.STL",
-    "bytes": 1521784,
-    "sha256": "9e315ebc8a7a0cb98e033985b586b20d81cf8aa761181ae61ce56fcb14077a06"
-  },
-  {
-    "path": "input/g1/assets/left_hand_middle_0_link.STL",
-    "bytes": 475984,
-    "sha256": "6b35f2f77211d5a366f0b9a4e47c4ee35e536731266f1a34e9efa12db579b892"
-  },
-  {
-    "path": "input/g1/assets/left_hand_middle_1_link.STL",
-    "bytes": 1521784,
-    "sha256": "9e315ebc8a7a0cb98e033985b586b20d81cf8aa761181ae61ce56fcb14077a06"
-  },
-  {
-    "path": "input/g1/assets/left_hand_palm_link.STL",
-    "bytes": 2140184,
-    "sha256": "23a486b75bd78a9bf03cec25d84d87f97f3dae038cf21a743b6d469b337e4004"
-  },
-  {
-    "path": "input/g1/assets/left_hand_thumb_0_link.STL",
-    "bytes": 8884,
-    "sha256": "a90c721661c0622685488a3c74d1e122c7da89242d3a1daef75edb83422d05e0"
-  },
-  {
-    "path": "input/g1/assets/left_hand_thumb_1_link.STL",
-    "bytes": 475984,
-    "sha256": "445c54a45bc13ce36001556f66bc0f49c83cb40321205ae4d676bb2874325684"
-  },
-  {
-    "path": "input/g1/assets/left_hand_thumb_2_link.STL",
-    "bytes": 1521784,
-    "sha256": "3d8dbe5085acfc213d21aa8b0782e89cd79084e9678f3a85fc7b04a86b029db5"
-  },
-  {
-    "path": "input/g1/assets/left_hip_pitch_link.STL",
-    "bytes": 181684,
-    "sha256": "4725168105ee768ee31638ef22b53f6be2d7641bfd7cfefe803488d884776fa4"
-  },
-  {
-    "path": "input/g1/assets/left_hip_roll_link.STL",
-    "bytes": 192184,
-    "sha256": "91f25922ee8a7c3152790051bebad17b4d9cd243569c38fe340285ff93a97acf"
-  },
-  {
-    "path": "input/g1/assets/left_hip_yaw_link.STL",
-    "bytes": 296284,
-    "sha256": "a16d88aa6ddac8083aa7ad55ed317bea44b1fa003d314fba88965b7ed0f3b55b"
-  },
-  {
-    "path": "input/g1/assets/left_knee_link.STL",
-    "bytes": 854884,
-    "sha256": "8d92b9e3d3a636761150bb8025e32514c4602b91c7028d523ee42b3e632de477"
-  },
-  {
-    "path": "input/g1/assets/left_rubber_hand.STL",
-    "bytes": 2287484,
-    "sha256": "cff2221a690fa69303f61fce68f2d155c1517b52efb6ca9262dd56e0bc6e70fe"
-  },
-  {
-    "path": "input/g1/assets/left_shoulder_pitch_link.STL",
-    "bytes": 176784,
-    "sha256": "f0d1cfd02fcf0d42f95e678eeca33da3afbcc366ffba5c052847773ec4f31d52"
-  },
-  {
-    "path": "input/g1/assets/left_shoulder_roll_link.STL",
-    "bytes": 400284,
-    "sha256": "fb9df21687773522598dc384f1a2945c7519f11cbc8bd372a49170316d6eee88"
-  },
-  {
-    "path": "input/g1/assets/left_shoulder_yaw_link.STL",
-    "bytes": 249184,
-    "sha256": "1aa97e9748e924336567992181f78c7cd0652fd52a4afcca3df6b2ef6f9e712e"
-  },
-  {
-    "path": "input/g1/assets/left_wrist_pitch_link.STL",
-    "bytes": 85984,
-    "sha256": "b251d8e05047f695d0f536cd78c11973cfa4e78d08cfe82759336cc3471de3a9"
-  },
-  {
-    "path": "input/g1/assets/left_wrist_roll_link.STL",
-    "bytes": 356184,
-    "sha256": "edc387c9a0ba8c2237e9b296d32531426fabeb6f53e58df45c76106bca74148c"
-  },
-  {
-    "path": "input/g1/assets/left_wrist_yaw_link.STL",
-    "bytes": 318684,
-    "sha256": "83f8fb3a726bf9613d65dd14f0f447cb918c3c95b3938042a0c9c09749267d3b"
-  },
-  {
-    "path": "input/g1/assets/logo_link.STL",
-    "bytes": 243384,
-    "sha256": "8571a0a19bc4916fa55f91449f51d5fdefd751000054865a842449429d5f155b"
-  },
-  {
-    "path": "input/g1/assets/pelvis.STL",
-    "bytes": 1060884,
-    "sha256": "5ba6bbc888e630550140d3c26763f10206da8c8bd30ed886b8ede41c61f57a31"
-  },
-  {
-    "path": "input/g1/assets/pelvis_contour_link.STL",
-    "bytes": 1805184,
-    "sha256": "5cc5c2c7a312329e3feeb2b03d3fc09fc29705bd01864f6767e51be959662420"
-  },
-  {
-    "path": "input/g1/assets/right_ankle_pitch_link.STL",
-    "bytes": 71184,
-    "sha256": "15be426539ec1be70246d4d82a168806db64a41301af8b35c197a33348c787a9"
-  },
-  {
-    "path": "input/g1/assets/right_ankle_roll_link.STL",
-    "bytes": 653784,
-    "sha256": "4b66222ea56653e627711b56d0a8949b4920da5df091da0ceb343f54e884e3a5"
-  },
-  {
-    "path": "input/g1/assets/right_elbow_link.STL",
-    "bytes": 88784,
-    "sha256": "1be925d7aa268bb8fddf5362b9173066890c7d32092c05638608126e59d1e2ab"
-  },
-  {
-    "path": "input/g1/assets/right_hand_index_0_link.STL",
-    "bytes": 475984,
-    "sha256": "12ab4300c95e437e834f9aef772b3b431c671bf34338930b52ad11aef73bbd0d"
-  },
-  {
-    "path": "input/g1/assets/right_hand_index_1_link.STL",
-    "bytes": 1521784,
-    "sha256": "c9c34efce4563cacdcfd29fc838a982976d40f5442c71219811dcbbf3923a33d"
-  },
-  {
-    "path": "input/g1/assets/right_hand_middle_0_link.STL",
-    "bytes": 475984,
-    "sha256": "12ab4300c95e437e834f9aef772b3b431c671bf34338930b52ad11aef73bbd0d"
-  },
-  {
-    "path": "input/g1/assets/right_hand_middle_1_link.STL",
-    "bytes": 1521784,
-    "sha256": "c9c34efce4563cacdcfd29fc838a982976d40f5442c71219811dcbbf3923a33d"
-  },
-  {
-    "path": "input/g1/assets/right_hand_palm_link.STL",
-    "bytes": 2140184,
-    "sha256": "86c0b231cc44477d64a6493e5a427ba16617a00738112dd187c652675b086fb9"
-  },
-  {
-    "path": "input/g1/assets/right_hand_thumb_0_link.STL",
-    "bytes": 8884,
-    "sha256": "544298d0ea1088f5b276a10cc6a6a9e533efdd91594955fdc956c46211d07f83"
-  },
-  {
-    "path": "input/g1/assets/right_hand_thumb_1_link.STL",
-    "bytes": 475984,
-    "sha256": "0a9a820da8dd10f298778b714f1364216e8a5976f4fd3a05689ea26327d44bf6"
-  },
-  {
-    "path": "input/g1/assets/right_hand_thumb_2_link.STL",
-    "bytes": 1521784,
-    "sha256": "3f1bfb37668e8f61801c8d25f171fa1949e08666be86c67acad7e0079937cc45"
-  },
-  {
-    "path": "input/g1/assets/right_hip_pitch_link.STL",
-    "bytes": 181284,
-    "sha256": "e4f3c99d7f4a7d34eadbef9461fc66e3486cb5442db1ec50c86317d459f1a9c6"
-  },
-  {
-    "path": "input/g1/assets/right_hip_roll_link.STL",
-    "bytes": 192684,
-    "sha256": "4c254ef66a356f492947f360dd931965477b631e3fcc841f91ccc46d945d54f6"
-  },
-  {
-    "path": "input/g1/assets/right_hip_yaw_link.STL",
-    "bytes": 296284,
-    "sha256": "e479c2936ca2057e9eb2f7dff6c189b7419d7b8484dea0b298cbb36a2a6aa668"
-  },
-  {
-    "path": "input/g1/assets/right_knee_link.STL",
-    "bytes": 852284,
-    "sha256": "63c4008449c9bbe701a6e2b557b7a252e90cf3a5abcf54cee46862b9a69f8ec8"
-  },
-  {
-    "path": "input/g1/assets/right_rubber_hand.STL",
-    "bytes": 2192684,
-    "sha256": "99533b778bca6246144fa511bb9d4e555e075c641f2a0251e04372869cd99d67"
-  },
-  {
-    "path": "input/g1/assets/right_shoulder_pitch_link.STL",
-    "bytes": 176784,
-    "sha256": "24cdb387e0128dfe602770a81c56cdce3a0181d34d039a11d1aaf8819b7b8c02"
-  },
-  {
-    "path": "input/g1/assets/right_shoulder_roll_link.STL",
-    "bytes": 401884,
-    "sha256": "962b97c48f9ce9e8399f45dd9522e0865d19aa9fd299406b2d475a8fc4a53e81"
-  },
-  {
-    "path": "input/g1/assets/right_shoulder_yaw_link.STL",
-    "bytes": 249984,
-    "sha256": "a0b76489271da0c72461a344c9ffb0f0c6e64f019ea5014c1624886c442a2fe5"
-  },
-  {
-    "path": "input/g1/assets/right_wrist_pitch_link.STL",
-    "bytes": 79584,
-    "sha256": "d22f8f3b3127f15a63e5be1ee273cd5075786c3142f1c3d9f76cbf43d2a26477"
-  },
-  {
-    "path": "input/g1/assets/right_wrist_roll_link.STL",
-    "bytes": 356084,
-    "sha256": "a7ee9212ff5b94d6cb7f52bb1bbf3f352194d5b598acff74f4c77d340c5b344f"
-  },
-  {
-    "path": "input/g1/assets/right_wrist_yaw_link.STL",
-    "bytes": 341484,
-    "sha256": "bc9dece2d12509707e0057ba2e48df8f3d56db0c79410212963a25e8a50f61a6"
-  },
-  {
-    "path": "input/g1/assets/torso_link_rev_1_0.STL",
-    "bytes": 2570584,
-    "sha256": "11ddb46f2098efbbd8816b1d65893632d8e78be936376c7cdcd6771899ccc723"
-  },
-  {
-    "path": "input/g1/assets/waist_roll_link_rev_1_0.STL",
-    "bytes": 85884,
-    "sha256": "b67c347a05abc3e8ddae600d98a082bee273bb39f8e651647708b0a7140a8a97"
-  },
-  {
-    "path": "input/g1/assets/waist_yaw_link_rev_1_0.STL",
-    "bytes": 619984,
-    "sha256": "ec6db442b11f25eed898b5add07940c85d804f300de24dcbd264ccd8be7d554c"
-  },
-  {
-    "path": "input/g1/g1.xml",
+    "path": "environment/input/g1/g1.xml",
     "bytes": 23446,
     "sha256": "3c2616550a31f33e84d3c80b8e913ac5618c8888019b0c9490dae93493e647f3"
   },
   {
-    "path": "input/g1/g1_mjx.xml",
+    "path": "environment/input/g1/g1_mjx.xml",
     "bytes": 27445,
     "sha256": "7bf99a486bc3d4f24629dd5ccae30b7c9c3ad595d84e685fbd1e4920d457a61f"
   },
   {
-    "path": "input/g1/g1_with_hands.xml",
+    "path": "environment/input/g1/g1_with_hands.xml",
     "bytes": 35285,
     "sha256": "2d41a3c6783fbf9e17349608d9c2222d970163b1db315ce9f30c4a97631fc078"
   },
   {
-    "path": "input/g1/scene.xml",
+    "path": "environment/input/g1/scene.xml",
     "bytes": 774,
     "sha256": "e3f3a82afba68e1fbf6546d0d8ec1c9896d7c5117d7f9e2171f2dccd5740f80b"
   },
   {
-    "path": "input/g1/scene_mjx.xml",
+    "path": "environment/input/g1/scene_mjx.xml",
     "bytes": 7423,
     "sha256": "112b12e4d2cb3330e5062ff7b331b946c3c37121f35de0bace507d274ef06bda"
   },
   {
-    "path": "input/g1/scene_with_hands.xml",
+    "path": "environment/input/g1/scene_with_hands.xml",
     "bytes": 795,
     "sha256": "69a995bc8f8ba05de416de0944635e386f0581a82ce8cf2bbe3f50d4bd64e812"
   },
   {
-    "path": "input/run_instructions.md",
+    "path": "environment/input/run_instructions.md",
     "bytes": 618,
     "sha256": "00b5bb51378a624914ae268c7c9b09ff4d0fa574065089b6082ccdf8330e1bd4"
   }

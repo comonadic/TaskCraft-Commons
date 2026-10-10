@@ -1,0 +1,6 @@
+NAME                        READY   STATUS    RESTARTS   AGE   IP           NODE           NOMINATED NODE   READINESS GATES
+backend-676d8d674-tmdbs     1/1     Running   0          33s   10.42.0.9    e3b10423a0ff   <none>           <none>
+backend-676d8d674-xss8z     1/1     Running   0          33s   10.42.0.7    e3b10423a0ff   <none>           <none>
+db-0                        1/1     Running   0          33s   10.42.0.14   e3b10423a0ff   <none>           <none>
+frontend-5b485b9474-4nh9q   1/1     Running   0          33s   10.42.0.10   e3b10423a0ff   <none>           <none>
+frontend-5b485b9474-52455   1/1     Running   0          33s   10.42.0.8    e3b10423a0ff   <none>           <none>

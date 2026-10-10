@@ -1,0 +1,13 @@
+data_type,severity,policy_clause
+id_number,CRITICAL,P1
+bank_account,HIGH,P2
+precise_location,HIGH,P2
+health,HIGH,P2
+biometric,CRITICAL,P1
+contact,ALLOWED,P3
+payment,ALLOWED,P3
+profile,ALLOWED,P3
+usage,ALLOWED,P3
+device,ALLOWED,P3
+public,ALLOWED,P3
+credential,CRITICAL,P1

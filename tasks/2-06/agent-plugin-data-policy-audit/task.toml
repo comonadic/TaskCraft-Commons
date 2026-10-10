@@ -1,0 +1,28 @@
+schema_version = "1.4"
+artifacts = ["/app/output"]
+[task]
+name = "TaskCraft/agent-plugin-data-policy-audit"
+version = "0.3.0"
+description = "依据平台数据政策检查插件字段，汇总违规与严重程度，并分析不同业务域的数据暴露范围。"
+keywords = ["knowledge-work", "zh-CN", "deterministic"]
+[metadata]
+difficulty = "hard"
+category = "2-06"
+occupation = "2-06-07-14"
+[agent]
+timeout_sec = 3600.0
+[environment]
+build_timeout_sec = 2400.0
+network_mode = "public"
+cpus = 2
+memory_mb = 6144
+storage_mb = 16384
+[verifier]
+timeout_sec = 1200.0
+environment_mode = "separate"
+[verifier.environment]
+build_timeout_sec = 2400.0
+network_mode = "public"
+cpus = 2
+memory_mb = 6144
+storage_mb = 16384

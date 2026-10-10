@@ -2,26 +2,32 @@
 
 对 12 导联心电波形进行五类诊断标签建模，交付完整预测表，并说明模型的训练与验证过程。
 
-职业：医学研究人员（2-01-08-00）
+职业：医学研究人员 · `2-01-08-00`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你负责心电信号研究，需要建立覆盖正常、心肌梗死、ST-T 改变、传导异常和肥厚类别的多标签模型。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-800 条训练记录、1,386 条测试波形及 NORM、MI、STTC、CD、HYP 五类定义。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**分类效果 · 98 分**
-
-按测试 ID 对齐预测与参考标签，计算宏平均 F1；本项得分为 98 × min(1, F1 ÷ 0.75)。
-
-**方法说明 · 2 分**
-
-读取方法报告，正文超过 60 个字符取得本项分数。
-
-预测文件需完整覆盖测试 ID，每个 ID 唯一，标签列取值为 0 或 1。
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

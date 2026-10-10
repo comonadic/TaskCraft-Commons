@@ -3,14 +3,14 @@
   "title": "云衡软件私募投资初筛备忘录",
   "brief": "阅读云衡软件的公司、财务与客户资料，形成投资初筛建议，列出投资论点、风险和后续尽调问题。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-06",
   "occupation": {
     "code": "2-06-11-03",
     "name": "证券投资专业人员"
   },
   "scene": "你是投资研究人员，需要向团队提交一份结构完整、结论明确并能追溯资料的初筛备忘录。",
-  "taskPrompt": "你是投资研究人员，需要向团队提交一份结构完整、结论明确并能追溯资料的初筛备忘录。\n\n1. 整理八份公司资料，计算八项关键财务指标\n2. 形成三条投资论点、四类风险与四项尽调问题\n3. 写出 Go、No-Go 或 Hold 建议，逐项引用资料\n\n交付成果：\n- screening_memo.md：投资建议、公司产品、论点、财务、估值、风险、尽调和证据附录八章。\n- analysis.json：财务指标、论点、风险、尽调问题、建议与理由。",
+  "taskPrompt": "# 云衡软件私募投资初筛备忘录\n\n你是投资研究人员，需要向团队提交一份结构完整、结论明确并能追溯资料的初筛备忘录。\n\n1. 整理八份公司资料，计算八项关键财务指标\n2. 形成三条投资论点、四类风险与四项尽调问题\n3. 写出 Go、No-Go 或 Hold 建议，逐项引用资料\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/screening_memo.md`：投资建议、公司产品、论点、财务、估值、风险、尽调和证据附录八章。\n- `/app/output/analysis.json`：财务指标、论点、风险、尽调问题、建议与理由。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n## 运行与提交\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`screening_memo.md`（八个模板章节）；`analysis.json`，包含metrics（8指标）、thesis（3条，每条evidence引用）、risks（4条）、diligence（4项）、recommendation枚举及reason。\n",
   "agentMustDo": [
     "整理八份公司资料，计算八项关键财务指标",
     "形成三条投资论点、四类风险与四项尽调问题",
@@ -24,119 +24,119 @@
   "inputFiles": [
     {
       "name": "公司资料 D01 · HTML",
-      "path": "input/D01.html",
+      "path": "environment/input/D01.html",
       "format": "HTML",
       "bytes": 842,
       "description": "公司资料 D01 · HTML，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "公司资料 D01 · PDF",
-      "path": "input/D01.pdf",
+      "path": "environment/input/D01.pdf",
       "format": "PDF",
       "bytes": 25125,
       "description": "公司资料 D01 · PDF，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "公司资料 D02 · HTML",
-      "path": "input/D02.html",
+      "path": "environment/input/D02.html",
       "format": "HTML",
       "bytes": 915,
       "description": "公司资料 D02 · HTML，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "公司资料 D02 · PDF",
-      "path": "input/D02.pdf",
+      "path": "environment/input/D02.pdf",
       "format": "PDF",
       "bytes": 22428,
       "description": "公司资料 D02 · PDF，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "公司资料 D03 · HTML",
-      "path": "input/D03.html",
+      "path": "environment/input/D03.html",
       "format": "HTML",
       "bytes": 865,
       "description": "公司资料 D03 · HTML，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "公司资料 D03 · PDF",
-      "path": "input/D03.pdf",
+      "path": "environment/input/D03.pdf",
       "format": "PDF",
       "bytes": 24422,
       "description": "公司资料 D03 · PDF，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "公司资料 D04 · HTML",
-      "path": "input/D04.html",
+      "path": "environment/input/D04.html",
       "format": "HTML",
       "bytes": 653,
       "description": "公司资料 D04 · HTML，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "公司资料 D04 · PDF",
-      "path": "input/D04.pdf",
+      "path": "environment/input/D04.pdf",
       "format": "PDF",
       "bytes": 19863,
       "description": "公司资料 D04 · PDF，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "公司资料 D05 · HTML",
-      "path": "input/D05.html",
+      "path": "environment/input/D05.html",
       "format": "HTML",
       "bytes": 812,
       "description": "公司资料 D05 · HTML，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "公司资料 D05 · PDF",
-      "path": "input/D05.pdf",
+      "path": "environment/input/D05.pdf",
       "format": "PDF",
       "bytes": 25918,
       "description": "公司资料 D05 · PDF，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "公司资料 D06 · HTML",
-      "path": "input/D06.html",
+      "path": "environment/input/D06.html",
       "format": "HTML",
       "bytes": 776,
       "description": "公司资料 D06 · HTML，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "公司资料 D06 · PDF",
-      "path": "input/D06.pdf",
+      "path": "environment/input/D06.pdf",
       "format": "PDF",
       "bytes": 24425,
       "description": "公司资料 D06 · PDF，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "公司资料 D07 · HTML",
-      "path": "input/D07.html",
+      "path": "environment/input/D07.html",
       "format": "HTML",
       "bytes": 798,
       "description": "公司资料 D07 · HTML，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "公司资料 D07 · PDF",
-      "path": "input/D07.pdf",
+      "path": "environment/input/D07.pdf",
       "format": "PDF",
       "bytes": 25687,
       "description": "公司资料 D07 · PDF，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "公司资料 D08 · HTML",
-      "path": "input/D08.html",
+      "path": "environment/input/D08.html",
       "format": "HTML",
       "bytes": 900,
       "description": "公司资料 D08 · HTML，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "公司资料 D08 · PDF",
-      "path": "input/D08.pdf",
+      "path": "environment/input/D08.pdf",
       "format": "PDF",
       "bytes": 27852,
       "description": "公司资料 D08 · PDF，用于云衡软件私募投资初筛备忘录。"
     },
     {
       "name": "备忘录模板",
-      "path": "input/memo_template.md",
+      "path": "environment/input/memo_template.md",
       "format": "MD",
       "bytes": 557,
       "description": "备忘录模板，用于云衡软件私募投资初筛备忘录。"
@@ -146,20 +146,22 @@
   "inputManifest": "materials.json",
   "referenceFiles": [
     {
-      "name": "screening_memo.md",
-      "path": "output/screening_memo.md",
-      "format": "MD",
-      "description": "投资建议、公司产品、论点、财务、估值、风险、尽调和证据附录八章。"
+      "name": "analysis.json",
+      "path": "reference/analysis.json",
+      "format": "JSON",
+      "bytes": 3946,
+      "description": "财务指标、论点、风险、尽调问题、建议与理由。"
     },
     {
-      "name": "analysis.json",
-      "path": "output/analysis.json",
-      "format": "JSON",
-      "description": "财务指标、论点、风险、尽调问题、建议与理由。"
+      "name": "screening_memo.md",
+      "path": "reference/screening_memo.md",
+      "format": "MD",
+      "bytes": 2632,
+      "description": "投资建议、公司产品、论点、财务、估值、风险、尽调和证据附录八章。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "财务指标",
@@ -191,6 +193,105 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "从 analysis.json 核对八项财务指标和论点证据。",
+      "计算四类风险与四项待尽调事项的覆盖 F1。",
+      "核对中文投资备忘录、明确建议与分析结构。"
+    ],
+    "metrics": [
+      "财务计算 45%、论点证据 15%、风险 10%、待尽调 10%、备忘录 20%。",
+      "自动评分覆盖数值与文件结构；投资判断的专业质量可在审题时由领域贡献者补充评议。"
+    ],
+    "gates": [],
+    "checks": [
+      {
+        "name": "八项财务计算",
+        "weight": 45.0,
+        "implementation": "lambda: tree_score(read_json(OUTPUT / 'analysis.json')['metrics'], read_json(TESTS / 'expected.json'))"
+      },
+      {
+        "name": "论点与证据结构",
+        "weight": 15.0,
+        "implementation": "evidence"
+      },
+      {
+        "name": "四类风险覆盖",
+        "weight": 10.0,
+        "implementation": "lambda: f1_set([x['id'] for x in read_json(OUTPUT / 'analysis.json')['risks']], ['R1', 'R2', 'R3', 'R4'])"
+      },
+      {
+        "name": "四项待尽调",
+        "weight": 10.0,
+        "implementation": "lambda: f1_set([x['id'] for x in read_json(OUTPUT / 'analysis.json')['diligence']], ['Q1', 'Q2', 'Q3', 'Q4'])"
+      },
+      {
+        "name": "完整中文备忘录及明确建议",
+        "weight": 20.0,
+        "implementation": "memo"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "screening_memo.md",
+      "path": "output/screening_memo.md",
+      "format": "MD",
+      "description": "投资建议、公司产品、论点、财务、估值、风险、尽调和证据附录八章。"
+    },
+    {
+      "name": "analysis.json",
+      "path": "output/analysis.json",
+      "format": "JSON",
+      "description": "财务指标、论点、风险、尽调问题、建议与理由。"
+    }
+  ],
+  "referenceFileCount": 2,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/memo_template.md",
+      "content": "# 投资建议\n# 公司与产品\n# 投资论点\n# 财务分析\n# 估值\n# 风险\n# 待尽调\n# 证据附录\n\n引用格式 [D02:p1]。风险条目保留R1..R4，待尽调保留Q1..Q4。metrics字段 revenue_growth, gross_margin, nrr, top5_share, net_debt, ev_revenue, annual_burn, runway_months；比例用小数，金额百万元。thesis每项含claim,evidence（引用数组）；risks/diligence每项含id,description,evidence。每项另附evidence_quotes数组，与evidence依序一一对应，填写PDF页内逐字摘录；不能只给材料编号。",
+      "truncated": false
+    },
+    {
+      "path": "reference/analysis.json",
+      "content": "{\n  \"metrics\": {\n    \"revenue_growth\": 0.25,\n    \"gross_margin\": 0.7,\n    \"nrr\": 1.15,\n    \"top5_share\": 0.4,\n    \"net_debt\": -12.0,\n    \"ev_revenue\": 1.824,\n    \"annual_burn\": 20.0,\n    \"runway_months\": 18.0\n  },\n  \"thesis\": [\n    {\n      \"claim\": \"收入增长25%，需与每年翻倍的销售口径区分。\",\n      \"evidence\": [\n        \"D02:p1\",\n        \"D01:p2\"\n      ],\n      \"evidence_quotes\": [\n        \"币种人民币，金额单位百万元。\\n2022年收入：80；2023年收入：100；2024年收入：125。\\n2024年营业成本：37.5；调整后EBITDA：-6。\",\n        \"销售演示称收入“每年翻倍”，请以财务材料复核。\\n2024年拓展海外业务，收入占比8%。\"\n      ]\n    },\n    {\n      \"claim\": \"同一客户队列NRR为115%，有扩张能力。\",\n      \"evidence\": [\n        \"D03:p1\"\n      ],\n      \"evidence_quotes\": [\n        \"2024年初同一存量客户ARR：90。\\n年末该批客户ARR：103.5，已包含增购、降配和流失，不含新客。\\n前五大客户收入：50；最大客户收入：22。\"\n      ]\n    },\n    {\n      \"claim\": \"集成能力得到部分受访客户认可，但访谈有选择偏差。\",\n      \"evidence\": [\n        \"D06:p1\"\n      ],\n      \"evidence_quotes\": [\n        \"六家访谈客户中四家赞赏系统集成能力，两家认为迁移成本高。\\n访谈对象由公司推荐，存在选择偏差。\"\n      ]\n    }\n  ],\n  \"risks\": [\n    {\n      \"id\": \"R1\",\n      \"description\": \"客户集中与续约风险\",\n      \"evidence\": [\n        \"D07:p1\"\n      ],\n      \"evidence_quotes\": [\n        \"R1：客户集中度及两家大客户续约。\\nR2：应收款回收和现金消耗。\\nR3：访谈与市场规模证据偏差。\"\n      ]\n    },\n    {\n      \"id\": \"R2\",\n      \"description\": \"应收回款及现金消耗风险\",\n      \"evidence\": [\n        \"D07:p1\"\n      ],\n      \"evidence_quotes\": [\n        \"R1：客户集中度及两家大客户续约。\\nR2：应收款回收和现金消耗。\\nR3：访谈与市场规模证据偏差。\"\n      ]\n    },\n    {\n      \"id\": \"R3\",\n      \"description\": \"访谈样本和市场估计偏差\",\n      \"evidence\": [\n        \"D07:p1\"\n      ],\n      \"evidence_quotes\": [\n        \"R1：客户集中度及两家大客户续约。\\nR2：应收款回收和现金消耗。\\nR3：访谈与市场规模证据偏差。\"\n      ]\n    },\n    {\n      \"id\": \"R4\",\n      \"description\": \"奖励稀释与交易价格不完整\",\n      \"evidence\": [\n        \"D07:p2\"\n      ],\n      \"evidence_quotes\": [\n        \"R4：交易价格未含管理层奖励与潜在稀释。\\n不得将未知成本编造成确定金额。\"\n      ]\n    }\n  ],\n  \"diligence\": [\n    {\n      \"id\": \"Q1\",\n      \"description\": \"索取续约合同与回款流水\",\n      \"evidence\": [\n        \"D08:p1\"\n      ],\n      \"evidence_quotes\": [\n        \"Q1：前五大客户续约合同与回款流水。\\nQ2：逾期应收账款逐笔账龄及期后回收。\"\n      ]\n    },\n    {\n      \"id\": \"Q2\",\n      \"description\": \"核查逾期账款回收\",\n      \"evidence\": [\n        \"D08:p1\"\n      ],\n      \"evidence_quotes\": [\n        \"Q1：前五大客户续约合同与回款流水。\\nQ2：逾期应收账款逐笔账龄及期后回收。\"\n      ]\n    },\n    {\n      \"id\": \"Q3\",\n      \"description\": \"独立访谈与原始市场研究\",\n      \"evidence\": [\n        \"D08:p2\"\n      ],\n      \"evidence_quotes\": [\n        \"Q3：独立客户访谈及市场规模原始研究。\\nQ4：奖励、期权、稀释及交易费用清单。\"\n      ]\n    },\n    {\n      \"id\": \"Q4\",\n      \"description\": \"补全期权奖励与费用\",\n      \"evidence\": [\n        \"D08:p2\"\n      ],\n      \"evidence_quotes\": [\n        \"Q3：独立客户访谈及市场规模原始研究。\\nQ4：奖励、期权、稀释及交易费用清单。\"\n      ]\n    }\n  ],\n  \"recommendation\": \"Hold\",\n  \"reason\": \"增长与留存有吸引力，但大客户续约、回款及稀释未核实，应待尽调后决策。\"\n}\n",
+      "truncated": false
+    }
+  ]
 }

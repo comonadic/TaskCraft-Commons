@@ -2,30 +2,32 @@
 
 结合交易、邮件与客服记录筛选再营销受众，判定可联系渠道，并分析新受众与现有分群的重叠。
 
-职业：市场营销专业人员（2-06-07-02）
+职业：市场营销专业人员 · `2-06-07-02`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是零售企业营销分析人员，需要为下一轮活动准备一份符合客户授权和业务规则的受众名单。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-客户与交易记录、邮件活动数据、工单记录、授权规则及既有分群。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**受众与渠道 · 65 分**
-
-按客户 ID 比对入选名单和渠道资格，按记录与字段的正确比例计分。
-
-**分群摘要 · 15 分**
-
-比对分群定义与统计字段，按正确比例计分。
-
-**重叠分析 · 20 分**
-
-按既有分群 ID 比较重叠人数及比例，数值绝对容差为 0.000001。
-
-
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

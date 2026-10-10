@@ -1,0 +1,18 @@
+{
+  "filing_id": "CN002_2023",
+  "company": "松岳软件",
+  "year": 2023,
+  "currency": "CNY",
+  "revenue": 420550000.0,
+  "net_income": 42055000.0,
+  "assets": 841100000.0,
+  "liabilities": 353262000.0,
+  "cash": 75699000.0,
+  "equity": 487838000.0,
+  "operating_cashflow": 50466000.0,
+  "capex": 18924750.0,
+  "debt": 247283400.0,
+  "shares": 100000000.0,
+  "eps": 0.4205,
+  "dividends": 0
+}

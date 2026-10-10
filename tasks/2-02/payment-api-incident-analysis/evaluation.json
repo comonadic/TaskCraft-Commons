@@ -1,0 +1,87 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "根因与证据",
+      "weight": 50,
+      "rule": "逐项比较根因类型、资源和日志原文，按正确比例计分。"
+    },
+    {
+      "name": "影响范围",
+      "weight": 10,
+      "rule": "受影响资源集合采用 F1 计分。"
+    },
+    {
+      "name": "整改计划",
+      "weight": 25,
+      "rule": "检查动作说明、整数优先级和结构化参数，按参数正确比例计分。"
+    },
+    {
+      "name": "回滚方案",
+      "weight": 10,
+      "rule": "比对回滚版本和镜像，按字段正确比例计分。"
+    },
+    {
+      "name": "摘要与验证",
+      "weight": 5,
+      "rule": "诊断摘要至少 20 字且恢复验证说明至少 10 字，取得本项分数。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "读取 RCA JSON，逐项匹配根因、受影响资源与逐字日志证据。",
+    "检查结构化整改参数，包括配置键、目标值与操作步骤。",
+    "核对回滚版本、镜像与中文诊断摘要和验证步骤。"
+  ],
+  "metrics": [
+    "根因和证据占 50%；受影响资源 F1 占 10%；整改参数占 25%；回滚占 10%；摘要占 5%。",
+    "根因证据按材料中的原文核验；资源集合使用 F1。"
+  ],
+  "gates": [],
+  "checks": [
+    {
+      "name": "根因与逐字证据",
+      "weight": 50.0,
+      "implementation": "roots"
+    },
+    {
+      "name": "受影响资源",
+      "weight": 10.0,
+      "implementation": "lambda: f1_set(read_json(OUTPUT / 'root_cause_analysis.json')['affected_resources'], e['affected_resources'])"
+    },
+    {
+      "name": "中文整改结构化参数",
+      "weight": 25.0,
+      "implementation": "params"
+    },
+    {
+      "name": "回滚版本与镜像",
+      "weight": 10.0,
+      "implementation": "lambda: tree_score({k: read_json(OUTPUT / 'root_cause_analysis.json')['rollback'][k] for k in e['rollback']}, e['rollback'])"
+    },
+    {
+      "name": "诊断摘要与验证步骤",
+      "weight": 5.0,
+      "implementation": "lambda: len(read_json(OUTPUT / 'root_cause_analysis.json')['summary']) >= 20 and len(read_json(OUTPUT / 'root_cause_analysis.json')['rollback']['verify']) >= 10"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

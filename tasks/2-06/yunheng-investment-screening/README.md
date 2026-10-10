@@ -2,38 +2,32 @@
 
 阅读云衡软件的公司、财务与客户资料，形成投资初筛建议，列出投资论点、风险和后续尽调问题。
 
-职业：证券投资专业人员（2-06-11-03）
+职业：证券投资专业人员 · `2-06-11-03`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是投资研究人员，需要向团队提交一份结构完整、结论明确并能追溯资料的初筛备忘录。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-八份公司与经营资料，包含三年财务、客户队列、董事会与销售信息。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**财务指标 · 45 分**
-
-逐字段比对八项财务计算，按正确比例计分。
-
-**论点与引文 · 15 分**
-
-检查论点、风险和尽调项的引文是否对应资料文件及页码，按有效条目比例计分。
-
-**风险识别 · 10 分**
-
-四类风险 ID 集合按 F1 计分。
-
-**尽调问题 · 10 分**
-
-四项尽调 ID 集合按 F1 计分。
-
-**备忘录与建议 · 20 分**
-
-检查八章完整、建议枚举及报告与结构化建议一致，建议理由至少 20 字。
-
-
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

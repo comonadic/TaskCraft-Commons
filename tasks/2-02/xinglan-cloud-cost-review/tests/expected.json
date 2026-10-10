@@ -1,0 +1,146 @@
+[
+  {
+    "resource_id": "CVM-000",
+    "resource_type": "CVM",
+    "name": "project-0-res-0",
+    "action": "schedule_stop",
+    "current_cost": 576.0,
+    "projected_cost": 172.8,
+    "monthly_savings": 403.2
+  },
+  {
+    "resource_id": "CVM-001",
+    "resource_type": "CVM",
+    "name": "project-0-res-1",
+    "action": "schedule_stop",
+    "current_cost": 576.0,
+    "projected_cost": 172.8,
+    "monthly_savings": 403.2
+  },
+  {
+    "resource_id": "CDB-000",
+    "resource_type": "CDB",
+    "name": "project-1-res-0",
+    "action": "downsize",
+    "current_cost": 1080.0,
+    "projected_cost": 540.0,
+    "monthly_savings": 540.0
+  },
+  {
+    "resource_id": "CDB-001",
+    "resource_type": "CDB",
+    "name": "project-1-res-1",
+    "action": "downsize",
+    "current_cost": 1080.0,
+    "projected_cost": 540.0,
+    "monthly_savings": 540.0
+  },
+  {
+    "resource_id": "CDB-002",
+    "resource_type": "CDB",
+    "name": "project-1-res-2",
+    "action": "downsize",
+    "current_cost": 1080.0,
+    "projected_cost": 540.0,
+    "monthly_savings": 540.0
+  },
+  {
+    "resource_id": "COS-000",
+    "resource_type": "COS",
+    "name": "project-2-res-0",
+    "action": "archive",
+    "current_cost": 240.0,
+    "projected_cost": 60.0,
+    "monthly_savings": 180.0
+  },
+  {
+    "resource_id": "COS-001",
+    "resource_type": "COS",
+    "name": "project-2-res-1",
+    "action": "archive",
+    "current_cost": 276.0,
+    "projected_cost": 69.0,
+    "monthly_savings": 207.0
+  },
+  {
+    "resource_id": "NAT-000",
+    "resource_type": "NAT",
+    "name": "project-3-res-0",
+    "action": "delete_idle",
+    "current_cost": 360.0,
+    "projected_cost": 0.0,
+    "monthly_savings": 360.0
+  },
+  {
+    "resource_id": "EIP-000",
+    "resource_type": "EIP",
+    "name": "project-4-res-0",
+    "action": "release",
+    "current_cost": 144.0,
+    "projected_cost": 0.0,
+    "monthly_savings": 144.0
+  },
+  {
+    "resource_id": "EIP-001",
+    "resource_type": "EIP",
+    "name": "project-4-res-1",
+    "action": "release",
+    "current_cost": 144.0,
+    "projected_cost": 0.0,
+    "monthly_savings": 144.0
+  },
+  {
+    "resource_id": "LOG-000",
+    "resource_type": "LOG",
+    "name": "project-5-res-0",
+    "action": "shorten_retention",
+    "current_cost": 120.0,
+    "projected_cost": 20.0,
+    "monthly_savings": 100.0
+  },
+  {
+    "resource_id": "LOG-001",
+    "resource_type": "LOG",
+    "name": "project-5-res-1",
+    "action": "shorten_retention",
+    "current_cost": 138.0,
+    "projected_cost": 34.5,
+    "monthly_savings": 103.5
+  },
+  {
+    "resource_id": "LOG-002",
+    "resource_type": "LOG",
+    "name": "project-5-res-2",
+    "action": "shorten_retention",
+    "current_cost": 156.0,
+    "projected_cost": 78.0,
+    "monthly_savings": 78.0
+  },
+  {
+    "resource_id": "EIP-img-901",
+    "resource_type": "EIP",
+    "name": "orphan-ip-image",
+    "action": "release",
+    "current_cost": 144.0,
+    "projected_cost": 0.0,
+    "monthly_savings": 144.0
+  },
+  {
+    "resource_id": "LOG-img-902",
+    "resource_type": "LOG",
+    "name": "debug-log-image",
+    "action": "shorten_retention",
+    "current_cost": 240.0,
+    "projected_cost": 40.0,
+    "monthly_savings": 200.0
+  },
+  {
+    "resource_id": "CVM-img-903",
+    "resource_type": "CVM",
+    "name": "idle-dev-image",
+    "action": "schedule_stop",
+    "current_cost": 576.0,
+    "projected_cost": 172.8,
+    "monthly_savings": 403.2
+  }
+]

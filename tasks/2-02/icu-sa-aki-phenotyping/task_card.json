@@ -3,14 +3,14 @@
   "title": "医院多系统事件表 SA-AKI 表型提取",
   "brief": "连接 ICU 住院与临床事件记录，按时间窗识别 SA-AKI 表型，交付患者名单和逐住院判定记录。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-02",
   "occupation": {
     "code": "2-02-30-09",
     "name": "数据分析处理工程技术人员"
   },
   "scene": "你是医学数据分析人员，需要将分散在不同系统的事件整理为一致的住院时间线和表型结果。",
-  "taskPrompt": "你是医学数据分析人员，需要将分散在不同系统的事件整理为一致的住院时间线和表型结果。\n\n1. 连接 720 次 ICU 住院的感染、器官功能与肾功能事件\n2. 按给定 Sepsis-3、KDIGO 和七天时间窗规则判定\n3. 整理唯一患者名单，记录每次住院的起始时间与判定理由\n\n交付成果：\n- sa_aki_patients.csv：符合条件的唯一 subject_id 名单。\n- phenotype_audit.csv：逐 stay_id 的起始时间、资格与判定理由。",
+  "taskPrompt": "# 医院多系统事件表 SA-AKI 表型提取\n\n你是医学数据分析人员，需要将分散在不同系统的事件整理为一致的住院时间线和表型结果。\n\n1. 连接 720 次 ICU 住院的感染、器官功能与肾功能事件\n2. 按给定 Sepsis-3、KDIGO 和七天时间窗规则判定\n3. 整理唯一患者名单，记录每次住院的起始时间与判定理由\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/sa_aki_patients.csv`：符合条件的唯一 subject_id 名单。\n- `/app/output/phenotype_audit.csv`：逐 stay_id 的起始时间、资格与判定理由。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`sa_aki_patients.csv`，只有subject_id一列，严格唯一；`phenotype_audit.csv`列stay_id,sepsis_hour,aki_hour,eligible,reason。缺失时间填空字符串。\n",
   "agentMustDo": [
     "连接 720 次 ICU 住院的感染、器官功能与肾功能事件",
     "按给定 Sepsis-3、KDIGO 和七天时间窗规则判定",
@@ -24,42 +24,42 @@
   "inputFiles": [
     {
       "name": "his_icu_stays.csv",
-      "path": "input/his_icu_stays.csv",
+      "path": "environment/input/his_icu_stays.csv",
       "format": "CSV",
       "bytes": 40080,
       "description": "his_icu_stays.csv，用于医院多系统事件表 SA-AKI 表型提取。"
     },
     {
       "name": "infection_orders.csv",
-      "path": "input/infection_orders.csv",
+      "path": "environment/input/infection_orders.csv",
       "format": "CSV",
       "bytes": 10113,
       "description": "infection_orders.csv，用于医院多系统事件表 SA-AKI 表型提取。"
     },
     {
       "name": "lis_labs.csv",
-      "path": "input/lis_labs.csv",
+      "path": "environment/input/lis_labs.csv",
       "format": "CSV",
       "bytes": 1813617,
       "description": "lis_labs.csv，用于医院多系统事件表 SA-AKI 表型提取。"
     },
     {
       "name": "nursing_urine.csv",
-      "path": "input/nursing_urine.csv",
+      "path": "environment/input/nursing_urine.csv",
       "format": "CSV",
       "bytes": 3173105,
       "description": "nursing_urine.csv，用于医院多系统事件表 SA-AKI 表型提取。"
     },
     {
       "name": "protocol.md",
-      "path": "input/protocol.md",
+      "path": "environment/input/protocol.md",
       "format": "MD",
       "bytes": 1019,
       "description": "protocol.md，用于医院多系统事件表 SA-AKI 表型提取。"
     },
     {
       "name": "sofa_assessments.csv",
-      "path": "input/sofa_assessments.csv",
+      "path": "environment/input/sofa_assessments.csv",
       "format": "CSV",
       "bytes": 11560,
       "description": "sofa_assessments.csv，用于医院多系统事件表 SA-AKI 表型提取。"
@@ -69,20 +69,22 @@
   "inputManifest": "materials.json",
   "referenceFiles": [
     {
-      "name": "sa_aki_patients.csv",
-      "path": "output/sa_aki_patients.csv",
+      "name": "phenotype_audit.csv",
+      "path": "reference/phenotype_audit.csv",
       "format": "CSV",
-      "description": "符合条件的唯一 subject_id 名单。"
+      "bytes": 22906,
+      "description": "逐 stay_id 的起始时间、资格与判定理由。"
     },
     {
-      "name": "phenotype_audit.csv",
-      "path": "output/phenotype_audit.csv",
+      "name": "sa_aki_patients.csv",
+      "path": "reference/sa_aki_patients.csv",
       "format": "CSV",
-      "description": "逐 stay_id 的起始时间、资格与判定理由。"
+      "bytes": 1762,
+      "description": "符合条件的唯一 subject_id 名单。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "患者名单",
@@ -99,6 +101,100 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "按感染、SOFA、肌酐和尿量规则确定符合条件的患者。",
+      "对 patient_ids.txt 与目标患者集合计算 F1。",
+      "按 stay_id 核对 720 次住院的事件起始、边界与定位证据。"
+    ],
+    "metrics": [
+      "患者集合 F1 占 65%，住院级审计占 35%。",
+      "F1 = 2 × 两集合交集大小 /（提交集合大小 + 目标集合大小）。"
+    ],
+    "gates": [],
+    "checks": [
+      {
+        "name": "患者精确集合F1",
+        "weight": 65.0,
+        "implementation": "ids"
+      },
+      {
+        "name": "720次住院起始与边界证据",
+        "weight": 35.0,
+        "implementation": "lambda: record_score(read_csv(OUTPUT / 'phenotype_audit.csv'), e['audit'], ['stay_id'])"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "sa_aki_patients.csv",
+      "path": "output/sa_aki_patients.csv",
+      "format": "CSV",
+      "description": "符合条件的唯一 subject_id 名单。"
+    },
+    {
+      "name": "phenotype_audit.csv",
+      "path": "output/phenotype_audit.csv",
+      "format": "CSV",
+      "description": "逐 stay_id 的起始时间、资格与判定理由。"
+    }
+  ],
+  "referenceFileCount": 2,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/his_icu_stays.csv",
+      "content": "icu_id,patient_id,admit_time,discharge_hour,weight_kg,baseline_creatinine_mg_dl\nICU0000,P0000,2024-01-01T00:00:00+08:00,240,79.9,0.841\nICU0001,P0001,2024-01-01T00:00:00+08:00,240,84.2,1.051\nICU0002,P0002,2024-01-01T00:00:00+08:00,240,69.9,0.73\nICU0003,P0003,2024-01-01T00:00:00+08:00,240,96.0,0.749\nICU0004,P0004,2024-01-01T00:00:00+08:00,240,89.5,0.715\nICU0005,P0005,2024-01-01T00:00:00+08:00,240,101.1,1.064\nICU0006,P0006,2024-01-01T00:00:00+08:00,240,87.8,1.173\nICU0007,P0007,2024-01-01T00:00:00+08:00,240,78.1,0.696\nICU0008,P0008,2024-01-01T00:00:00+08:00,240,101.2,1.12\nICU0009,P0009,2024-01-01T00:00:00+08:00,240,67.2,0.745\nICU0010,P0010,2024-01-01T00:00:00+08:00,240,85.2,0.889\nICU0011,P0011,2024-01-01T00:00:00+08:00,240,56.5,\nICU0012,P0012,2024-01-01T00:00:00+08:00,240,77.5,1.086\nICU0013,P0013,2024-01-01T00:00:00+08:00,240,84.6,0.956\nICU0014,P0014,2024-01-01T00:00:00+08:00,240,58.3,0.772\nICU0015,P0015,2024-01-01T00:00:00+08:00,240,56.9,0.882\nICU0016,P0016,2024-01-01T00:00:00+08:00,240,103.6,0.785\nICU0017,P0017,2024-01-01T00:00:00+08:00,240,49.6,1.031\nICU0018,P0018,2024-01-01T00:00:00+08:00,240,86.6,0.765\nICU0019,P0019,2024-01-01T00:00:00+08:00,240,81.7,1.046\nICU0020,P0020,2024-01-01T00:00:00+08:00,240,51.6,1.105\nICU0021,P0021,2024-01-01T00:00:00+08:00,240,81.6,0.666\nICU0022,P0022,2024-01-01T00:00:00+08:00,240,61.6,0.872\nICU0023,P0023,2024-01-01T00:00:00+08:00,240,62.6,\nICU0024,P0024,2024-01-01T00:00:00+08:00,240,46.2,0.861\nICU0025,P0025,2024-01-01T00:00:00+08:00,240,87.6,0.757\nICU0026,P0026,2024-01-01T00:00:00+08:00,240,79.7,1.165\nICU0027,P0027,2024-01-01T00:00:00+08:00,240,82.3,0.687\nICU0028,P0028,2024-01-01T00:00:00+08:00,240,92.9,1.121\nICU0029,P0029,2024-01-01T00:00:00+08:00,240,45.5,1.106\nICU0030,P0030,2024-01-01T00:00:00+08:00,240,104.7,1.131\nICU0031,P0031,2024-01-01T00:00:00+08:00,240,103.6,1.176\nICU0032,P0032,2024-01-01T00:00:00+08:00,240,78.7,1.018\nICU0033,P0033,2024-01-01T00:00:00+08:00,240,103.6,0.813\nICU0034,P0034,2024-01-01T00:00:00+08:00,240,63.8,0.717\nICU0035,P0035,2024-01-01T00:00:00+08:00,240,56.2,\nICU0036,P0036,2024-01-01T00:00:00+08:00,240,59.6,0.984\nICU0037,P0037,2024-01-01T00:00:00+08:00,240,99.6,0.945\nICU0038,P0038,2024-01-01T00:00:00+08:00,240,62.3,0.951\nICU0039,P0039,2024-01-01T00:00:00+08:00,240,79.3,1.142\nICU0040,P0040,2024-01-01T00:00:00+08:00,240,89.0,0.816\nICU0041,P0041,2024-01-01T00:00:00+08:00,240,78.9,1.015\nICU0042,P0042,2024-01-01T00:00:00+08:00,240,104.2,1.139\nICU0043,P0043,2024-01-01T00:00:00+08:00,240,58.9,0.734\nICU0044,P0044,2024-01-01T00:00:00+08:00,240,73.8,0.758\nICU0045,P0045,2024-01-01T00:00:00+08:00,240,94.0,0.656\nICU0046,P0046,2024-01-01T00:00:00+08:00,240,87.6,1.127\nICU0047,P0047,2024-01-01T00:00:00+08:00,240,104.8,\nICU0048,P0048,2024-01-01T00:00:00+08:00,240,72.1,1.085\nICU0049,P0049,2024-01-01T00:00:00+08:00,240,53.0,1.05\nICU0050,P0050,2024-01-01T00:00:00+08:00,240,96.0,1.094\nICU0051,P0051,2024-01-01T00:00:00+08:00,240,47.4,1.035\nICU0052,P0052,2024-01-01T00:00:00+08:00,240,69.1,0.905\nICU0053,P0053,2024-01-01T00:00:00+08:00,240,92.2,1.155\nICU0054,P0054,2024-01-01T00:00:00+08:00,240,72.3,0.86\nICU0055,P0055,2024-01-01T00:00:00+08:00,240,59.3,1.027\nICU0056,P0056,2024-01-01T00:00:00+08:00,240,59.2,0.901\nICU0057,P0057,2024-01-01T00:00:00+08:00,240,59.8,1.095\nICU0058,P0058,2024-01-01T00:00:00+08:00,240,86.6,1.092\nICU0059,P0059,2024-01-01T00:00:00+08:00,240,55.3,\nICU0060,P0060,2024-01-01T00:00:00+08:00,240,46.1,1.003\nICU0061,P0061,2024-01-01T00:00:00+08:00,240,84.3,1.0\nICU0062,P0062,2024-01-01T00:00:00+08:00,240,92.4,0.698\nICU0063,P0063,2024-01-01T00:00:00+08:00,240,57.1,0.959\nICU0064,P0064,2024-01-01T00:00:00+08:00,240,61.2,0.796\nICU0065,P0065,2024-01-01T00:00:00+08:00,240,46.5,0.66\nICU0066,P0066,2024-01-01T00:00:00+08:00,240,88.1,0.915\nICU0067,P0067,2024-01-01T00:00:00+08:00,240,61.0,1.166\nICU0068,P0068,2024-01-01T00:00:00+08:00,240,50.6,1.143\nICU0069,P0069,2024-01-01T00:00:00+08:00,240,96.9,0.854\nICU0070,P0070,2024-01-01T00:00:00+08:00,240,94.1,0.924\nICU0071,P0071,2024-01-01T00:00:00+08:00,240,98.9,\nICU0072,P0072,2024-01-01T00:00:00+08:00,240,101.8,1.112\nICU0073,P0073,2024-01-01T00:00:00+08:00,240,72.8,0.922\nICU0074,P0074,2024-01-01T00:00:00+08:00,240,76.3,1.133\nICU0075,P0075,2024-01-01T00:00:00+08:00,240,55.1,0.774\nICU0076,P0076,2024-01-01T00:00:00+08:00,240,50.5,1.011\nICU0077,P0077,2024-01-01T00:00:00+08:00,240,74.0,1.127\nICU0078,P0078,2024-01-01T00:00:00+08:00,240,68.4,1.071\nICU0079,P0079,2024-01-01T00:00:00+08:00,240,67.8,1.1\nICU0080,P0080,2024-01-01T00:00:00+08:00,240,89.3,0.953\nICU0081,P0081,2024-01-01T00:00:00+08:00,240,93.0,0.659\nICU0082,P0082,2024-01-01T00:00:00+08:00,240,91.7,0.807\nICU0083,P0083,2024-01-01T00:00:00+08:00,240,69.8,\nICU0084,P0084,2024-01-01T00:00:00+08:00,240,74.7,0.68\nICU0085,P0085,2024-01-01T00:00:00+08:00,240,77.8,0.736\nICU0086,P0086,2024-01-01T00:00:00+08:00,240,102.0,0.944\nICU0087,P0087,2024-01-01T00:00:00+08:00,240,71.2,0.881\nICU0088,P0088,2024-01-01T00:00:00+08:00,240,80.4,0.919\nICU0089,P0089,2024-01-01T00:00:00+08:00,240,96.7,0.661\nICU0090,P0090,2024-01-01T00:00:00+08:00,240,88.7,0.658\nICU0091,P0091,2024-01-01T00:00:00+08:00,240,48.9,0.742\nICU0092,P0092,2024-01-01T00:00:00+08:00,240,58.3,0.91\nICU0093,P0093,2024-01-01T00:00:00+08:00,240,47.9,1.161\nICU0094,P0094,2024-01-01T00:00:00+08:00,240,66.8,0.863\nICU0095,P0095,2024-01-01T00:00:00+08:00,240,83.2,\nICU0096,P0096,2024-01-01T00:00:00+08:00,240,95.7,0.9\nICU0097,P0097,2024-01-01T00:00:00+08:00,240,86.1,1.18\nICU0098,P0098,2024-01-01T00:00:00+08:00,240,50.2,0.97\nICU0099,P0099,2024-01-01T00:00:00+08:00,240,97.7,0.913\nICU0100,P0100,2024-01-01T00:00:00+08:00,240,97.3,0.893\nICU0101,P0101,2024-01-01T00:00:00+08:00,240,46.2,1.119\nICU0102,P0102,2024-01-01T00:00:00+08:00,240,66.5,0.681\nICU0103,P0103,2024-01-01T00:00:00+08:00,240,102.7,1.066\nICU0104,P0104,2024-01-01T00:00:00+08:00,240,74.3,1.045\nICU0105,P0105,2024-01-01T00:00:00+08:00,240,64.9,0.95\nICU0106,P0106,2024-01-01T00:00:00+08:00,240,51.7,1.005\nICU0107,P0107,2024-01-01T00:00:00+08:00,240,49.6,\nICU0108,P0108,2024-01-01T00:00",
+      "truncated": true
+    },
+    {
+      "path": "environment/input/infection_orders.csv",
+      "content": "icu_id,hour,suspected_infection\nICU0000,24,1\nICU0001,24,1\nICU0002,24,1\nICU0003,24,1\nICU0004,24,1\nICU0005,24,1\nICU0006,24,1\nICU0007,24,1\nICU0008,24,1\nICU0009,24,0\nICU0010,24,1\nICU0011,24,1\nICU0012,24,1\nICU0013,24,1\nICU0014,24,1\nICU0015,24,1\nICU0016,24,1\nICU0017,24,1\nICU0018,24,1\nICU0019,24,1\nICU0020,24,1\nICU0021,24,0\nICU0022,24,1\nICU0023,24,1\nICU0024,24,1\nICU0025,24,1\nICU0026,24,1\nICU0027,24,1\nICU0028,24,1\nICU0029,24,1\nICU0030,24,1\nICU0031,24,1\nICU0032,24,1\nICU0033,24,0\nICU0034,24,1\nICU0035,24,1\nICU0036,24,1\nICU0037,24,1\nICU0038,24,1\nICU0039,24,1\nICU0040,24,1\nICU0041,24,1\nICU0042,24,1\nICU0043,24,1\nICU0044,24,1\nICU0045,24,0\nICU0046,24,1\nICU0047,24,1\nICU0048,24,1\nICU0049,24,1\nICU0050,24,1\nICU0051,24,1\nICU0052,24,1\nICU0053,24,1\nICU0054,24,1\nICU0055,24,1\nICU0056,24,1\nICU0057,24,0\nICU0058,24,1\nICU0059,24,1\nICU0060,24,1\nICU0061,24,1\nICU0062,24,1\nICU0063,24,1\nICU0064,24,1\nICU0065,24,1\nICU0066,24,1\nICU0067,24,1\nICU0068,24,1\nICU0069,24,0\nICU0070,24,1\nICU0071,24,1\nICU0072,24,1\nICU0073,24,1\nICU0074,24,1\nICU0075,24,1\nICU0076,24,1\nICU0077,24,1\nICU0078,24,1\nICU0079,24,1\nICU0080,24,1\nICU0081,24,0\nICU0082,24,1\nICU0083,24,1\nICU0084,24,1\nICU0085,24,1\nICU0086,24,1\nICU0087,24,1\nICU0088,24,1\nICU0089,24,1\nICU0090,24,1\nICU0091,24,1\nICU0092,24,1\nICU0093,24,0\nICU0094,24,1\nICU0095,24,1\nICU0096,24,1\nICU0097,24,1\nICU0098,24,1\nICU0099,24,1\nICU0100,24,1\nICU0101,24,1\nICU0102,24,1\nICU0103,24,1\nICU0104,24,1\nICU0105,24,0\nICU0106,24,1\nICU0107,24,1\nICU0108,24,1\nICU0109,24,1\nICU0110,24,1\nICU0111,24,1\nICU0112,24,1\nICU0113,24,1\nICU0114,24,1\nICU0115,24,1\nICU0116,24,1\nICU0117,24,0\nICU0118,24,1\nICU0119,24,1\nICU0120,24,1\nICU0121,24,1\nICU0122,24,1\nICU0123,24,1\nICU0124,24,1\nICU0125,24,1\nICU0126,24,1\nICU0127,24,1\nICU0128,24,1\nICU0129,24,0\nICU0130,24,1\nICU0131,24,1\nICU0132,24,1\nICU0133,24,1\nICU0134,24,1\nICU0135,24,1\nICU0136,24,1\nICU0137,24,1\nICU0138,24,1\nICU0139,24,1\nICU0140,24,1\nICU0141,24,0\nICU0142,24,1\nICU0143,24,1\nICU0144,24,1\nICU0145,24,1\nICU0146,24,1\nICU0147,24,1\nICU0148,24,1\nICU0149,24,1\nICU0150,24,1\nICU0151,24,1\nICU0152,24,1\nICU0153,24,0\nICU0154,24,1\nICU0155,24,1\nICU0156,24,1\nICU0157,24,1\nICU0158,24,1\nICU0159,24,1\nICU0160,24,1\nICU0161,24,1\nICU0162,24,1\nICU0163,24,1\nICU0164,24,1\nICU0165,24,0\nICU0166,24,1\nICU0167,24,1\nICU0168,24,1\nICU0169,24,1\nICU0170,24,1\nICU0171,24,1\nICU0172,24,1\nICU0173,24,1\nICU0174,24,1\nICU0175,24,1\nICU0176,24,1\nICU0177,24,0\nICU0178,24,1\nICU0179,24,1\nICU0180,24,1\nICU0181,24,1\nICU0182,24,1\nICU0183,24,1\nICU0184,24,1\nICU0185,24,1\nICU0186,24,1\nICU0187,24,1\nICU0188,24,1\nICU0189,24,0\nICU0190,24,1\nICU0191,24,1\nICU0192,24,1\nICU0193,24,1\nICU0194,24,1\nICU0195,24,1\nICU0196,24,1\nICU0197,24,1\nICU0198,24,1\nICU0199,24,1\nICU0200,24,1\nICU0201,24,0\nICU0202,24,1\nICU0203,24,1\nICU0204,24,1\nICU0205,24,1\nICU0206,24,1\nICU0207,24,1\nICU0208,24,1\nICU0209,24,1\nICU0210,24,1\nICU0211,24,1\nICU0212,24,1\nICU0213,24,0\nICU0214,24,1\nICU0215,24,1\nICU0216,24,1\nICU0217,24,1\nICU0218,24,1\nICU0219,24,1\nICU0220,24,1\nICU0221,24,1\nICU0222,24,1\nICU0223,24,1\nICU0224,24,1\nICU0225,24,0\nICU0226,24,1\nICU0227,24,1\nICU0228,24,1\nICU0229,24,1\nICU0230,24,1\nICU0231,24,1\nICU0232,24,1\nICU0233,24,1\nICU0234,24,1\nICU0235,24,1\nICU0236,24,1\nICU0237,24,0\nICU0238,24,1\nICU0239,24,1\nICU0240,24,1\nICU0241,24,1\nICU0242,24,1\nICU0243,24,1\nICU0244,24,1\nICU0245,24,1\nICU0246,24,1\nICU0247,24,1\nICU0248,24,1\nICU0249,24,0\nICU0250,24,1\nICU0251,24,1\nICU0252,24,1\nICU0253,24,1\nICU0254,24,1\nICU0255,24,1\nICU0256,24,1\nICU0257,24,1\nICU0258,24,1\nICU0259,24,1\nICU0260,24,1\nICU0261,24,0\nICU0262,24,1\nICU0263,24,1\nICU0264,24,1\nICU0265,24,1\nICU0266,24,1\nICU0267,24,1\nICU0268,24,1\nICU0269,24,1\nICU0270,24,1\nICU0271,24,1\nICU0272,24,1\nICU0273,24,0\nICU0274,24,1\nICU0275,24,1\nICU0276,24,1\nICU0277,24,1\nICU0278,24,1\nICU0279,24,1\nICU0280,24,1\nICU0281,24,1\nICU0282,24,1\nICU0283,24,1\nICU0284,24,1\nICU0285,24,0\nICU0286,24,1\nICU0287,24,1\nICU0288,24,1\nICU0289,24,1\nICU0290,24,1\nICU0291,24,1\nICU0292,24,1\nICU0293,24,1\nICU0294,24,1\nICU0295,24,1\nICU0296,24,1\nICU0297,24,0\nICU0298,24,1\nICU0299,24,1\nICU0300,24,1\nICU0301,24,1\nICU0302,24,1\nICU0303,24,1\nICU0304,24,1\nICU0305,24,1\nICU0306,24,1\nICU0307,24,1\nICU0308,24,1\nICU0309,24,0\nICU0310,24,1\nICU0311,24,1\nICU0312,24,1\nICU0313,24,1\nICU0314,24,1\nICU0315,24,1\nICU0316,24,1\nICU0317,24,1\nICU0318,24,1\nICU0319,24,1\nICU0320,24,1\nICU0321,24,0\nICU0322,24,1\nICU0323,24,1\nICU0324,24,1\nICU0325,24,1\nICU0326,24,1\nICU0327,24,1\nICU0328,24,1\nICU0329,24,1\nICU0330,24,1\nICU0331,24,1\nICU0332,24,1\nICU0333,24,0\nICU0334,24,1\nICU0335,24,1\nICU0336,24,1\nICU0337,24,1\nICU0338,24,1\nICU0339,24,1\nICU0340,24,1\nICU0341,24,1\nICU0342,24,1\nICU0343,24,1\nICU0344,24,1\nICU0345,24,0\nICU0346,24,1\nICU0347,24,1\nICU0348,24,1\nICU0349,24,1\nICU0350,24,1\nICU0351,24,1\nICU0352,24,1\nICU0353,24,1\nICU0354,24,1\nICU0355,24,1\nICU0356,24,1\nICU0357,24,0\nICU0358,24,1\nICU0359,24,1\nICU0360,24,1\nICU0361,24,1\nICU0362,24,1\nICU0363,24,1\nICU0364,24,1\nICU0365,24,1\nICU0366,24,1\nICU0367,24,1\nICU0368,24,1\nICU0369,24,0\nICU0370,24,1\nICU0371,24,1\nICU0372,24,1\nICU0373,24,1\nICU0374,24,1\nICU0375,24,1\nICU0376,24,1\nICU0377,24,1\nICU0378,24,1\nICU0379,24,1\nICU0380,24,1\nICU0381,24,0\nICU0382,24,1\nICU0383,24,1\nICU0384,24,1\nICU0385,24,1\nICU0386,24,1\nICU0387,24,1\nICU0388,24,1\nICU0389,24,1\nICU0390,24,1\nICU0391,24,1\nICU0392,24,1\nICU0393,24,0\nICU0394,24,1\nICU0395,24,1\nICU0396,24,1\nICU0397,24,1\nICU0398,24,1\nICU0399,24,1\nICU0400,24,1\nICU0401,24,1\nICU0402,24,1\nICU0403,24,1\nICU0404,24,1\nICU0405,24,0\nICU0406,24,1\nICU0407,24,1\nICU0408,24,1\nICU0409,24,1\nICU0410,24,1\nICU0411,24,1\nICU0412,24,1\nICU0413,24,1\nICU0414,24,1\nICU0415,24,1\nICU0416,24,1\nICU0417,24,0\nICU0418,24,1\nICU0419,24,1\nICU0420,24,1\nICU0421,24,1\nICU0422,24,1\nICU0423,24,1\nICU0424,24,1\nICU0425,24,1\nICU0426,24,1\nICU0427,24,1\nICU0428,24,1\nICU0429,24,0\nICU0430,24,1\nICU0431,24,1\nICU0432,24,1\nICU0433,24,1\nICU0434,24,1\nICU0435,24,1\nICU0436,24,1\nICU0437,24,1\nICU0438,24,1\nICU0439,24,1\nICU0440,24,1\nICU0441,24,0\nICU0442,24,1\nICU0443,24,1\nICU0444,24,1\nICU0445,24,1\nICU0446,24,1\nICU0447,24,1\nICU0448,24,1\nICU0449,24,1\nICU0450,24,1\nICU0451,24,1\nICU0452,24,1\nICU0453,24,0\nICU0454,24,1\nICU0455,24,1\nICU0456,24,1\nICU0457,24,1\nICU0458,24,1\nI",
+      "truncated": true
+    },
+    {
+      "path": "reference/phenotype_audit.csv",
+      "content": "stay_id,sepsis_hour,aki_hour,eligible,reason\nICU0000,24.0,30,True,eligible\nICU0001,24.0,192,True,eligible\nICU0002,24.0,195,False,outside_7d\nICU0003,24.0,12,False,aki_before_sepsis\nICU0004,24.0,58,True,eligible\nICU0005,24.0,48,True,eligible\nICU0006,24.0,90,True,eligible\nICU0007,24.0,240,False,outside_7d\nICU0008,24.0,,False,no_aki\nICU0009,,36,False,no_sepsis\nICU0010,,36,False,no_sepsis\nICU0011,24.0,,False,no_aki\nICU0012,24.0,30,True,eligible\nICU0013,24.0,192,True,eligible\nICU0014,24.0,195,False,outside_7d\nICU0015,24.0,12,False,aki_before_sepsis\nICU0016,24.0,58,True,eligible\nICU0017,24.0,48,True,eligible\nICU0018,24.0,90,True,eligible\nICU0019,24.0,240,False,outside_7d\nICU0020,24.0,,False,no_aki\nICU0021,,36,False,no_sepsis\nICU0022,,36,False,no_sepsis\nICU0023,24.0,,False,no_aki\nICU0024,24.0,30,True,eligible\nICU0025,24.0,192,True,eligible\nICU0026,24.0,195,False,outside_7d\nICU0027,24.0,12,False,aki_before_sepsis\nICU0028,24.0,58,True,eligible\nICU0029,24.0,48,True,eligible\nICU0030,24.0,90,True,eligible\nICU0031,24.0,240,False,outside_7d\nICU0032,24.0,,False,no_aki\nICU0033,,36,False,no_sepsis\nICU0034,,36,False,no_sepsis\nICU0035,24.0,,False,no_aki\nICU0036,24.0,30,True,eligible\nICU0037,24.0,192,True,eligible\nICU0038,24.0,195,False,outside_7d\nICU0039,24.0,12,False,aki_before_sepsis\nICU0040,24.0,58,True,eligible\nICU0041,24.0,48,True,eligible\nICU0042,24.0,90,True,eligible\nICU0043,24.0,240,False,outside_7d\nICU0044,24.0,,False,no_aki\nICU0045,,36,False,no_sepsis\nICU0046,,36,False,no_sepsis\nICU0047,24.0,,False,no_aki\nICU0048,24.0,30,True,eligible\nICU0049,24.0,192,True,eligible\nICU0050,24.0,195,False,outside_7d\nICU0051,24.0,12,False,aki_before_sepsis\nICU0052,24.0,58,True,eligible\nICU0053,24.0,48,True,eligible\nICU0054,24.0,90,True,eligible\nICU0055,24.0,240,False,outside_7d\nICU0056,24.0,,False,no_aki\nICU0057,,36,False,no_sepsis\nICU0058,,36,False,no_sepsis\nICU0059,24.0,,False,no_aki\nICU0060,24.0,30,True,eligible\nICU0061,24.0,192,True,eligible\nICU0062,24.0,195,False,outside_7d\nICU0063,24.0,12,False,aki_before_sepsis\nICU0064,24.0,58,True,eligible\nICU0065,24.0,48,True,eligible\nICU0066,24.0,90,True,eligible\nICU0067,24.0,240,False,outside_7d\nICU0068,24.0,,False,no_aki\nICU0069,,36,False,no_sepsis\nICU0070,,36,False,no_sepsis\nICU0071,24.0,,False,no_aki\nICU0072,24.0,30,True,eligible\nICU0073,24.0,192,True,eligible\nICU0074,24.0,195,False,outside_7d\nICU0075,24.0,12,False,aki_before_sepsis\nICU0076,24.0,58,True,eligible\nICU0077,24.0,48,True,eligible\nICU0078,24.0,90,True,eligible\nICU0079,24.0,240,False,outside_7d\nICU0080,24.0,,False,no_aki\nICU0081,,36,False,no_sepsis\nICU0082,,36,False,no_sepsis\nICU0083,24.0,,False,no_aki\nICU0084,24.0,30,True,eligible\nICU0085,24.0,192,True,eligible\nICU0086,24.0,195,False,outside_7d\nICU0087,24.0,12,False,aki_before_sepsis\nICU0088,24.0,58,True,eligible\nICU0089,24.0,48,True,eligible\nICU0090,24.0,90,True,eligible\nICU0091,24.0,240,False,outside_7d\nICU0092,24.0,,False,no_aki\nICU0093,,36,False,no_sepsis\nICU0094,,36,False,no_sepsis\nICU0095,24.0,,False,no_aki\nICU0096,24.0,30,True,eligible\nICU0097,24.0,192,True,eligible\nICU0098,24.0,195,False,outside_7d\nICU0099,24.0,12,False,aki_before_sepsis\nICU0100,24.0,58,True,eligible\nICU0101,24.0,48,True,eligible\nICU0102,24.0,90,True,eligible\nICU0103,24.0,240,False,outside_7d\nICU0104,24.0,,False,no_aki\nICU0105,,36,False,no_sepsis\nICU0106,,36,False,no_sepsis\nICU0107,24.0,,False,no_aki\nICU0108,24.0,30,True,eligible\nICU0109,24.0,192,True,eligible\nICU0110,24.0,195,False,outside_7d\nICU0111,24.0,12,False,aki_before_sepsis\nICU0112,24.0,58,True,eligible\nICU0113,24.0,48,True,eligible\nICU0114,24.0,90,True,eligible\nICU0115,24.0,240,False,outside_7d\nICU0116,24.0,,False,no_aki\nICU0117,,36,False,no_sepsis\nICU0118,,36,False,no_sepsis\nICU0119,24.0,,False,no_aki\nICU0120,24.0,30,True,eligible\nICU0121,24.0,192,True,eligible\nICU0122,24.0,195,False,outside_7d\nICU0123,24.0,12,False,aki_before_sepsis\nICU0124,24.0,58,True,eligible\nICU0125,24.0,48,True,eligible\nICU0126,24.0,90,True,eligible\nICU0127,24.0,240,False,outside_7d\nICU0128,24.0,,False,no_aki\nICU0129,,36,False,no_sepsis\nICU0130,,36,False,no_sepsis\nICU0131,24.0,,False,no_aki\nICU0132,24.0,30,True,eligible\nICU0133,24.0,192,True,eligible\nICU0134,24.0,195,False,outside_7d\nICU0135,24.0,12,False,aki_before_sepsis\nICU0136,24.0,58,True,eligible\nICU0137,24.0,48,True,eligible\nICU0138,24.0,90,True,eligible\nICU0139,24.0,240,False,outside_7d\nICU0140,24.0,,False,no_aki\nICU0141,,36,False,no_sepsis\nICU0142,,36,False,no_sepsis\nICU0143,24.0,,False,no_aki\nICU0144,24.0,30,True,eligible\nICU0145,24.0,192,True,eligible\nICU0146,24.0,195,False,outside_7d\nICU0147,24.0,12,False,aki_before_sepsis\nICU0148,24.0,58,True,eligible\nICU0149,24.0,48,True,eligible\nICU0150,24.0,90,True,eligible\nICU0151,24.0,240,False,outside_7d\nICU0152,24.0,,False,no_aki\nICU0153,,36,False,no_sepsis\nICU0154,,36,False,no_sepsis\nICU0155,24.0,,False,no_aki\nICU0156,24.0,30,True,eligible\nICU0157,24.0,192,True,eligible\nICU0158,24.0,195,False,outside_7d\nICU0159,24.0,12,False,aki_before_sepsis\nICU0160,24.0,58,True,eligible\nICU0161,24.0,48,True,eligible\nICU0162,24.0,90,True,eligible\nICU0163,24.0,240,False,outside_7d\nICU0164,24.0,,False,no_aki\nICU0165,,36,False,no_sepsis\nICU0166,,36,False,no_sepsis\nICU0167,24.0,,False,no_aki\nICU0168,24.0,30,True,eligible\nICU0169,24.0,192,True,eligible\nICU0170,24.0,195,False,outside_7d\nICU0171,24.0,12,False,aki_before_sepsis\nICU0172,24.0,58,True,eligible\nICU0173,24.0,48,True,eligible\nICU0174,24.0,90,True,eligible\nICU0175,24.0,240,False,outside_7d\nICU0176,24.0,,False,no_aki\nICU0177,,36,False,no_sepsis\nICU0178,,36,False,no_sepsis\nICU0179,24.0,,False,no_aki\nICU0180,24.0,30,True,eligible\nICU0181,24.0,192,True,eligible\nICU0182,24.0,195,False,outside_7d\nICU0183,24.0,12,False,aki_before_sepsis\nICU0184,24.0,58,True,eligible\nICU0185,24.0,48,True,eligible\nICU0186,24.0,90,True,eligible\nICU0187,24.0,240,False,outside_7d\nICU0188,24.0,,False,no_aki\nICU0189,,36,False,no_sepsis\nICU0190,,36,False,no_sepsis\nICU0191,24.0,,False,no_aki\nICU0192,24.0,30,True,eligible\nICU0193,24.0,192,True",
+      "truncated": true
+    },
+    {
+      "path": "reference/sa_aki_patients.csv",
+      "content": "subject_id\nP0000\nP0001\nP0004\nP0005\nP0006\nP0012\nP0013\nP0016\nP0017\nP0018\nP0024\nP0025\nP0028\nP0029\nP0030\nP0036\nP0037\nP0040\nP0041\nP0042\nP0048\nP0049\nP0052\nP0053\nP0054\nP0060\nP0061\nP0064\nP0065\nP0066\nP0072\nP0073\nP0076\nP0077\nP0078\nP0084\nP0085\nP0088\nP0089\nP0090\nP0096\nP0097\nP0100\nP0101\nP0102\nP0108\nP0109\nP0112\nP0113\nP0114\nP0120\nP0121\nP0124\nP0125\nP0126\nP0132\nP0133\nP0136\nP0137\nP0138\nP0144\nP0145\nP0148\nP0149\nP0150\nP0156\nP0157\nP0160\nP0161\nP0162\nP0168\nP0169\nP0172\nP0173\nP0174\nP0180\nP0181\nP0184\nP0185\nP0186\nP0192\nP0193\nP0196\nP0197\nP0198\nP0204\nP0205\nP0208\nP0209\nP0210\nP0216\nP0217\nP0220\nP0221\nP0222\nP0228\nP0229\nP0232\nP0233\nP0234\nP0240\nP0241\nP0244\nP0245\nP0246\nP0252\nP0253\nP0256\nP0257\nP0258\nP0264\nP0265\nP0268\nP0269\nP0270\nP0276\nP0277\nP0280\nP0281\nP0282\nP0288\nP0289\nP0292\nP0293\nP0294\nP0300\nP0301\nP0304\nP0305\nP0306\nP0312\nP0313\nP0316\nP0317\nP0318\nP0324\nP0325\nP0328\nP0329\nP0330\nP0336\nP0337\nP0340\nP0341\nP0342\nP0348\nP0349\nP0352\nP0353\nP0354\nP0360\nP0361\nP0364\nP0365\nP0366\nP0372\nP0373\nP0376\nP0377\nP0378\nP0384\nP0385\nP0388\nP0389\nP0390\nP0396\nP0397\nP0400\nP0401\nP0402\nP0408\nP0409\nP0412\nP0413\nP0414\nP0420\nP0421\nP0424\nP0425\nP0426\nP0432\nP0433\nP0436\nP0437\nP0438\nP0444\nP0445\nP0448\nP0449\nP0450\nP0456\nP0457\nP0460\nP0461\nP0462\nP0468\nP0469\nP0472\nP0473\nP0474\nP0480\nP0481\nP0484\nP0485\nP0486\nP0492\nP0493\nP0496\nP0497\nP0498\nP0504\nP0505\nP0508\nP0509\nP0510\nP0516\nP0517\nP0520\nP0521\nP0522\nP0528\nP0529\nP0532\nP0533\nP0534\nP0540\nP0541\nP0544\nP0545\nP0546\nP0552\nP0553\nP0556\nP0557\nP0558\nP0564\nP0565\nP0568\nP0569\nP0570\nP0576\nP0577\nP0580\nP0581\nP0582\nP0588\nP0589\nP0592\nP0593\nP0594\n",
+      "truncated": false
+    }
+  ]
 }

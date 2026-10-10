@@ -3,14 +3,14 @@
   "title": "星澜云账单与资源成本优化",
   "brief": "分析星澜的云资源账单与使用情况，提出逐资源优化建议，并核算优化后的月度费用和节约金额。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-02",
   "occupation": {
     "code": "2-02-38-04",
     "name": "云计算工程技术人员"
   },
   "scene": "你是云平台成本管理人员，需要为运营团队整理一份能够落地的资源优化清单，说明每项建议的依据和预计收益。",
-  "taskPrompt": "你是云平台成本管理人员，需要为运营团队整理一份能够落地的资源优化清单，说明每项建议的依据和预计收益。\n\n1. 结合资源清单、使用数据和截图识别可优化资源\n2. 为各项资源选择合适的优化动作，计算现有费用和预计费用\n3. 汇总月度节约金额，形成管理摘要和资源明细\n\n交付成果：\n- optimization_report.json：包含整体费用、节约金额、建议数量与逐资源建议的优化报告。\n- savings_summary.csv：逐资源费用测算表，列出资源名称、动作和节约金额。",
+  "taskPrompt": "# 星澜云账单与资源成本优化\n\n你是云平台成本管理人员，需要为运营团队整理一份能够落地的资源优化清单，说明每项建议的依据和预计收益。\n\n1. 结合资源清单、使用数据和截图识别可优化资源\n2. 为各项资源选择合适的优化动作，计算现有费用和预计费用\n3. 汇总月度节约金额，形成管理摘要和资源明细\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/optimization_report.json`：包含整体费用、节约金额、建议数量与逐资源建议的优化报告。\n- `/app/output/savings_summary.csv`：逐资源费用测算表，列出资源名称、动作和节约金额。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n## 运行与提交\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`optimization_report.json`含executive_summary（current_cost,projected_cost,monthly_savings,recommendation_count）和recommendations数组；`savings_summary.csv`列resource_id,resource_type,name,action,current_cost,projected_cost,monthly_savings。\n",
   "agentMustDo": [
     "结合资源清单、使用数据和截图识别可优化资源",
     "为各项资源选择合适的优化动作，计算现有费用和预计费用",
@@ -24,28 +24,28 @@
   "inputFiles": [
     {
       "name": "dashboard.png",
-      "path": "input/dashboard.png",
+      "path": "environment/input/dashboard.png",
       "format": "PNG",
       "bytes": 66702,
       "description": "dashboard.png，用于星澜云账单与资源成本优化。"
     },
     {
       "name": "pricing.csv",
-      "path": "input/pricing.csv",
+      "path": "environment/input/pricing.csv",
       "format": "CSV",
       "bytes": 137,
       "description": "pricing.csv，用于星澜云账单与资源成本优化。"
     },
     {
       "name": "业务规则说明",
-      "path": "input/rules.md",
+      "path": "environment/input/rules.md",
       "format": "MD",
       "bytes": 637,
       "description": "业务规则说明，用于星澜云账单与资源成本优化。"
     },
     {
       "name": "usage.csv",
-      "path": "input/usage.csv",
+      "path": "environment/input/usage.csv",
       "format": "CSV",
       "bytes": 2059,
       "description": "usage.csv，用于星澜云账单与资源成本优化。"
@@ -56,19 +56,21 @@
   "referenceFiles": [
     {
       "name": "optimization_report.json",
-      "path": "output/optimization_report.json",
+      "path": "reference/optimization_report.json",
       "format": "JSON",
+      "bytes": 3860,
       "description": "包含整体费用、节约金额、建议数量与逐资源建议的优化报告。"
     },
     {
       "name": "savings_summary.csv",
-      "path": "output/savings_summary.csv",
+      "path": "reference/savings_summary.csv",
       "format": "CSV",
+      "bytes": 1027,
       "description": "逐资源费用测算表，列出资源名称、动作和节约金额。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "资源识别",
@@ -95,6 +97,111 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "从 savings_summary.csv 提取资源集合、优化动作与费用。",
+      "计算浪费资源覆盖 F1，再按资源 ID 比较动作和金额。",
+      "检查中文摘要中的总额、行动建议和交付文件完整性。"
+    ],
+    "metrics": [
+      "资源覆盖 F1 = 2 × 正确资源数 /（提交资源数 + 应覆盖资源数）。",
+      "动作和费用按资源主键逐记录比较；重复主键使相应检查项记 0。",
+      "资源覆盖、动作、费用、摘要分别占 30%、30%、25%、15%。"
+    ],
+    "gates": [],
+    "checks": [
+      {
+        "name": "浪费资源覆盖F1",
+        "weight": 30.0,
+        "implementation": "lambda: f1_set([r['resource_id'] for r in read_csv(OUTPUT / 'savings_summary.csv')], [r['resource_id'] for r in e])"
+      },
+      {
+        "name": "动作",
+        "weight": 30.0,
+        "implementation": "lambda: subset(['resource_id', 'action'])"
+      },
+      {
+        "name": "逐资源费用与节约",
+        "weight": 25.0,
+        "implementation": "lambda: subset(['resource_id', 'current_cost', 'projected_cost', 'monthly_savings'])"
+      },
+      {
+        "name": "摘要与双产物完整性",
+        "weight": 15.0,
+        "implementation": "report"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "optimization_report.json",
+      "path": "output/optimization_report.json",
+      "format": "JSON",
+      "description": "包含整体费用、节约金额、建议数量与逐资源建议的优化报告。"
+    },
+    {
+      "name": "savings_summary.csv",
+      "path": "output/savings_summary.csv",
+      "format": "CSV",
+      "description": "逐资源费用测算表，列出资源名称、动作和节约金额。"
+    }
+  ],
+  "referenceFileCount": 2,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/pricing.csv",
+      "content": "resource_type,unit_price_cny,billing_unit\nCVM,0.8,hour\nCDB,1.5,hour\nCOS,0.12,GB-month\nNAT,0.5,hour\nEIP,0.2,hour\nLOG,0.06,GB-month\n",
+      "truncated": false
+    },
+    {
+      "path": "environment/input/usage.csv",
+      "content": "resource_id,resource_type,name,billable_units,utilization_pct,inactive_days,attached,retention_days\nCVM-000,CVM,project-0-res-0,720,0,35,False,180\nCVM-001,CVM,project-0-res-1,720,2,45,False,120\nCVM-002,CVM,project-0-res-2,720,8,16,True,60\nCVM-003,CVM,project-0-res-3,720,20,2,True,30\nCVM-004,CVM,project-0-res-4,720,40,0,True,14\nCVM-005,CVM,project-0-res-5,720,65,0,True,7\nCVM-006,CVM,project-0-res-6,720,90,0,True,7\nCDB-000,CDB,project-1-res-0,720,0,35,False,180\nCDB-001,CDB,project-1-res-1,720,2,45,False,120\nCDB-002,CDB,project-1-res-2,720,8,16,True,60\nCDB-003,CDB,project-1-res-3,720,20,2,True,30\nCDB-004,CDB,project-1-res-4,720,40,0,True,14\nCDB-005,CDB,project-1-res-5,720,65,0,True,7\nCDB-006,CDB,project-1-res-6,720,90,0,True,7\nCOS-000,COS,project-2-res-0,2000,0,35,False,180\nCOS-001,COS,project-2-res-1,2300,2,45,False,120\nCOS-002,COS,project-2-res-2,2600,8,16,True,60\nCOS-003,COS,project-2-res-3,2900,20,2,True,30\nCOS-004,COS,project-2-res-4,3200,40,0,True,14\nCOS-005,COS,project-2-res-5,3500,65,0,True,7\nCOS-006,COS,project-2-res-6,3800,90,0,True,7\nNAT-000,NAT,project-3-res-0,720,0,35,False,180\nNAT-001,NAT,project-3-res-1,720,2,45,False,120\nNAT-002,NAT,project-3-res-2,720,8,16,True,60\nNAT-003,NAT,project-3-res-3,720,20,2,True,30\nNAT-004,NAT,project-3-res-4,720,40,0,True,14\nNAT-005,NAT,project-3-res-5,720,65,0,True,7\nNAT-006,NAT,project-3-res-6,720,90,0,True,7\nEIP-000,EIP,project-4-res-0,720,0,35,False,180\nEIP-001,EIP,project-4-res-1,720,2,45,False,120\nEIP-002,EIP,project-4-res-2,720,8,16,True,60\nEIP-003,EIP,project-4-res-3,720,20,2,True,30\nEIP-004,EIP,project-4-res-4,720,40,0,True,14\nEIP-005,EIP,project-4-res-5,720,65,0,True,7\nEIP-006,EIP,project-4-res-6,720,90,0,True,7\nLOG-000,LOG,project-5-res-0,2000,0,35,False,180\nLOG-001,LOG,project-5-res-1,2300,2,45,False,120\nLOG-002,LOG,project-5-res-2,2600,8,16,True,60\nLOG-003,LOG,project-5-res-3,2900,20,2,True,30\nLOG-004,LOG,project-5-res-4,3200,40,0,True,14\nLOG-005,LOG,project-5-res-5,3500,65,0,True,7\nLOG-006,LOG,project-5-res-6,3800,90,0,True,7\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/optimization_report.json",
+      "content": "{\n  \"executive_summary\": {\n    \"current_cost\": 6930.0,\n    \"projected_cost\": 2439.9,\n    \"monthly_savings\": 4490.1,\n    \"recommendation_count\": 16\n  },\n  \"recommendations\": [\n    {\n      \"resource_id\": \"CVM-000\",\n      \"resource_type\": \"CVM\",\n      \"name\": \"project-0-res-0\",\n      \"action\": \"schedule_stop\",\n      \"current_cost\": 576.0,\n      \"projected_cost\": 172.8,\n      \"monthly_savings\": 403.2\n    },\n    {\n      \"resource_id\": \"CVM-001\",\n      \"resource_type\": \"CVM\",\n      \"name\": \"project-0-res-1\",\n      \"action\": \"schedule_stop\",\n      \"current_cost\": 576.0,\n      \"projected_cost\": 172.8,\n      \"monthly_savings\": 403.2\n    },\n    {\n      \"resource_id\": \"CDB-000\",\n      \"resource_type\": \"CDB\",\n      \"name\": \"project-1-res-0\",\n      \"action\": \"downsize\",\n      \"current_cost\": 1080.0,\n      \"projected_cost\": 540.0,\n      \"monthly_savings\": 540.0\n    },\n    {\n      \"resource_id\": \"CDB-001\",\n      \"resource_type\": \"CDB\",\n      \"name\": \"project-1-res-1\",\n      \"action\": \"downsize\",\n      \"current_cost\": 1080.0,\n      \"projected_cost\": 540.0,\n      \"monthly_savings\": 540.0\n    },\n    {\n      \"resource_id\": \"CDB-002\",\n      \"resource_type\": \"CDB\",\n      \"name\": \"project-1-res-2\",\n      \"action\": \"downsize\",\n      \"current_cost\": 1080.0,\n      \"projected_cost\": 540.0,\n      \"monthly_savings\": 540.0\n    },\n    {\n      \"resource_id\": \"COS-000\",\n      \"resource_type\": \"COS\",\n      \"name\": \"project-2-res-0\",\n      \"action\": \"archive\",\n      \"current_cost\": 240.0,\n      \"projected_cost\": 60.0,\n      \"monthly_savings\": 180.0\n    },\n    {\n      \"resource_id\": \"COS-001\",\n      \"resource_type\": \"COS\",\n      \"name\": \"project-2-res-1\",\n      \"action\": \"archive\",\n      \"current_cost\": 276.0,\n      \"projected_cost\": 69.0,\n      \"monthly_savings\": 207.0\n    },\n    {\n      \"resource_id\": \"NAT-000\",\n      \"resource_type\": \"NAT\",\n      \"name\": \"project-3-res-0\",\n      \"action\": \"delete_idle\",\n      \"current_cost\": 360.0,\n      \"projected_cost\": 0.0,\n      \"monthly_savings\": 360.0\n    },\n    {\n      \"resource_id\": \"EIP-000\",\n      \"resource_type\": \"EIP\",\n      \"name\": \"project-4-res-0\",\n      \"action\": \"release\",\n      \"current_cost\": 144.0,\n      \"projected_cost\": 0.0,\n      \"monthly_savings\": 144.0\n    },\n    {\n      \"resource_id\": \"EIP-001\",\n      \"resource_type\": \"EIP\",\n      \"name\": \"project-4-res-1\",\n      \"action\": \"release\",\n      \"current_cost\": 144.0,\n      \"projected_cost\": 0.0,\n      \"monthly_savings\": 144.0\n    },\n    {\n      \"resource_id\": \"LOG-000\",\n      \"resource_type\": \"LOG\",\n      \"name\": \"project-5-res-0\",\n      \"action\": \"shorten_retention\",\n      \"current_cost\": 120.0,\n      \"projected_cost\": 20.0,\n      \"monthly_savings\": 100.0\n    },\n    {\n      \"resource_id\": \"LOG-001\",\n      \"resource_type\": \"LOG\",\n      \"name\": \"project-5-res-1\",\n      \"action\": \"shorten_retention\",\n      \"current_cost\": 138.0,\n      \"projected_cost\": 34.5,\n      \"monthly_savings\": 103.5\n    },\n    {\n      \"resource_id\": \"LOG-002\",\n      \"resource_type\": \"LOG\",\n      \"name\": \"project-5-res-2\",\n      \"action\": \"shorten_retention\",\n      \"current_cost\": 156.0,\n      \"projected_cost\": 78.0,\n      \"monthly_savings\": 78.0\n    },\n    {\n      \"resource_id\": \"EIP-img-901\",\n      \"resource_type\": \"EIP\",\n      \"name\": \"orphan-ip-image\",\n      \"action\": \"release\",\n      \"current_cost\": 144.0,\n      \"projected_cost\": 0.0,\n      \"monthly_savings\": 144.0\n    },\n    {\n      \"resource_id\": \"LOG-img-902\",\n      \"resource_type\": \"LOG\",\n      \"name\": \"debug-log-image\",\n      \"action\": \"shorten_retention\",\n      \"current_cost\": 240.0,\n      \"projected_cost\": 40.0,\n      \"monthly_savings\": 200.0\n    },\n    {\n      \"resource_id\": \"CVM-img-903\",\n      \"resource_type\": \"CVM\",\n      \"name\": \"idle-dev-image\",\n      \"action\": \"schedule_stop\",\n      \"current_cost\": 576.0,\n      \"projected_cost\": 172.8,\n      \"monthly_savings\": 403.2\n    }\n  ]\n}\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/savings_summary.csv",
+      "content": "resource_id,resource_type,name,action,current_cost,projected_cost,monthly_savings\nCVM-000,CVM,project-0-res-0,schedule_stop,576.0,172.8,403.2\nCVM-001,CVM,project-0-res-1,schedule_stop,576.0,172.8,403.2\nCDB-000,CDB,project-1-res-0,downsize,1080.0,540.0,540.0\nCDB-001,CDB,project-1-res-1,downsize,1080.0,540.0,540.0\nCDB-002,CDB,project-1-res-2,downsize,1080.0,540.0,540.0\nCOS-000,COS,project-2-res-0,archive,240.0,60.0,180.0\nCOS-001,COS,project-2-res-1,archive,276.0,69.0,207.0\nNAT-000,NAT,project-3-res-0,delete_idle,360.0,0.0,360.0\nEIP-000,EIP,project-4-res-0,release,144.0,0.0,144.0\nEIP-001,EIP,project-4-res-1,release,144.0,0.0,144.0\nLOG-000,LOG,project-5-res-0,shorten_retention,120.0,20.0,100.0\nLOG-001,LOG,project-5-res-1,shorten_retention,138.0,34.5,103.5\nLOG-002,LOG,project-5-res-2,shorten_retention,156.0,78.0,78.0\nEIP-img-901,EIP,orphan-ip-image,release,144.0,0.0,144.0\nLOG-img-902,LOG,debug-log-image,shorten_retention,240.0,40.0,200.0\nCVM-img-903,CVM,idle-dev-image,schedule_stop,576.0,172.8,403.2\n",
+      "truncated": false
+    }
+  ]
 }

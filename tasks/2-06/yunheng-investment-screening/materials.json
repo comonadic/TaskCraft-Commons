@@ -1,86 +1,86 @@
 [
   {
-    "path": "input/D01.html",
+    "path": "environment/input/D01.html",
     "bytes": 842,
     "sha256": "fe21edaad57719b2c5a9583a8f82592e3d0a1afd5bb90a978c8f13d45d098288"
   },
   {
-    "path": "input/D01.pdf",
+    "path": "environment/input/D01.pdf",
     "bytes": 25125,
     "sha256": "e6a8da2ba57afb6b9def1604b00f368c4c9677b936f18d11fc5db8981761f861"
   },
   {
-    "path": "input/D02.html",
+    "path": "environment/input/D02.html",
     "bytes": 915,
     "sha256": "a6fa1c40178aab550d1a8bedfc62aba95beefc9b129ca5185227acd526bf2bf8"
   },
   {
-    "path": "input/D02.pdf",
+    "path": "environment/input/D02.pdf",
     "bytes": 22428,
     "sha256": "ec3e60cef7ca88b5c44c7e679f08379f0f39629e7db843110bea2d56d35a8aa4"
   },
   {
-    "path": "input/D03.html",
+    "path": "environment/input/D03.html",
     "bytes": 865,
     "sha256": "fde77b257aa4071c5e26057b232ccc2f096ca6ffa46f4fd9e04350281340e809"
   },
   {
-    "path": "input/D03.pdf",
+    "path": "environment/input/D03.pdf",
     "bytes": 24422,
     "sha256": "38315d5a508b2fe7229bdda5ebe308c55ef44a927aba6b9057304dea68e59983"
   },
   {
-    "path": "input/D04.html",
+    "path": "environment/input/D04.html",
     "bytes": 653,
     "sha256": "f1924621203c1fc2fa1f6214d07470975cc94bd06cbfb79177b00a2cea501028"
   },
   {
-    "path": "input/D04.pdf",
+    "path": "environment/input/D04.pdf",
     "bytes": 19863,
     "sha256": "597614340ddf5080c17d4c7ce81ac89e37eaff3a1bceb4c878f5b08f4488745f"
   },
   {
-    "path": "input/D05.html",
+    "path": "environment/input/D05.html",
     "bytes": 812,
     "sha256": "78e1b26570d0785433c354aef1f2959ef6f6b7eb775d877b9c25f8542d6129b5"
   },
   {
-    "path": "input/D05.pdf",
+    "path": "environment/input/D05.pdf",
     "bytes": 25918,
     "sha256": "9655c455177d7a2ad93f65cdbd784e6748c714173e8edf03cef772bd3ed1d757"
   },
   {
-    "path": "input/D06.html",
+    "path": "environment/input/D06.html",
     "bytes": 776,
     "sha256": "588150e47d80eaaf10c2dfcf60fba78da8151e3ed3ed93305e371346616dbac4"
   },
   {
-    "path": "input/D06.pdf",
+    "path": "environment/input/D06.pdf",
     "bytes": 24425,
     "sha256": "e2e64d7086183223b2a9af7fcaaf09d02cb279a798fa2f7920e8d6059f87ac19"
   },
   {
-    "path": "input/D07.html",
+    "path": "environment/input/D07.html",
     "bytes": 798,
     "sha256": "e3095458eb57b447fd1d42019b1ab6b52a6d3de13ac3b9d3b91b9ae1642c0870"
   },
   {
-    "path": "input/D07.pdf",
+    "path": "environment/input/D07.pdf",
     "bytes": 25687,
     "sha256": "ba28031fc39928b5f31689f25df186ea80a639dd9ff0e9f2ec02ceffc03348e7"
   },
   {
-    "path": "input/D08.html",
+    "path": "environment/input/D08.html",
     "bytes": 900,
     "sha256": "8fa1b47b29f2d22d8f8f53272483343d5ae196b53ffdcf87294f7ab8276b908e"
   },
   {
-    "path": "input/D08.pdf",
+    "path": "environment/input/D08.pdf",
     "bytes": 27852,
     "sha256": "e5fa39fbe9dbcb5ddc875ecf44d4f74a8bf63c823e0827d9fecf79e672af7f3f"
   },
   {
-    "path": "input/memo_template.md",
+    "path": "environment/input/memo_template.md",
     "bytes": 557,
     "sha256": "2848795e65a3acb3acac70c107af77ab6b0e5fe81394d7946b2a349028ba3f52"
   }

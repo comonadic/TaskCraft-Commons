@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: payment-api, namespace: payments}
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+      - name: payment-api
+        image: registry.local/payment:1.7.0
+        resources: {requests: {memory: 128Mi}, limits: {memory: 128Mi}}
+        env: [{name: METRICS_PORT, value: "9100"}]
+        livenessProbe: {httpGet: {path: /health, port: 8080}, initialDelaySeconds: 5, periodSeconds: 5, failureThreshold: 2}
+        readinessProbe: {httpGet: {path: /ready, port: 8080}, initialDelaySeconds: 5}

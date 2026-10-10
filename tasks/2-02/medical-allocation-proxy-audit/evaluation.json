@@ -1,0 +1,74 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "评分与排序",
+      "weight": 65,
+      "rule": "本项内原始分数保留占 30%，基线入选 F1 占 20%，修订入选 F1 占 30%，按修订分数排序的名单 F1 占 20%。"
+    },
+    {
+      "name": "群体与需要指标",
+      "weight": 30,
+      "rule": "基线与修订报告各占 15 分，逐字段比较入选数量、群体占比与需要指标。"
+    },
+    {
+      "name": "分析说明",
+      "weight": 5,
+      "rule": "分析正文至少 60 字，取得本项分数。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "读取 6,000 人预测，核对基线分数、入选标志和改进分数。",
+    "按改进分数与 patient_id 排序选取 1,200 人，比较目标人群。",
+    "核对两个人群报告中的需要程度与构成，并检查机制解释。"
+  ],
+  "metrics": [
+    "排序项 = 0.3 × 基线分数正确率 + 0.2 × 基线入选F1 + 0.3 × 改进入选F1 + 0.2 × 重排入选F1；该项占 65%。",
+    "baseline、revised 报告各占 15%，机制说明占 5%。"
+  ],
+  "gates": [
+    "预测文件须恰好包含 6,000 个唯一患者 ID。"
+  ],
+  "checks": [
+    {
+      "name": "原分数与两种排序",
+      "weight": 65.0,
+      "implementation": "predictions"
+    },
+    {
+      "name": "机制及外推限制说明",
+      "weight": 5.0,
+      "implementation": "lambda: len((OUTPUT / 'analysis.md').read_text()) >= 60"
+    },
+    {
+      "name": "baseline人群需要与构成",
+      "weight": 15.0,
+      "implementation": "lambda name=name: tree_score(read_json(OUTPUT / f'{name}_report.json'), e[name + '_report'])"
+    },
+    {
+      "name": "revised人群需要与构成",
+      "weight": 15.0,
+      "implementation": "lambda name=name: tree_score(read_json(OUTPUT / f'{name}_report.json'), e[name + '_report'])"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

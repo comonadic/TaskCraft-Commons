@@ -1,0 +1,87 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "财务指标",
+      "weight": 45,
+      "rule": "逐字段比对八项财务计算，按正确比例计分。"
+    },
+    {
+      "name": "论点与引文",
+      "weight": 15,
+      "rule": "检查论点、风险和尽调项的引文是否对应资料文件及页码，按有效条目比例计分。"
+    },
+    {
+      "name": "风险识别",
+      "weight": 10,
+      "rule": "四类风险 ID 集合按 F1 计分。"
+    },
+    {
+      "name": "尽调问题",
+      "weight": 10,
+      "rule": "四项尽调 ID 集合按 F1 计分。"
+    },
+    {
+      "name": "备忘录与建议",
+      "weight": 20,
+      "rule": "检查八章完整、建议枚举及报告与结构化建议一致，建议理由至少 20 字。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "从 analysis.json 核对八项财务指标和论点证据。",
+    "计算四类风险与四项待尽调事项的覆盖 F1。",
+    "核对中文投资备忘录、明确建议与分析结构。"
+  ],
+  "metrics": [
+    "财务计算 45%、论点证据 15%、风险 10%、待尽调 10%、备忘录 20%。",
+    "自动评分覆盖数值与文件结构；投资判断的专业质量可在审题时由领域贡献者补充评议。"
+  ],
+  "gates": [],
+  "checks": [
+    {
+      "name": "八项财务计算",
+      "weight": 45.0,
+      "implementation": "lambda: tree_score(read_json(OUTPUT / 'analysis.json')['metrics'], read_json(TESTS / 'expected.json'))"
+    },
+    {
+      "name": "论点与证据结构",
+      "weight": 15.0,
+      "implementation": "evidence"
+    },
+    {
+      "name": "四类风险覆盖",
+      "weight": 10.0,
+      "implementation": "lambda: f1_set([x['id'] for x in read_json(OUTPUT / 'analysis.json')['risks']], ['R1', 'R2', 'R3', 'R4'])"
+    },
+    {
+      "name": "四项待尽调",
+      "weight": 10.0,
+      "implementation": "lambda: f1_set([x['id'] for x in read_json(OUTPUT / 'analysis.json')['diligence']], ['Q1', 'Q2', 'Q3', 'Q4'])"
+    },
+    {
+      "name": "完整中文备忘录及明确建议",
+      "weight": 20.0,
+      "implementation": "memo"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

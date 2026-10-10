@@ -1,0 +1,67 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "受众与渠道",
+      "weight": 65,
+      "rule": "按客户 ID 比对入选名单和渠道资格，按记录与字段的正确比例计分。"
+    },
+    {
+      "name": "分群摘要",
+      "weight": 15,
+      "rule": "比对分群定义与统计字段，按正确比例计分。"
+    },
+    {
+      "name": "重叠分析",
+      "weight": 20,
+      "rule": "按既有分群 ID 比较重叠人数及比例，数值绝对容差为 0.000001。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "读取客户、订单和偏好材料，按业务规则构造目标受众与渠道资格。",
+    "按 customer_id 对齐提交名单，比较人员和字段。",
+    "核对分群定义以及各已有分群的交集、并集与分母。"
+  ],
+  "metrics": [
+    "受众名单占 65%，分群摘要占 15%，重叠报告占 20%。",
+    "重叠率数值绝对容差 1e−6，默认相对容差 1e−5；重复 customer_id 记 0。"
+  ],
+  "gates": [],
+  "checks": [
+    {
+      "name": "精确受众与渠道资格",
+      "weight": 65.0,
+      "implementation": "lambda: record_score(read_csv(OUTPUT / 'audience_roster.csv'), e['roster'], ['customer_id'])"
+    },
+    {
+      "name": "分群摘要",
+      "weight": 15.0,
+      "implementation": "lambda: tree_score(read_json(OUTPUT / 'segment_definition.json'), e['definition'])"
+    },
+    {
+      "name": "正确分母重叠率",
+      "weight": 20.0,
+      "implementation": "lambda: record_score(read_csv(OUTPUT / 'overlap_report.tsv', '\\t'), e['overlap'], ['segment_id'], atol=1e-06)"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

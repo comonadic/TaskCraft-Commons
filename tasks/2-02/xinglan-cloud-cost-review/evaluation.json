@@ -1,0 +1,78 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "资源识别",
+      "weight": 30,
+      "rule": "将建议中的资源 ID 与应优化资源集合比较，以 F1 衡量覆盖率和准确率，得分为 30 × F1。"
+    },
+    {
+      "name": "优化动作",
+      "weight": 30,
+      "rule": "按资源 ID 比对动作，按记录与字段的正确比例计分。"
+    },
+    {
+      "name": "费用测算",
+      "weight": 25,
+      "rule": "逐资源比较现有费用、预计费用和月度节约，金额容差为 0.01，按正确比例计分。"
+    },
+    {
+      "name": "报告汇总",
+      "weight": 15,
+      "rule": "整体摘要与建议明细各占本项一半，检查费用合计、建议数量和逐项内容。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "从 savings_summary.csv 提取资源集合、优化动作与费用。",
+    "计算浪费资源覆盖 F1，再按资源 ID 比较动作和金额。",
+    "检查中文摘要中的总额、行动建议和交付文件完整性。"
+  ],
+  "metrics": [
+    "资源覆盖 F1 = 2 × 正确资源数 /（提交资源数 + 应覆盖资源数）。",
+    "动作和费用按资源主键逐记录比较；重复主键使相应检查项记 0。",
+    "资源覆盖、动作、费用、摘要分别占 30%、30%、25%、15%。"
+  ],
+  "gates": [],
+  "checks": [
+    {
+      "name": "浪费资源覆盖F1",
+      "weight": 30.0,
+      "implementation": "lambda: f1_set([r['resource_id'] for r in read_csv(OUTPUT / 'savings_summary.csv')], [r['resource_id'] for r in e])"
+    },
+    {
+      "name": "动作",
+      "weight": 30.0,
+      "implementation": "lambda: subset(['resource_id', 'action'])"
+    },
+    {
+      "name": "逐资源费用与节约",
+      "weight": 25.0,
+      "implementation": "lambda: subset(['resource_id', 'current_cost', 'projected_cost', 'monthly_savings'])"
+    },
+    {
+      "name": "摘要与双产物完整性",
+      "weight": 15.0,
+      "implementation": "report"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

@@ -1,0 +1,6 @@
+{
+  "label": 0.7,
+  "evidence": 0.3,
+  "video_gate": "独立回放对应3帧像素比较及6秒时长",
+  "third_party_model_commit": "0059d4335f8156206f63a35662313385f7ad6d74"
+}

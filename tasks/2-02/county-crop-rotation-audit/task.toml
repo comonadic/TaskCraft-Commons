@@ -1,0 +1,28 @@
+schema_version = "1.4"
+artifacts = ["/app/output"]
+[task]
+name = "TaskCraft/county-crop-rotation-audit"
+version = "0.3.0"
+description = "依据十年作物记录与轮作规则，判断地块资格，整理风险地块，并交付可用于 GIS 的审计成果。"
+keywords = ["knowledge-work", "zh-CN", "deterministic"]
+[metadata]
+difficulty = "hard"
+category = "2-02"
+occupation = "2-02-02-07"
+[agent]
+timeout_sec = 3600.0
+[environment]
+build_timeout_sec = 2400.0
+network_mode = "public"
+cpus = 2
+memory_mb = 6144
+storage_mb = 16384
+[verifier]
+timeout_sec = 1200.0
+environment_mode = "separate"
+[verifier.environment]
+build_timeout_sec = 2400.0
+network_mode = "public"
+cpus = 2
+memory_mb = 6144
+storage_mb = 16384

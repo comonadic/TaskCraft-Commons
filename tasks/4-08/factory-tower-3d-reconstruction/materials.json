@@ -1,36 +1,36 @@
 [
   {
-    "path": "input/01总平面.pdf",
+    "path": "environment/input/01总平面.pdf",
     "bytes": 15739,
     "sha256": "0b3a21cfd3ba1ef1cd949b57c05270ca7f418881fffaaa9edb429a77af03b3aa"
   },
   {
-    "path": "input/02首层平面.pdf",
+    "path": "environment/input/02首层平面.pdf",
     "bytes": 15853,
     "sha256": "cc53446f5f3561626e20f00f1ee0817da3c8232a59cb1f872f21277c39cdfaef"
   },
   {
-    "path": "input/03屋面平面.pdf",
+    "path": "environment/input/03屋面平面.pdf",
     "bytes": 15738,
     "sha256": "eb725ebff9c7b3f16fd976f9c2e4ac7a9dbede7b671dfe4974b1523e3a3c57d5"
   },
   {
-    "path": "input/04南立面.pdf",
+    "path": "environment/input/04南立面.pdf",
     "bytes": 15655,
     "sha256": "3c4a482b48ad5783e10ecb08c11e9418eab46534eabc4a32e5da35e10e122638"
   },
   {
-    "path": "input/05东立面.pdf",
+    "path": "environment/input/05东立面.pdf",
     "bytes": 15551,
     "sha256": "304ab37bda449794ab376cda18bcf6781a030adf6b2e3443029b55f75a6e9599"
   },
   {
-    "path": "input/06剖面.pdf",
+    "path": "environment/input/06剖面.pdf",
     "bytes": 15565,
     "sha256": "62fce2dc4c792eca16c58f6a89b081446fd6f4dac795f8852e6ace72a672d4c4"
   },
   {
-    "path": "input/drawing_schedule.md",
+    "path": "environment/input/drawing_schedule.md",
     "bytes": 998,
     "sha256": "507d1829fd379517548bf78f280d1ff0186bb9b06bc06827aecda8b9945ff3cd"
   }

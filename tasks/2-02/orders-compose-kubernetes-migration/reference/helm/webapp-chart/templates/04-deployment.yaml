@@ -1,0 +1,78 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: webapp
+    tier: backend
+spec:
+  replicas: {{ .Values.backendReplicas }}
+  selector:
+    matchLabels:
+      app: webapp
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: webapp
+        tier: backend
+    spec:
+      containers:
+      - name: backend
+        image: ale-cn-webapp:0.1.0
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
+        resources:
+          requests:
+            cpu: 100m
+            memory: 64Mi
+          limits:
+            cpu: 1000m
+            memory: 512Mi
+        volumeMounts:
+        - name: source
+          mountPath: /app
+          readOnly: true
+        command:
+        - python
+        - /app/backend.py
+        env:
+        - name: MARKET
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: MARKET
+        - name: DB_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: DB_HOST
+        - name: DB_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: DB_NAME
+        - name: DB_USER
+          value: seed
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: password
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 20
+          periodSeconds: 10
+      volumes:
+      - name: source
+        configMap:
+          name: app-config

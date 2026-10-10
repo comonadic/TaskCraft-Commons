@@ -1,0 +1,41 @@
+{
+  "version": "runtime-assets-v1",
+  "architecture": "linux/arm64",
+  "archive": {
+    "url": "https://github.com/comonadic/TaskCraft-Commons/releases/download/runtime-assets-v1/taskcraft-k8s-arm64-v1.tar.gz",
+    "bytes": 412202709,
+    "sha256": "a885594feb4b2f6a7b4adb2398a520fab36955c9f95f55a61f8352ba3ed60cda"
+  },
+  "files": [
+    {
+      "path": "environment/assets/helm-linux-arm64.tar.gz",
+      "bytes": 15843660,
+      "sha256": "c86c9b23602d4abbfae39d9634e25ab1d0ea6c4c16c5b154113efe316a402547"
+    },
+    {
+      "path": "environment/assets/k3s",
+      "bytes": 66322584,
+      "sha256": "79d3c5c67abe8d24c2e59ecb51f675ed1232ff43e810e0d661af34fa7a27c66a"
+    },
+    {
+      "path": "environment/assets/k3s-airgap-images-arm64.tar.zst",
+      "bytes": 133187799,
+      "sha256": "7b3eee2ff1c98081eb16cbdbae1f562da0f9a969467d8a1030a39934637acf07"
+    },
+    {
+      "path": "environment/assets/postgres.tar",
+      "bytes": 461765632,
+      "sha256": "2d33d81ef2a447782fcb67436216aadc0984b7373f7d471afdbd2ac1355938bd"
+    },
+    {
+      "path": "environment/assets/python.tar",
+      "bytes": 57616896,
+      "sha256": "3b2bae31c808536d22f5eac35a7cc6bcf2a695ba9e1a40ab991dc3a1efe3ff0e"
+    },
+    {
+      "path": "environment/assets/webapp.tar",
+      "bytes": 80700416,
+      "sha256": "83bdcf619cbac8671d9d78dcc24ea9e61e91965bdd6f2ea36c141b2f59d62b1b"
+    }
+  ]
+}

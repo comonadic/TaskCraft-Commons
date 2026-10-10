@@ -1,0 +1,18 @@
+{
+  "filing_id": "CN006_2023",
+  "company": "云岫物流",
+  "year": 2023,
+  "currency": "CNY",
+  "revenue": 819670000.0,
+  "net_income": 147540600.0,
+  "assets": 1639340000.0,
+  "liabilities": 688522800.0,
+  "cash": 147540600.0,
+  "equity": 950817200.0,
+  "operating_cashflow": 177048720.0,
+  "capex": 36885150.0,
+  "debt": 481965960.0,
+  "shares": 100000000.0,
+  "eps": 1.4754,
+  "dividends": 29508120.0
+}

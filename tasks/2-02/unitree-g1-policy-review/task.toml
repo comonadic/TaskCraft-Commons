@@ -1,0 +1,28 @@
+schema_version = "1.4"
+artifacts = ["/app/output"]
+[task]
+name = "TaskCraft/unitree-g1-policy-review"
+version = "0.3.0"
+description = "回放八组人形机器人控制策略，判断稳定性和跟踪效果，用视频与轨迹指标支持每项结论。"
+keywords = ["knowledge-work", "zh-CN", "deterministic"]
+[metadata]
+difficulty = "hard"
+category = "2-02"
+occupation = "2-02-38-10"
+[agent]
+timeout_sec = 7200.0
+[environment]
+build_timeout_sec = 2400.0
+network_mode = "public"
+cpus = 2
+memory_mb = 6144
+storage_mb = 16384
+[verifier]
+timeout_sec = 1200.0
+environment_mode = "separate"
+[verifier.environment]
+build_timeout_sec = 2400.0
+network_mode = "public"
+cpus = 2
+memory_mb = 6144
+storage_mb = 16384

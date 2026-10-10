@@ -1,21 +1,21 @@
 [
   {
-    "path": "input/brief.md",
+    "path": "environment/input/brief.md",
     "bytes": 757,
     "sha256": "f178d84c3b48a8eac68f7da43d415dd984333918946bbbde5b0b5e85c06b6385"
   },
   {
-    "path": "input/existing_segments.csv",
+    "path": "environment/input/existing_segments.csv",
     "bytes": 133993,
     "sha256": "b885085fb6485caf2d8d31612db53962744e16f2ffd335ba5c1282aba0b9acfe"
   },
   {
-    "path": "input/governance.yaml",
+    "path": "environment/input/governance.yaml",
     "bytes": 142,
     "sha256": "d6fe11b04ce826f5cfd6abd5c2efa89f61002ea0c78dc0e6d211f58261089142"
   },
   {
-    "path": "input/unified_profiles.parquet",
+    "path": "environment/input/unified_profiles.parquet",
     "bytes": 154608,
     "sha256": "a2507672894359379b740b874bd5a741efbaf30ae2ba6f23adfc6cedf13c5b35"
   }

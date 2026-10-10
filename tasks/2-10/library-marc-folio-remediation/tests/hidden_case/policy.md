@@ -1,0 +1,1 @@
+题名NFKC、strip、移除尾部/后再strip；041 chi改zho；100按authority映射；020去空格和连字符；856仅将http改https。949不在有效馆代码中优先quarantine；多个ISBN匹配review；无匹配create；唯一匹配protected则skip_protected，否则overlay。目标instance在唯一匹配时填写，其他为空。QA需records、五种decision_counts以及每记录changes列表，变化类型title/language/authority/isbn/url。

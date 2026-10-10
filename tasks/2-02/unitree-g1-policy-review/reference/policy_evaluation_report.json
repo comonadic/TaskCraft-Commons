@@ -1,0 +1,82 @@
+[
+  {
+    "case_id": "G1-01",
+    "verdict": "successful",
+    "observation": "六秒回放保持站立，没有触发跌倒阈值。关节跟踪误差为0.0010弧度，最小基座高度0.7916米。",
+    "evidence": {
+      "min_base_height": 0.7916138550488151,
+      "tracking_rmse": 0.0009624578516360935,
+      "fall_time": null
+    }
+  },
+  {
+    "case_id": "G1-02",
+    "verdict": "successful",
+    "observation": "六秒回放保持站立，没有触发跌倒阈值。关节跟踪误差为0.0038弧度，最小基座高度0.7914米。",
+    "evidence": {
+      "min_base_height": 0.7913981474344896,
+      "tracking_rmse": 0.0037996951069757,
+      "fall_time": null
+    }
+  },
+  {
+    "case_id": "G1-03",
+    "verdict": "failed",
+    "observation": "在1.63秒首次跌倒，基座高度降到阈值以下。关节跟踪误差为0.0968弧度，最小基座高度0.0586米。",
+    "evidence": {
+      "min_base_height": 0.05855329019268087,
+      "tracking_rmse": 0.09681648266343673,
+      "fall_time": 1.6340000000000012
+    }
+  },
+  {
+    "case_id": "G1-04",
+    "verdict": "failed",
+    "observation": "在4.56秒首次跌倒，基座高度降到阈值以下。关节跟踪误差为0.0100弧度，最小基座高度0.0477米。",
+    "evidence": {
+      "min_base_height": 0.04773118341170904,
+      "tracking_rmse": 0.009967081815193143,
+      "fall_time": 4.55799999999972
+    }
+  },
+  {
+    "case_id": "G1-05",
+    "verdict": "failed",
+    "observation": "在2.65秒首次跌倒，基座高度降到阈值以下。关节跟踪误差为0.0209弧度，最小基座高度0.0621米。",
+    "evidence": {
+      "min_base_height": 0.062066693788357045,
+      "tracking_rmse": 0.020946823054081305,
+      "fall_time": 2.6539999999999293
+    }
+  },
+  {
+    "case_id": "G1-06",
+    "verdict": "failed",
+    "observation": "在2.01秒首次跌倒，基座高度降到阈值以下。关节跟踪误差为0.1888弧度，最小基座高度0.0549米。",
+    "evidence": {
+      "min_base_height": 0.05490177935793018,
+      "tracking_rmse": 0.18880363996337715,
+      "fall_time": 2.0080000000000005
+    }
+  },
+  {
+    "case_id": "G1-07",
+    "verdict": "failed",
+    "observation": "在2.55秒首次跌倒，基座高度降到阈值以下。关节跟踪误差为0.2294弧度，最小基座高度0.0419米。",
+    "evidence": {
+      "min_base_height": 0.04187392176250409,
+      "tracking_rmse": 0.22941540532009227,
+      "fall_time": 2.5519999999999405
+    }
+  },
+  {
+    "case_id": "G1-08",
+    "verdict": "successful",
+    "observation": "六秒回放保持站立，没有触发跌倒阈值。关节跟踪误差为0.0039弧度，最小基座高度0.7913米。",
+    "evidence": {
+      "min_base_height": 0.791265603973732,
+      "tracking_rmse": 0.003892000442858327,
+      "fall_time": null
+    }
+  }
+]

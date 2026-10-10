@@ -3,14 +3,14 @@
   "title": "澄海精密权益研究摘要工作簿",
   "brief": "整合行情与财报信息，完成六板块权益研究摘要，保留关键计算公式及资料对应的时间和出处。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-06",
   "occupation": {
     "code": "2-06-11-03",
     "name": "证券投资专业人员"
   },
   "scene": "你是证券研究人员，需要把澄海精密的市场与财务信息整理进统一研究模板，供团队进一步分析。",
-  "taskPrompt": "你是证券研究人员，需要把澄海精密的市场与财务信息整理进统一研究模板，供团队进一步分析。\n\n1. 读取行情、统计及年报页面，提取指定时点的数据\n2. 填入研究摘要模板，建立派生指标公式\n3. 检查工作簿计算结果并整理资料索引\n\n交付成果：\n- CN_Financial_Summary.xlsx：“研究摘要”工作表，包含输入值、派生指标和动态公式。\n- sources.json：行情时点、公司、币种与资料页面索引。",
+  "taskPrompt": "# 澄海精密权益研究摘要工作簿\n\n你是证券研究人员，需要把澄海精密的市场与财务信息整理进统一研究模板，供团队进一步分析。\n\n1. 读取行情、统计及年报页面，提取指定时点的数据\n2. 填入研究摘要模板，建立派生指标公式\n3. 检查工作簿计算结果并整理资料索引\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/CN_Financial_Summary.xlsx`：“研究摘要”工作表，包含输入值、派生指标和动态公式。\n- `/app/output/sources.json`：行情时点、公司、币种与资料页面索引。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`CN_Financial_Summary.xlsx`，单页“研究摘要”，按template行坐标填B列；`sources.json`字段quote_time,company,currency,pages。公式行见 output_contract.json。\n",
   "agentMustDo": [
     "读取行情、统计及年报页面，提取指定时点的数据",
     "填入研究摘要模板，建立派生指标公式",
@@ -25,56 +25,56 @@
   "inputFiles": [
     {
       "name": "annual_report.html",
-      "path": "input/annual_report.html",
+      "path": "environment/input/annual_report.html",
       "format": "HTML",
       "bytes": 816,
       "description": "annual_report.html，用于澄海精密权益研究摘要工作簿。"
     },
     {
       "name": "formula_contract.md",
-      "path": "input/formula_contract.md",
+      "path": "environment/input/formula_contract.md",
       "format": "MD",
       "bytes": 270,
       "description": "formula_contract.md，用于澄海精密权益研究摘要工作簿。"
     },
     {
       "name": "output_contract.json",
-      "path": "input/output_contract.json",
+      "path": "environment/input/output_contract.json",
       "format": "JSON",
       "bytes": 1049,
       "description": "output_contract.json，用于澄海精密权益研究摘要工作簿。"
     },
     {
       "name": "quote.html",
-      "path": "input/quote.html",
+      "path": "environment/input/quote.html",
       "format": "HTML",
       "bytes": 735,
       "description": "quote.html，用于澄海精密权益研究摘要工作簿。"
     },
     {
       "name": "statistics.html",
-      "path": "input/statistics.html",
+      "path": "environment/input/statistics.html",
       "format": "HTML",
       "bytes": 663,
       "description": "statistics.html，用于澄海精密权益研究摘要工作簿。"
     },
     {
       "name": "template.xlsx",
-      "path": "input/template.xlsx",
+      "path": "environment/input/template.xlsx",
       "format": "XLSX",
       "bytes": 4466,
       "description": "template.xlsx，用于澄海精密权益研究摘要工作簿。"
     },
     {
       "name": "template.xlsx.inspect.ndjson",
-      "path": "input/template.xlsx.inspect.ndjson",
+      "path": "environment/input/template.xlsx.inspect.ndjson",
       "format": "NDJSON",
       "bytes": 10839,
       "description": "template.xlsx.inspect.ndjson，用于澄海精密权益研究摘要工作簿。"
     },
     {
       "name": "template.xlsx.png",
-      "path": "input/template.xlsx.png",
+      "path": "environment/input/template.xlsx.png",
       "format": "PNG",
       "bytes": 65446,
       "description": "template.xlsx.png，用于澄海精密权益研究摘要工作簿。"
@@ -85,19 +85,21 @@
   "referenceFiles": [
     {
       "name": "CN_Financial_Summary.xlsx",
-      "path": "output/CN_Financial_Summary.xlsx",
+      "path": "reference/CN_Financial_Summary.xlsx",
       "format": "XLSX",
+      "bytes": 4633,
       "description": "“研究摘要”工作表，包含输入值、派生指标和动态公式。"
     },
     {
       "name": "sources.json",
-      "path": "output/sources.json",
+      "path": "reference/sources.json",
       "format": "JSON",
+      "bytes": 173,
       "description": "行情时点、公司、币种与资料页面索引。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "数据与计算结果",
@@ -119,6 +121,100 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "读取 Excel 工作簿的原始输入、派生指标和公式。",
+      "核对估值、盈利、增长与资产负债指标。",
+      "对关键输入应用四组扰动，检查公式计算是否等价，再核对来源时点。"
+    ],
+    "metrics": [
+      "数值占 65%，动态公式占 25%，公司、币种和报价时点占 10%。",
+      "公式项按四组输入扰动后的计算结果判断等价，支持等价写法。"
+    ],
+    "gates": [],
+    "checks": [
+      {
+        "name": "全部输入与派生数值",
+        "weight": 65.0,
+        "implementation": "lambda: tree_score({k: read_xlsx(OUTPUT / 'CN_Financial_Summary.xlsx')[0].get(k) for k in e}, e)"
+      },
+      {
+        "name": "动态公式四组扰动等价",
+        "weight": 25.0,
+        "implementation": "lambda: equivalence(read_xlsx(OUTPUT / 'CN_Financial_Summary.xlsx')[1], f, e)"
+      },
+      {
+        "name": "来源与时点",
+        "weight": 10.0,
+        "implementation": "lambda: tree_score(read_json(OUTPUT / 'sources.json'), {'quote_time': '2025-03-31 15:00', 'company': '澄海精密', 'currency': 'CNY', 'pages': ['quote.html', 'statistics.html', 'annual_report.html']})"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "CN_Financial_Summary.xlsx",
+      "path": "output/CN_Financial_Summary.xlsx",
+      "format": "XLSX",
+      "description": "“研究摘要”工作表，包含输入值、派生指标和动态公式。"
+    },
+    {
+      "name": "sources.json",
+      "path": "output/sources.json",
+      "format": "JSON",
+      "description": "行情时点、公司、币种与资料页面索引。"
+    }
+  ],
+  "referenceFileCount": 2,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/formula_contract.md",
+      "content": "公式评分支持四则运算、幂、括号、单元格相对/绝对引用、SUM/AVERAGE/MIN/MAX/ABS/ROUND及单列连续范围。在四组扰动输入上验证依赖与等价性，不能用硬编码常量替代动态公式。数值缓存与实际金额也须正确。",
+      "truncated": false
+    },
+    {
+      "path": "environment/input/output_contract.json",
+      "content": "{\n  \"cells\": {\n    \"股价\": 4,\n    \"总股本\": 5,\n    \"流通股本\": 6,\n    \"52周最高\": 7,\n    \"52周最低\": 8,\n    \"市值\": 10,\n    \"有息债务\": 11,\n    \"现金\": 12,\n    \"企业价值\": 13,\n    \"市盈率\": 14,\n    \"企业价值/收入\": 15,\n    \"营业收入\": 17,\n    \"营业成本\": 18,\n    \"净利润\": 19,\n    \"毛利\": 20,\n    \"毛利率\": 21,\n    \"总资产\": 23,\n    \"总负债\": 24,\n    \"股东权益\": 25,\n    \"资产负债率\": 26,\n    \"经营现金流\": 28,\n    \"资本开支\": 29,\n    \"自由现金流\": 30,\n    \"净利率\": 32,\n    \"每股收益\": 33,\n    \"流通市值\": 34\n  },\n  \"formula_rows\": [\n    \"市值\",\n    \"企业价值\",\n    \"市盈率\",\n    \"企业价值/收入\",\n    \"毛利\",\n    \"毛利率\",\n    \"资产负债率\",\n    \"自由现金流\",\n    \"净利率\",\n    \"每股收益\",\n    \"流通市值\"\n  ],\n  \"sources\": {\n    \"quote_time\": \"2025-03-31 15:00\",\n    \"company\": \"澄海精密\",\n    \"currency\": \"CNY\",\n    \"pages\": [\n      \"quote.html\",\n      \"statistics.html\",\n      \"annual_report.html\"\n    ]\n  }\n}\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/sources.json",
+      "content": "{\n  \"quote_time\": \"2025-03-31 15:00\",\n  \"company\": \"澄海精密\",\n  \"currency\": \"CNY\",\n  \"pages\": [\n    \"quote.html\",\n    \"statistics.html\",\n    \"annual_report.html\"\n  ]\n}\n",
+      "truncated": false
+    }
+  ]
 }

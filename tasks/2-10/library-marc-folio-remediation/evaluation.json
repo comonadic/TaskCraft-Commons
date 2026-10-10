@@ -1,0 +1,87 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "书目字段",
+      "weight": 30,
+      "rule": "按记录 ID 比对 ISBN、作者、题名、语言、链接和馆藏字段，按正确比例计分。"
+    },
+    {
+      "name": "处理决策",
+      "weight": 20,
+      "rule": "比对覆盖、新建、隔离、复核和跳过等动作及目标记录，按正确比例计分。"
+    },
+    {
+      "name": "导入计划",
+      "weight": 10,
+      "rule": "比对记录、动作、目标实例和分馆，按正确比例计分。"
+    },
+    {
+      "name": "质量与程序",
+      "weight": 10,
+      "rule": "检查决策数量、400 条变化记录、修复摘要与程序文件。"
+    },
+    {
+      "name": "新增案例处理",
+      "weight": 30,
+      "rule": "将程序用于另外 80 条案例；字段修复、处理决策、导入计划按 40%、40%、20% 加权计分。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "解析 400 条 MARC 记录并逐字段核对修复结果。",
+    "按 record_id 检查覆盖、创建或隔离决策及导入计划。",
+    "检查 QA 证据，并用 80 条独立案例运行提交 CLI。"
+  ],
+  "metrics": [
+    "字段修复 30%、决策 20%、导入计划 10%、QA与CLI材料 10%、独立案例复跑 30%。",
+    "隐藏案例复跑在新目录进行；评分文件与目标记录留在验证器中。"
+  ],
+  "gates": [],
+  "checks": [
+    {
+      "name": "400条字段修复",
+      "weight": 30.0,
+      "implementation": "records"
+    },
+    {
+      "name": "覆盖/创建/隔离决策",
+      "weight": 20.0,
+      "implementation": "lambda: record_score(read_csv(out / 'overlay_decisions.csv'), e['decisions'], ['record_id'])"
+    },
+    {
+      "name": "导入计划",
+      "weight": 10.0,
+      "implementation": "plans"
+    },
+    {
+      "name": "QA与CLI材料",
+      "weight": 10.0,
+      "implementation": "qa"
+    },
+    {
+      "name": "80条隐藏案例CLI复跑",
+      "weight": 30.0,
+      "implementation": "hidden"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

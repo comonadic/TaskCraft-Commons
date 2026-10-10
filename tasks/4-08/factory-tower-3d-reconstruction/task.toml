@@ -1,0 +1,28 @@
+schema_version = "1.4"
+artifacts = ["/app/output"]
+[task]
+name = "TaskCraft/factory-tower-3d-reconstruction"
+version = "0.3.0"
+description = "根据建筑平面、立面和剖面图重建厂房与塔楼，整理构件名称与尺寸，并交付可继续编辑的三维模型。"
+keywords = ["knowledge-work", "zh-CN", "deterministic"]
+[metadata]
+difficulty = "hard"
+category = "4-08"
+occupation = "4-08-08-23"
+[agent]
+timeout_sec = 7200.0
+[environment]
+build_timeout_sec = 2400.0
+network_mode = "public"
+cpus = 2
+memory_mb = 6144
+storage_mb = 16384
+[verifier]
+timeout_sec = 1200.0
+environment_mode = "separate"
+[verifier.environment]
+build_timeout_sec = 2400.0
+network_mode = "public"
+cpus = 2
+memory_mb = 6144
+storage_mb = 16384

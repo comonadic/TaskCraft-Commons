@@ -1,0 +1,17 @@
+{
+  "baseline": {
+    "cost_cny": 333.89573788297287,
+    "peak_kw": 4.299418246763383,
+    "comfort_violation_degree_hours": 0.0
+  },
+  "cost": {
+    "cost_cny": 306.2683338187699,
+    "peak_kw": 8.0,
+    "comfort_violation_degree_hours": 3.1876723483037495e-12
+  },
+  "peak": {
+    "cost_cny": 323.9814197496901,
+    "peak_kw": 3.886064464858456,
+    "comfort_violation_degree_hours": 1.5756285165480222e-12
+  }
+}

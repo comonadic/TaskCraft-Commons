@@ -1,26 +1,26 @@
 [
   {
-    "path": "input/codebook.pdf",
+    "path": "environment/input/codebook.pdf",
     "bytes": 79245,
     "sha256": "c566befb0917b866cbeba62763a214819c6aa5610f6a6df7de413b5f613faee8"
   },
   {
-    "path": "input/column_dictionary.json",
+    "path": "environment/input/column_dictionary.json",
     "bytes": 5034,
     "sha256": "bb3d8943b7d7ce7e605c9aad2d3da5d4f225cf42acdf294fe3326e8ed9b5ca7b"
   },
   {
-    "path": "input/posts.xlsx",
+    "path": "environment/input/posts.xlsx",
     "bytes": 20861,
     "sha256": "c2aa1f732da45e23930ea80c860fa4e3ad84d4c61bc2f8e1b395025d68ecece0"
   },
   {
-    "path": "input/posts.xlsx.inspect.ndjson",
+    "path": "environment/input/posts.xlsx.inspect.ndjson",
     "bytes": 229960,
     "sha256": "e74572485d85fffc72a44e9fd6bed3c7a0f826f96c55f15e0372dbe788c3536c"
   },
   {
-    "path": "input/posts.xlsx.png",
+    "path": "environment/input/posts.xlsx.png",
     "bytes": 587381,
     "sha256": "a6ea96c28250e4a00c53b865f6e3b3027233cfe7aa87378c4813b75a67f47975"
   }

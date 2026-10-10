@@ -3,14 +3,14 @@
   "title": "零售企业再营销受众与渠道资格",
   "brief": "结合交易、邮件与客服记录筛选再营销受众，判定可联系渠道，并分析新受众与现有分群的重叠。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-06",
   "occupation": {
     "code": "2-06-07-02",
     "name": "市场营销专业人员"
   },
   "scene": "你是零售企业营销分析人员，需要为下一轮活动准备一份符合客户授权和业务规则的受众名单。",
-  "taskPrompt": "你是零售企业营销分析人员，需要为下一轮活动准备一份符合客户授权和业务规则的受众名单。\n\n1. 连接客户、交易、邮件及工单资料\n2. 按活动规则筛选受众，逐客户确定可用渠道\n3. 整理分群定义、受众名单和与现有分群的重叠结果\n\n交付成果：\n- segment_definition.json：分群规则、人数和关键统计。\n- audience_roster.csv：受众名单及逐客户渠道资格。\n- overlap_report.tsv：与现有分群的重叠人数和比例。",
+  "taskPrompt": "# 零售企业再营销受众与渠道资格\n\n你是零售企业营销分析人员，需要为下一轮活动准备一份符合客户授权和业务规则的受众名单。\n\n1. 连接客户、交易、邮件及工单资料\n2. 按活动规则筛选受众，逐客户确定可用渠道\n3. 整理分群定义、受众名单和与现有分群的重叠结果\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/segment_definition.json`：分群规则、人数和关键统计。\n- `/app/output/audience_roster.csv`：受众名单及逐客户渠道资格。\n- `/app/output/overlap_report.tsv`：与现有分群的重叠人数和比例。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n## 运行与提交\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`segment_definition.json`，`audience_roster.csv`，`overlap_report.tsv`；字段及计算口径见 brief.md。\n",
   "agentMustDo": [
     "连接客户、交易、邮件及工单资料",
     "按活动规则筛选受众，逐客户确定可用渠道",
@@ -24,28 +24,28 @@
   "inputFiles": [
     {
       "name": "brief.md",
-      "path": "input/brief.md",
+      "path": "environment/input/brief.md",
       "format": "MD",
       "bytes": 757,
       "description": "brief.md，用于零售企业再营销受众与渠道资格。"
     },
     {
       "name": "existing_segments.csv",
-      "path": "input/existing_segments.csv",
+      "path": "environment/input/existing_segments.csv",
       "format": "CSV",
       "bytes": 133993,
       "description": "existing_segments.csv，用于零售企业再营销受众与渠道资格。"
     },
     {
       "name": "governance.yaml",
-      "path": "input/governance.yaml",
+      "path": "environment/input/governance.yaml",
       "format": "YAML",
       "bytes": 142,
       "description": "governance.yaml，用于零售企业再营销受众与渠道资格。"
     },
     {
       "name": "unified_profiles.parquet",
-      "path": "input/unified_profiles.parquet",
+      "path": "environment/input/unified_profiles.parquet",
       "format": "PARQUET",
       "bytes": 154608,
       "description": "unified_profiles.parquet，用于零售企业再营销受众与渠道资格。"
@@ -55,26 +55,29 @@
   "inputManifest": "materials.json",
   "referenceFiles": [
     {
-      "name": "segment_definition.json",
-      "path": "output/segment_definition.json",
-      "format": "JSON",
-      "description": "分群规则、人数和关键统计。"
-    },
-    {
       "name": "audience_roster.csv",
-      "path": "output/audience_roster.csv",
+      "path": "reference/audience_roster.csv",
       "format": "CSV",
+      "bytes": 86318,
       "description": "受众名单及逐客户渠道资格。"
     },
     {
       "name": "overlap_report.tsv",
-      "path": "output/overlap_report.tsv",
+      "path": "reference/overlap_report.tsv",
       "format": "TSV",
+      "bytes": 146,
       "description": "与现有分群的重叠人数和比例。"
+    },
+    {
+      "name": "segment_definition.json",
+      "path": "reference/segment_definition.json",
+      "format": "JSON",
+      "bytes": 124,
+      "description": "分群规则、人数和关键统计。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "受众与渠道",
@@ -96,6 +99,111 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "读取客户、订单和偏好材料，按业务规则构造目标受众与渠道资格。",
+      "按 customer_id 对齐提交名单，比较人员和字段。",
+      "核对分群定义以及各已有分群的交集、并集与分母。"
+    ],
+    "metrics": [
+      "受众名单占 65%，分群摘要占 15%，重叠报告占 20%。",
+      "重叠率数值绝对容差 1e−6，默认相对容差 1e−5；重复 customer_id 记 0。"
+    ],
+    "gates": [],
+    "checks": [
+      {
+        "name": "精确受众与渠道资格",
+        "weight": 65.0,
+        "implementation": "lambda: record_score(read_csv(OUTPUT / 'audience_roster.csv'), e['roster'], ['customer_id'])"
+      },
+      {
+        "name": "分群摘要",
+        "weight": 15.0,
+        "implementation": "lambda: tree_score(read_json(OUTPUT / 'segment_definition.json'), e['definition'])"
+      },
+      {
+        "name": "正确分母重叠率",
+        "weight": 20.0,
+        "implementation": "lambda: record_score(read_csv(OUTPUT / 'overlap_report.tsv', '\\t'), e['overlap'], ['segment_id'], atol=1e-06)"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "segment_definition.json",
+      "path": "output/segment_definition.json",
+      "format": "JSON",
+      "description": "分群规则、人数和关键统计。"
+    },
+    {
+      "name": "audience_roster.csv",
+      "path": "output/audience_roster.csv",
+      "format": "CSV",
+      "description": "受众名单及逐客户渠道资格。"
+    },
+    {
+      "name": "overlap_report.tsv",
+      "path": "output/overlap_report.tsv",
+      "format": "TSV",
+      "description": "与现有分群的重叠人数和比例。"
+    }
+  ],
+  "referenceFileCount": 3,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/existing_segments.csv",
+      "content": "segment_id,customer_id\nS0,C00000\nS0,C00003\nS0,C00006\nS0,C00009\nS0,C00012\nS0,C00015\nS0,C00018\nS0,C00021\nS0,C00024\nS0,C00027\nS0,C00030\nS0,C00033\nS0,C00036\nS0,C00039\nS0,C00042\nS0,C00045\nS0,C00048\nS0,C00051\nS0,C00054\nS0,C00057\nS0,C00060\nS0,C00063\nS0,C00066\nS0,C00069\nS0,C00072\nS0,C00075\nS0,C00078\nS0,C00081\nS0,C00084\nS0,C00087\nS0,C00090\nS0,C00093\nS0,C00096\nS0,C00099\nS0,C00102\nS0,C00105\nS0,C00108\nS0,C00111\nS0,C00114\nS0,C00117\nS0,C00120\nS0,C00123\nS0,C00126\nS0,C00129\nS0,C00132\nS0,C00135\nS0,C00138\nS0,C00141\nS0,C00144\nS0,C00147\nS0,C00150\nS0,C00153\nS0,C00156\nS0,C00159\nS0,C00162\nS0,C00165\nS0,C00168\nS0,C00171\nS0,C00174\nS0,C00177\nS0,C00180\nS0,C00183\nS0,C00186\nS0,C00189\nS0,C00192\nS0,C00195\nS0,C00198\nS0,C00201\nS0,C00204\nS0,C00207\nS0,C00210\nS0,C00213\nS0,C00216\nS0,C00219\nS0,C00222\nS0,C00225\nS0,C00228\nS0,C00231\nS0,C00234\nS0,C00237\nS0,C00240\nS0,C00243\nS0,C00246\nS0,C00249\nS0,C00252\nS0,C00255\nS0,C00258\nS0,C00261\nS0,C00264\nS0,C00267\nS0,C00270\nS0,C00273\nS0,C00276\nS0,C00279\nS0,C00282\nS0,C00285\nS0,C00288\nS0,C00291\nS0,C00294\nS0,C00297\nS0,C00300\nS0,C00303\nS0,C00306\nS0,C00309\nS0,C00312\nS0,C00315\nS0,C00318\nS0,C00321\nS0,C00324\nS0,C00327\nS0,C00330\nS0,C00333\nS0,C00336\nS0,C00339\nS0,C00342\nS0,C00345\nS0,C00348\nS0,C00351\nS0,C00354\nS0,C00357\nS0,C00360\nS0,C00363\nS0,C00366\nS0,C00369\nS0,C00372\nS0,C00375\nS0,C00378\nS0,C00381\nS0,C00384\nS0,C00387\nS0,C00390\nS0,C00393\nS0,C00396\nS0,C00399\nS0,C00402\nS0,C00405\nS0,C00408\nS0,C00411\nS0,C00414\nS0,C00417\nS0,C00420\nS0,C00423\nS0,C00426\nS0,C00429\nS0,C00432\nS0,C00435\nS0,C00438\nS0,C00441\nS0,C00444\nS0,C00447\nS0,C00450\nS0,C00453\nS0,C00456\nS0,C00459\nS0,C00462\nS0,C00465\nS0,C00468\nS0,C00471\nS0,C00474\nS0,C00477\nS0,C00480\nS0,C00483\nS0,C00486\nS0,C00489\nS0,C00492\nS0,C00495\nS0,C00498\nS0,C00501\nS0,C00504\nS0,C00507\nS0,C00510\nS0,C00513\nS0,C00516\nS0,C00519\nS0,C00522\nS0,C00525\nS0,C00528\nS0,C00531\nS0,C00534\nS0,C00537\nS0,C00540\nS0,C00543\nS0,C00546\nS0,C00549\nS0,C00552\nS0,C00555\nS0,C00558\nS0,C00561\nS0,C00564\nS0,C00567\nS0,C00570\nS0,C00573\nS0,C00576\nS0,C00579\nS0,C00582\nS0,C00585\nS0,C00588\nS0,C00591\nS0,C00594\nS0,C00597\nS0,C00600\nS0,C00603\nS0,C00606\nS0,C00609\nS0,C00612\nS0,C00615\nS0,C00618\nS0,C00621\nS0,C00624\nS0,C00627\nS0,C00630\nS0,C00633\nS0,C00636\nS0,C00639\nS0,C00642\nS0,C00645\nS0,C00648\nS0,C00651\nS0,C00654\nS0,C00657\nS0,C00660\nS0,C00663\nS0,C00666\nS0,C00669\nS0,C00672\nS0,C00675\nS0,C00678\nS0,C00681\nS0,C00684\nS0,C00687\nS0,C00690\nS0,C00693\nS0,C00696\nS0,C00699\nS0,C00702\nS0,C00705\nS0,C00708\nS0,C00711\nS0,C00714\nS0,C00717\nS0,C00720\nS0,C00723\nS0,C00726\nS0,C00729\nS0,C00732\nS0,C00735\nS0,C00738\nS0,C00741\nS0,C00744\nS0,C00747\nS0,C00750\nS0,C00753\nS0,C00756\nS0,C00759\nS0,C00762\nS0,C00765\nS0,C00768\nS0,C00771\nS0,C00774\nS0,C00777\nS0,C00780\nS0,C00783\nS0,C00786\nS0,C00789\nS0,C00792\nS0,C00795\nS0,C00798\nS0,C00801\nS0,C00804\nS0,C00807\nS0,C00810\nS0,C00813\nS0,C00816\nS0,C00819\nS0,C00822\nS0,C00825\nS0,C00828\nS0,C00831\nS0,C00834\nS0,C00837\nS0,C00840\nS0,C00843\nS0,C00846\nS0,C00849\nS0,C00852\nS0,C00855\nS0,C00858\nS0,C00861\nS0,C00864\nS0,C00867\nS0,C00870\nS0,C00873\nS0,C00876\nS0,C00879\nS0,C00882\nS0,C00885\nS0,C00888\nS0,C00891\nS0,C00894\nS0,C00897\nS0,C00900\nS0,C00903\nS0,C00906\nS0,C00909\nS0,C00912\nS0,C00915\nS0,C00918\nS0,C00921\nS0,C00924\nS0,C00927\nS0,C00930\nS0,C00933\nS0,C00936\nS0,C00939\nS0,C00942\nS0,C00945\nS0,C00948\nS0,C00951\nS0,C00954\nS0,C00957\nS0,C00960\nS0,C00963\nS0,C00966\nS0,C00969\nS0,C00972\nS0,C00975\nS0,C00978\nS0,C00981\nS0,C00984\nS0,C00987\nS0,C00990\nS0,C00993\nS0,C00996\nS0,C00999\nS0,C01002\nS0,C01005\nS0,C01008\nS0,C01011\nS0,C01014\nS0,C01017\nS0,C01020\nS0,C01023\nS0,C01026\nS0,C01029\nS0,C01032\nS0,C01035\nS0,C01038\nS0,C01041\nS0,C01044\nS0,C01047\nS0,C01050\nS0,C01053\nS0,C01056\nS0,C01059\nS0,C01062\nS0,C01065\nS0,C01068\nS0,C01071\nS0,C01074\nS0,C01077\nS0,C01080\nS0,C01083\nS0,C01086\nS0,C01089\nS0,C01092\nS0,C01095\nS0,C01098\nS0,C01101\nS0,C01104\nS0,C01107\nS0,C01110\nS0,C01113\nS0,C01116\nS0,C01119\nS0,C01122\nS0,C01125\nS0,C01128\nS0,C01131\nS0,C01134\nS0,C01137\nS0,C01140\nS0,C01143\nS0,C01146\nS0,C01149\nS0,C01152\nS0,C01155\nS0,C01158\nS0,C01161\nS0,C01164\nS0,C01167\nS0,C01170\nS0,C01173\nS0,C01176\nS0,C01179\nS0,C01182\nS0,C01185\nS0,C01188\nS0,C01191\nS0,C01194\nS0,C01197\nS0,C01200\nS0,C01203\nS0,C01206\nS0,C01209\nS0,C01212\nS0,C01215\nS0,C01218\nS0,C01221\nS0,C01224\nS0,C01227\nS0,C01230\nS0,C01233\nS0,C01236\nS0,C01239\nS0,C01242\nS0,C01245\nS0,C01248\nS0,C01251\nS0,C01254\nS0,C01257\nS0,C01260\nS0,C01263\nS0,C01266\nS0,C01269\nS0,C01272\nS0,C01275\nS0,C01278\nS0,C01281\nS0,C01284\nS0,C01287\nS0,C01290\nS0,C01293\nS0,C01296\nS0,C01299\nS0,C01302\nS0,C01305\nS0,C01308\nS0,C01311\nS0,C01314\nS0,C01317\nS0,C01320\nS0,C01323\nS0,C01326\nS0,C01329\nS0,C01332\nS0,C01335\nS0,C01338\nS0,C01341\nS0,C01344\nS0,C01347\nS0,C01350\nS0,C01353\nS0,C01356\nS0,C01359\nS0,C01362\nS0,C01365\nS0,C01368\nS0,C01371\nS0,C01374\nS0,C01377\nS0,C01380\nS0,C01383\nS0,C01386\nS0,C01389\nS0,C01392\nS0,C01395\nS0,C01398\nS0,C01401\nS0,C01404\nS0,C01407\nS0,C01410\nS0,C01413\nS0,C01416\nS0,C01419\nS0,C01422\nS0,C01425\nS0,C01428\nS0,C01431\nS0,C01434\nS0,C01437\nS0,C01440\nS0,C01443\nS0,C01446\nS0,C01449\nS0,C01452\nS0,C01455\nS0,C01458\nS0,C01461\nS0,C01464\nS0,C01467\nS0,C01470\nS0,C01473\nS0,C01476\nS0,C01479\nS0,C01482\nS0,C01485\nS0,C01488\nS0,C01491\nS0,C01494\nS0,C01497\nS0,C01500\nS0,C01503\nS0,C01506\nS0,C01509\nS0,C01512\nS0,C01515\nS0,C01518\nS0,C01521\nS0,C01524\nS0,C01527\nS0,C01530\nS0,C01533\nS0,C01536\nS0,C01539\nS0,C01542\nS0,C01545\nS0,C01548\nS0,C01551\nS0,C01554\nS0,C01557\nS0,C01560\nS0,C01563\nS0,C01566\nS0,C01569\nS0,C01572\nS0,C01575\nS0,C01578\nS0,C01581\nS0,C01584\nS0,C01587\nS0,C01590\nS0,C01593\nS0,C01596\nS0,C01599\nS0,C01602\nS0,C01605\nS0,C01608\nS0,C01611\nS0,C01614\nS0,C01617\nS0,C01620\nS0,C01623\nS0,C01626\nS0,C01629\nS0,C01632\nS0,C01635\nS0,C01638\nS0,C01641\nS0,C01644\nS0,C01647\nS0,C01650\nS0,C01653\nS0,C01656\nS0,C01659\nS0,C01662\nS0,C01665\nS0,C01668\nS0,C01671\nS0,C01674\nS0,C01677\nS0,C01680\nS0,C01683\nS0,C01686\nS0,C01689\nS0,C01692\nS0,C01695\nS0,C01698\nS0,C01701\nS0,C01704\nS0,C01707\nS0,C01710\nS0,C01713\nS0,C01716\nS0,C01719\nS0,C01722\nS0,C01725\nS0,C01728\nS0,C01731\nS0,C01734\nS0,C01737\nS0,C01740\nS0,C01743\nS0,C01746\nS0,C01749\nS0,C01752\nS0,C01755\nS0,C01758\nS0,C01761\nS0,C01764\nS0,C01767\nS0,C01770\nS0,C01773\nS0,C01776\nS0,C01779\nS0,C01782\nS0,C01785\nS0,C01788\nS0,C017",
+      "truncated": true
+    },
+    {
+      "path": "reference/audience_roster.csv",
+      "content": "customer_id,transaction_count_90d,spend_90d,email_opens_30d,sms_eligible,push_eligible,any_channel_eligible\nC00000,16,8122,0.0,True,True,True\nC00008,17,4749,0.0,False,False,False\nC00012,21,12743,0.0,True,False,True\nC00013,19,13198,0.0,False,True,True\nC00023,14,8998,0.0,False,False,False\nC00035,16,12625,0.0,False,False,False\nC00036,10,17855,0.0,False,True,True\nC00039,10,6329,0.0,False,False,False\nC00042,15,11234,0.0,True,True,True\nC00043,21,16240,0.0,False,False,False\nC00055,20,8608,0.0,False,False,False\nC00057,19,11647,0.0,True,False,True\nC00060,9,7947,0.0,False,False,False\nC00064,20,9359,0.0,True,False,True\nC00066,18,7195,0.0,False,False,False\nC00073,15,6898,0.0,False,False,False\nC00074,14,13620,0.0,True,False,True\nC00075,10,9506,0.0,False,False,False\nC00078,20,8727,0.0,False,False,False\nC00091,16,16304,0.0,False,True,True\nC00092,8,16448,0.0,False,False,False\nC00098,17,9470,0.0,False,True,True\nC00106,18,15391,0.0,False,False,False\nC00108,21,4758,0.0,True,True,True\nC00113,19,5215,0.0,False,False,False\nC00118,19,14418,0.0,True,False,True\nC00121,15,15606,0.0,False,False,False\nC00127,10,15056,0.0,False,True,True\nC00139,13,10946,0.0,False,False,False\nC00142,11,5562,0.0,False,False,False\nC00144,10,17854,0.0,True,False,True\nC00169,12,11652,0.0,False,False,False\nC00178,18,10151,0.0,True,False,True\nC00183,13,7227,0.0,False,False,False\nC00195,17,4179,0.0,False,False,False\nC00199,11,9859,0.0,False,True,True\nC00205,20,3258,0.0,False,False,False\nC00207,11,15279,0.0,False,True,True\nC00208,12,15257,0.0,True,True,True\nC00212,12,5953,0.0,False,True,True\nC00216,9,16641,0.0,False,False,False\nC00217,17,7141,0.0,True,True,True\nC00226,18,13646,0.0,False,False,False\nC00235,9,12633,0.0,False,True,True\nC00238,21,12951,0.0,True,False,True\nC00243,19,7958,0.0,True,False,True\nC00246,21,11249,0.0,False,True,True\nC00250,9,9321,0.0,False,False,False\nC00257,14,5794,0.0,False,False,False\nC00263,18,13787,0.0,False,False,False\nC00264,15,10798,0.0,True,False,True\nC00265,21,5181,0.0,False,True,True\nC00269,8,15793,0.0,False,False,False\nC00279,17,3729,0.0,True,False,True\nC00293,11,3502,0.0,True,False,True\nC00294,14,4924,0.0,False,False,False\nC00297,11,6963,0.0,True,False,True\nC00299,15,5015,0.0,False,True,True\nC00305,15,10759,0.0,False,False,False\nC00311,18,14201,0.0,True,False,True\nC00328,17,16678,0.0,True,False,True\nC00332,11,8901,0.0,False,False,False\nC00336,17,10203,0.0,False,True,True\nC00337,15,15193,0.0,False,False,False\nC00351,19,6492,0.0,False,False,False\nC00352,12,5766,0.0,True,False,True\nC00354,14,17654,0.0,True,True,True\nC00355,20,9636,0.0,False,False,False\nC00356,21,6824,0.0,False,False,False\nC00361,15,16584,0.0,False,False,False\nC00364,8,16908,0.0,False,False,False\nC00368,15,7076,0.0,True,False,True\nC00369,17,11596,0.0,False,False,False\nC00371,11,14511,0.0,False,False,False\nC00372,11,4636,0.0,False,False,False\nC00375,9,9481,0.0,False,False,False\nC00377,13,13911,0.0,False,True,True\nC00378,12,3625,0.0,False,False,False\nC00379,14,17075,0.0,False,False,False\nC00382,12,5971,0.0,True,True,True\nC00387,19,17217,0.0,True,True,True\nC00390,20,7038,0.0,False,False,False\nC00392,15,15630,0.0,False,False,False\nC00394,8,17672,0.0,False,False,False\nC00401,13,14956,0.0,False,True,True\nC00409,11,8902,0.0,False,True,True\nC00419,11,14663,0.0,False,False,False\nC00429,19,15395,0.0,False,False,False\nC00439,12,6447,0.0,True,False,True\nC00450,20,16562,0.0,True,True,True\nC00451,14,11620,0.0,True,False,True\nC00455,12,6306,0.0,True,False,True\nC00456,11,14999,0.0,False,False,False\nC00464,20,15769,0.0,False,False,False\nC00466,17,6033,0.0,True,True,True\nC00468,12,17163,0.0,True,False,True\nC00473,18,4114,0.0,False,False,False\nC00477,19,5450,0.0,True,False,True\nC00481,9,6838,0.0,True,False,True\nC00490,9,6245,0.0,False,True,True\nC00491,21,9625,0.0,False,True,True\nC00493,21,16944,0.0,False,False,False\nC00500,21,14960,0.0,False,False,False\nC00502,16,4404,0.0,False,False,False\nC00503,21,8751,0.0,False,False,False\nC00507,21,8473,0.0,True,False,True\nC00508,20,14766,0.0,False,False,False\nC00511,11,9622,0.0,False,True,True\nC00512,21,12245,0.0,False,True,True\nC00513,21,15949,0.0,False,False,False\nC00514,8,9944,0.0,True,False,True\nC00523,18,14674,0.0,True,False,True\nC00524,21,5907,0.0,False,False,False\nC00526,18,5243,0.0,False,False,False\nC00529,20,6666,0.0,False,True,True\nC00537,13,12164,0.0,False,False,False\nC00538,11,8813,0.0,True,False,True\nC00541,21,4268,0.0,False,False,False\nC00545,14,3713,0.0,False,False,False\nC00546,19,3152,0.0,False,False,False\nC00551,17,14382,0.0,True,False,True\nC00552,11,3502,0.0,False,True,True\nC00556,18,15357,0.0,True,False,True\nC00557,19,7865,0.0,False,False,False\nC00562,13,7030,0.0,False,False,False\nC00565,16,5940,0.0,True,True,True\nC00566,8,12349,0.0,False,False,False\nC00569,21,3555,0.0,False,True,True\nC00582,20,9799,0.0,False,False,False\nC00583,13,9248,0.0,True,False,True\nC00597,15,9689,0.0,False,False,False\nC00598,8,7735,0.0,False,False,False\nC00604,12,5833,0.0,False,True,True\nC00608,9,11768,0.0,False,False,False\nC00611,11,8610,0.0,True,False,True\nC00615,9,14273,0.0,False,False,False\nC00627,19,16935,0.0,False,False,False\nC00636,21,3701,0.0,False,True,True\nC00637,19,9588,0.0,True,False,True\nC00649,10,6692,0.0,False,False,False\nC00651,13,13222,0.0,False,True,True\nC00654,20,4275,0.0,False,False,False\nC00658,12,15557,0.0,True,True,True\nC00665,9,13091,0.0,False,False,False\nC00683,14,16946,0.0,False,True,True\nC00689,14,8969,0.0,False,True,True\nC00693,18,11225,0.0,False,True,True\nC00696,20,3724,0.0,False,True,True\nC00704,18,4703,0.0,True,False,True\nC00707,18,9744,0.0,False,True,True\nC00709,16,5661,0.0,False,False,False\nC00714,8,16542,0.0,True,True,True\nC00715,19,13727,0.0,False,False,False\nC00717,11,13732,0.0,False,False,False\nC00718,12,8886,0.0,False,False,False\nC00722,20,6858,0.0,False,False,False\nC00723,18,8964,0.0,False,False,False\nC00724,14,5749,0.0,False,True,True\nC00725,20,13072,0.0,False,True,True\nC00729,17,13153,0.0,False,True,True\nC00731,15,11301,0.0,False,False,False\nC00732,12,5650,0.0,False,False,False\nC00736,15,1612",
+      "truncated": true
+    },
+    {
+      "path": "reference/overlap_report.tsv",
+      "content": "segment_id\toverlap_count\toverlap_pct\nS0\t805\t33.937605\nS1\t614\t25.885329\nS2\t481\t20.278246\nS3\t381\t16.062395\nS4\t335\t14.123103\nS5\t318\t13.406408\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/segment_definition.json",
+      "content": "{\n  \"as_of\": \"2025-03-31\",\n  \"audience_count\": 2372,\n  \"sms_count\": 706,\n  \"push_count\": 652,\n  \"any_channel_count\": 1165\n}\n",
+      "truncated": false
+    }
+  ]
 }

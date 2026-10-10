@@ -1,0 +1,7 @@
+resource_type,unit_price_cny,billing_unit
+CVM,0.8,hour
+CDB,1.5,hour
+COS,0.12,GB-month
+NAT,0.5,hour
+EIP,0.2,hour
+LOG,0.06,GB-month

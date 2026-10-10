@@ -1,0 +1,2 @@
+资格：stable=true且area_ha>=0.5。area_ha是业务核定面积，几何为示意，禁止由几何面积覆盖它。作物代码rice,wheat,maize,soy,fallow；空及unknown都无效。8字段：valid_years有效年度数（含fallow）；distinct_crops非休耕不同作物数；max_consecutive同种非休耕作物最大连续年数，缺失/unknown/fallow都中断；rotation_changes相邻两年均有效且不同则+1（含休耕转换）；legume_years为soy年数；fallow_years；risk_flag为任一风险；risk_reasons按字母序用|连接。
+风险：存在无效年missing_or_unknown；max_consecutive>=4为monoculture；无soy为no_legume；fallow>=3为too_much_fallow。flagged是eligible中risk_flag=true的精确子集。保留原列顺序，8字段追加其后（geometry位置由GeoPackage驱动决定）。id_lcp唯一。

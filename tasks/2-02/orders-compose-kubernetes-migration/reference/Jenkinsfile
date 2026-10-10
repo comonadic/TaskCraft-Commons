@@ -1,0 +1,10 @@
+pipeline {
+  agent any
+  stages {
+    stage('build') { steps { sh 'docker build -t ale-cn-webapp:0.1.0 app/backend; docker build -t ale-cn-frontend:0.1.0 app/frontend' } }
+    stage('test') { steps { sh 'pytest app/backend/tests; cd app/frontend && npm test' } }
+    stage('security') { steps { sh 'trivy image --exit-code 1 --severity CRITICAL ale-cn-webapp:0.1.0' } }
+    stage('deploy') { steps { sh 'helm upgrade --install webapp helm/webapp-chart --namespace alecn --create-namespace' } }
+    stage('verify') { steps { sh 'kubectl rollout status deployment/backend -n alecn; kubectl rollout status deployment/frontend -n alecn' } }
+  }
+}

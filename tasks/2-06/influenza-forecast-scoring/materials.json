@@ -1,21 +1,21 @@
 [
   {
-    "path": "input/forecast_archive.parquet",
+    "path": "environment/input/forecast_archive.parquet",
     "bytes": 1006318,
     "sha256": "52d172a5903c8107224c795a645b7be8b41af979e5fa54a9c7ab2089b5a2c996"
   },
   {
-    "path": "input/quantiles.json",
+    "path": "environment/input/quantiles.json",
     "bytes": 180,
     "sha256": "635a2adfa92757c8a92bf275bd4b87ae06cab9b68aa411865de808d0599e08d2"
   },
   {
-    "path": "input/scoring.md",
+    "path": "environment/input/scoring.md",
     "bytes": 579,
     "sha256": "057492131d44c69e1a9ee7b04ea69a3467c42dcf4a5489233d88e47090b3d6e3"
   },
   {
-    "path": "input/truth.csv",
+    "path": "environment/input/truth.csv",
     "bytes": 21281,
     "sha256": "e927ab1cb06a523b420706ef7b1bc1b2d5a48346da4ccd7811d2bba7b915eab6"
   }

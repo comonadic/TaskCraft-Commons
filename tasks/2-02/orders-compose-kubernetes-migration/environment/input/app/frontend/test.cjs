@@ -1,0 +1,1 @@
+const test=require('node:test');const assert=require('node:assert');const fs=require('node:fs');test('offline React entry',()=>{const h=fs.readFileSync('index.html','utf8');assert(h.includes('ReactDOM.createRoot'));assert(h.includes('/api/health'));});

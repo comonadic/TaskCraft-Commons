@@ -2,26 +2,32 @@
 
 复算多模型的流感住院预测表现，整理逐预测单元的误差、区间覆盖率和模型汇总排名。
 
-职业：统计专业人员（2-06-02-00）
+职业：统计专业人员 · `2-06-02-00`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是预测评估分析人员，需要把不同模型的预测与观测值对齐，形成可比较的评分表。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-五个模型的分位数预测、12 个地区的观测记录、18 周数据及评分规则。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**逐单元评分 · 75 分**
-
-按模型、地区、日期和预测期联合定位记录，比对 WIS、MAE 和覆盖率，绝对容差为 0.000001。
-
-**模型汇总 · 25 分**
-
-逐模型比较单元数量、平均指标与相对 WIS，按字段正确比例计分。
-
-
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

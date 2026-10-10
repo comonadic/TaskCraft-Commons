@@ -1,0 +1,5 @@
+{
+  "finding_recall": 1,
+  "false_positive_penalty_per_finding": 0.2,
+  "evidence": "逐字原句+真实页码+双文档，支持中文标题；不同有效证据配对均可"
+}

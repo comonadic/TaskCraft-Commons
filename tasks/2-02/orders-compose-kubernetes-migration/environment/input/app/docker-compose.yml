@@ -1,0 +1,12 @@
+services:
+  frontend:
+    build: ./frontend
+    ports: ["3000:3000"]
+  backend:
+    build: ./backend
+    environment: {DB_HOST: db, DB_NAME: orders, DB_USER: seed, DB_PASSWORD: seedpass, MARKET: CN-SYNTHETIC}
+    ports: ["5000:5000"]
+  db:
+    image: postgres:16.6
+    environment: {POSTGRES_DB: orders, POSTGRES_USER: seed, POSTGRES_PASSWORD: seedpass}
+    volumes: ["./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro"]

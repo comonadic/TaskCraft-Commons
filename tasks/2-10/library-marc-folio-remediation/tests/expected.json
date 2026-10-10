@@ -1,0 +1,5606 @@
+{
+  "decisions": [
+    {
+      "record_id": "B00000",
+      "decision": "quarantine",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00001",
+      "decision": "overlay",
+      "target_instance": "F00001"
+    },
+    {
+      "record_id": "B00002",
+      "decision": "overlay",
+      "target_instance": "F00002"
+    },
+    {
+      "record_id": "B00003",
+      "decision": "overlay",
+      "target_instance": "F00003"
+    },
+    {
+      "record_id": "B00004",
+      "decision": "overlay",
+      "target_instance": "F00004"
+    },
+    {
+      "record_id": "B00005",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00006",
+      "decision": "overlay",
+      "target_instance": "F00006"
+    },
+    {
+      "record_id": "B00007",
+      "decision": "skip_protected",
+      "target_instance": "F00007"
+    },
+    {
+      "record_id": "B00008",
+      "decision": "overlay",
+      "target_instance": "F00008"
+    },
+    {
+      "record_id": "B00009",
+      "decision": "overlay",
+      "target_instance": "F00009"
+    },
+    {
+      "record_id": "B00010",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00011",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00012",
+      "decision": "overlay",
+      "target_instance": "F00012"
+    },
+    {
+      "record_id": "B00013",
+      "decision": "overlay",
+      "target_instance": "F00013"
+    },
+    {
+      "record_id": "B00014",
+      "decision": "skip_protected",
+      "target_instance": "F00014"
+    },
+    {
+      "record_id": "B00015",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00016",
+      "decision": "overlay",
+      "target_instance": "F00016"
+    },
+    {
+      "record_id": "B00017",
+      "decision": "overlay",
+      "target_instance": "F00017"
+    },
+    {
+      "record_id": "B00018",
+      "decision": "overlay",
+      "target_instance": "F00018"
+    },
+    {
+      "record_id": "B00019",
+      "decision": "quarantine",
+      "target_instance": "F00019"
+    },
+    {
+      "record_id": "B00020",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00021",
+      "decision": "skip_protected",
+      "target_instance": "F00021"
+    },
+    {
+      "record_id": "B00022",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00023",
+      "decision": "overlay",
+      "target_instance": "F00023"
+    },
+    {
+      "record_id": "B00024",
+      "decision": "overlay",
+      "target_instance": "F00024"
+    },
+    {
+      "record_id": "B00025",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00026",
+      "decision": "overlay",
+      "target_instance": "F00026"
+    },
+    {
+      "record_id": "B00027",
+      "decision": "overlay",
+      "target_instance": "F00027"
+    },
+    {
+      "record_id": "B00028",
+      "decision": "skip_protected",
+      "target_instance": "F00028"
+    },
+    {
+      "record_id": "B00029",
+      "decision": "overlay",
+      "target_instance": "F00029"
+    },
+    {
+      "record_id": "B00030",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00031",
+      "decision": "overlay",
+      "target_instance": "F00031"
+    },
+    {
+      "record_id": "B00032",
+      "decision": "overlay",
+      "target_instance": "F00032"
+    },
+    {
+      "record_id": "B00033",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00034",
+      "decision": "overlay",
+      "target_instance": "F00034"
+    },
+    {
+      "record_id": "B00035",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00036",
+      "decision": "overlay",
+      "target_instance": "F00036"
+    },
+    {
+      "record_id": "B00037",
+      "decision": "overlay",
+      "target_instance": "F00037"
+    },
+    {
+      "record_id": "B00038",
+      "decision": "quarantine",
+      "target_instance": "F00038"
+    },
+    {
+      "record_id": "B00039",
+      "decision": "overlay",
+      "target_instance": "F00039"
+    },
+    {
+      "record_id": "B00040",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00041",
+      "decision": "overlay",
+      "target_instance": "F00041"
+    },
+    {
+      "record_id": "B00042",
+      "decision": "skip_protected",
+      "target_instance": "F00042"
+    },
+    {
+      "record_id": "B00043",
+      "decision": "overlay",
+      "target_instance": "F00043"
+    },
+    {
+      "record_id": "B00044",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00045",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00046",
+      "decision": "overlay",
+      "target_instance": "F00046"
+    },
+    {
+      "record_id": "B00047",
+      "decision": "overlay",
+      "target_instance": "F00047"
+    },
+    {
+      "record_id": "B00048",
+      "decision": "overlay",
+      "target_instance": "F00048"
+    },
+    {
+      "record_id": "B00049",
+      "decision": "skip_protected",
+      "target_instance": "F00049"
+    },
+    {
+      "record_id": "B00050",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00051",
+      "decision": "overlay",
+      "target_instance": "F00051"
+    },
+    {
+      "record_id": "B00052",
+      "decision": "overlay",
+      "target_instance": "F00052"
+    },
+    {
+      "record_id": "B00053",
+      "decision": "overlay",
+      "target_instance": "F00053"
+    },
+    {
+      "record_id": "B00054",
+      "decision": "overlay",
+      "target_instance": "F00054"
+    },
+    {
+      "record_id": "B00055",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00056",
+      "decision": "skip_protected",
+      "target_instance": "F00056"
+    },
+    {
+      "record_id": "B00057",
+      "decision": "quarantine",
+      "target_instance": "F00057"
+    },
+    {
+      "record_id": "B00058",
+      "decision": "overlay",
+      "target_instance": "F00058"
+    },
+    {
+      "record_id": "B00059",
+      "decision": "overlay",
+      "target_instance": "F00059"
+    },
+    {
+      "record_id": "B00060",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00061",
+      "decision": "overlay",
+      "target_instance": "F00061"
+    },
+    {
+      "record_id": "B00062",
+      "decision": "overlay",
+      "target_instance": "F00062"
+    },
+    {
+      "record_id": "B00063",
+      "decision": "skip_protected",
+      "target_instance": "F00063"
+    },
+    {
+      "record_id": "B00064",
+      "decision": "overlay",
+      "target_instance": "F00064"
+    },
+    {
+      "record_id": "B00065",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00066",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00067",
+      "decision": "overlay",
+      "target_instance": "F00067"
+    },
+    {
+      "record_id": "B00068",
+      "decision": "overlay",
+      "target_instance": "F00068"
+    },
+    {
+      "record_id": "B00069",
+      "decision": "overlay",
+      "target_instance": "F00069"
+    },
+    {
+      "record_id": "B00070",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00071",
+      "decision": "overlay",
+      "target_instance": "F00071"
+    },
+    {
+      "record_id": "B00072",
+      "decision": "overlay",
+      "target_instance": "F00072"
+    },
+    {
+      "record_id": "B00073",
+      "decision": "overlay",
+      "target_instance": "F00073"
+    },
+    {
+      "record_id": "B00074",
+      "decision": "overlay",
+      "target_instance": "F00074"
+    },
+    {
+      "record_id": "B00075",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00076",
+      "decision": "quarantine",
+      "target_instance": "F00076"
+    },
+    {
+      "record_id": "B00077",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00078",
+      "decision": "overlay",
+      "target_instance": "F00078"
+    },
+    {
+      "record_id": "B00079",
+      "decision": "overlay",
+      "target_instance": "F00079"
+    },
+    {
+      "record_id": "B00080",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00081",
+      "decision": "overlay",
+      "target_instance": "F00081"
+    },
+    {
+      "record_id": "B00082",
+      "decision": "overlay",
+      "target_instance": "F00082"
+    },
+    {
+      "record_id": "B00083",
+      "decision": "overlay",
+      "target_instance": "F00083"
+    },
+    {
+      "record_id": "B00084",
+      "decision": "skip_protected",
+      "target_instance": "F00084"
+    },
+    {
+      "record_id": "B00085",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00086",
+      "decision": "overlay",
+      "target_instance": "F00086"
+    },
+    {
+      "record_id": "B00087",
+      "decision": "overlay",
+      "target_instance": "F00087"
+    },
+    {
+      "record_id": "B00088",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00089",
+      "decision": "overlay",
+      "target_instance": "F00089"
+    },
+    {
+      "record_id": "B00090",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00091",
+      "decision": "skip_protected",
+      "target_instance": "F00091"
+    },
+    {
+      "record_id": "B00092",
+      "decision": "overlay",
+      "target_instance": "F00092"
+    },
+    {
+      "record_id": "B00093",
+      "decision": "overlay",
+      "target_instance": "F00093"
+    },
+    {
+      "record_id": "B00094",
+      "decision": "overlay",
+      "target_instance": "F00094"
+    },
+    {
+      "record_id": "B00095",
+      "decision": "quarantine",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00096",
+      "decision": "overlay",
+      "target_instance": "F00096"
+    },
+    {
+      "record_id": "B00097",
+      "decision": "overlay",
+      "target_instance": "F00097"
+    },
+    {
+      "record_id": "B00098",
+      "decision": "skip_protected",
+      "target_instance": "F00098"
+    },
+    {
+      "record_id": "B00099",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00100",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00101",
+      "decision": "overlay",
+      "target_instance": "F00101"
+    },
+    {
+      "record_id": "B00102",
+      "decision": "overlay",
+      "target_instance": "F00102"
+    },
+    {
+      "record_id": "B00103",
+      "decision": "overlay",
+      "target_instance": "F00103"
+    },
+    {
+      "record_id": "B00104",
+      "decision": "overlay",
+      "target_instance": "F00104"
+    },
+    {
+      "record_id": "B00105",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00106",
+      "decision": "overlay",
+      "target_instance": "F00106"
+    },
+    {
+      "record_id": "B00107",
+      "decision": "overlay",
+      "target_instance": "F00107"
+    },
+    {
+      "record_id": "B00108",
+      "decision": "overlay",
+      "target_instance": "F00108"
+    },
+    {
+      "record_id": "B00109",
+      "decision": "overlay",
+      "target_instance": "F00109"
+    },
+    {
+      "record_id": "B00110",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00111",
+      "decision": "overlay",
+      "target_instance": "F00111"
+    },
+    {
+      "record_id": "B00112",
+      "decision": "skip_protected",
+      "target_instance": "F00112"
+    },
+    {
+      "record_id": "B00113",
+      "decision": "overlay",
+      "target_instance": "F00113"
+    },
+    {
+      "record_id": "B00114",
+      "decision": "quarantine",
+      "target_instance": "F00114"
+    },
+    {
+      "record_id": "B00115",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00116",
+      "decision": "overlay",
+      "target_instance": "F00116"
+    },
+    {
+      "record_id": "B00117",
+      "decision": "overlay",
+      "target_instance": "F00117"
+    },
+    {
+      "record_id": "B00118",
+      "decision": "overlay",
+      "target_instance": "F00118"
+    },
+    {
+      "record_id": "B00119",
+      "decision": "skip_protected",
+      "target_instance": "F00119"
+    },
+    {
+      "record_id": "B00120",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00121",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00122",
+      "decision": "overlay",
+      "target_instance": "F00122"
+    },
+    {
+      "record_id": "B00123",
+      "decision": "overlay",
+      "target_instance": "F00123"
+    },
+    {
+      "record_id": "B00124",
+      "decision": "overlay",
+      "target_instance": "F00124"
+    },
+    {
+      "record_id": "B00125",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00126",
+      "decision": "skip_protected",
+      "target_instance": "F00126"
+    },
+    {
+      "record_id": "B00127",
+      "decision": "overlay",
+      "target_instance": "F00127"
+    },
+    {
+      "record_id": "B00128",
+      "decision": "overlay",
+      "target_instance": "F00128"
+    },
+    {
+      "record_id": "B00129",
+      "decision": "overlay",
+      "target_instance": "F00129"
+    },
+    {
+      "record_id": "B00130",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00131",
+      "decision": "overlay",
+      "target_instance": "F00131"
+    },
+    {
+      "record_id": "B00132",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00133",
+      "decision": "quarantine",
+      "target_instance": "F00133"
+    },
+    {
+      "record_id": "B00134",
+      "decision": "overlay",
+      "target_instance": "F00134"
+    },
+    {
+      "record_id": "B00135",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00136",
+      "decision": "overlay",
+      "target_instance": "F00136"
+    },
+    {
+      "record_id": "B00137",
+      "decision": "overlay",
+      "target_instance": "F00137"
+    },
+    {
+      "record_id": "B00138",
+      "decision": "overlay",
+      "target_instance": "F00138"
+    },
+    {
+      "record_id": "B00139",
+      "decision": "overlay",
+      "target_instance": "F00139"
+    },
+    {
+      "record_id": "B00140",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00141",
+      "decision": "overlay",
+      "target_instance": "F00141"
+    },
+    {
+      "record_id": "B00142",
+      "decision": "overlay",
+      "target_instance": "F00142"
+    },
+    {
+      "record_id": "B00143",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00144",
+      "decision": "overlay",
+      "target_instance": "F00144"
+    },
+    {
+      "record_id": "B00145",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00146",
+      "decision": "overlay",
+      "target_instance": "F00146"
+    },
+    {
+      "record_id": "B00147",
+      "decision": "skip_protected",
+      "target_instance": "F00147"
+    },
+    {
+      "record_id": "B00148",
+      "decision": "overlay",
+      "target_instance": "F00148"
+    },
+    {
+      "record_id": "B00149",
+      "decision": "overlay",
+      "target_instance": "F00149"
+    },
+    {
+      "record_id": "B00150",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00151",
+      "decision": "overlay",
+      "target_instance": "F00151"
+    },
+    {
+      "record_id": "B00152",
+      "decision": "quarantine",
+      "target_instance": "F00152"
+    },
+    {
+      "record_id": "B00153",
+      "decision": "overlay",
+      "target_instance": "F00153"
+    },
+    {
+      "record_id": "B00154",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00155",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00156",
+      "decision": "overlay",
+      "target_instance": "F00156"
+    },
+    {
+      "record_id": "B00157",
+      "decision": "overlay",
+      "target_instance": "F00157"
+    },
+    {
+      "record_id": "B00158",
+      "decision": "overlay",
+      "target_instance": "F00158"
+    },
+    {
+      "record_id": "B00159",
+      "decision": "overlay",
+      "target_instance": "F00159"
+    },
+    {
+      "record_id": "B00160",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00161",
+      "decision": "skip_protected",
+      "target_instance": "F00161"
+    },
+    {
+      "record_id": "B00162",
+      "decision": "overlay",
+      "target_instance": "F00162"
+    },
+    {
+      "record_id": "B00163",
+      "decision": "overlay",
+      "target_instance": "F00163"
+    },
+    {
+      "record_id": "B00164",
+      "decision": "overlay",
+      "target_instance": "F00164"
+    },
+    {
+      "record_id": "B00165",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00166",
+      "decision": "overlay",
+      "target_instance": "F00166"
+    },
+    {
+      "record_id": "B00167",
+      "decision": "overlay",
+      "target_instance": "F00167"
+    },
+    {
+      "record_id": "B00168",
+      "decision": "skip_protected",
+      "target_instance": "F00168"
+    },
+    {
+      "record_id": "B00169",
+      "decision": "overlay",
+      "target_instance": "F00169"
+    },
+    {
+      "record_id": "B00170",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00171",
+      "decision": "quarantine",
+      "target_instance": "F00171"
+    },
+    {
+      "record_id": "B00172",
+      "decision": "overlay",
+      "target_instance": "F00172"
+    },
+    {
+      "record_id": "B00173",
+      "decision": "overlay",
+      "target_instance": "F00173"
+    },
+    {
+      "record_id": "B00174",
+      "decision": "overlay",
+      "target_instance": "F00174"
+    },
+    {
+      "record_id": "B00175",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00176",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00177",
+      "decision": "overlay",
+      "target_instance": "F00177"
+    },
+    {
+      "record_id": "B00178",
+      "decision": "overlay",
+      "target_instance": "F00178"
+    },
+    {
+      "record_id": "B00179",
+      "decision": "overlay",
+      "target_instance": "F00179"
+    },
+    {
+      "record_id": "B00180",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00181",
+      "decision": "overlay",
+      "target_instance": "F00181"
+    },
+    {
+      "record_id": "B00182",
+      "decision": "skip_protected",
+      "target_instance": "F00182"
+    },
+    {
+      "record_id": "B00183",
+      "decision": "overlay",
+      "target_instance": "F00183"
+    },
+    {
+      "record_id": "B00184",
+      "decision": "overlay",
+      "target_instance": "F00184"
+    },
+    {
+      "record_id": "B00185",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00186",
+      "decision": "overlay",
+      "target_instance": "F00186"
+    },
+    {
+      "record_id": "B00187",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00188",
+      "decision": "overlay",
+      "target_instance": "F00188"
+    },
+    {
+      "record_id": "B00189",
+      "decision": "skip_protected",
+      "target_instance": "F00189"
+    },
+    {
+      "record_id": "B00190",
+      "decision": "quarantine",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00191",
+      "decision": "overlay",
+      "target_instance": "F00191"
+    },
+    {
+      "record_id": "B00192",
+      "decision": "overlay",
+      "target_instance": "F00192"
+    },
+    {
+      "record_id": "B00193",
+      "decision": "overlay",
+      "target_instance": "F00193"
+    },
+    {
+      "record_id": "B00194",
+      "decision": "overlay",
+      "target_instance": "F00194"
+    },
+    {
+      "record_id": "B00195",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00196",
+      "decision": "skip_protected",
+      "target_instance": "F00196"
+    },
+    {
+      "record_id": "B00197",
+      "decision": "overlay",
+      "target_instance": "F00197"
+    },
+    {
+      "record_id": "B00198",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00199",
+      "decision": "overlay",
+      "target_instance": "F00199"
+    },
+    {
+      "record_id": "B00200",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00201",
+      "decision": "overlay",
+      "target_instance": "F00201"
+    },
+    {
+      "record_id": "B00202",
+      "decision": "overlay",
+      "target_instance": "F00202"
+    },
+    {
+      "record_id": "B00203",
+      "decision": "skip_protected",
+      "target_instance": "F00203"
+    },
+    {
+      "record_id": "B00204",
+      "decision": "overlay",
+      "target_instance": "F00204"
+    },
+    {
+      "record_id": "B00205",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00206",
+      "decision": "overlay",
+      "target_instance": "F00206"
+    },
+    {
+      "record_id": "B00207",
+      "decision": "overlay",
+      "target_instance": "F00207"
+    },
+    {
+      "record_id": "B00208",
+      "decision": "overlay",
+      "target_instance": "F00208"
+    },
+    {
+      "record_id": "B00209",
+      "decision": "quarantine",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00210",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00211",
+      "decision": "overlay",
+      "target_instance": "F00211"
+    },
+    {
+      "record_id": "B00212",
+      "decision": "overlay",
+      "target_instance": "F00212"
+    },
+    {
+      "record_id": "B00213",
+      "decision": "overlay",
+      "target_instance": "F00213"
+    },
+    {
+      "record_id": "B00214",
+      "decision": "overlay",
+      "target_instance": "F00214"
+    },
+    {
+      "record_id": "B00215",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00216",
+      "decision": "overlay",
+      "target_instance": "F00216"
+    },
+    {
+      "record_id": "B00217",
+      "decision": "skip_protected",
+      "target_instance": "F00217"
+    },
+    {
+      "record_id": "B00218",
+      "decision": "overlay",
+      "target_instance": "F00218"
+    },
+    {
+      "record_id": "B00219",
+      "decision": "overlay",
+      "target_instance": "F00219"
+    },
+    {
+      "record_id": "B00220",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00221",
+      "decision": "overlay",
+      "target_instance": "F00221"
+    },
+    {
+      "record_id": "B00222",
+      "decision": "overlay",
+      "target_instance": "F00222"
+    },
+    {
+      "record_id": "B00223",
+      "decision": "overlay",
+      "target_instance": "F00223"
+    },
+    {
+      "record_id": "B00224",
+      "decision": "skip_protected",
+      "target_instance": "F00224"
+    },
+    {
+      "record_id": "B00225",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00226",
+      "decision": "overlay",
+      "target_instance": "F00226"
+    },
+    {
+      "record_id": "B00227",
+      "decision": "overlay",
+      "target_instance": "F00227"
+    },
+    {
+      "record_id": "B00228",
+      "decision": "quarantine",
+      "target_instance": "F00228"
+    },
+    {
+      "record_id": "B00229",
+      "decision": "overlay",
+      "target_instance": "F00229"
+    },
+    {
+      "record_id": "B00230",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00231",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00232",
+      "decision": "overlay",
+      "target_instance": "F00232"
+    },
+    {
+      "record_id": "B00233",
+      "decision": "overlay",
+      "target_instance": "F00233"
+    },
+    {
+      "record_id": "B00234",
+      "decision": "overlay",
+      "target_instance": "F00234"
+    },
+    {
+      "record_id": "B00235",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00236",
+      "decision": "overlay",
+      "target_instance": "F00236"
+    },
+    {
+      "record_id": "B00237",
+      "decision": "overlay",
+      "target_instance": "F00237"
+    },
+    {
+      "record_id": "B00238",
+      "decision": "skip_protected",
+      "target_instance": "F00238"
+    },
+    {
+      "record_id": "B00239",
+      "decision": "overlay",
+      "target_instance": "F00239"
+    },
+    {
+      "record_id": "B00240",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00241",
+      "decision": "overlay",
+      "target_instance": "F00241"
+    },
+    {
+      "record_id": "B00242",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00243",
+      "decision": "overlay",
+      "target_instance": "F00243"
+    },
+    {
+      "record_id": "B00244",
+      "decision": "overlay",
+      "target_instance": "F00244"
+    },
+    {
+      "record_id": "B00245",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00246",
+      "decision": "overlay",
+      "target_instance": "F00246"
+    },
+    {
+      "record_id": "B00247",
+      "decision": "quarantine",
+      "target_instance": "F00247"
+    },
+    {
+      "record_id": "B00248",
+      "decision": "overlay",
+      "target_instance": "F00248"
+    },
+    {
+      "record_id": "B00249",
+      "decision": "overlay",
+      "target_instance": "F00249"
+    },
+    {
+      "record_id": "B00250",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00251",
+      "decision": "overlay",
+      "target_instance": "F00251"
+    },
+    {
+      "record_id": "B00252",
+      "decision": "skip_protected",
+      "target_instance": "F00252"
+    },
+    {
+      "record_id": "B00253",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00254",
+      "decision": "overlay",
+      "target_instance": "F00254"
+    },
+    {
+      "record_id": "B00255",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00256",
+      "decision": "overlay",
+      "target_instance": "F00256"
+    },
+    {
+      "record_id": "B00257",
+      "decision": "overlay",
+      "target_instance": "F00257"
+    },
+    {
+      "record_id": "B00258",
+      "decision": "overlay",
+      "target_instance": "F00258"
+    },
+    {
+      "record_id": "B00259",
+      "decision": "skip_protected",
+      "target_instance": "F00259"
+    },
+    {
+      "record_id": "B00260",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00261",
+      "decision": "overlay",
+      "target_instance": "F00261"
+    },
+    {
+      "record_id": "B00262",
+      "decision": "overlay",
+      "target_instance": "F00262"
+    },
+    {
+      "record_id": "B00263",
+      "decision": "overlay",
+      "target_instance": "F00263"
+    },
+    {
+      "record_id": "B00264",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00265",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00266",
+      "decision": "quarantine",
+      "target_instance": "F00266"
+    },
+    {
+      "record_id": "B00267",
+      "decision": "overlay",
+      "target_instance": "F00267"
+    },
+    {
+      "record_id": "B00268",
+      "decision": "overlay",
+      "target_instance": "F00268"
+    },
+    {
+      "record_id": "B00269",
+      "decision": "overlay",
+      "target_instance": "F00269"
+    },
+    {
+      "record_id": "B00270",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00271",
+      "decision": "overlay",
+      "target_instance": "F00271"
+    },
+    {
+      "record_id": "B00272",
+      "decision": "overlay",
+      "target_instance": "F00272"
+    },
+    {
+      "record_id": "B00273",
+      "decision": "skip_protected",
+      "target_instance": "F00273"
+    },
+    {
+      "record_id": "B00274",
+      "decision": "overlay",
+      "target_instance": "F00274"
+    },
+    {
+      "record_id": "B00275",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00276",
+      "decision": "overlay",
+      "target_instance": "F00276"
+    },
+    {
+      "record_id": "B00277",
+      "decision": "overlay",
+      "target_instance": "F00277"
+    },
+    {
+      "record_id": "B00278",
+      "decision": "overlay",
+      "target_instance": "F00278"
+    },
+    {
+      "record_id": "B00279",
+      "decision": "overlay",
+      "target_instance": "F00279"
+    },
+    {
+      "record_id": "B00280",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00281",
+      "decision": "overlay",
+      "target_instance": "F00281"
+    },
+    {
+      "record_id": "B00282",
+      "decision": "overlay",
+      "target_instance": "F00282"
+    },
+    {
+      "record_id": "B00283",
+      "decision": "overlay",
+      "target_instance": "F00283"
+    },
+    {
+      "record_id": "B00284",
+      "decision": "overlay",
+      "target_instance": "F00284"
+    },
+    {
+      "record_id": "B00285",
+      "decision": "quarantine",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00286",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00287",
+      "decision": "skip_protected",
+      "target_instance": "F00287"
+    },
+    {
+      "record_id": "B00288",
+      "decision": "overlay",
+      "target_instance": "F00288"
+    },
+    {
+      "record_id": "B00289",
+      "decision": "overlay",
+      "target_instance": "F00289"
+    },
+    {
+      "record_id": "B00290",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00291",
+      "decision": "overlay",
+      "target_instance": "F00291"
+    },
+    {
+      "record_id": "B00292",
+      "decision": "overlay",
+      "target_instance": "F00292"
+    },
+    {
+      "record_id": "B00293",
+      "decision": "overlay",
+      "target_instance": "F00293"
+    },
+    {
+      "record_id": "B00294",
+      "decision": "skip_protected",
+      "target_instance": "F00294"
+    },
+    {
+      "record_id": "B00295",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00296",
+      "decision": "overlay",
+      "target_instance": "F00296"
+    },
+    {
+      "record_id": "B00297",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00298",
+      "decision": "overlay",
+      "target_instance": "F00298"
+    },
+    {
+      "record_id": "B00299",
+      "decision": "overlay",
+      "target_instance": "F00299"
+    },
+    {
+      "record_id": "B00300",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00301",
+      "decision": "skip_protected",
+      "target_instance": "F00301"
+    },
+    {
+      "record_id": "B00302",
+      "decision": "overlay",
+      "target_instance": "F00302"
+    },
+    {
+      "record_id": "B00303",
+      "decision": "overlay",
+      "target_instance": "F00303"
+    },
+    {
+      "record_id": "B00304",
+      "decision": "quarantine",
+      "target_instance": "F00304"
+    },
+    {
+      "record_id": "B00305",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00306",
+      "decision": "overlay",
+      "target_instance": "F00306"
+    },
+    {
+      "record_id": "B00307",
+      "decision": "overlay",
+      "target_instance": "F00307"
+    },
+    {
+      "record_id": "B00308",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00309",
+      "decision": "overlay",
+      "target_instance": "F00309"
+    },
+    {
+      "record_id": "B00310",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00311",
+      "decision": "overlay",
+      "target_instance": "F00311"
+    },
+    {
+      "record_id": "B00312",
+      "decision": "overlay",
+      "target_instance": "F00312"
+    },
+    {
+      "record_id": "B00313",
+      "decision": "overlay",
+      "target_instance": "F00313"
+    },
+    {
+      "record_id": "B00314",
+      "decision": "overlay",
+      "target_instance": "F00314"
+    },
+    {
+      "record_id": "B00315",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00316",
+      "decision": "overlay",
+      "target_instance": "F00316"
+    },
+    {
+      "record_id": "B00317",
+      "decision": "overlay",
+      "target_instance": "F00317"
+    },
+    {
+      "record_id": "B00318",
+      "decision": "overlay",
+      "target_instance": "F00318"
+    },
+    {
+      "record_id": "B00319",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00320",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00321",
+      "decision": "overlay",
+      "target_instance": "F00321"
+    },
+    {
+      "record_id": "B00322",
+      "decision": "skip_protected",
+      "target_instance": "F00322"
+    },
+    {
+      "record_id": "B00323",
+      "decision": "quarantine",
+      "target_instance": "F00323"
+    },
+    {
+      "record_id": "B00324",
+      "decision": "overlay",
+      "target_instance": "F00324"
+    },
+    {
+      "record_id": "B00325",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00326",
+      "decision": "overlay",
+      "target_instance": "F00326"
+    },
+    {
+      "record_id": "B00327",
+      "decision": "overlay",
+      "target_instance": "F00327"
+    },
+    {
+      "record_id": "B00328",
+      "decision": "overlay",
+      "target_instance": "F00328"
+    },
+    {
+      "record_id": "B00329",
+      "decision": "skip_protected",
+      "target_instance": "F00329"
+    },
+    {
+      "record_id": "B00330",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00331",
+      "decision": "overlay",
+      "target_instance": "F00331"
+    },
+    {
+      "record_id": "B00332",
+      "decision": "overlay",
+      "target_instance": "F00332"
+    },
+    {
+      "record_id": "B00333",
+      "decision": "overlay",
+      "target_instance": "F00333"
+    },
+    {
+      "record_id": "B00334",
+      "decision": "overlay",
+      "target_instance": "F00334"
+    },
+    {
+      "record_id": "B00335",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00336",
+      "decision": "skip_protected",
+      "target_instance": "F00336"
+    },
+    {
+      "record_id": "B00337",
+      "decision": "overlay",
+      "target_instance": "F00337"
+    },
+    {
+      "record_id": "B00338",
+      "decision": "overlay",
+      "target_instance": "F00338"
+    },
+    {
+      "record_id": "B00339",
+      "decision": "overlay",
+      "target_instance": "F00339"
+    },
+    {
+      "record_id": "B00340",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00341",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00342",
+      "decision": "quarantine",
+      "target_instance": "F00342"
+    },
+    {
+      "record_id": "B00343",
+      "decision": "skip_protected",
+      "target_instance": "F00343"
+    },
+    {
+      "record_id": "B00344",
+      "decision": "overlay",
+      "target_instance": "F00344"
+    },
+    {
+      "record_id": "B00345",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00346",
+      "decision": "overlay",
+      "target_instance": "F00346"
+    },
+    {
+      "record_id": "B00347",
+      "decision": "overlay",
+      "target_instance": "F00347"
+    },
+    {
+      "record_id": "B00348",
+      "decision": "overlay",
+      "target_instance": "F00348"
+    },
+    {
+      "record_id": "B00349",
+      "decision": "overlay",
+      "target_instance": "F00349"
+    },
+    {
+      "record_id": "B00350",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00351",
+      "decision": "overlay",
+      "target_instance": "F00351"
+    },
+    {
+      "record_id": "B00352",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00353",
+      "decision": "overlay",
+      "target_instance": "F00353"
+    },
+    {
+      "record_id": "B00354",
+      "decision": "overlay",
+      "target_instance": "F00354"
+    },
+    {
+      "record_id": "B00355",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00356",
+      "decision": "overlay",
+      "target_instance": "F00356"
+    },
+    {
+      "record_id": "B00357",
+      "decision": "skip_protected",
+      "target_instance": "F00357"
+    },
+    {
+      "record_id": "B00358",
+      "decision": "overlay",
+      "target_instance": "F00358"
+    },
+    {
+      "record_id": "B00359",
+      "decision": "overlay",
+      "target_instance": "F00359"
+    },
+    {
+      "record_id": "B00360",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00361",
+      "decision": "quarantine",
+      "target_instance": "F00361"
+    },
+    {
+      "record_id": "B00362",
+      "decision": "overlay",
+      "target_instance": "F00362"
+    },
+    {
+      "record_id": "B00363",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00364",
+      "decision": "skip_protected",
+      "target_instance": "F00364"
+    },
+    {
+      "record_id": "B00365",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00366",
+      "decision": "overlay",
+      "target_instance": "F00366"
+    },
+    {
+      "record_id": "B00367",
+      "decision": "overlay",
+      "target_instance": "F00367"
+    },
+    {
+      "record_id": "B00368",
+      "decision": "overlay",
+      "target_instance": "F00368"
+    },
+    {
+      "record_id": "B00369",
+      "decision": "overlay",
+      "target_instance": "F00369"
+    },
+    {
+      "record_id": "B00370",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00371",
+      "decision": "skip_protected",
+      "target_instance": "F00371"
+    },
+    {
+      "record_id": "B00372",
+      "decision": "overlay",
+      "target_instance": "F00372"
+    },
+    {
+      "record_id": "B00373",
+      "decision": "overlay",
+      "target_instance": "F00373"
+    },
+    {
+      "record_id": "B00374",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00375",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00376",
+      "decision": "overlay",
+      "target_instance": "F00376"
+    },
+    {
+      "record_id": "B00377",
+      "decision": "overlay",
+      "target_instance": "F00377"
+    },
+    {
+      "record_id": "B00378",
+      "decision": "skip_protected",
+      "target_instance": "F00378"
+    },
+    {
+      "record_id": "B00379",
+      "decision": "overlay",
+      "target_instance": "F00379"
+    },
+    {
+      "record_id": "B00380",
+      "decision": "quarantine",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00381",
+      "decision": "overlay",
+      "target_instance": "F00381"
+    },
+    {
+      "record_id": "B00382",
+      "decision": "overlay",
+      "target_instance": "F00382"
+    },
+    {
+      "record_id": "B00383",
+      "decision": "overlay",
+      "target_instance": "F00383"
+    },
+    {
+      "record_id": "B00384",
+      "decision": "overlay",
+      "target_instance": "F00384"
+    },
+    {
+      "record_id": "B00385",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00386",
+      "decision": "overlay",
+      "target_instance": "F00386"
+    },
+    {
+      "record_id": "B00387",
+      "decision": "overlay",
+      "target_instance": "F00387"
+    },
+    {
+      "record_id": "B00388",
+      "decision": "overlay",
+      "target_instance": "F00388"
+    },
+    {
+      "record_id": "B00389",
+      "decision": "overlay",
+      "target_instance": "F00389"
+    },
+    {
+      "record_id": "B00390",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00391",
+      "decision": "overlay",
+      "target_instance": "F00391"
+    },
+    {
+      "record_id": "B00392",
+      "decision": "skip_protected",
+      "target_instance": "F00392"
+    },
+    {
+      "record_id": "B00393",
+      "decision": "overlay",
+      "target_instance": "F00393"
+    },
+    {
+      "record_id": "B00394",
+      "decision": "overlay",
+      "target_instance": "F00394"
+    },
+    {
+      "record_id": "B00395",
+      "decision": "create",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00396",
+      "decision": "review",
+      "target_instance": ""
+    },
+    {
+      "record_id": "B00397",
+      "decision": "overlay",
+      "target_instance": "F00397"
+    },
+    {
+      "record_id": "B00398",
+      "decision": "overlay",
+      "target_instance": "F00398"
+    },
+    {
+      "record_id": "B00399",
+      "decision": "quarantine",
+      "target_instance": "F00399"
+    }
+  ],
+  "records": [
+    {
+      "id": "B00000",
+      "isbn": "9787000000000",
+      "author": "作者00",
+      "title": "数字图书馆研究 第0卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00000",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00001",
+      "isbn": "9787000000001",
+      "author": "作者01",
+      "title": "数字图书馆研究 第1卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00001",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00002",
+      "isbn": "9787000000002",
+      "author": "作者02",
+      "title": "数字图书馆研究 第2卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00002",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00003",
+      "isbn": "9787000000003",
+      "author": "作者03",
+      "title": "数字图书馆研究 第3卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00003",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00004",
+      "isbn": "9787000000004",
+      "author": "作者04",
+      "title": "数字图书馆研究 第4卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00004",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00005",
+      "isbn": "9787000000005",
+      "author": "作者05",
+      "title": "数字图书馆研究 第5卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00005",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00006",
+      "isbn": "9787000000006",
+      "author": "作者06",
+      "title": "数字图书馆研究 第6卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00006",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00007",
+      "isbn": "9787000000007",
+      "author": "作者07",
+      "title": "数字图书馆研究 第7卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00007",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00008",
+      "isbn": "9787000000008",
+      "author": "作者08",
+      "title": "数字图书馆研究 第8卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00008",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00009",
+      "isbn": "9787000000009",
+      "author": "作者09",
+      "title": "数字图书馆研究 第9卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00009",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00010",
+      "isbn": "9787000000010",
+      "author": "作者10",
+      "title": "数字图书馆研究 第10卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00010",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00011",
+      "isbn": "9787000000011",
+      "author": "作者11",
+      "title": "数字图书馆研究 第11卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00011",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00012",
+      "isbn": "9787000000012",
+      "author": "作者12",
+      "title": "数字图书馆研究 第12卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00012",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00013",
+      "isbn": "9787000000013",
+      "author": "作者13",
+      "title": "数字图书馆研究 第13卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00013",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00014",
+      "isbn": "9787000000014",
+      "author": "作者14",
+      "title": "数字图书馆研究 第14卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00014",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00015",
+      "isbn": "9787000000015",
+      "author": "作者15",
+      "title": "数字图书馆研究 第15卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00015",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00016",
+      "isbn": "9787000000016",
+      "author": "作者16",
+      "title": "数字图书馆研究 第16卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00016",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00017",
+      "isbn": "9787000000017",
+      "author": "作者17",
+      "title": "数字图书馆研究 第17卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00017",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00018",
+      "isbn": "9787000000018",
+      "author": "作者18",
+      "title": "数字图书馆研究 第18卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00018",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00019",
+      "isbn": "9787000000019",
+      "author": "作者19",
+      "title": "数字图书馆研究 第19卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00019",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00020",
+      "isbn": "9787000000020",
+      "author": "作者20",
+      "title": "数字图书馆研究 第20卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00020",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00021",
+      "isbn": "9787000000021",
+      "author": "作者21",
+      "title": "数字图书馆研究 第21卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00021",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00022",
+      "isbn": "9787000000022",
+      "author": "作者22",
+      "title": "数字图书馆研究 第22卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00022",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00023",
+      "isbn": "9787000000023",
+      "author": "作者23",
+      "title": "数字图书馆研究 第23卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00023",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00024",
+      "isbn": "9787000000024",
+      "author": "作者24",
+      "title": "数字图书馆研究 第24卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00024",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00025",
+      "isbn": "9787000000025",
+      "author": "作者25",
+      "title": "数字图书馆研究 第25卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00025",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00026",
+      "isbn": "9787000000026",
+      "author": "作者26",
+      "title": "数字图书馆研究 第26卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00026",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00027",
+      "isbn": "9787000000027",
+      "author": "作者27",
+      "title": "数字图书馆研究 第27卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00027",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00028",
+      "isbn": "9787000000028",
+      "author": "作者28",
+      "title": "数字图书馆研究 第28卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00028",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00029",
+      "isbn": "9787000000029",
+      "author": "作者29",
+      "title": "数字图书馆研究 第29卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00029",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00030",
+      "isbn": "9787000000030",
+      "author": "作者30",
+      "title": "数字图书馆研究 第30卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00030",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00031",
+      "isbn": "9787000000031",
+      "author": "作者31",
+      "title": "数字图书馆研究 第31卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00031",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00032",
+      "isbn": "9787000000032",
+      "author": "作者32",
+      "title": "数字图书馆研究 第32卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00032",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00033",
+      "isbn": "9787000000033",
+      "author": "作者33",
+      "title": "数字图书馆研究 第33卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00033",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00034",
+      "isbn": "9787000000034",
+      "author": "作者34",
+      "title": "数字图书馆研究 第34卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00034",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00035",
+      "isbn": "9787000000035",
+      "author": "作者35",
+      "title": "数字图书馆研究 第35卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00035",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00036",
+      "isbn": "9787000000036",
+      "author": "作者36",
+      "title": "数字图书馆研究 第36卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00036",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00037",
+      "isbn": "9787000000037",
+      "author": "作者37",
+      "title": "数字图书馆研究 第37卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00037",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00038",
+      "isbn": "9787000000038",
+      "author": "作者38",
+      "title": "数字图书馆研究 第38卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00038",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00039",
+      "isbn": "9787000000039",
+      "author": "作者39",
+      "title": "数字图书馆研究 第39卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00039",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00040",
+      "isbn": "9787000000040",
+      "author": "作者00",
+      "title": "数字图书馆研究 第40卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00040",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00041",
+      "isbn": "9787000000041",
+      "author": "作者01",
+      "title": "数字图书馆研究 第41卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00041",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00042",
+      "isbn": "9787000000042",
+      "author": "作者02",
+      "title": "数字图书馆研究 第42卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00042",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00043",
+      "isbn": "9787000000043",
+      "author": "作者03",
+      "title": "数字图书馆研究 第43卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00043",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00044",
+      "isbn": "9787000000044",
+      "author": "作者04",
+      "title": "数字图书馆研究 第44卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00044",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00045",
+      "isbn": "9787000000045",
+      "author": "作者05",
+      "title": "数字图书馆研究 第45卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00045",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00046",
+      "isbn": "9787000000046",
+      "author": "作者06",
+      "title": "数字图书馆研究 第46卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00046",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00047",
+      "isbn": "9787000000047",
+      "author": "作者07",
+      "title": "数字图书馆研究 第47卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00047",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00048",
+      "isbn": "9787000000048",
+      "author": "作者08",
+      "title": "数字图书馆研究 第48卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00048",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00049",
+      "isbn": "9787000000049",
+      "author": "作者09",
+      "title": "数字图书馆研究 第49卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00049",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00050",
+      "isbn": "9787000000050",
+      "author": "作者10",
+      "title": "数字图书馆研究 第50卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00050",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00051",
+      "isbn": "9787000000051",
+      "author": "作者11",
+      "title": "数字图书馆研究 第51卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00051",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00052",
+      "isbn": "9787000000052",
+      "author": "作者12",
+      "title": "数字图书馆研究 第52卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00052",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00053",
+      "isbn": "9787000000053",
+      "author": "作者13",
+      "title": "数字图书馆研究 第53卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00053",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00054",
+      "isbn": "9787000000054",
+      "author": "作者14",
+      "title": "数字图书馆研究 第54卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00054",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00055",
+      "isbn": "9787000000055",
+      "author": "作者15",
+      "title": "数字图书馆研究 第55卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00055",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00056",
+      "isbn": "9787000000056",
+      "author": "作者16",
+      "title": "数字图书馆研究 第56卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00056",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00057",
+      "isbn": "9787000000057",
+      "author": "作者17",
+      "title": "数字图书馆研究 第57卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00057",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00058",
+      "isbn": "9787000000058",
+      "author": "作者18",
+      "title": "数字图书馆研究 第58卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00058",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00059",
+      "isbn": "9787000000059",
+      "author": "作者19",
+      "title": "数字图书馆研究 第59卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00059",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00060",
+      "isbn": "9787000000060",
+      "author": "作者20",
+      "title": "数字图书馆研究 第60卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00060",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00061",
+      "isbn": "9787000000061",
+      "author": "作者21",
+      "title": "数字图书馆研究 第61卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00061",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00062",
+      "isbn": "9787000000062",
+      "author": "作者22",
+      "title": "数字图书馆研究 第62卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00062",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00063",
+      "isbn": "9787000000063",
+      "author": "作者23",
+      "title": "数字图书馆研究 第63卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00063",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00064",
+      "isbn": "9787000000064",
+      "author": "作者24",
+      "title": "数字图书馆研究 第64卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00064",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00065",
+      "isbn": "9787000000065",
+      "author": "作者25",
+      "title": "数字图书馆研究 第65卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00065",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00066",
+      "isbn": "9787000000066",
+      "author": "作者26",
+      "title": "数字图书馆研究 第66卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00066",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00067",
+      "isbn": "9787000000067",
+      "author": "作者27",
+      "title": "数字图书馆研究 第67卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00067",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00068",
+      "isbn": "9787000000068",
+      "author": "作者28",
+      "title": "数字图书馆研究 第68卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00068",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00069",
+      "isbn": "9787000000069",
+      "author": "作者29",
+      "title": "数字图书馆研究 第69卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00069",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00070",
+      "isbn": "9787000000070",
+      "author": "作者30",
+      "title": "数字图书馆研究 第70卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00070",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00071",
+      "isbn": "9787000000071",
+      "author": "作者31",
+      "title": "数字图书馆研究 第71卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00071",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00072",
+      "isbn": "9787000000072",
+      "author": "作者32",
+      "title": "数字图书馆研究 第72卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00072",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00073",
+      "isbn": "9787000000073",
+      "author": "作者33",
+      "title": "数字图书馆研究 第73卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00073",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00074",
+      "isbn": "9787000000074",
+      "author": "作者34",
+      "title": "数字图书馆研究 第74卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00074",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00075",
+      "isbn": "9787000000075",
+      "author": "作者35",
+      "title": "数字图书馆研究 第75卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00075",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00076",
+      "isbn": "9787000000076",
+      "author": "作者36",
+      "title": "数字图书馆研究 第76卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00076",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00077",
+      "isbn": "9787000000077",
+      "author": "作者37",
+      "title": "数字图书馆研究 第77卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00077",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00078",
+      "isbn": "9787000000078",
+      "author": "作者38",
+      "title": "数字图书馆研究 第78卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00078",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00079",
+      "isbn": "9787000000079",
+      "author": "作者39",
+      "title": "数字图书馆研究 第79卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00079",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00080",
+      "isbn": "9787000000080",
+      "author": "作者00",
+      "title": "数字图书馆研究 第80卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00080",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00081",
+      "isbn": "9787000000081",
+      "author": "作者01",
+      "title": "数字图书馆研究 第81卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00081",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00082",
+      "isbn": "9787000000082",
+      "author": "作者02",
+      "title": "数字图书馆研究 第82卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00082",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00083",
+      "isbn": "9787000000083",
+      "author": "作者03",
+      "title": "数字图书馆研究 第83卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00083",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00084",
+      "isbn": "9787000000084",
+      "author": "作者04",
+      "title": "数字图书馆研究 第84卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00084",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00085",
+      "isbn": "9787000000085",
+      "author": "作者05",
+      "title": "数字图书馆研究 第85卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00085",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00086",
+      "isbn": "9787000000086",
+      "author": "作者06",
+      "title": "数字图书馆研究 第86卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00086",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00087",
+      "isbn": "9787000000087",
+      "author": "作者07",
+      "title": "数字图书馆研究 第87卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00087",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00088",
+      "isbn": "9787000000088",
+      "author": "作者08",
+      "title": "数字图书馆研究 第88卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00088",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00089",
+      "isbn": "9787000000089",
+      "author": "作者09",
+      "title": "数字图书馆研究 第89卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00089",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00090",
+      "isbn": "9787000000090",
+      "author": "作者10",
+      "title": "数字图书馆研究 第90卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00090",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00091",
+      "isbn": "9787000000091",
+      "author": "作者11",
+      "title": "数字图书馆研究 第91卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00091",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00092",
+      "isbn": "9787000000092",
+      "author": "作者12",
+      "title": "数字图书馆研究 第92卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00092",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00093",
+      "isbn": "9787000000093",
+      "author": "作者13",
+      "title": "数字图书馆研究 第93卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00093",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00094",
+      "isbn": "9787000000094",
+      "author": "作者14",
+      "title": "数字图书馆研究 第94卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00094",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00095",
+      "isbn": "9787000000095",
+      "author": "作者15",
+      "title": "数字图书馆研究 第95卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00095",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00096",
+      "isbn": "9787000000096",
+      "author": "作者16",
+      "title": "数字图书馆研究 第96卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00096",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00097",
+      "isbn": "9787000000097",
+      "author": "作者17",
+      "title": "数字图书馆研究 第97卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00097",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00098",
+      "isbn": "9787000000098",
+      "author": "作者18",
+      "title": "数字图书馆研究 第98卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00098",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00099",
+      "isbn": "9787000000099",
+      "author": "作者19",
+      "title": "数字图书馆研究 第99卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00099",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00100",
+      "isbn": "9787000000100",
+      "author": "作者20",
+      "title": "数字图书馆研究 第100卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00100",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00101",
+      "isbn": "9787000000101",
+      "author": "作者21",
+      "title": "数字图书馆研究 第101卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00101",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00102",
+      "isbn": "9787000000102",
+      "author": "作者22",
+      "title": "数字图书馆研究 第102卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00102",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00103",
+      "isbn": "9787000000103",
+      "author": "作者23",
+      "title": "数字图书馆研究 第103卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00103",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00104",
+      "isbn": "9787000000104",
+      "author": "作者24",
+      "title": "数字图书馆研究 第104卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00104",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00105",
+      "isbn": "9787000000105",
+      "author": "作者25",
+      "title": "数字图书馆研究 第105卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00105",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00106",
+      "isbn": "9787000000106",
+      "author": "作者26",
+      "title": "数字图书馆研究 第106卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00106",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00107",
+      "isbn": "9787000000107",
+      "author": "作者27",
+      "title": "数字图书馆研究 第107卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00107",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00108",
+      "isbn": "9787000000108",
+      "author": "作者28",
+      "title": "数字图书馆研究 第108卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00108",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00109",
+      "isbn": "9787000000109",
+      "author": "作者29",
+      "title": "数字图书馆研究 第109卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00109",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00110",
+      "isbn": "9787000000110",
+      "author": "作者30",
+      "title": "数字图书馆研究 第110卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00110",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00111",
+      "isbn": "9787000000111",
+      "author": "作者31",
+      "title": "数字图书馆研究 第111卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00111",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00112",
+      "isbn": "9787000000112",
+      "author": "作者32",
+      "title": "数字图书馆研究 第112卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00112",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00113",
+      "isbn": "9787000000113",
+      "author": "作者33",
+      "title": "数字图书馆研究 第113卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00113",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00114",
+      "isbn": "9787000000114",
+      "author": "作者34",
+      "title": "数字图书馆研究 第114卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00114",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00115",
+      "isbn": "9787000000115",
+      "author": "作者35",
+      "title": "数字图书馆研究 第115卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00115",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00116",
+      "isbn": "9787000000116",
+      "author": "作者36",
+      "title": "数字图书馆研究 第116卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00116",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00117",
+      "isbn": "9787000000117",
+      "author": "作者37",
+      "title": "数字图书馆研究 第117卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00117",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00118",
+      "isbn": "9787000000118",
+      "author": "作者38",
+      "title": "数字图书馆研究 第118卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00118",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00119",
+      "isbn": "9787000000119",
+      "author": "作者39",
+      "title": "数字图书馆研究 第119卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00119",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00120",
+      "isbn": "9787000000120",
+      "author": "作者00",
+      "title": "数字图书馆研究 第120卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00120",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00121",
+      "isbn": "9787000000121",
+      "author": "作者01",
+      "title": "数字图书馆研究 第121卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00121",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00122",
+      "isbn": "9787000000122",
+      "author": "作者02",
+      "title": "数字图书馆研究 第122卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00122",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00123",
+      "isbn": "9787000000123",
+      "author": "作者03",
+      "title": "数字图书馆研究 第123卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00123",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00124",
+      "isbn": "9787000000124",
+      "author": "作者04",
+      "title": "数字图书馆研究 第124卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00124",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00125",
+      "isbn": "9787000000125",
+      "author": "作者05",
+      "title": "数字图书馆研究 第125卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00125",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00126",
+      "isbn": "9787000000126",
+      "author": "作者06",
+      "title": "数字图书馆研究 第126卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00126",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00127",
+      "isbn": "9787000000127",
+      "author": "作者07",
+      "title": "数字图书馆研究 第127卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00127",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00128",
+      "isbn": "9787000000128",
+      "author": "作者08",
+      "title": "数字图书馆研究 第128卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00128",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00129",
+      "isbn": "9787000000129",
+      "author": "作者09",
+      "title": "数字图书馆研究 第129卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00129",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00130",
+      "isbn": "9787000000130",
+      "author": "作者10",
+      "title": "数字图书馆研究 第130卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00130",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00131",
+      "isbn": "9787000000131",
+      "author": "作者11",
+      "title": "数字图书馆研究 第131卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00131",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00132",
+      "isbn": "9787000000132",
+      "author": "作者12",
+      "title": "数字图书馆研究 第132卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00132",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00133",
+      "isbn": "9787000000133",
+      "author": "作者13",
+      "title": "数字图书馆研究 第133卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00133",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00134",
+      "isbn": "9787000000134",
+      "author": "作者14",
+      "title": "数字图书馆研究 第134卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00134",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00135",
+      "isbn": "9787000000135",
+      "author": "作者15",
+      "title": "数字图书馆研究 第135卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00135",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00136",
+      "isbn": "9787000000136",
+      "author": "作者16",
+      "title": "数字图书馆研究 第136卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00136",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00137",
+      "isbn": "9787000000137",
+      "author": "作者17",
+      "title": "数字图书馆研究 第137卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00137",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00138",
+      "isbn": "9787000000138",
+      "author": "作者18",
+      "title": "数字图书馆研究 第138卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00138",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00139",
+      "isbn": "9787000000139",
+      "author": "作者19",
+      "title": "数字图书馆研究 第139卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00139",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00140",
+      "isbn": "9787000000140",
+      "author": "作者20",
+      "title": "数字图书馆研究 第140卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00140",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00141",
+      "isbn": "9787000000141",
+      "author": "作者21",
+      "title": "数字图书馆研究 第141卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00141",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00142",
+      "isbn": "9787000000142",
+      "author": "作者22",
+      "title": "数字图书馆研究 第142卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00142",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00143",
+      "isbn": "9787000000143",
+      "author": "作者23",
+      "title": "数字图书馆研究 第143卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00143",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00144",
+      "isbn": "9787000000144",
+      "author": "作者24",
+      "title": "数字图书馆研究 第144卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00144",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00145",
+      "isbn": "9787000000145",
+      "author": "作者25",
+      "title": "数字图书馆研究 第145卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00145",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00146",
+      "isbn": "9787000000146",
+      "author": "作者26",
+      "title": "数字图书馆研究 第146卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00146",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00147",
+      "isbn": "9787000000147",
+      "author": "作者27",
+      "title": "数字图书馆研究 第147卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00147",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00148",
+      "isbn": "9787000000148",
+      "author": "作者28",
+      "title": "数字图书馆研究 第148卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00148",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00149",
+      "isbn": "9787000000149",
+      "author": "作者29",
+      "title": "数字图书馆研究 第149卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00149",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00150",
+      "isbn": "9787000000150",
+      "author": "作者30",
+      "title": "数字图书馆研究 第150卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00150",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00151",
+      "isbn": "9787000000151",
+      "author": "作者31",
+      "title": "数字图书馆研究 第151卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00151",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00152",
+      "isbn": "9787000000152",
+      "author": "作者32",
+      "title": "数字图书馆研究 第152卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00152",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00153",
+      "isbn": "9787000000153",
+      "author": "作者33",
+      "title": "数字图书馆研究 第153卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00153",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00154",
+      "isbn": "9787000000154",
+      "author": "作者34",
+      "title": "数字图书馆研究 第154卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00154",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00155",
+      "isbn": "9787000000155",
+      "author": "作者35",
+      "title": "数字图书馆研究 第155卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00155",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00156",
+      "isbn": "9787000000156",
+      "author": "作者36",
+      "title": "数字图书馆研究 第156卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00156",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00157",
+      "isbn": "9787000000157",
+      "author": "作者37",
+      "title": "数字图书馆研究 第157卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00157",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00158",
+      "isbn": "9787000000158",
+      "author": "作者38",
+      "title": "数字图书馆研究 第158卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00158",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00159",
+      "isbn": "9787000000159",
+      "author": "作者39",
+      "title": "数字图书馆研究 第159卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00159",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00160",
+      "isbn": "9787000000160",
+      "author": "作者00",
+      "title": "数字图书馆研究 第160卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00160",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00161",
+      "isbn": "9787000000161",
+      "author": "作者01",
+      "title": "数字图书馆研究 第161卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00161",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00162",
+      "isbn": "9787000000162",
+      "author": "作者02",
+      "title": "数字图书馆研究 第162卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00162",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00163",
+      "isbn": "9787000000163",
+      "author": "作者03",
+      "title": "数字图书馆研究 第163卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00163",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00164",
+      "isbn": "9787000000164",
+      "author": "作者04",
+      "title": "数字图书馆研究 第164卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00164",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00165",
+      "isbn": "9787000000165",
+      "author": "作者05",
+      "title": "数字图书馆研究 第165卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00165",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00166",
+      "isbn": "9787000000166",
+      "author": "作者06",
+      "title": "数字图书馆研究 第166卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00166",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00167",
+      "isbn": "9787000000167",
+      "author": "作者07",
+      "title": "数字图书馆研究 第167卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00167",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00168",
+      "isbn": "9787000000168",
+      "author": "作者08",
+      "title": "数字图书馆研究 第168卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00168",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00169",
+      "isbn": "9787000000169",
+      "author": "作者09",
+      "title": "数字图书馆研究 第169卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00169",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00170",
+      "isbn": "9787000000170",
+      "author": "作者10",
+      "title": "数字图书馆研究 第170卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00170",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00171",
+      "isbn": "9787000000171",
+      "author": "作者11",
+      "title": "数字图书馆研究 第171卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00171",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00172",
+      "isbn": "9787000000172",
+      "author": "作者12",
+      "title": "数字图书馆研究 第172卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00172",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00173",
+      "isbn": "9787000000173",
+      "author": "作者13",
+      "title": "数字图书馆研究 第173卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00173",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00174",
+      "isbn": "9787000000174",
+      "author": "作者14",
+      "title": "数字图书馆研究 第174卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00174",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00175",
+      "isbn": "9787000000175",
+      "author": "作者15",
+      "title": "数字图书馆研究 第175卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00175",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00176",
+      "isbn": "9787000000176",
+      "author": "作者16",
+      "title": "数字图书馆研究 第176卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00176",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00177",
+      "isbn": "9787000000177",
+      "author": "作者17",
+      "title": "数字图书馆研究 第177卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00177",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00178",
+      "isbn": "9787000000178",
+      "author": "作者18",
+      "title": "数字图书馆研究 第178卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00178",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00179",
+      "isbn": "9787000000179",
+      "author": "作者19",
+      "title": "数字图书馆研究 第179卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00179",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00180",
+      "isbn": "9787000000180",
+      "author": "作者20",
+      "title": "数字图书馆研究 第180卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00180",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00181",
+      "isbn": "9787000000181",
+      "author": "作者21",
+      "title": "数字图书馆研究 第181卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00181",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00182",
+      "isbn": "9787000000182",
+      "author": "作者22",
+      "title": "数字图书馆研究 第182卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00182",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00183",
+      "isbn": "9787000000183",
+      "author": "作者23",
+      "title": "数字图书馆研究 第183卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00183",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00184",
+      "isbn": "9787000000184",
+      "author": "作者24",
+      "title": "数字图书馆研究 第184卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00184",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00185",
+      "isbn": "9787000000185",
+      "author": "作者25",
+      "title": "数字图书馆研究 第185卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00185",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00186",
+      "isbn": "9787000000186",
+      "author": "作者26",
+      "title": "数字图书馆研究 第186卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00186",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00187",
+      "isbn": "9787000000187",
+      "author": "作者27",
+      "title": "数字图书馆研究 第187卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00187",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00188",
+      "isbn": "9787000000188",
+      "author": "作者28",
+      "title": "数字图书馆研究 第188卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00188",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00189",
+      "isbn": "9787000000189",
+      "author": "作者29",
+      "title": "数字图书馆研究 第189卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00189",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00190",
+      "isbn": "9787000000190",
+      "author": "作者30",
+      "title": "数字图书馆研究 第190卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00190",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00191",
+      "isbn": "9787000000191",
+      "author": "作者31",
+      "title": "数字图书馆研究 第191卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00191",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00192",
+      "isbn": "9787000000192",
+      "author": "作者32",
+      "title": "数字图书馆研究 第192卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00192",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00193",
+      "isbn": "9787000000193",
+      "author": "作者33",
+      "title": "数字图书馆研究 第193卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00193",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00194",
+      "isbn": "9787000000194",
+      "author": "作者34",
+      "title": "数字图书馆研究 第194卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00194",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00195",
+      "isbn": "9787000000195",
+      "author": "作者35",
+      "title": "数字图书馆研究 第195卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00195",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00196",
+      "isbn": "9787000000196",
+      "author": "作者36",
+      "title": "数字图书馆研究 第196卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00196",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00197",
+      "isbn": "9787000000197",
+      "author": "作者37",
+      "title": "数字图书馆研究 第197卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00197",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00198",
+      "isbn": "9787000000198",
+      "author": "作者38",
+      "title": "数字图书馆研究 第198卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00198",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00199",
+      "isbn": "9787000000199",
+      "author": "作者39",
+      "title": "数字图书馆研究 第199卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00199",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00200",
+      "isbn": "9787000000200",
+      "author": "作者00",
+      "title": "数字图书馆研究 第200卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00200",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00201",
+      "isbn": "9787000000201",
+      "author": "作者01",
+      "title": "数字图书馆研究 第201卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00201",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00202",
+      "isbn": "9787000000202",
+      "author": "作者02",
+      "title": "数字图书馆研究 第202卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00202",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00203",
+      "isbn": "9787000000203",
+      "author": "作者03",
+      "title": "数字图书馆研究 第203卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00203",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00204",
+      "isbn": "9787000000204",
+      "author": "作者04",
+      "title": "数字图书馆研究 第204卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00204",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00205",
+      "isbn": "9787000000205",
+      "author": "作者05",
+      "title": "数字图书馆研究 第205卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00205",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00206",
+      "isbn": "9787000000206",
+      "author": "作者06",
+      "title": "数字图书馆研究 第206卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00206",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00207",
+      "isbn": "9787000000207",
+      "author": "作者07",
+      "title": "数字图书馆研究 第207卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00207",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00208",
+      "isbn": "9787000000208",
+      "author": "作者08",
+      "title": "数字图书馆研究 第208卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00208",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00209",
+      "isbn": "9787000000209",
+      "author": "作者09",
+      "title": "数字图书馆研究 第209卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00209",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00210",
+      "isbn": "9787000000210",
+      "author": "作者10",
+      "title": "数字图书馆研究 第210卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00210",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00211",
+      "isbn": "9787000000211",
+      "author": "作者11",
+      "title": "数字图书馆研究 第211卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00211",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00212",
+      "isbn": "9787000000212",
+      "author": "作者12",
+      "title": "数字图书馆研究 第212卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00212",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00213",
+      "isbn": "9787000000213",
+      "author": "作者13",
+      "title": "数字图书馆研究 第213卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00213",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00214",
+      "isbn": "9787000000214",
+      "author": "作者14",
+      "title": "数字图书馆研究 第214卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00214",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00215",
+      "isbn": "9787000000215",
+      "author": "作者15",
+      "title": "数字图书馆研究 第215卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00215",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00216",
+      "isbn": "9787000000216",
+      "author": "作者16",
+      "title": "数字图书馆研究 第216卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00216",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00217",
+      "isbn": "9787000000217",
+      "author": "作者17",
+      "title": "数字图书馆研究 第217卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00217",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00218",
+      "isbn": "9787000000218",
+      "author": "作者18",
+      "title": "数字图书馆研究 第218卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00218",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00219",
+      "isbn": "9787000000219",
+      "author": "作者19",
+      "title": "数字图书馆研究 第219卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00219",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00220",
+      "isbn": "9787000000220",
+      "author": "作者20",
+      "title": "数字图书馆研究 第220卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00220",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00221",
+      "isbn": "9787000000221",
+      "author": "作者21",
+      "title": "数字图书馆研究 第221卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00221",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00222",
+      "isbn": "9787000000222",
+      "author": "作者22",
+      "title": "数字图书馆研究 第222卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00222",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00223",
+      "isbn": "9787000000223",
+      "author": "作者23",
+      "title": "数字图书馆研究 第223卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00223",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00224",
+      "isbn": "9787000000224",
+      "author": "作者24",
+      "title": "数字图书馆研究 第224卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00224",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00225",
+      "isbn": "9787000000225",
+      "author": "作者25",
+      "title": "数字图书馆研究 第225卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00225",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00226",
+      "isbn": "9787000000226",
+      "author": "作者26",
+      "title": "数字图书馆研究 第226卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00226",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00227",
+      "isbn": "9787000000227",
+      "author": "作者27",
+      "title": "数字图书馆研究 第227卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00227",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00228",
+      "isbn": "9787000000228",
+      "author": "作者28",
+      "title": "数字图书馆研究 第228卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00228",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00229",
+      "isbn": "9787000000229",
+      "author": "作者29",
+      "title": "数字图书馆研究 第229卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00229",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00230",
+      "isbn": "9787000000230",
+      "author": "作者30",
+      "title": "数字图书馆研究 第230卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00230",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00231",
+      "isbn": "9787000000231",
+      "author": "作者31",
+      "title": "数字图书馆研究 第231卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00231",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00232",
+      "isbn": "9787000000232",
+      "author": "作者32",
+      "title": "数字图书馆研究 第232卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00232",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00233",
+      "isbn": "9787000000233",
+      "author": "作者33",
+      "title": "数字图书馆研究 第233卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00233",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00234",
+      "isbn": "9787000000234",
+      "author": "作者34",
+      "title": "数字图书馆研究 第234卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00234",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00235",
+      "isbn": "9787000000235",
+      "author": "作者35",
+      "title": "数字图书馆研究 第235卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00235",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00236",
+      "isbn": "9787000000236",
+      "author": "作者36",
+      "title": "数字图书馆研究 第236卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00236",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00237",
+      "isbn": "9787000000237",
+      "author": "作者37",
+      "title": "数字图书馆研究 第237卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00237",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00238",
+      "isbn": "9787000000238",
+      "author": "作者38",
+      "title": "数字图书馆研究 第238卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00238",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00239",
+      "isbn": "9787000000239",
+      "author": "作者39",
+      "title": "数字图书馆研究 第239卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00239",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00240",
+      "isbn": "9787000000240",
+      "author": "作者00",
+      "title": "数字图书馆研究 第240卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00240",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00241",
+      "isbn": "9787000000241",
+      "author": "作者01",
+      "title": "数字图书馆研究 第241卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00241",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00242",
+      "isbn": "9787000000242",
+      "author": "作者02",
+      "title": "数字图书馆研究 第242卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00242",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00243",
+      "isbn": "9787000000243",
+      "author": "作者03",
+      "title": "数字图书馆研究 第243卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00243",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00244",
+      "isbn": "9787000000244",
+      "author": "作者04",
+      "title": "数字图书馆研究 第244卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00244",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00245",
+      "isbn": "9787000000245",
+      "author": "作者05",
+      "title": "数字图书馆研究 第245卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00245",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00246",
+      "isbn": "9787000000246",
+      "author": "作者06",
+      "title": "数字图书馆研究 第246卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00246",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00247",
+      "isbn": "9787000000247",
+      "author": "作者07",
+      "title": "数字图书馆研究 第247卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00247",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00248",
+      "isbn": "9787000000248",
+      "author": "作者08",
+      "title": "数字图书馆研究 第248卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00248",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00249",
+      "isbn": "9787000000249",
+      "author": "作者09",
+      "title": "数字图书馆研究 第249卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00249",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00250",
+      "isbn": "9787000000250",
+      "author": "作者10",
+      "title": "数字图书馆研究 第250卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00250",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00251",
+      "isbn": "9787000000251",
+      "author": "作者11",
+      "title": "数字图书馆研究 第251卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00251",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00252",
+      "isbn": "9787000000252",
+      "author": "作者12",
+      "title": "数字图书馆研究 第252卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00252",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00253",
+      "isbn": "9787000000253",
+      "author": "作者13",
+      "title": "数字图书馆研究 第253卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00253",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00254",
+      "isbn": "9787000000254",
+      "author": "作者14",
+      "title": "数字图书馆研究 第254卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00254",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00255",
+      "isbn": "9787000000255",
+      "author": "作者15",
+      "title": "数字图书馆研究 第255卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00255",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00256",
+      "isbn": "9787000000256",
+      "author": "作者16",
+      "title": "数字图书馆研究 第256卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00256",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00257",
+      "isbn": "9787000000257",
+      "author": "作者17",
+      "title": "数字图书馆研究 第257卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00257",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00258",
+      "isbn": "9787000000258",
+      "author": "作者18",
+      "title": "数字图书馆研究 第258卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00258",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00259",
+      "isbn": "9787000000259",
+      "author": "作者19",
+      "title": "数字图书馆研究 第259卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00259",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00260",
+      "isbn": "9787000000260",
+      "author": "作者20",
+      "title": "数字图书馆研究 第260卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00260",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00261",
+      "isbn": "9787000000261",
+      "author": "作者21",
+      "title": "数字图书馆研究 第261卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00261",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00262",
+      "isbn": "9787000000262",
+      "author": "作者22",
+      "title": "数字图书馆研究 第262卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00262",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00263",
+      "isbn": "9787000000263",
+      "author": "作者23",
+      "title": "数字图书馆研究 第263卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00263",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00264",
+      "isbn": "9787000000264",
+      "author": "作者24",
+      "title": "数字图书馆研究 第264卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00264",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00265",
+      "isbn": "9787000000265",
+      "author": "作者25",
+      "title": "数字图书馆研究 第265卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00265",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00266",
+      "isbn": "9787000000266",
+      "author": "作者26",
+      "title": "数字图书馆研究 第266卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00266",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00267",
+      "isbn": "9787000000267",
+      "author": "作者27",
+      "title": "数字图书馆研究 第267卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00267",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00268",
+      "isbn": "9787000000268",
+      "author": "作者28",
+      "title": "数字图书馆研究 第268卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00268",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00269",
+      "isbn": "9787000000269",
+      "author": "作者29",
+      "title": "数字图书馆研究 第269卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00269",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00270",
+      "isbn": "9787000000270",
+      "author": "作者30",
+      "title": "数字图书馆研究 第270卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00270",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00271",
+      "isbn": "9787000000271",
+      "author": "作者31",
+      "title": "数字图书馆研究 第271卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00271",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00272",
+      "isbn": "9787000000272",
+      "author": "作者32",
+      "title": "数字图书馆研究 第272卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00272",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00273",
+      "isbn": "9787000000273",
+      "author": "作者33",
+      "title": "数字图书馆研究 第273卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00273",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00274",
+      "isbn": "9787000000274",
+      "author": "作者34",
+      "title": "数字图书馆研究 第274卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00274",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00275",
+      "isbn": "9787000000275",
+      "author": "作者35",
+      "title": "数字图书馆研究 第275卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00275",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00276",
+      "isbn": "9787000000276",
+      "author": "作者36",
+      "title": "数字图书馆研究 第276卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00276",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00277",
+      "isbn": "9787000000277",
+      "author": "作者37",
+      "title": "数字图书馆研究 第277卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00277",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00278",
+      "isbn": "9787000000278",
+      "author": "作者38",
+      "title": "数字图书馆研究 第278卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00278",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00279",
+      "isbn": "9787000000279",
+      "author": "作者39",
+      "title": "数字图书馆研究 第279卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00279",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00280",
+      "isbn": "9787000000280",
+      "author": "作者00",
+      "title": "数字图书馆研究 第280卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00280",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00281",
+      "isbn": "9787000000281",
+      "author": "作者01",
+      "title": "数字图书馆研究 第281卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00281",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00282",
+      "isbn": "9787000000282",
+      "author": "作者02",
+      "title": "数字图书馆研究 第282卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00282",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00283",
+      "isbn": "9787000000283",
+      "author": "作者03",
+      "title": "数字图书馆研究 第283卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00283",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00284",
+      "isbn": "9787000000284",
+      "author": "作者04",
+      "title": "数字图书馆研究 第284卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00284",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00285",
+      "isbn": "9787000000285",
+      "author": "作者05",
+      "title": "数字图书馆研究 第285卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00285",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00286",
+      "isbn": "9787000000286",
+      "author": "作者06",
+      "title": "数字图书馆研究 第286卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00286",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00287",
+      "isbn": "9787000000287",
+      "author": "作者07",
+      "title": "数字图书馆研究 第287卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00287",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00288",
+      "isbn": "9787000000288",
+      "author": "作者08",
+      "title": "数字图书馆研究 第288卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00288",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00289",
+      "isbn": "9787000000289",
+      "author": "作者09",
+      "title": "数字图书馆研究 第289卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00289",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00290",
+      "isbn": "9787000000290",
+      "author": "作者10",
+      "title": "数字图书馆研究 第290卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00290",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00291",
+      "isbn": "9787000000291",
+      "author": "作者11",
+      "title": "数字图书馆研究 第291卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00291",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00292",
+      "isbn": "9787000000292",
+      "author": "作者12",
+      "title": "数字图书馆研究 第292卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00292",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00293",
+      "isbn": "9787000000293",
+      "author": "作者13",
+      "title": "数字图书馆研究 第293卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00293",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00294",
+      "isbn": "9787000000294",
+      "author": "作者14",
+      "title": "数字图书馆研究 第294卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00294",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00295",
+      "isbn": "9787000000295",
+      "author": "作者15",
+      "title": "数字图书馆研究 第295卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00295",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00296",
+      "isbn": "9787000000296",
+      "author": "作者16",
+      "title": "数字图书馆研究 第296卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00296",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00297",
+      "isbn": "9787000000297",
+      "author": "作者17",
+      "title": "数字图书馆研究 第297卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00297",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00298",
+      "isbn": "9787000000298",
+      "author": "作者18",
+      "title": "数字图书馆研究 第298卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00298",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00299",
+      "isbn": "9787000000299",
+      "author": "作者19",
+      "title": "数字图书馆研究 第299卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00299",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00300",
+      "isbn": "9787000000300",
+      "author": "作者20",
+      "title": "数字图书馆研究 第300卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00300",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00301",
+      "isbn": "9787000000301",
+      "author": "作者21",
+      "title": "数字图书馆研究 第301卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00301",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00302",
+      "isbn": "9787000000302",
+      "author": "作者22",
+      "title": "数字图书馆研究 第302卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00302",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00303",
+      "isbn": "9787000000303",
+      "author": "作者23",
+      "title": "数字图书馆研究 第303卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00303",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00304",
+      "isbn": "9787000000304",
+      "author": "作者24",
+      "title": "数字图书馆研究 第304卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00304",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00305",
+      "isbn": "9787000000305",
+      "author": "作者25",
+      "title": "数字图书馆研究 第305卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00305",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00306",
+      "isbn": "9787000000306",
+      "author": "作者26",
+      "title": "数字图书馆研究 第306卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00306",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00307",
+      "isbn": "9787000000307",
+      "author": "作者27",
+      "title": "数字图书馆研究 第307卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00307",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00308",
+      "isbn": "9787000000308",
+      "author": "作者28",
+      "title": "数字图书馆研究 第308卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00308",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00309",
+      "isbn": "9787000000309",
+      "author": "作者29",
+      "title": "数字图书馆研究 第309卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00309",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00310",
+      "isbn": "9787000000310",
+      "author": "作者30",
+      "title": "数字图书馆研究 第310卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00310",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00311",
+      "isbn": "9787000000311",
+      "author": "作者31",
+      "title": "数字图书馆研究 第311卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00311",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00312",
+      "isbn": "9787000000312",
+      "author": "作者32",
+      "title": "数字图书馆研究 第312卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00312",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00313",
+      "isbn": "9787000000313",
+      "author": "作者33",
+      "title": "数字图书馆研究 第313卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00313",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00314",
+      "isbn": "9787000000314",
+      "author": "作者34",
+      "title": "数字图书馆研究 第314卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00314",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00315",
+      "isbn": "9787000000315",
+      "author": "作者35",
+      "title": "数字图书馆研究 第315卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00315",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00316",
+      "isbn": "9787000000316",
+      "author": "作者36",
+      "title": "数字图书馆研究 第316卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00316",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00317",
+      "isbn": "9787000000317",
+      "author": "作者37",
+      "title": "数字图书馆研究 第317卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00317",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00318",
+      "isbn": "9787000000318",
+      "author": "作者38",
+      "title": "数字图书馆研究 第318卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00318",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00319",
+      "isbn": "9787000000319",
+      "author": "作者39",
+      "title": "数字图书馆研究 第319卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00319",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00320",
+      "isbn": "9787000000320",
+      "author": "作者00",
+      "title": "数字图书馆研究 第320卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00320",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00321",
+      "isbn": "9787000000321",
+      "author": "作者01",
+      "title": "数字图书馆研究 第321卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00321",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00322",
+      "isbn": "9787000000322",
+      "author": "作者02",
+      "title": "数字图书馆研究 第322卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00322",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00323",
+      "isbn": "9787000000323",
+      "author": "作者03",
+      "title": "数字图书馆研究 第323卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00323",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00324",
+      "isbn": "9787000000324",
+      "author": "作者04",
+      "title": "数字图书馆研究 第324卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00324",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00325",
+      "isbn": "9787000000325",
+      "author": "作者05",
+      "title": "数字图书馆研究 第325卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00325",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00326",
+      "isbn": "9787000000326",
+      "author": "作者06",
+      "title": "数字图书馆研究 第326卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00326",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00327",
+      "isbn": "9787000000327",
+      "author": "作者07",
+      "title": "数字图书馆研究 第327卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00327",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00328",
+      "isbn": "9787000000328",
+      "author": "作者08",
+      "title": "数字图书馆研究 第328卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00328",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00329",
+      "isbn": "9787000000329",
+      "author": "作者09",
+      "title": "数字图书馆研究 第329卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00329",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00330",
+      "isbn": "9787000000330",
+      "author": "作者10",
+      "title": "数字图书馆研究 第330卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00330",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00331",
+      "isbn": "9787000000331",
+      "author": "作者11",
+      "title": "数字图书馆研究 第331卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00331",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00332",
+      "isbn": "9787000000332",
+      "author": "作者12",
+      "title": "数字图书馆研究 第332卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00332",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00333",
+      "isbn": "9787000000333",
+      "author": "作者13",
+      "title": "数字图书馆研究 第333卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00333",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00334",
+      "isbn": "9787000000334",
+      "author": "作者14",
+      "title": "数字图书馆研究 第334卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00334",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00335",
+      "isbn": "9787000000335",
+      "author": "作者15",
+      "title": "数字图书馆研究 第335卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00335",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00336",
+      "isbn": "9787000000336",
+      "author": "作者16",
+      "title": "数字图书馆研究 第336卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00336",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00337",
+      "isbn": "9787000000337",
+      "author": "作者17",
+      "title": "数字图书馆研究 第337卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00337",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00338",
+      "isbn": "9787000000338",
+      "author": "作者18",
+      "title": "数字图书馆研究 第338卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00338",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00339",
+      "isbn": "9787000000339",
+      "author": "作者19",
+      "title": "数字图书馆研究 第339卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00339",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00340",
+      "isbn": "9787000000340",
+      "author": "作者20",
+      "title": "数字图书馆研究 第340卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00340",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00341",
+      "isbn": "9787000000341",
+      "author": "作者21",
+      "title": "数字图书馆研究 第341卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00341",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00342",
+      "isbn": "9787000000342",
+      "author": "作者22",
+      "title": "数字图书馆研究 第342卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00342",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00343",
+      "isbn": "9787000000343",
+      "author": "作者23",
+      "title": "数字图书馆研究 第343卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00343",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00344",
+      "isbn": "9787000000344",
+      "author": "作者24",
+      "title": "数字图书馆研究 第344卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00344",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00345",
+      "isbn": "9787000000345",
+      "author": "作者25",
+      "title": "数字图书馆研究 第345卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00345",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00346",
+      "isbn": "9787000000346",
+      "author": "作者26",
+      "title": "数字图书馆研究 第346卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00346",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00347",
+      "isbn": "9787000000347",
+      "author": "作者27",
+      "title": "数字图书馆研究 第347卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00347",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00348",
+      "isbn": "9787000000348",
+      "author": "作者28",
+      "title": "数字图书馆研究 第348卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00348",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00349",
+      "isbn": "9787000000349",
+      "author": "作者29",
+      "title": "数字图书馆研究 第349卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00349",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00350",
+      "isbn": "9787000000350",
+      "author": "作者30",
+      "title": "数字图书馆研究 第350卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00350",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00351",
+      "isbn": "9787000000351",
+      "author": "作者31",
+      "title": "数字图书馆研究 第351卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00351",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00352",
+      "isbn": "9787000000352",
+      "author": "作者32",
+      "title": "数字图书馆研究 第352卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00352",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00353",
+      "isbn": "9787000000353",
+      "author": "作者33",
+      "title": "数字图书馆研究 第353卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00353",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00354",
+      "isbn": "9787000000354",
+      "author": "作者34",
+      "title": "数字图书馆研究 第354卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00354",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00355",
+      "isbn": "9787000000355",
+      "author": "作者35",
+      "title": "数字图书馆研究 第355卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00355",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00356",
+      "isbn": "9787000000356",
+      "author": "作者36",
+      "title": "数字图书馆研究 第356卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00356",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00357",
+      "isbn": "9787000000357",
+      "author": "作者37",
+      "title": "数字图书馆研究 第357卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00357",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00358",
+      "isbn": "9787000000358",
+      "author": "作者38",
+      "title": "数字图书馆研究 第358卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00358",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00359",
+      "isbn": "9787000000359",
+      "author": "作者39",
+      "title": "数字图书馆研究 第359卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00359",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00360",
+      "isbn": "9787000000360",
+      "author": "作者00",
+      "title": "数字图书馆研究 第360卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00360",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00361",
+      "isbn": "9787000000361",
+      "author": "作者01",
+      "title": "数字图书馆研究 第361卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00361",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00362",
+      "isbn": "9787000000362",
+      "author": "作者02",
+      "title": "数字图书馆研究 第362卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00362",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00363",
+      "isbn": "9787000000363",
+      "author": "作者03",
+      "title": "数字图书馆研究 第363卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00363",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00364",
+      "isbn": "9787000000364",
+      "author": "作者04",
+      "title": "数字图书馆研究 第364卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00364",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00365",
+      "isbn": "9787000000365",
+      "author": "作者05",
+      "title": "数字图书馆研究 第365卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00365",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00366",
+      "isbn": "9787000000366",
+      "author": "作者06",
+      "title": "数字图书馆研究 第366卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00366",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00367",
+      "isbn": "9787000000367",
+      "author": "作者07",
+      "title": "数字图书馆研究 第367卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00367",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00368",
+      "isbn": "9787000000368",
+      "author": "作者08",
+      "title": "数字图书馆研究 第368卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00368",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00369",
+      "isbn": "9787000000369",
+      "author": "作者09",
+      "title": "数字图书馆研究 第369卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00369",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00370",
+      "isbn": "9787000000370",
+      "author": "作者10",
+      "title": "数字图书馆研究 第370卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00370",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00371",
+      "isbn": "9787000000371",
+      "author": "作者11",
+      "title": "数字图书馆研究 第371卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00371",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00372",
+      "isbn": "9787000000372",
+      "author": "作者12",
+      "title": "数字图书馆研究 第372卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00372",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00373",
+      "isbn": "9787000000373",
+      "author": "作者13",
+      "title": "数字图书馆研究 第373卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00373",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00374",
+      "isbn": "9787000000374",
+      "author": "作者14",
+      "title": "数字图书馆研究 第374卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00374",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00375",
+      "isbn": "9787000000375",
+      "author": "作者15",
+      "title": "数字图书馆研究 第375卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00375",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00376",
+      "isbn": "9787000000376",
+      "author": "作者16",
+      "title": "数字图书馆研究 第376卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00376",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00377",
+      "isbn": "9787000000377",
+      "author": "作者17",
+      "title": "数字图书馆研究 第377卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00377",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00378",
+      "isbn": "9787000000378",
+      "author": "作者18",
+      "title": "数字图书馆研究 第378卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00378",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00379",
+      "isbn": "9787000000379",
+      "author": "作者19",
+      "title": "数字图书馆研究 第379卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00379",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00380",
+      "isbn": "9787000000380",
+      "author": "作者20",
+      "title": "数字图书馆研究 第380卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00380",
+      "branch": "UNKNOWN"
+    },
+    {
+      "id": "B00381",
+      "isbn": "9787000000381",
+      "author": "作者21",
+      "title": "数字图书馆研究 第381卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00381",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00382",
+      "isbn": "9787000000382",
+      "author": "作者22",
+      "title": "数字图书馆研究 第382卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00382",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00383",
+      "isbn": "9787000000383",
+      "author": "作者23",
+      "title": "数字图书馆研究 第383卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00383",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00384",
+      "isbn": "9787000000384",
+      "author": "作者24",
+      "title": "数字图书馆研究 第384卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00384",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00385",
+      "isbn": "9787000000385",
+      "author": "作者25",
+      "title": "数字图书馆研究 第385卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00385",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00386",
+      "isbn": "9787000000386",
+      "author": "作者26",
+      "title": "数字图书馆研究 第386卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00386",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00387",
+      "isbn": "9787000000387",
+      "author": "作者27",
+      "title": "数字图书馆研究 第387卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00387",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00388",
+      "isbn": "9787000000388",
+      "author": "作者28",
+      "title": "数字图书馆研究 第388卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00388",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00389",
+      "isbn": "9787000000389",
+      "author": "作者29",
+      "title": "数字图书馆研究 第389卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00389",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00390",
+      "isbn": "9787000000390",
+      "author": "作者30",
+      "title": "数字图书馆研究 第390卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00390",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00391",
+      "isbn": "9787000000391",
+      "author": "作者31",
+      "title": "数字图书馆研究 第391卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00391",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00392",
+      "isbn": "9787000000392",
+      "author": "作者32",
+      "title": "数字图书馆研究 第392卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00392",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00393",
+      "isbn": "9787000000393",
+      "author": "作者33",
+      "title": "数字图书馆研究 第393卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00393",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00394",
+      "isbn": "9787000000394",
+      "author": "作者34",
+      "title": "数字图书馆研究 第394卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00394",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00395",
+      "isbn": "9787000000395",
+      "author": "作者35",
+      "title": "数字图书馆研究 第395卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00395",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00396",
+      "isbn": "9787000000396",
+      "author": "作者36",
+      "title": "数字图书馆研究 第396卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00396",
+      "branch": "MAIN"
+    },
+    {
+      "id": "B00397",
+      "isbn": "9787000000397",
+      "author": "作者37",
+      "title": "数字图书馆研究 第397卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00397",
+      "branch": "EAST"
+    },
+    {
+      "id": "B00398",
+      "isbn": "9787000000398",
+      "author": "作者38",
+      "title": "数字图书馆研究 第398卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00398",
+      "branch": "WEST"
+    },
+    {
+      "id": "B00399",
+      "isbn": "9787000000399",
+      "author": "作者39",
+      "title": "数字图书馆研究 第399卷",
+      "lang": "zho",
+      "url": "https://catalog.example/B00399",
+      "branch": "UNKNOWN"
+    }
+  ]
+}

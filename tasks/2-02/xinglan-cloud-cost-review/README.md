@@ -2,34 +2,32 @@
 
 分析星澜的云资源账单与使用情况，提出逐资源优化建议，并核算优化后的月度费用和节约金额。
 
-职业：云计算工程技术人员（2-02-38-04）
+职业：云计算工程技术人员 · `2-02-38-04`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是云平台成本管理人员，需要为运营团队整理一份能够落地的资源优化清单，说明每项建议的依据和预计收益。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-资源与账单 CSV、使用情况截图，以及费用和动作规则。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**资源识别 · 30 分**
-
-将建议中的资源 ID 与应优化资源集合比较，以 F1 衡量覆盖率和准确率，得分为 30 × F1。
-
-**优化动作 · 30 分**
-
-按资源 ID 比对动作，按记录与字段的正确比例计分。
-
-**费用测算 · 25 分**
-
-逐资源比较现有费用、预计费用和月度节约，金额容差为 0.01，按正确比例计分。
-
-**报告汇总 · 15 分**
-
-整体摘要与建议明细各占本项一半，检查费用合计、建议数量和逐项内容。
-
-
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

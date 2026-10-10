@@ -1,0 +1,1 @@
+Unitree G1模型来自 Google DeepMind MuJoCo Menagerie，commit 0059d4335f8156206f63a35662313385f7ad6d74，https://github.com/google-deepmind/mujoco_menagerie/tree/0059d4335f8156206f63a35662313385f7ad6d74/unitree_g1 。许可原文见g1/LICENSE。模型与STL是第三方真实模型资产，不是本任务合成材料；8个控制案例与中文题面为合成创作。

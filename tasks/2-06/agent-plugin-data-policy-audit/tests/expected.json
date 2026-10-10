@@ -1,0 +1,5920 @@
+{
+  "violations": [
+    {
+      "action_id": "ACT000",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_000",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT001",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_001",
+      "data_field_name": "field_00",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT001",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_001",
+      "data_field_name": "field_01",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT002",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_002",
+      "data_field_name": "field_00",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT002",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_002",
+      "data_field_name": "field_01",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT002",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_002",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT002",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_002",
+      "data_field_name": "field_03",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT002",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_002",
+      "data_field_name": "field_04",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT002",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_002",
+      "data_field_name": "field_05",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT003",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_003",
+      "data_field_name": "field_01",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT003",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_003",
+      "data_field_name": "field_03",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT003",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_003",
+      "data_field_name": "field_05",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT003",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_003",
+      "data_field_name": "field_06",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT004",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_004",
+      "data_field_name": "field_02",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT004",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_004",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT004",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_004",
+      "data_field_name": "field_05",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT004",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_004",
+      "data_field_name": "field_06",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT004",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_004",
+      "data_field_name": "field_07",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT005",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_005",
+      "data_field_name": "field_03",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT005",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_005",
+      "data_field_name": "field_07",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT005",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_005",
+      "data_field_name": "field_08",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT005",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_005",
+      "data_field_name": "field_09",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT006",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_006",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT006",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_006",
+      "data_field_name": "field_07",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT006",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_006",
+      "data_field_name": "field_08",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT006",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_006",
+      "data_field_name": "field_09",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT006",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_006",
+      "data_field_name": "field_10",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT007",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_007",
+      "data_field_name": "field_01",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT007",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_007",
+      "data_field_name": "field_02",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT007",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_007",
+      "data_field_name": "field_03",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT007",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_007",
+      "data_field_name": "field_04",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT008",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_008",
+      "data_field_name": "field_00",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT008",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_008",
+      "data_field_name": "field_03",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT008",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_008",
+      "data_field_name": "field_04",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT008",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_008",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT009",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_009",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT009",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_009",
+      "data_field_name": "field_06",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT010",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_010",
+      "data_field_name": "field_00",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT010",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_010",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT010",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_010",
+      "data_field_name": "field_05",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT011",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_011",
+      "data_field_name": "field_03",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT011",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_011",
+      "data_field_name": "field_07",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT012",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_012",
+      "data_field_name": "field_00",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT012",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_012",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT012",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_012",
+      "data_field_name": "field_04",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT012",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_012",
+      "data_field_name": "field_08",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT012",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_012",
+      "data_field_name": "field_09",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT013",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_013",
+      "data_field_name": "field_01",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT013",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_013",
+      "data_field_name": "field_02",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT013",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_013",
+      "data_field_name": "field_03",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT013",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_013",
+      "data_field_name": "field_05",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT013",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_013",
+      "data_field_name": "field_06",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT013",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_013",
+      "data_field_name": "field_07",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT013",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_013",
+      "data_field_name": "field_08",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT013",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_013",
+      "data_field_name": "field_10",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT014",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_014",
+      "data_field_name": "field_00",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT014",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_014",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT014",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_014",
+      "data_field_name": "field_04",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT015",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_015",
+      "data_field_name": "field_00",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT015",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_015",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT016",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_016",
+      "data_field_name": "field_00",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT016",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_016",
+      "data_field_name": "field_03",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT016",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_016",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT016",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_016",
+      "data_field_name": "field_06",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT018",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_018",
+      "data_field_name": "field_00",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT018",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_018",
+      "data_field_name": "field_03",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT018",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_018",
+      "data_field_name": "field_04",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT018",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_018",
+      "data_field_name": "field_05",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT018",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_018",
+      "data_field_name": "field_07",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT018",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_018",
+      "data_field_name": "field_08",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT019",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_019",
+      "data_field_name": "field_00",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT019",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_019",
+      "data_field_name": "field_01",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT019",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_019",
+      "data_field_name": "field_02",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT019",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_019",
+      "data_field_name": "field_03",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT019",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_019",
+      "data_field_name": "field_04",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT019",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_019",
+      "data_field_name": "field_07",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT019",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_019",
+      "data_field_name": "field_08",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT019",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_019",
+      "data_field_name": "field_09",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT020",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_020",
+      "data_field_name": "field_00",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT020",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_020",
+      "data_field_name": "field_01",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT020",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_020",
+      "data_field_name": "field_03",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT020",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_020",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT020",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_020",
+      "data_field_name": "field_07",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT020",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_020",
+      "data_field_name": "field_08",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT020",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_020",
+      "data_field_name": "field_09",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT020",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_020",
+      "data_field_name": "field_10",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT021",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_021",
+      "data_field_name": "field_00",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT021",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_021",
+      "data_field_name": "field_01",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT022",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_022",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT022",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_022",
+      "data_field_name": "field_04",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT022",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_022",
+      "data_field_name": "field_05",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT023",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_023",
+      "data_field_name": "field_00",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT023",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_023",
+      "data_field_name": "field_03",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT023",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_023",
+      "data_field_name": "field_05",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT023",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_023",
+      "data_field_name": "field_06",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT024",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_024",
+      "data_field_name": "field_01",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT024",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_024",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT024",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_024",
+      "data_field_name": "field_06",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT025",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_025",
+      "data_field_name": "field_00",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT025",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_025",
+      "data_field_name": "field_06",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT026",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_026",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT026",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_026",
+      "data_field_name": "field_03",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT026",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_026",
+      "data_field_name": "field_04",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT026",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_026",
+      "data_field_name": "field_07",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT026",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_026",
+      "data_field_name": "field_08",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT027",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_027",
+      "data_field_name": "field_07",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT027",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_027",
+      "data_field_name": "field_09",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT027",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_027",
+      "data_field_name": "field_10",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT029",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_029",
+      "data_field_name": "field_00",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT029",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_029",
+      "data_field_name": "field_01",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT029",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_029",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT029",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_029",
+      "data_field_name": "field_03",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT029",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_029",
+      "data_field_name": "field_04",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT030",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_030",
+      "data_field_name": "field_01",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT030",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_030",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT030",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_030",
+      "data_field_name": "field_03",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT030",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_030",
+      "data_field_name": "field_04",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT031",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_031",
+      "data_field_name": "field_02",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT031",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_031",
+      "data_field_name": "field_04",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT031",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_031",
+      "data_field_name": "field_05",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT031",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_031",
+      "data_field_name": "field_06",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT031",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_031",
+      "data_field_name": "field_07",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT032",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_032",
+      "data_field_name": "field_00",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT032",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_032",
+      "data_field_name": "field_01",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT032",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_032",
+      "data_field_name": "field_06",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT032",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_032",
+      "data_field_name": "field_07",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT032",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_032",
+      "data_field_name": "field_08",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT033",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_033",
+      "data_field_name": "field_05",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT033",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_033",
+      "data_field_name": "field_07",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT033",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_033",
+      "data_field_name": "field_08",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT033",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_033",
+      "data_field_name": "field_09",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT034",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_034",
+      "data_field_name": "field_05",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT034",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_034",
+      "data_field_name": "field_06",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT034",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_034",
+      "data_field_name": "field_08",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT034",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_034",
+      "data_field_name": "field_09",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT034",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_034",
+      "data_field_name": "field_10",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT035",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_035",
+      "data_field_name": "field_00",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT035",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_035",
+      "data_field_name": "field_03",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT036",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_036",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT036",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_036",
+      "data_field_name": "field_03",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT036",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_036",
+      "data_field_name": "field_05",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT037",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_037",
+      "data_field_name": "field_00",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT037",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_037",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT037",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_037",
+      "data_field_name": "field_04",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT037",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_037",
+      "data_field_name": "field_05",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT037",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_037",
+      "data_field_name": "field_06",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT038",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_038",
+      "data_field_name": "field_01",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT038",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_038",
+      "data_field_name": "field_02",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT038",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_038",
+      "data_field_name": "field_03",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT038",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_038",
+      "data_field_name": "field_05",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT039",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_039",
+      "data_field_name": "field_03",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT039",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_039",
+      "data_field_name": "field_04",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT039",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_039",
+      "data_field_name": "field_06",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT039",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_039",
+      "data_field_name": "field_07",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT039",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_039",
+      "data_field_name": "field_08",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT040",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_040",
+      "data_field_name": "field_00",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT040",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_040",
+      "data_field_name": "field_02",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT040",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_040",
+      "data_field_name": "field_05",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT041",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_041",
+      "data_field_name": "field_02",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT041",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_041",
+      "data_field_name": "field_04",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT041",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_041",
+      "data_field_name": "field_07",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT041",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_041",
+      "data_field_name": "field_08",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT041",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_041",
+      "data_field_name": "field_09",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT041",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_041",
+      "data_field_name": "field_10",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT042",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_042",
+      "data_field_name": "field_01",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT043",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_043",
+      "data_field_name": "field_00",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT043",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_043",
+      "data_field_name": "field_04",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT043",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_043",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT044",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_044",
+      "data_field_name": "field_02",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT044",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_044",
+      "data_field_name": "field_04",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT045",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_045",
+      "data_field_name": "field_01",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT045",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_045",
+      "data_field_name": "field_02",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT045",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_045",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT045",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_045",
+      "data_field_name": "field_06",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT045",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_045",
+      "data_field_name": "field_07",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT046",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_046",
+      "data_field_name": "field_00",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT046",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_046",
+      "data_field_name": "field_01",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT046",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_046",
+      "data_field_name": "field_05",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT046",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_046",
+      "data_field_name": "field_06",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT046",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_046",
+      "data_field_name": "field_08",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT047",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_047",
+      "data_field_name": "field_03",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT047",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_047",
+      "data_field_name": "field_07",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT047",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_047",
+      "data_field_name": "field_09",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT048",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_048",
+      "data_field_name": "field_00",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT048",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_048",
+      "data_field_name": "field_01",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT048",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_048",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT048",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_048",
+      "data_field_name": "field_05",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT048",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_048",
+      "data_field_name": "field_06",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT048",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_048",
+      "data_field_name": "field_10",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT049",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_049",
+      "data_field_name": "field_01",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT049",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_049",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT049",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_049",
+      "data_field_name": "field_03",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT050",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_050",
+      "data_field_name": "field_00",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT050",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_050",
+      "data_field_name": "field_01",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT050",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_050",
+      "data_field_name": "field_03",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT050",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_050",
+      "data_field_name": "field_04",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT051",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_051",
+      "data_field_name": "field_00",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT051",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_051",
+      "data_field_name": "field_01",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT051",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_051",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT052",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_052",
+      "data_field_name": "field_01",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT052",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_052",
+      "data_field_name": "field_03",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT052",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_052",
+      "data_field_name": "field_05",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT052",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_052",
+      "data_field_name": "field_06",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT053",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_053",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT053",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_053",
+      "data_field_name": "field_04",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT053",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_053",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT053",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_053",
+      "data_field_name": "field_06",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT054",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_054",
+      "data_field_name": "field_00",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT054",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_054",
+      "data_field_name": "field_05",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT054",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_054",
+      "data_field_name": "field_08",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT054",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_054",
+      "data_field_name": "field_09",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT055",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_055",
+      "data_field_name": "field_00",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT055",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_055",
+      "data_field_name": "field_01",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT055",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_055",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT055",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_055",
+      "data_field_name": "field_04",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT055",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_055",
+      "data_field_name": "field_05",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT055",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_055",
+      "data_field_name": "field_06",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT055",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_055",
+      "data_field_name": "field_07",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT055",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_055",
+      "data_field_name": "field_09",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT055",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_055",
+      "data_field_name": "field_10",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT056",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_056",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT056",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_056",
+      "data_field_name": "field_04",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT057",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_057",
+      "data_field_name": "field_00",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT057",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_057",
+      "data_field_name": "field_01",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT057",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_057",
+      "data_field_name": "field_02",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT057",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_057",
+      "data_field_name": "field_05",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT058",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_058",
+      "data_field_name": "field_00",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT058",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_058",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT058",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_058",
+      "data_field_name": "field_04",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT058",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_058",
+      "data_field_name": "field_06",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT059",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_059",
+      "data_field_name": "field_00",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT059",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_059",
+      "data_field_name": "field_01",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT059",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_059",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT059",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_059",
+      "data_field_name": "field_04",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT059",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_059",
+      "data_field_name": "field_07",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT060",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_060",
+      "data_field_name": "field_02",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT060",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_060",
+      "data_field_name": "field_04",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT060",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_060",
+      "data_field_name": "field_05",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT060",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_060",
+      "data_field_name": "field_07",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT060",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_060",
+      "data_field_name": "field_08",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT061",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_061",
+      "data_field_name": "field_00",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT061",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_061",
+      "data_field_name": "field_01",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT061",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_061",
+      "data_field_name": "field_02",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT061",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_061",
+      "data_field_name": "field_03",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT061",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_061",
+      "data_field_name": "field_04",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT061",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_061",
+      "data_field_name": "field_08",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT062",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_062",
+      "data_field_name": "field_01",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT062",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_062",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT062",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_062",
+      "data_field_name": "field_04",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT062",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_062",
+      "data_field_name": "field_07",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT063",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_063",
+      "data_field_name": "field_00",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT063",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_063",
+      "data_field_name": "field_01",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT063",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_063",
+      "data_field_name": "field_02",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT063",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_063",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT064",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_064",
+      "data_field_name": "field_02",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT064",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_064",
+      "data_field_name": "field_03",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT064",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_064",
+      "data_field_name": "field_04",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT065",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_065",
+      "data_field_name": "field_00",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT065",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_065",
+      "data_field_name": "field_01",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT065",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_065",
+      "data_field_name": "field_04",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT065",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_065",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT065",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_065",
+      "data_field_name": "field_06",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT066",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_066",
+      "data_field_name": "field_00",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT066",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_066",
+      "data_field_name": "field_01",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT066",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_066",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT066",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_066",
+      "data_field_name": "field_06",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT067",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_067",
+      "data_field_name": "field_00",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT067",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_067",
+      "data_field_name": "field_02",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT067",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_067",
+      "data_field_name": "field_06",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT068",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_068",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT068",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_068",
+      "data_field_name": "field_03",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT068",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_068",
+      "data_field_name": "field_05",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT068",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_068",
+      "data_field_name": "field_07",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT069",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_069",
+      "data_field_name": "field_00",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT069",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_069",
+      "data_field_name": "field_03",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT069",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_069",
+      "data_field_name": "field_04",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT069",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_069",
+      "data_field_name": "field_06",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT069",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_069",
+      "data_field_name": "field_07",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT069",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_069",
+      "data_field_name": "field_08",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT069",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_069",
+      "data_field_name": "field_10",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT070",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_070",
+      "data_field_name": "field_00",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT070",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_070",
+      "data_field_name": "field_01",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT071",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_071",
+      "data_field_name": "field_00",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT071",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_071",
+      "data_field_name": "field_02",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT071",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_071",
+      "data_field_name": "field_04",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT071",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_071",
+      "data_field_name": "field_05",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT072",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_072",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT072",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_072",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT072",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_072",
+      "data_field_name": "field_04",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT072",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_072",
+      "data_field_name": "field_05",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT073",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_073",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT073",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_073",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT073",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_073",
+      "data_field_name": "field_06",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT074",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_074",
+      "data_field_name": "field_04",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT074",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_074",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT074",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_074",
+      "data_field_name": "field_08",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT075",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_075",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT075",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_075",
+      "data_field_name": "field_06",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT075",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_075",
+      "data_field_name": "field_07",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT075",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_075",
+      "data_field_name": "field_09",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT076",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_076",
+      "data_field_name": "field_01",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT076",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_076",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT076",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_076",
+      "data_field_name": "field_04",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT076",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_076",
+      "data_field_name": "field_07",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT076",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_076",
+      "data_field_name": "field_08",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT076",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_076",
+      "data_field_name": "field_09",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT077",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_077",
+      "data_field_name": "field_00",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT077",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_077",
+      "data_field_name": "field_01",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT077",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_077",
+      "data_field_name": "field_03",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT078",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_078",
+      "data_field_name": "field_00",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT078",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_078",
+      "data_field_name": "field_02",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT078",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_078",
+      "data_field_name": "field_03",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT078",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_078",
+      "data_field_name": "field_05",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT079",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_079",
+      "data_field_name": "field_00",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT079",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_079",
+      "data_field_name": "field_01",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT079",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_079",
+      "data_field_name": "field_04",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT079",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_079",
+      "data_field_name": "field_05",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT080",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_080",
+      "data_field_name": "field_01",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT080",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_080",
+      "data_field_name": "field_02",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT080",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_080",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT080",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_080",
+      "data_field_name": "field_06",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT081",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_081",
+      "data_field_name": "field_02",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT081",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_081",
+      "data_field_name": "field_03",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT081",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_081",
+      "data_field_name": "field_05",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT081",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_081",
+      "data_field_name": "field_07",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT081",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_081",
+      "data_field_name": "field_08",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT082",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_082",
+      "data_field_name": "field_01",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT082",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_082",
+      "data_field_name": "field_02",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT082",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_082",
+      "data_field_name": "field_03",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT082",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_082",
+      "data_field_name": "field_04",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT082",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_082",
+      "data_field_name": "field_06",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT082",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_082",
+      "data_field_name": "field_07",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT082",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_082",
+      "data_field_name": "field_08",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT082",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_082",
+      "data_field_name": "field_09",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT083",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_083",
+      "data_field_name": "field_00",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT083",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_083",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT083",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_083",
+      "data_field_name": "field_06",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT083",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_083",
+      "data_field_name": "field_07",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT083",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_083",
+      "data_field_name": "field_10",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT084",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_084",
+      "data_field_name": "field_00",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT084",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_084",
+      "data_field_name": "field_01",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT084",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_084",
+      "data_field_name": "field_04",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT085",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_085",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT086",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_086",
+      "data_field_name": "field_01",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT086",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_086",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT086",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_086",
+      "data_field_name": "field_03",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT086",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_086",
+      "data_field_name": "field_05",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT087",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_087",
+      "data_field_name": "field_01",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT087",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_087",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT087",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_087",
+      "data_field_name": "field_04",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT087",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_087",
+      "data_field_name": "field_06",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT087",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_087",
+      "data_field_name": "field_07",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT088",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_088",
+      "data_field_name": "field_01",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT088",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_088",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT088",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_088",
+      "data_field_name": "field_06",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT088",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_088",
+      "data_field_name": "field_07",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT088",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_088",
+      "data_field_name": "field_08",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT089",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_089",
+      "data_field_name": "field_00",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT089",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_089",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT089",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_089",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT089",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_089",
+      "data_field_name": "field_07",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT089",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_089",
+      "data_field_name": "field_08",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT089",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_089",
+      "data_field_name": "field_09",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT090",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_090",
+      "data_field_name": "field_00",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT090",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_090",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT090",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_090",
+      "data_field_name": "field_04",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT090",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_090",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT090",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_090",
+      "data_field_name": "field_06",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT090",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_090",
+      "data_field_name": "field_07",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT090",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_090",
+      "data_field_name": "field_10",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT091",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_091",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT092",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_092",
+      "data_field_name": "field_01",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT092",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_092",
+      "data_field_name": "field_04",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT092",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_092",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT093",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_093",
+      "data_field_name": "field_04",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT094",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_094",
+      "data_field_name": "field_01",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT094",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_094",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT094",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_094",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT094",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_094",
+      "data_field_name": "field_04",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT094",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_094",
+      "data_field_name": "field_05",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT094",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_094",
+      "data_field_name": "field_07",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT095",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_095",
+      "data_field_name": "field_01",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT095",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_095",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT095",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_095",
+      "data_field_name": "field_07",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT096",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_096",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT096",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_096",
+      "data_field_name": "field_06",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT096",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_096",
+      "data_field_name": "field_07",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT096",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_096",
+      "data_field_name": "field_09",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT097",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_097",
+      "data_field_name": "field_00",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT097",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_097",
+      "data_field_name": "field_06",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT097",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_097",
+      "data_field_name": "field_08",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT098",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_098",
+      "data_field_name": "field_01",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT098",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_098",
+      "data_field_name": "field_04",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT099",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_099",
+      "data_field_name": "field_00",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT099",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_099",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT099",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_099",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT099",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_099",
+      "data_field_name": "field_05",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT100",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_100",
+      "data_field_name": "field_02",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT100",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_100",
+      "data_field_name": "field_03",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT101",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_101",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT101",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_101",
+      "data_field_name": "field_04",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT101",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_101",
+      "data_field_name": "field_05",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT101",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_101",
+      "data_field_name": "field_07",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT102",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_102",
+      "data_field_name": "field_05",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT102",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_102",
+      "data_field_name": "field_06",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT102",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_102",
+      "data_field_name": "field_07",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT102",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_102",
+      "data_field_name": "field_08",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT103",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_103",
+      "data_field_name": "field_00",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT103",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_103",
+      "data_field_name": "field_08",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT103",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_103",
+      "data_field_name": "field_09",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT104",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_104",
+      "data_field_name": "field_00",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT104",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_104",
+      "data_field_name": "field_01",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT104",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_104",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT104",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_104",
+      "data_field_name": "field_03",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT104",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_104",
+      "data_field_name": "field_05",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT104",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_104",
+      "data_field_name": "field_06",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT104",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_104",
+      "data_field_name": "field_08",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT105",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_105",
+      "data_field_name": "field_01",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT105",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_105",
+      "data_field_name": "field_03",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT106",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_106",
+      "data_field_name": "field_00",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT106",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_106",
+      "data_field_name": "field_01",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT106",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_106",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT106",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_106",
+      "data_field_name": "field_05",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT107",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_107",
+      "data_field_name": "field_00",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT107",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_107",
+      "data_field_name": "field_01",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT107",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_107",
+      "data_field_name": "field_02",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT107",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_107",
+      "data_field_name": "field_04",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT107",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_107",
+      "data_field_name": "field_06",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT108",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_108",
+      "data_field_name": "field_00",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT108",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_108",
+      "data_field_name": "field_06",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT108",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_108",
+      "data_field_name": "field_07",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT109",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_109",
+      "data_field_name": "field_00",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT109",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_109",
+      "data_field_name": "field_02",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT109",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_109",
+      "data_field_name": "field_03",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT109",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_109",
+      "data_field_name": "field_04",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT109",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_109",
+      "data_field_name": "field_06",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT109",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_109",
+      "data_field_name": "field_07",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT110",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_110",
+      "data_field_name": "field_01",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT110",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_110",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT110",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_110",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT110",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_110",
+      "data_field_name": "field_08",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT110",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_110",
+      "data_field_name": "field_09",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT111",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_111",
+      "data_field_name": "field_00",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT111",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_111",
+      "data_field_name": "field_01",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT111",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_111",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT111",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_111",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT111",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_111",
+      "data_field_name": "field_06",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT111",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_111",
+      "data_field_name": "field_08",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT112",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_112",
+      "data_field_name": "field_00",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT112",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_112",
+      "data_field_name": "field_02",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT112",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_112",
+      "data_field_name": "field_03",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT112",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_112",
+      "data_field_name": "field_04",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT113",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_113",
+      "data_field_name": "field_00",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT113",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_113",
+      "data_field_name": "field_01",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT113",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_113",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT114",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_114",
+      "data_field_name": "field_00",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT114",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_114",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT114",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_114",
+      "data_field_name": "field_06",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT115",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_115",
+      "data_field_name": "field_01",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT115",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_115",
+      "data_field_name": "field_04",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT115",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_115",
+      "data_field_name": "field_05",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT115",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_115",
+      "data_field_name": "field_07",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT116",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_116",
+      "data_field_name": "field_00",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT116",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_116",
+      "data_field_name": "field_01",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT116",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_116",
+      "data_field_name": "field_07",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT116",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_116",
+      "data_field_name": "field_08",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT117",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_117",
+      "data_field_name": "field_00",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT117",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_117",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT117",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_117",
+      "data_field_name": "field_04",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT117",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_117",
+      "data_field_name": "field_07",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT117",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_117",
+      "data_field_name": "field_08",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT118",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_118",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT118",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_118",
+      "data_field_name": "field_06",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT118",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_118",
+      "data_field_name": "field_09",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT119",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_119",
+      "data_field_name": "field_00",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT119",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_119",
+      "data_field_name": "field_01",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT119",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_119",
+      "data_field_name": "field_02",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT119",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_119",
+      "data_field_name": "field_03",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT119",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_119",
+      "data_field_name": "field_04",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT120",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_120",
+      "data_field_name": "field_01",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT120",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_120",
+      "data_field_name": "field_02",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT121",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_121",
+      "data_field_name": "field_01",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT121",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_121",
+      "data_field_name": "field_04",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT121",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_121",
+      "data_field_name": "field_06",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT122",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_122",
+      "data_field_name": "field_01",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT122",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_122",
+      "data_field_name": "field_02",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT122",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_122",
+      "data_field_name": "field_03",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT122",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_122",
+      "data_field_name": "field_04",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT122",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_122",
+      "data_field_name": "field_05",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT122",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_122",
+      "data_field_name": "field_06",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT123",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_123",
+      "data_field_name": "field_01",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT123",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_123",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT123",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_123",
+      "data_field_name": "field_03",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT123",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_123",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT123",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_123",
+      "data_field_name": "field_08",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT124",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_124",
+      "data_field_name": "field_00",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT124",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_124",
+      "data_field_name": "field_01",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT124",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_124",
+      "data_field_name": "field_05",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT125",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_125",
+      "data_field_name": "field_00",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT125",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_125",
+      "data_field_name": "field_03",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT125",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_125",
+      "data_field_name": "field_04",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT125",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_125",
+      "data_field_name": "field_06",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT125",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_125",
+      "data_field_name": "field_07",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT125",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_125",
+      "data_field_name": "field_08",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT126",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_126",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT127",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_127",
+      "data_field_name": "field_01",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT127",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_127",
+      "data_field_name": "field_02",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT128",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_128",
+      "data_field_name": "field_04",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT128",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_128",
+      "data_field_name": "field_05",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT128",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_128",
+      "data_field_name": "field_06",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT129",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_129",
+      "data_field_name": "field_01",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT129",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_129",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT129",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_129",
+      "data_field_name": "field_03",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT130",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_130",
+      "data_field_name": "field_00",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT130",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_130",
+      "data_field_name": "field_01",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT130",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_130",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT130",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_130",
+      "data_field_name": "field_03",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT130",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_130",
+      "data_field_name": "field_04",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT131",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_131",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT131",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_131",
+      "data_field_name": "field_05",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT132",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_132",
+      "data_field_name": "field_00",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT132",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_132",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT132",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_132",
+      "data_field_name": "field_04",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT132",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_132",
+      "data_field_name": "field_05",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT132",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_132",
+      "data_field_name": "field_06",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT132",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_132",
+      "data_field_name": "field_08",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT133",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_133",
+      "data_field_name": "field_01",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT133",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_133",
+      "data_field_name": "field_04",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT134",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_134",
+      "data_field_name": "field_00",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT134",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_134",
+      "data_field_name": "field_02",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT135",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_135",
+      "data_field_name": "field_00",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT135",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_135",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT135",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_135",
+      "data_field_name": "field_03",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT135",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_135",
+      "data_field_name": "field_05",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT136",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_136",
+      "data_field_name": "field_00",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT136",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_136",
+      "data_field_name": "field_01",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT136",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_136",
+      "data_field_name": "field_03",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT136",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_136",
+      "data_field_name": "field_04",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT136",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_136",
+      "data_field_name": "field_05",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT136",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d16.xingqiao.example",
+      "api_name": "api_136",
+      "data_field_name": "field_06",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT137",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_137",
+      "data_field_name": "field_00",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT137",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_137",
+      "data_field_name": "field_04",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT137",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_137",
+      "data_field_name": "field_05",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT137",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_137",
+      "data_field_name": "field_07",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT137",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d17.xingqiao.example",
+      "api_name": "api_137",
+      "data_field_name": "field_08",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT138",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_138",
+      "data_field_name": "field_03",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT138",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_138",
+      "data_field_name": "field_05",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT138",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d18.xingqiao.example",
+      "api_name": "api_138",
+      "data_field_name": "field_07",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT139",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_139",
+      "data_field_name": "field_00",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT139",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_139",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT139",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_139",
+      "data_field_name": "field_04",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT139",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_139",
+      "data_field_name": "field_06",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT139",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_139",
+      "data_field_name": "field_07",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT139",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_139",
+      "data_field_name": "field_09",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT139",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d19.xingqiao.example",
+      "api_name": "api_139",
+      "data_field_name": "field_10",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT140",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_140",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT140",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d20.xingqiao.example",
+      "api_name": "api_140",
+      "data_field_name": "field_04",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT141",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_141",
+      "data_field_name": "field_00",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT141",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_141",
+      "data_field_name": "field_01",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT141",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_141",
+      "data_field_name": "field_02",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT141",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d21.xingqiao.example",
+      "api_name": "api_141",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT142",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_142",
+      "data_field_name": "field_00",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT142",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_142",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT142",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_142",
+      "data_field_name": "field_03",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT142",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_142",
+      "data_field_name": "field_04",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT142",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d22.xingqiao.example",
+      "api_name": "api_142",
+      "data_field_name": "field_06",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT143",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_143",
+      "data_field_name": "field_03",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT143",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_143",
+      "data_field_name": "field_06",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT143",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d23.xingqiao.example",
+      "api_name": "api_143",
+      "data_field_name": "field_07",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT144",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_144",
+      "data_field_name": "field_00",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT144",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_144",
+      "data_field_name": "field_06",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT144",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d00.xingqiao.example",
+      "api_name": "api_144",
+      "data_field_name": "field_08",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT145",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_145",
+      "data_field_name": "field_02",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT145",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_145",
+      "data_field_name": "field_04",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT145",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_145",
+      "data_field_name": "field_05",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT145",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d01.xingqiao.example",
+      "api_name": "api_145",
+      "data_field_name": "field_06",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT146",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_146",
+      "data_field_name": "field_01",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT146",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_146",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT146",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_146",
+      "data_field_name": "field_04",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT146",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_146",
+      "data_field_name": "field_07",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT146",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_146",
+      "data_field_name": "field_08",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT146",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d02.xingqiao.example",
+      "api_name": "api_146",
+      "data_field_name": "field_10",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT147",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_147",
+      "data_field_name": "field_00",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT147",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d03.xingqiao.example",
+      "api_name": "api_147",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT148",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_148",
+      "data_field_name": "field_01",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT148",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d04.xingqiao.example",
+      "api_name": "api_148",
+      "data_field_name": "field_04",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT149",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_149",
+      "data_field_name": "field_00",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT149",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_149",
+      "data_field_name": "field_01",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT149",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_149",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT149",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d05.xingqiao.example",
+      "api_name": "api_149",
+      "data_field_name": "field_04",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT150",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_150",
+      "data_field_name": "field_00",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT150",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_150",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT150",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_150",
+      "data_field_name": "field_03",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT150",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_150",
+      "data_field_name": "field_04",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT150",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_150",
+      "data_field_name": "field_06",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT150",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d06.xingqiao.example",
+      "api_name": "api_150",
+      "data_field_name": "field_07",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT151",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_151",
+      "data_field_name": "field_01",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT151",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_151",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT151",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_151",
+      "data_field_name": "field_03",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT151",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_151",
+      "data_field_name": "field_05",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT151",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d07.xingqiao.example",
+      "api_name": "api_151",
+      "data_field_name": "field_07",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT152",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_152",
+      "data_field_name": "field_00",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT152",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_152",
+      "data_field_name": "field_01",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT152",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_152",
+      "data_field_name": "field_02",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT152",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_152",
+      "data_field_name": "field_03",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT152",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_152",
+      "data_field_name": "field_05",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT152",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_152",
+      "data_field_name": "field_08",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT152",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d08.xingqiao.example",
+      "api_name": "api_152",
+      "data_field_name": "field_09",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT153",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_153",
+      "data_field_name": "field_01",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT153",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_153",
+      "data_field_name": "field_02",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT153",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_153",
+      "data_field_name": "field_04",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT153",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_153",
+      "data_field_name": "field_05",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT153",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_153",
+      "data_field_name": "field_08",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT153",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d09.xingqiao.example",
+      "api_name": "api_153",
+      "data_field_name": "field_09",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT154",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_154",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT154",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d10.xingqiao.example",
+      "api_name": "api_154",
+      "data_field_name": "field_04",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT155",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_155",
+      "data_field_name": "field_00",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT155",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_155",
+      "data_field_name": "field_01",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT155",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_155",
+      "data_field_name": "field_03",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT155",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d11.xingqiao.example",
+      "api_name": "api_155",
+      "data_field_name": "field_05",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT156",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_156",
+      "data_field_name": "field_00",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT156",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_156",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT156",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_156",
+      "data_field_name": "field_03",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT156",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d12.xingqiao.example",
+      "api_name": "api_156",
+      "data_field_name": "field_06",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT157",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_157",
+      "data_field_name": "field_01",
+      "data_type": "biometric"
+    },
+    {
+      "action_id": "ACT157",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_157",
+      "data_field_name": "field_02",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT157",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_157",
+      "data_field_name": "field_04",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT157",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d13.xingqiao.example",
+      "api_name": "api_157",
+      "data_field_name": "field_06",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT158",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_158",
+      "data_field_name": "field_00",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT158",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_158",
+      "data_field_name": "field_01",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT158",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_158",
+      "data_field_name": "field_02",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT158",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_158",
+      "data_field_name": "field_03",
+      "data_type": "precise_location"
+    },
+    {
+      "action_id": "ACT158",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d14.xingqiao.example",
+      "api_name": "api_158",
+      "data_field_name": "field_08",
+      "data_type": "health"
+    },
+    {
+      "action_id": "ACT159",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_159",
+      "data_field_name": "field_00",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT159",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_159",
+      "data_field_name": "field_01",
+      "data_type": "id_number"
+    },
+    {
+      "action_id": "ACT159",
+      "severity": "HIGH",
+      "policy_clause": "P2",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_159",
+      "data_field_name": "field_02",
+      "data_type": "bank_account"
+    },
+    {
+      "action_id": "ACT159",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_159",
+      "data_field_name": "field_03",
+      "data_type": "credential"
+    },
+    {
+      "action_id": "ACT159",
+      "severity": "CRITICAL",
+      "policy_clause": "P1",
+      "action_domain": "d15.xingqiao.example",
+      "api_name": "api_159",
+      "data_field_name": "field_09",
+      "data_type": "credential"
+    }
+  ],
+  "exposure": [
+    {
+      "domain": "d00.xingqiao.example",
+      "agent_count": 21,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 6.0,
+      "amplification": "2.000x"
+    },
+    {
+      "domain": "d01.xingqiao.example",
+      "agent_count": 18,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 6.142857142857143,
+      "amplification": "1.953x"
+    },
+    {
+      "domain": "d02.xingqiao.example",
+      "agent_count": 20,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 6.0,
+      "amplification": "2.000x"
+    },
+    {
+      "domain": "d03.xingqiao.example",
+      "agent_count": 22,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 6.285714285714286,
+      "amplification": "1.909x"
+    },
+    {
+      "domain": "d04.xingqiao.example",
+      "agent_count": 24,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 5.714285714285714,
+      "amplification": "2.100x"
+    },
+    {
+      "domain": "d05.xingqiao.example",
+      "agent_count": 21,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 5.714285714285714,
+      "amplification": "2.100x"
+    },
+    {
+      "domain": "d06.xingqiao.example",
+      "agent_count": 18,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 6.571428571428571,
+      "amplification": "1.826x"
+    },
+    {
+      "domain": "d07.xingqiao.example",
+      "agent_count": 20,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 6.428571428571429,
+      "amplification": "1.867x"
+    },
+    {
+      "domain": "d08.xingqiao.example",
+      "agent_count": 22,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 6.571428571428571,
+      "amplification": "1.826x"
+    },
+    {
+      "domain": "d09.xingqiao.example",
+      "agent_count": 24,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 5.857142857142857,
+      "amplification": "2.049x"
+    },
+    {
+      "domain": "d10.xingqiao.example",
+      "agent_count": 21,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 5.571428571428571,
+      "amplification": "2.154x"
+    },
+    {
+      "domain": "d11.xingqiao.example",
+      "agent_count": 18,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 6.0,
+      "amplification": "2.000x"
+    },
+    {
+      "domain": "d12.xingqiao.example",
+      "agent_count": 20,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 5.428571428571429,
+      "amplification": "2.211x"
+    },
+    {
+      "domain": "d13.xingqiao.example",
+      "agent_count": 22,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 5.571428571428571,
+      "amplification": "2.154x"
+    },
+    {
+      "domain": "d14.xingqiao.example",
+      "agent_count": 24,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 6.142857142857143,
+      "amplification": "1.953x"
+    },
+    {
+      "domain": "d15.xingqiao.example",
+      "agent_count": 21,
+      "union_datatypes_count": 11,
+      "avg_datatypes_per_action": 5.714285714285714,
+      "amplification": "1.925x"
+    },
+    {
+      "domain": "d16.xingqiao.example",
+      "agent_count": 17,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 5.833333333333333,
+      "amplification": "2.057x"
+    },
+    {
+      "domain": "d17.xingqiao.example",
+      "agent_count": 18,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 6.333333333333333,
+      "amplification": "1.895x"
+    },
+    {
+      "domain": "d18.xingqiao.example",
+      "agent_count": 19,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 5.833333333333333,
+      "amplification": "2.057x"
+    },
+    {
+      "domain": "d19.xingqiao.example",
+      "agent_count": 20,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 5.666666666666667,
+      "amplification": "2.118x"
+    },
+    {
+      "domain": "d20.xingqiao.example",
+      "agent_count": 16,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 5.833333333333333,
+      "amplification": "2.057x"
+    },
+    {
+      "domain": "d21.xingqiao.example",
+      "agent_count": 17,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 5.666666666666667,
+      "amplification": "2.118x"
+    },
+    {
+      "domain": "d22.xingqiao.example",
+      "agent_count": 18,
+      "union_datatypes_count": 12,
+      "avg_datatypes_per_action": 5.833333333333333,
+      "amplification": "2.057x"
+    },
+    {
+      "domain": "d23.xingqiao.example",
+      "agent_count": 19,
+      "union_datatypes_count": 11,
+      "avg_datatypes_per_action": 5.833333333333333,
+      "amplification": "1.886x"
+    }
+  ],
+  "severity": {
+    "CRITICAL": 319,
+    "HIGH": 319
+  }
+}

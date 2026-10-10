@@ -2,30 +2,32 @@
 
 比较费用导向与需要导向的资源分配排名，分析不同群体的入选比例和健康需要覆盖情况。
 
-职业：数据分析处理工程技术人员（2-02-30-09）
+职业：数据分析处理工程技术人员 · `2-02-30-09`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是医疗数据分析人员，需要评估费用评分作为资源分配依据时产生的群体差异。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-6,000 条记录、两个群体、临床变量、原始评分和固定 20% 分配名额。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**评分与排序 · 65 分**
-
-本项内原始分数保留占 30%，基线入选 F1 占 20%，修订入选 F1 占 30%，按修订分数排序的名单 F1 占 20%。
-
-**群体与需要指标 · 30 分**
-
-基线与修订报告各占 15 分，逐字段比较入选数量、群体占比与需要指标。
-
-**分析说明 · 5 分**
-
-分析正文至少 60 字，取得本项分数。
-
-
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

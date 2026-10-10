@@ -1,0 +1,50 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "模拟与率定结果",
+      "weight": 100,
+      "rule": "重新执行水温模型，按 0.000001 绝对容差检查模拟值；报告正确比例乘以 min(1, 0.08 ÷ RMSE)，再换算为百分制。"
+    }
+  ],
+  "notes": "参数分别位于 mixing 0.02～0.5、exchange 0.05～0.45、attenuation 0.08～0.6；输出需覆盖全部时间与深度。",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "读取参数、模拟代码和 NetCDF 输出，检查参数边界、变量与完整时间轴。",
+    "在评分器中使用 LakeColumn1D 动力学独立模拟温度。",
+    "比较提交温度与独立模拟，再与观测计算 RMSE。"
+  ],
+  "metrics": [
+    "参数范围：mixing 0.02～0.5、exchange 0.05～0.45、attenuation 0.08～0.6。",
+    "输出须覆盖完整时间轴和 16 个水层，且温度与独立回放在 atol=1e−6 下相符。",
+    "reward = 报告字段匹配得分 × min(1, 0.08 / max(RMSE, 1e−12))；RMSE 单位为摄氏度。"
+  ],
+  "gates": [
+    "参数必须在给定范围内；提交模拟须与独立动力学一致。"
+  ],
+  "checks": [
+    {
+      "name": "参数约束、独立模型回放、完整NetCDF与观测RMSE",
+      "weight": 100,
+      "implementation": "evaluate"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

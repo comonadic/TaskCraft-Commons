@@ -1,0 +1,18 @@
+{
+  "filing_id": "CN001_2022",
+  "company": "澄海精密",
+  "year": 2022,
+  "currency": "CNY",
+  "revenue": 308650000.0,
+  "net_income": 24692000.0,
+  "assets": 617300000.0,
+  "liabilities": 259266000.0,
+  "cash": 55557000.0,
+  "equity": 358034000.0,
+  "operating_cashflow": 29630400.0,
+  "capex": 13889250.0,
+  "debt": 181486200.0,
+  "shares": 100000000.0,
+  "eps": 0.2469,
+  "dividends": 4938400.0
+}

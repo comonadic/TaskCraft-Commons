@@ -1,0 +1,2 @@
+as_of=2024-06-30。真值每(location,target_date)取release_date<=as_of的最新一条。每cell=(location,target_date,horizon)，仅保留五模型全部23分位数齐全的共同cell，重复或非单调预测视为不合格。
+K=11，median=q.5。每lower q<.5配upper=1-q，alpha=2q。IS=(u-l)+2/alpha*max(l-y,0)+2/alpha*max(y-u,0)。WIS=(.5*abs(y-median)+sum(alpha/2*IS))/(11+.5)。MAE为abs(y-median)。覆盖包含端点，50%用.25/.75，95%用.025/.975。模型汇总取cell均值，rel_wis=模型mean_wis/naive mean_wis。误差容限1e-6，n_cells为共同cell数。

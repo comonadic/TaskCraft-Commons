@@ -1,0 +1,1 @@
+P1：禁止采集身份证号、凭证与生物识别特征。P2：禁止采集银行账号、精准定位与健康信息。P3：其余题设类型在本任务中允许。类型先strip再lower，严格按taxonomy映射，不推断字段名。每个action的类型先去重；每域union取该域所有action的类型并集；avg为各action去重类型数的算术平均。agent_count按不同agent_id去重；>=3入表。放大率union/avg，四舍五入3位再加x。此为合成平台内部政策。

@@ -3,14 +3,14 @@
   "title": "县域十年地块轮作资格审计",
   "brief": "依据十年作物记录与轮作规则，判断地块资格，整理风险地块，并交付可用于 GIS 的审计成果。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-02",
   "occupation": {
     "code": "2-02-02-07",
     "name": "地理信息系统工程技术人员"
   },
   "scene": "你负责县域农业地块数据审计，需要将逐年的种植记录转为可追踪的资格和风险结果。",
-  "taskPrompt": "你负责县域农业地块数据审计，需要将逐年的种植记录转为可追踪的资格和风险结果。\n\n1. 读取地块和年度作物数据，按规则处理缺失与未知编码\n2. 为符合条件的地块计算八项审计字段\n3. 分别导出合格地块及风险子集，保留地块空间信息\n\n交付成果：\n- eligible_units.gpkg：合格地块图层，包含原始属性与八项审计字段。\n- flagged_units.gpkg：需要关注的风险地块图层。",
+  "taskPrompt": "# 县域十年地块轮作资格审计\n\n你负责县域农业地块数据审计，需要将逐年的种植记录转为可追踪的资格和风险结果。\n\n1. 读取地块和年度作物数据，按规则处理缺失与未知编码\n2. 为符合条件的地块计算八项审计字段\n3. 分别导出合格地块及风险子集，保留地块空间信息\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/eligible_units.gpkg`：合格地块图层，包含原始属性与八项审计字段。\n- `/app/output/flagged_units.gpkg`：需要关注的风险地块图层。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`eligible_units.gpkg`图层eligible_units；`flagged_units.gpkg`图层flagged_units。新增eight fields见rules.md，几何保持原始EPSG:4547。\n",
   "agentMustDo": [
     "读取地块和年度作物数据，按规则处理缺失与未知编码",
     "为符合条件的地块计算八项审计字段",
@@ -25,14 +25,14 @@
   "inputFiles": [
     {
       "name": "业务规则说明",
-      "path": "input/rules.md",
+      "path": "environment/input/rules.md",
       "format": "MD",
       "bytes": 841,
       "description": "业务规则说明，用于县域十年地块轮作资格审计。"
     },
     {
       "name": "seq1524_cn.gpkg",
-      "path": "input/seq1524_cn.gpkg",
+      "path": "environment/input/seq1524_cn.gpkg",
       "format": "GPKG",
       "bytes": 438272,
       "description": "seq1524_cn.gpkg，用于县域十年地块轮作资格审计。"
@@ -43,19 +43,21 @@
   "referenceFiles": [
     {
       "name": "eligible_units.gpkg",
-      "path": "output/eligible_units.gpkg",
+      "path": "reference/eligible_units.gpkg",
       "format": "GPKG",
+      "bytes": 421888,
       "description": "合格地块图层，包含原始属性与八项审计字段。"
     },
     {
       "name": "flagged_units.gpkg",
-      "path": "output/flagged_units.gpkg",
+      "path": "reference/flagged_units.gpkg",
       "format": "GPKG",
+      "bytes": 266240,
       "description": "需要关注的风险地块图层。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "资格与审计字段",
@@ -77,6 +79,90 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "读取输入地块与输出 GeoPackage，按地块 ID 对齐记录。",
+      "重算轮作、作物次数、NDVI、旱情风险和资格等八个字段。",
+      "检查原字段、几何与 CRS，再核对独立风险子集。"
+    ],
+    "metrics": [
+      "八个审计字段与资格占 60%；原字段、几何和坐标系占 20%；风险精确子集占 20%。",
+      "资格与风险使用输入材料中给定的县域规则，按地块记录逐项计分。"
+    ],
+    "gates": [],
+    "checks": [
+      {
+        "name": "八字段与资格",
+        "weight": 60.0,
+        "implementation": "audit"
+      },
+      {
+        "name": "原字段几何CRS保真",
+        "weight": 20.0,
+        "implementation": "geometry"
+      },
+      {
+        "name": "风险精确子集",
+        "weight": 20.0,
+        "implementation": "flagged"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "eligible_units.gpkg",
+      "path": "output/eligible_units.gpkg",
+      "format": "GPKG",
+      "description": "合格地块图层，包含原始属性与八项审计字段。"
+    },
+    {
+      "name": "flagged_units.gpkg",
+      "path": "output/flagged_units.gpkg",
+      "format": "GPKG",
+      "description": "需要关注的风险地块图层。"
+    }
+  ],
+  "referenceFileCount": 2,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/rules.md",
+      "content": "资格：stable=true且area_ha>=0.5。area_ha是业务核定面积，几何为示意，禁止由几何面积覆盖它。作物代码rice,wheat,maize,soy,fallow；空及unknown都无效。8字段：valid_years有效年度数（含fallow）；distinct_crops非休耕不同作物数；max_consecutive同种非休耕作物最大连续年数，缺失/unknown/fallow都中断；rotation_changes相邻两年均有效且不同则+1（含休耕转换）；legume_years为soy年数；fallow_years；risk_flag为任一风险；risk_reasons按字母序用|连接。\n风险：存在无效年missing_or_unknown；max_consecutive>=4为monoculture；无soy为no_legume；fallow>=3为too_much_fallow。flagged是eligible中risk_flag=true的精确子集。保留原列顺序，8字段追加其后（geometry位置由GeoPackage驱动决定）。id_lcp唯一。",
+      "truncated": false
+    }
+  ]
 }

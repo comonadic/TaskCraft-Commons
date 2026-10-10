@@ -1,0 +1,77 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "负荷点结果",
+      "weight": 40,
+      "rule": "按变压器 ID 比对路径累计结果和参数，按记录与字段正确比例计分。"
+    },
+    {
+      "name": "等权指标",
+      "weight": 25,
+      "rule": "逐字段比对系统等权指标，按正确比例计分。"
+    },
+    {
+      "name": "用户加权指标",
+      "weight": 30,
+      "rule": "逐字段比对加权指标与用户总数，按正确比例计分。"
+    },
+    {
+      "name": "方法说明",
+      "weight": 5,
+      "rule": "方法正文至少 60 字，取得本项分数。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "按 transformer_id 核对每个负荷点的供电路径与累计指标。",
+    "比较等权可靠性指标。",
+    "重算用户加权及计划停电指标，再检查方法说明。"
+  ],
+  "metrics": [
+    "负荷点 40%、等权指标 25%、用户加权与计划停电 30%、说明 5%。",
+    "逐记录和结构化数值比较采用默认 atol=1e−6、rtol=1e−5。"
+  ],
+  "gates": [],
+  "checks": [
+    {
+      "name": "负荷点路径累计",
+      "weight": 40.0,
+      "implementation": "lambda: record_score(read_csv(OUTPUT / 'loadpoint_metrics.csv'), e['points'], ['transformer_id'])"
+    },
+    {
+      "name": "等权指标",
+      "weight": 25.0,
+      "implementation": "lambda: tree_score(read_json(OUTPUT / 'reliability_indices.json'), e['original'])"
+    },
+    {
+      "name": "用户加权及计划停电",
+      "weight": 30.0,
+      "implementation": "lambda: tree_score(read_json(OUTPUT / 'cn_reliability_report.json'), e['cn'])"
+    },
+    {
+      "name": "方法说明",
+      "weight": 5.0,
+      "implementation": "lambda: len((OUTPUT / 'method.md').read_text()) >= 60"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

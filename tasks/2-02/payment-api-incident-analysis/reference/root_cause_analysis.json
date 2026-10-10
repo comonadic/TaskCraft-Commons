@@ -1,0 +1,48 @@
+{
+  "roots": [
+    {
+      "type": "memory_limit",
+      "resource": "deployment/payment-api",
+      "evidence_file": "failing_pod.txt",
+      "evidence_quote": "Last State: Terminated Reason: OOMKilled Exit Code: 137",
+      "description": "容器内存限制低于启动工作集，导致OOM终止。"
+    },
+    {
+      "type": "premature_liveness",
+      "resource": "deployment/payment-api",
+      "evidence_file": "failing_pod.txt",
+      "evidence_quote": "Liveness probe failed: connect: connection refused during initialization",
+      "description": "启动需要24秒，过早存活探针触发重启。"
+    },
+    {
+      "type": "metrics_port_mismatch",
+      "resource": "ServiceMonitor/payment-api",
+      "evidence_file": "failing_pod.txt",
+      "evidence_quote": "metrics listener bound to port 9100; ServiceMonitor targetPort=9090",
+      "description": "指标监听端口与采集目标不一致。"
+    }
+  ],
+  "affected_resources": [
+    "deployment/payment-api",
+    "svc/payment-api",
+    "ServiceMonitor/payment-api"
+  ],
+  "remediation": [
+    {
+      "priority": 1,
+      "resource": "deployment/payment-api",
+      "action": "先回滚恢复服务，再调整内存及探针并灰度发布；采集端口对齐。",
+      "parameters": {
+        "memory_limit": "512Mi",
+        "initialDelaySeconds": 30,
+        "metrics_target_port": 9100
+      }
+    }
+  ],
+  "rollback": {
+    "revision": 16,
+    "image": "registry.local/payment:1.6.2",
+    "verify": "检查双副本就绪、503恢复、无OOM及指标采集成功"
+  },
+  "summary": "发布后资源与探针配置导致重启，指标端口另有配置错误。数据库和DNS证据正常，不应当作根因。"
+}

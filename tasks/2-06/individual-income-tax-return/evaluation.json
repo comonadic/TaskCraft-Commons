@@ -1,0 +1,57 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "申报计算",
+      "weight": 95,
+      "rule": "逐人逐字段比对收入、扣除、应税所得、税额、预缴和差额，金额容差 0.01；按三人平均正确比例计分。"
+    },
+    {
+      "name": "申报截图",
+      "weight": 5,
+      "rule": "三张截图均可读取，且宽至少 800、高至少 500 像素，取得本项分数。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "读取三名纳税人的申报 JSON，核对各项收入、扣除与税额。",
+    "按字段比较申报结果并对三人取平均。",
+    "打开三份提交截图，检查图片可解析。"
+  ],
+  "metrics": [
+    "申报结果 95%，截图可读取 5%。",
+    "金额绝对容差 0.01，rtol=0；图片由解码器实际读取。"
+  ],
+  "gates": [],
+  "checks": [
+    {
+      "name": "三人申报字段与税额",
+      "weight": 95.0,
+      "implementation": "lambda: sum((tree_score(read_json(OUTPUT / 'returns' / f\"{r['taxpayer_id']}.json\"), r, atol=0.01, rtol=0) for r in e)) / 3"
+    },
+    {
+      "name": "提交截图可读取",
+      "weight": 5.0,
+      "implementation": "images"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

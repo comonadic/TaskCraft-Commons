@@ -1,0 +1,128 @@
+[
+  {
+    "id": "CN001_2022",
+    "company": "澄海精密",
+    "year": 2022,
+    "file": "CN001_2022.pdf",
+    "amount_unit": "元"
+  },
+  {
+    "id": "CN001_2023",
+    "company": "澄海精密",
+    "year": 2023,
+    "file": "CN001_2023.pdf",
+    "amount_unit": "万元"
+  },
+  {
+    "id": "CN001_2024",
+    "company": "澄海精密",
+    "year": 2024,
+    "file": "CN001_2024.pdf",
+    "amount_unit": "元"
+  },
+  {
+    "id": "CN002_2022",
+    "company": "松岳软件",
+    "year": 2022,
+    "file": "CN002_2022.pdf",
+    "amount_unit": "万元"
+  },
+  {
+    "id": "CN002_2023",
+    "company": "松岳软件",
+    "year": 2023,
+    "file": "CN002_2023.pdf",
+    "amount_unit": "元"
+  },
+  {
+    "id": "CN002_2024",
+    "company": "松岳软件",
+    "year": 2024,
+    "file": "CN002_2024.pdf",
+    "amount_unit": "万元"
+  },
+  {
+    "id": "CN003_2022",
+    "company": "青禾设备",
+    "year": 2022,
+    "file": "CN003_2022.pdf",
+    "amount_unit": "元"
+  },
+  {
+    "id": "CN003_2023",
+    "company": "青禾设备",
+    "year": 2023,
+    "file": "CN003_2023.pdf",
+    "amount_unit": "万元"
+  },
+  {
+    "id": "CN003_2024",
+    "company": "青禾设备",
+    "year": 2024,
+    "file": "CN003_2024.pdf",
+    "amount_unit": "元"
+  },
+  {
+    "id": "CN004_2022",
+    "company": "岚川材料",
+    "year": 2022,
+    "file": "CN004_2022.pdf",
+    "amount_unit": "万元"
+  },
+  {
+    "id": "CN004_2023",
+    "company": "岚川材料",
+    "year": 2023,
+    "file": "CN004_2023.pdf",
+    "amount_unit": "元"
+  },
+  {
+    "id": "CN004_2024",
+    "company": "岚川材料",
+    "year": 2024,
+    "file": "CN004_2024.pdf",
+    "amount_unit": "万元"
+  },
+  {
+    "id": "CN005_2022",
+    "company": "沐辰服务",
+    "year": 2022,
+    "file": "CN005_2022.pdf",
+    "amount_unit": "元"
+  },
+  {
+    "id": "CN005_2023",
+    "company": "沐辰服务",
+    "year": 2023,
+    "file": "CN005_2023.pdf",
+    "amount_unit": "万元"
+  },
+  {
+    "id": "CN005_2024",
+    "company": "沐辰服务",
+    "year": 2024,
+    "file": "CN005_2024.pdf",
+    "amount_unit": "元"
+  },
+  {
+    "id": "CN006_2022",
+    "company": "云岫物流",
+    "year": 2022,
+    "file": "CN006_2022.pdf",
+    "amount_unit": "万元"
+  },
+  {
+    "id": "CN006_2023",
+    "company": "云岫物流",
+    "year": 2023,
+    "file": "CN006_2023.pdf",
+    "amount_unit": "元"
+  },
+  {
+    "id": "CN006_2024",
+    "company": "云岫物流",
+    "year": 2024,
+    "file": "CN006_2024.pdf",
+    "amount_unit": "万元"
+  }
+]

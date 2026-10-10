@@ -1,31 +1,31 @@
 [
   {
-    "path": "input/his_icu_stays.csv",
+    "path": "environment/input/his_icu_stays.csv",
     "bytes": 40080,
     "sha256": "8a3255384203322f7c6c6586ca1a48095f48aac232d81e71c7d77a52804b685f"
   },
   {
-    "path": "input/infection_orders.csv",
+    "path": "environment/input/infection_orders.csv",
     "bytes": 10113,
     "sha256": "ad1559beca36545d3b366c3bbb9784e1cfce910300da428163189285e59a53c1"
   },
   {
-    "path": "input/lis_labs.csv",
+    "path": "environment/input/lis_labs.csv",
     "bytes": 1813617,
     "sha256": "9c9b77bbf557558fa20f607c5997af1502b2e1ccced5e9832a4fe0d23cc58c7d"
   },
   {
-    "path": "input/nursing_urine.csv",
+    "path": "environment/input/nursing_urine.csv",
     "bytes": 3173105,
     "sha256": "994116322eae16b521fc4e8139a7fdc5dd51b7bddac4e3423b117013cbfd6409"
   },
   {
-    "path": "input/protocol.md",
+    "path": "environment/input/protocol.md",
     "bytes": 1019,
     "sha256": "6a9aa3bc8b7e7bf2fc0ef8d2b5e3058e311e187b2ed75462226a825f67f78418"
   },
   {
-    "path": "input/sofa_assessments.csv",
+    "path": "environment/input/sofa_assessments.csv",
     "bytes": 11560,
     "sha256": "c630ce2f5b3a20ba63dd971e9e1a5cc65b69fbd15f846c89f4567f7f05dc8cc0"
   }

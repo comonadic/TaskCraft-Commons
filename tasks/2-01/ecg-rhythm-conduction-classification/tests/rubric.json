@@ -1,0 +1,5 @@
+{
+  "macro_f1_normalized_at_0_75": 0.98,
+  "report": 0.02,
+  "calibration": "0.75为本合成seed工程验收线，不继承原临床阈值"
+}

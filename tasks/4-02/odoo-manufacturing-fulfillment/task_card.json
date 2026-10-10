@@ -3,14 +3,14 @@
   "title": "Odoo 企业采购制造交付与退款",
   "brief": "在 Odoo 中完成采购、制造、交付、收款与退款流程，处理分包、缺料与成本分摊，并整理业务记录。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "4-02",
   "occupation": {
     "code": "4-02-06-05",
     "name": "供应链管理师"
   },
   "scene": "你是供应链业务人员，需要完成一组关联的订单与财务流程，使库存、制造和会计记录相互对应。",
-  "taskPrompt": "你是供应链业务人员，需要完成一组关联的订单与财务流程，使库存、制造和会计记录相互对应。\n\n1. 配置产品、两级 BOM、估值与采购，处理到货及成本分摊\n2. 完成制造、分包供料、分批交付与直运\n3. 完成发票核销、退货退款、报废补购与报销，整理记录索引\n\n交付成果：\n- Odoo 业务记录：完成后的库存、制造、交付、发票、退款与报销记录。\n- submission.json：创建和处理的业务记录 ID 索引。\n- workflow_report.md：数量、成本、付款、退款与关联关系说明。",
+  "taskPrompt": "# Odoo 企业采购制造交付与退款\n\n你是供应链业务人员，需要完成一组关联的订单与财务流程，使库存、制造和会计记录相互对应。\n\n1. 配置产品、两级 BOM、估值与采购，处理到货及成本分摊\n2. 完成制造、分包供料、分批交付与直运\n3. 完成发票核销、退货退款、报废补购与报销，整理记录索引\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/Odoo 业务记录`：完成后的库存、制造、交付、发票、退款与报销记录。\n- `/app/output/submission.json`：创建和处理的业务记录 ID 索引。\n- `/app/output/workflow_report.md`：数量、成本、付款、退款与关联关系说明。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\nOdoo数据库最终状态；`submission.json`列出创建的业务记录ID；`workflow_report.md`说明数量、成本、发票、退货关系；`screenshots/`可选GUI证据。\n",
   "agentMustDo": [
     "配置产品、两级 BOM、估值与采购，处理到货及成本分摊",
     "完成制造、分包供料、分批交付与直运",
@@ -24,7 +24,7 @@
   "inputFiles": [
     {
       "name": "business_brief.md",
-      "path": "input/business_brief.md",
+      "path": "environment/input/business_brief.md",
       "format": "MD",
       "bytes": 2311,
       "description": "business_brief.md，用于Odoo 企业采购制造交付与退款。"
@@ -33,6 +33,137 @@
   "inputFileCount": 1,
   "inputManifest": "materials.json",
   "referenceFiles": [
+    {
+      "name": "submission.json",
+      "path": "reference/submission.json",
+      "format": "JSON",
+      "bytes": 1152,
+      "description": "创建和处理的业务记录 ID 索引。"
+    },
+    {
+      "name": "workflow_report.md",
+      "path": "reference/workflow_report.md",
+      "format": "MD",
+      "bytes": 682,
+      "description": "数量、成本、付款、退款与关联关系说明。"
+    }
+  ],
+  "evaluation": {
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+    "criteria": [
+      {
+        "name": "业务处理",
+        "weight": 95,
+        "rule": "直接读取 Odoo 业务记录：估值 5 分、成本分摊 10 分、制造 10 分、交付 8 分、收款 10 分、退款 7 分、库存 12 分、分包 9 分、直运 5 分、报废补购 5 分、供应商发票 7 分、报销 7 分。"
+      },
+      {
+        "name": "记录与报告",
+        "weight": 5,
+        "rule": "中文操作报告超过 100 字，记录索引至少列出 10 项，取得本项分数。"
+      }
+    ],
+    "notes": "先检查业务环境与提交入口；金额检查容差为 0.01。",
+    "scoreRange": [
+      0,
+      100
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "shared",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "连接真实 Odoo ORM，读取会计、采购、库存、制造、销售与报销模型。",
+      "逐项核验成本分摊、两级制造、交付欠单、外币发票与退款、最终库存、分包与直运。",
+      "核对报废、补购、供应商付款、报销及分析账户，再检查中文操作报告与记录索引。"
+    ],
+    "metrics": [
+      "实际业务状态占 95%，操作报告与记录索引占 5%。",
+      "13 项检查直接读取数据库中单据关系、付款核销与库存记录，权重见检查表。",
+      "成本分摊要求 600/400，交付要求 2+1，退款要求 200 EUR，直运要求 3 件。"
+    ],
+    "gates": [
+      "业务状态可读取且 submission.json 等提交入口可解析，才进入逐项评分。"
+    ],
+    "checks": [
+      {
+        "name": "人民币与FIFO自动估值",
+        "weight": 5.0,
+        "implementation": "fifo"
+      },
+      {
+        "name": "实际成本分摊600/400",
+        "weight": 10.0,
+        "implementation": "landed"
+      },
+      {
+        "name": "两级真实制造完成",
+        "weight": 10.0,
+        "implementation": "manufactured"
+      },
+      {
+        "name": "2+1实际交付与欠单",
+        "weight": 8.0,
+        "implementation": "pickings"
+      },
+      {
+        "name": "两张EUR发票已付款核销",
+        "weight": 10.0,
+        "implementation": "invoices"
+      },
+      {
+        "name": "200EUR已付退款及原发票关联",
+        "weight": 7.0,
+        "implementation": "refunds"
+      },
+      {
+        "name": "最终库存与退回序列位置",
+        "weight": 12.0,
+        "implementation": "stock"
+      },
+      {
+        "name": "分包供料、制造与CS序列",
+        "weight": 9.0,
+        "implementation": "subcontract"
+      },
+      {
+        "name": "供应商直运3件",
+        "weight": 5.0,
+        "implementation": "dropship"
+      },
+      {
+        "name": "真实报废与额外补购",
+        "weight": 5.0,
+        "implementation": "scrap"
+      },
+      {
+        "name": "六张供应商发票已付",
+        "weight": 7.0,
+        "implementation": "bills"
+      },
+      {
+        "name": "差旅报销与分析账户",
+        "weight": 7.0,
+        "implementation": "expense"
+      },
+      {
+        "name": "中文操作报告与记录索引",
+        "weight": 5.0,
+        "implementation": "lambda: len((OUTPUT / 'workflow_report.md').read_text()) > 100 and len(read_json(OUTPUT / 'submission.json')) >= 10"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
     {
       "name": "Odoo 业务记录",
       "path": "output/Odoo 业务记录",
@@ -52,24 +183,35 @@
       "description": "数量、成本、付款、退款与关联关系说明。"
     }
   ],
-  "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
-    "criteria": [
-      {
-        "name": "业务处理",
-        "weight": 95,
-        "rule": "直接读取 Odoo 业务记录：估值 5 分、成本分摊 10 分、制造 10 分、交付 8 分、收款 10 分、退款 7 分、库存 12 分、分包 9 分、直运 5 分、报废补购 5 分、供应商发票 7 分、报销 7 分。"
-      },
-      {
-        "name": "记录与报告",
-        "weight": 5,
-        "rule": "中文操作报告超过 100 字，记录索引至少列出 10 项，取得本项分数。"
-      }
+  "referenceFileCount": 2,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 7200.0,
+    "verifierTimeoutSec": 900.0,
+    "verifierMode": "shared",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
     ],
-    "notes": "先检查业务环境与提交入口；金额检查容差为 0.01。",
-    "scoreRange": [
-      0,
-      100
+    "services": [
+      "Odoo 18",
+      "PostgreSQL 16.6"
     ]
-  }
+  },
+  "filePreviews": [
+    {
+      "path": "reference/submission.json",
+      "content": "{\n  \"products\": {\n    \"RM-A\": 7,\n    \"RM-B\": 8,\n    \"SUB\": 9,\n    \"KIT\": 10\n  },\n  \"category\": 4,\n  \"supplier\": 7,\n  \"customer\": 8,\n  \"cny\": 6,\n  \"eur\": 126,\n  \"journal\": 3,\n  \"expense\": 1,\n  \"purchase\": 1,\n  \"receipt_first\": 1,\n  \"boms\": {\n    \"SUB\": 1,\n    \"KIT\": 2\n  },\n  \"sub_mo\": 1,\n  \"shortage_snapshot\": {\n    \"id\": 1,\n    \"reservation_state\": \"confirmed\",\n    \"components_availability_state\": \"expected\",\n    \"move_raw_ids\": [\n      5,\n      6\n    ]\n  },\n  \"receipt_second\": 2,\n  \"landed_cost\": 1,\n  \"manufactured\": [\n    2,\n    3,\n    4\n  ],\n  \"lots\": [\n    1,\n    2,\n    3\n  ],\n  \"sale\": 1,\n  \"delivery_first\": 3,\n  \"delivery_second\": 4,\n  \"invoices\": [\n    20,\n    22\n  ],\n  \"payments\": [\n    2,\n    1\n  ],\n  \"return_picking\": 5,\n  \"refund\": 25,\n  \"subcontract_receipt\": 8,\n  \"subcontract_resupply\": 7,\n  \"subcontract_bom\": 3,\n  \"subcontract_pos\": [\n    2,\n    3\n  ],\n  \"subcontract_products\": {\n    \"RM-C\": 12,\n    \"SC\": 13\n  },\n  \"dropship\": 9,\n  \"dropship_po\": 4,\n  \"dropship_product\": 14,\n  \"scrap\": 1,\n  \"replacement_po\": 5,\n  \"vendor_bills\": [\n    37,\n    40,\n    43,\n    46,\n    49,\n    52\n  ],\n  \"expense_sheet\": 1,\n  \"analytic\": 1\n}",
+      "truncated": false
+    }
+  ]
 }

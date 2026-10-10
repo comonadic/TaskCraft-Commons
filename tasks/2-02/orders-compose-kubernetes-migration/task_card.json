@@ -3,14 +3,14 @@
   "title": "订单应用 Compose 到 Kubernetes 迁移",
   "brief": "将订单应用迁移到 Kubernetes，完成 Helm 部署、基础设施和流水线配置，并检查服务运行与网络访问。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-02",
   "occupation": {
     "code": "2-02-38-04",
     "name": "云计算工程技术人员"
   },
   "scene": "你是云平台工程师，需要迁移包含 React 前端、Flask 后端和 PostgreSQL 数据库的订单应用。",
-  "taskPrompt": "你是云平台工程师，需要迁移包含 React 前端、Flask 后端和 PostgreSQL 数据库的订单应用。\n\n1. 把 Compose 服务整理为 Helm Chart 和配置参数\n2. 准备 Terraform、Jenkins 流水线及持久化和扩缩容设置\n3. 部署应用，检查接口、数据库、网络策略并提交运行记录\n\n交付成果：\n- helm/webapp-chart/：可渲染的 Helm Chart、values 与资源模板。\n- terraform/main.tf：基础设施与 Helm 发布配置。\n- Jenkinsfile：构建、测试、发布等五阶段流水线。\n- verification/：Pod、Service、Helm 和接口检查记录。\n- migration_report.md：迁移步骤、配置选择与运行结果。",
+  "taskPrompt": "# 订单应用 Compose 到 Kubernetes 迁移\n\n你是云平台工程师，需要迁移包含 React 前端、Flask 后端和 PostgreSQL 数据库的订单应用。\n\n1. 把 Compose 服务整理为 Helm Chart 和配置参数\n2. 准备 Terraform、Jenkins 流水线及持久化和扩缩容设置\n3. 部署应用，检查接口、数据库、网络策略并提交运行记录\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/helm/webapp-chart/`：可渲染的 Helm Chart、values 与资源模板。\n- `/app/output/terraform/main.tf`：基础设施与 Helm 发布配置。\n- `/app/output/Jenkinsfile`：构建、测试、发布等五阶段流水线。\n- `/app/output/verification/`：Pod、Service、Helm 和接口检查记录。\n- `/app/output/migration_report.md`：迁移步骤、配置选择与运行结果。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n迁移附件中的React、Flask、PostgreSQL三层订单应用，部署到本题隔离K3s单节点。启动 /app/software/start-cluster.sh，使用kubectl与helm。所有镜像已离线缓存，禁止连接真实业务集群。创建命名空间alecn，Helm release名webapp。详细架构见requirements.md。除Helm chart，还须提交Terraform声明、国内团队采用的Jenkins五阶段流水线及真实集群快照。验收将重新查询实时集群、访问健康API、检查HPA当前CPU指标，并实测前端不能访问DB而后端可以。截图/文本不能替代运行状态。\n\n\n## 运行与提交\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\noutput/helm/webapp-chart（Chart.yaml、values.yaml、templates）；terraform/main.tf；Jenkinsfile；verification/{pods,services,helm-status,health-check}.txt；migration_report.md。所有命令仅对本题集群运行。\n",
   "agentMustDo": [
     "把 Compose 服务整理为 Helm Chart 和配置参数",
     "准备 Terraform、Jenkins 流水线及持久化和扩缩容设置",
@@ -26,21 +26,21 @@
   "inputFiles": [
     {
       "name": "工具与模型资料",
-      "path": "input/THIRD_PARTY.md",
+      "path": "environment/input/THIRD_PARTY.md",
       "format": "MD",
       "bytes": 353,
       "description": "工具与模型资料，用于订单应用 Compose 到 Kubernetes 迁移。"
     },
     {
       "name": "requirements.md",
-      "path": "input/requirements.md",
+      "path": "environment/input/requirements.md",
       "format": "MD",
       "bytes": 2056,
       "description": "requirements.md，用于订单应用 Compose 到 Kubernetes 迁移。"
     },
     {
       "name": "app 资料",
-      "path": "input/app/",
+      "path": "environment/input/app/",
       "format": "目录",
       "bytes": 145430,
       "description": "app 资料，共 11 个文件。"
@@ -49,6 +49,249 @@
   "inputFileCount": 13,
   "inputManifest": "materials.json",
   "referenceFiles": [
+    {
+      "name": "Jenkinsfile",
+      "path": "reference/Jenkinsfile",
+      "format": "FILE",
+      "bytes": 643,
+      "description": "构建、测试、发布等五阶段流水线。"
+    },
+    {
+      "name": "helm/webapp-chart/Chart.yaml",
+      "path": "reference/helm/webapp-chart/Chart.yaml",
+      "format": "YAML",
+      "bytes": 49,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "helm/webapp-chart/templates/00-configmap.yaml",
+      "path": "reference/helm/webapp-chart/templates/00-configmap.yaml",
+      "format": "YAML",
+      "bytes": 155493,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "helm/webapp-chart/templates/01-secret.yaml",
+      "path": "reference/helm/webapp-chart/templates/01-secret.yaml",
+      "format": "YAML",
+      "bytes": 126,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "helm/webapp-chart/templates/02-deployment.yaml",
+      "path": "reference/helm/webapp-chart/templates/02-deployment.yaml",
+      "format": "YAML",
+      "bytes": 925,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "helm/webapp-chart/templates/03-service.yaml",
+      "path": "reference/helm/webapp-chart/templates/03-service.yaml",
+      "format": "YAML",
+      "bytes": 224,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "helm/webapp-chart/templates/04-deployment.yaml",
+      "path": "reference/helm/webapp-chart/templates/04-deployment.yaml",
+      "format": "YAML",
+      "bytes": 1747,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "helm/webapp-chart/templates/05-service.yaml",
+      "path": "reference/helm/webapp-chart/templates/05-service.yaml",
+      "format": "YAML",
+      "bytes": 222,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "helm/webapp-chart/templates/06-service.yaml",
+      "path": "reference/helm/webapp-chart/templates/06-service.yaml",
+      "format": "YAML",
+      "bytes": 207,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "helm/webapp-chart/templates/07-statefulset.yaml",
+      "path": "reference/helm/webapp-chart/templates/07-statefulset.yaml",
+      "format": "YAML",
+      "bytes": 1384,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "helm/webapp-chart/templates/08-horizontalpodautoscaler.yaml",
+      "path": "reference/helm/webapp-chart/templates/08-horizontalpodautoscaler.yaml",
+      "format": "YAML",
+      "bytes": 365,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "helm/webapp-chart/templates/09-networkpolicy.yaml",
+      "path": "reference/helm/webapp-chart/templates/09-networkpolicy.yaml",
+      "format": "YAML",
+      "bytes": 321,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "helm/webapp-chart/templates/10-ingress.yaml",
+      "path": "reference/helm/webapp-chart/templates/10-ingress.yaml",
+      "format": "YAML",
+      "bytes": 480,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "helm/webapp-chart/values.yaml",
+      "path": "reference/helm/webapp-chart/values.yaml",
+      "format": "YAML",
+      "bytes": 60,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "migration_report.md",
+      "path": "reference/migration_report.md",
+      "format": "MD",
+      "bytes": 453,
+      "description": "迁移步骤、配置选择与运行结果。"
+    },
+    {
+      "name": "terraform/main.tf",
+      "path": "reference/terraform/main.tf",
+      "format": "TF",
+      "bytes": 540,
+      "description": "基础设施与 Helm 发布配置。"
+    },
+    {
+      "name": "verification/health-check.txt",
+      "path": "reference/verification/health-check.txt",
+      "format": "TXT",
+      "bytes": 61,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "verification/helm-status.txt",
+      "path": "reference/verification/helm-status.txt",
+      "format": "TXT",
+      "bytes": 116,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "verification/pods.txt",
+      "path": "reference/verification/pods.txt",
+      "format": "TXT",
+      "bytes": 699,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "verification/services.txt",
+      "path": "reference/verification/services.txt",
+      "format": "TXT",
+      "bytes": 328,
+      "description": "参考解生成的交付文件。"
+    }
+  ],
+  "evaluation": {
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+    "criteria": [
+      {
+        "name": "部署配置",
+        "weight": 70,
+        "rule": "资源覆盖 20 分、资源配置 25 分、Terraform 10 分、五阶段流水线 10 分、运行记录和中文报告 5 分；各项按满足要求的比例计分。"
+      },
+      {
+        "name": "集群运行",
+        "weight": 30,
+        "rule": "Pod 可用性 12 分；Service、接口与数据库、HPA 指标、网络连接各 4.5 分，按实际集群检查结果计分。"
+      }
+    ],
+    "notes": "先检查 Chart 渲染、values 文件及 Secret 编码，满足这些条件后计算各项得分。",
+    "scoreRange": [
+      0,
+      100
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "shared",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "渲染 Helm chart，解析八类资源、values、Secret、Terraform 和 Jenkins 文件。",
+      "连接任务内真实 K3s 集群，检查 Pod、Service、数据库与 API。",
+      "读取 HPA 实际 CPU 指标，执行 backend 可连数据库、frontend 不可连数据库的双向连通性检查。",
+      "合并静态产物与实时状态分数，输出逐项结果。"
+    ],
+    "metrics": [
+      "静态产物占 70%，实时集群占 30%。",
+      "检查项权重为 20/25/10/10/5/12/4.5/4.5/4.5/4.5%，详情见逐项检查表。",
+      "网络策略通过实际连接探测评分；HPA 通过实时 CPU 指标评分。"
+    ],
+    "gates": [
+      "Helm chart 必须可渲染、values 文件存在，Secret 必须为合法 base64。"
+    ],
+    "checks": [
+      {
+        "name": "8项Helm资源覆盖",
+        "weight": 20.0,
+        "implementation": "lambda: sum((x in index for x in required)) / 8"
+      },
+      {
+        "name": "结构与资源配置",
+        "weight": 25.0,
+        "implementation": "config"
+      },
+      {
+        "name": "Terraform静态合同",
+        "weight": 10.0,
+        "implementation": "terraform"
+      },
+      {
+        "name": "Jenkins五阶段静态合同",
+        "weight": 10.0,
+        "implementation": "ci"
+      },
+      {
+        "name": "快照与中文报告",
+        "weight": 5.0,
+        "implementation": "lambda: all(((OUTPUT / 'verification' / f).stat().st_size > 20 for f in ['pods.txt', 'services.txt', 'helm-status.txt', 'health-check.txt'])) and len((OUTPUT / 'migration_report.md').read_text()) > 60"
+      },
+      {
+        "name": "实时Pod可用性",
+        "weight": 12.0,
+        "implementation": "pods"
+      },
+      {
+        "name": "实时Service",
+        "weight": 4.5,
+        "implementation": "lambda: all((kub('get', 'service', x)['spec'].get('clusterIP') not in [None, '', 'None'] for x in ['frontend-service', 'backend-service', 'db-service']))"
+      },
+      {
+        "name": "实时Flask与数据库结果",
+        "weight": 4.5,
+        "implementation": "health"
+      },
+      {
+        "name": "HPA真实CPU指标",
+        "weight": 4.5,
+        "implementation": "hpa"
+      },
+      {
+        "name": "实际网络策略正反向连接",
+        "weight": 4.5,
+        "implementation": "isolation"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
     {
       "name": "helm/webapp-chart/",
       "path": "output/helm/webapp-chart/",
@@ -80,24 +323,46 @@
       "description": "迁移步骤、配置选择与运行结果。"
     }
   ],
-  "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
-    "criteria": [
-      {
-        "name": "部署配置",
-        "weight": 70,
-        "rule": "资源覆盖 20 分、资源配置 25 分、Terraform 10 分、五阶段流水线 10 分、运行记录和中文报告 5 分；各项按满足要求的比例计分。"
-      },
-      {
-        "name": "集群运行",
-        "weight": 30,
-        "rule": "Pod 可用性 12 分；Service、接口与数据库、HPA 指标、网络连接各 4.5 分，按实际集群检查结果计分。"
-      }
+  "referenceFileCount": 20,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 7200.0,
+    "verifierTimeoutSec": 900.0,
+    "verifierMode": "shared",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
     ],
-    "notes": "先检查 Chart 渲染、values 文件及 Secret 编码，满足这些条件后计算各项得分。",
-    "scoreRange": [
-      0,
-      100
+    "services": [
+      "K3s",
+      "Helm",
+      "PostgreSQL"
     ]
-  }
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/app/backend/backend.py",
+      "content": "from flask import Flask, jsonify\nimport os,psycopg2\napp=Flask(__name__)\ndef db():return psycopg2.connect(host=os.environ['DB_HOST'],dbname=os.environ['DB_NAME'],user=os.environ['DB_USER'],password=os.environ['DB_PASSWORD'],connect_timeout=3)\n@app.get('/health')\n@app.get('/api/health')\ndef health():\n try:\n  with db() as c:\n   with c.cursor() as q:q.execute('SELECT count(*) FROM orders');count=q.fetchone()[0]\n  return jsonify(status='healthy',orders=count,market=os.environ.get('MARKET',''))\n except Exception as e:return jsonify(status='unhealthy',error=type(e).__name__),503\n@app.get('/api/orders')\ndef orders():\n with db() as c:\n  with c.cursor() as q:q.execute('SELECT id,amount_cny FROM orders ORDER BY id');rows=q.fetchall()\n return jsonify(orders=[{'id':x[0],'amount_cny':float(x[1])} for x in rows])\nif __name__=='__main__':app.run(host='0.0.0.0',port=5000)\n",
+      "truncated": false
+    },
+    {
+      "path": "environment/input/app/backend/tests/test_app.py",
+      "content": "import importlib.util\nfrom pathlib import Path\ns=importlib.util.spec_from_file_location('app',Path(__file__).parents[1]/'backend.py');m=importlib.util.module_from_spec(s);s.loader.exec_module(m)\ndef test_routes():\n assert {'/api/health','/api/orders','/health'}<=set(str(x) for x in m.app.url_map.iter_rules())\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/verification/helm-status.txt",
+      "content": "NAME: webapp\nLAST DEPLOYED: Sat Oct 10 05:41:04 2026\nNAMESPACE: alecn\nSTATUS: deployed\nREVISION: 1\nTEST SUITE: None\n",
+      "truncated": false
+    }
+  ]
 }

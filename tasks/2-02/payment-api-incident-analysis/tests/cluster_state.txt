@@ -1,0 +1,27 @@
+2025-02-18T09:31:00Z kubectl get pods -n payments
+payment-api-7c9d6-1 0/1 CrashLoopBackOff 6
+payment-api-7c9d6-2 0/1 CrashLoopBackOff 5
+payment-db-0 1/1 Running 0
+NodeReady=True MemoryPressure=False DiskPressure=False
+svc/payment-api targetPort=8080 endpoints=0
+deployment/payment-api rollout revision=17 previous_revision=16
+old revision16 image=registry.local/payment:1.6.2
+Ingress reports upstream 503; certificate valid until 2025-12-31.
+Prometheus scrape payment-api:9090 fails; app endpoint listens on 9100.
+09:30:00Z unrelated batch-job-0 completed successfully
+09:31:00Z unrelated batch-job-1 completed successfully
+09:32:00Z unrelated batch-job-2 completed successfully
+09:33:00Z unrelated batch-job-3 completed successfully
+09:34:00Z unrelated batch-job-4 completed successfully
+09:35:00Z unrelated batch-job-5 completed successfully
+09:36:00Z unrelated batch-job-6 completed successfully
+09:37:00Z unrelated batch-job-7 completed successfully
+09:38:00Z unrelated batch-job-8 completed successfully
+09:39:00Z unrelated batch-job-9 completed successfully
+09:30:00Z unrelated batch-job-10 completed successfully
+09:31:00Z unrelated batch-job-11 completed successfully
+09:32:00Z unrelated batch-job-12 completed successfully
+09:33:00Z unrelated batch-job-13 completed successfully
+09:34:00Z unrelated batch-job-14 completed successfully
+09:35:00Z unrelated batch-job-15 completed successfully
+09:36:00Z unrelated batch-job-16 completed successfully

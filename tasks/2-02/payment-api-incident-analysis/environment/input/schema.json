@@ -1,0 +1,27 @@
+{
+  "root_types": [
+    "memory_limit",
+    "premature_liveness",
+    "metrics_port_mismatch"
+  ],
+  "root_fields": [
+    "type",
+    "resource",
+    "evidence_file",
+    "evidence_quote",
+    "description"
+  ],
+  "remediation_fields": [
+    "priority",
+    "resource",
+    "action",
+    "parameters"
+  ],
+  "parameter_keys": [
+    "memory_limit",
+    "initialDelaySeconds",
+    "metrics_target_port"
+  ],
+  "rollback": "object with revision,image,verify",
+  "affected_resources": "array of exact resource names"
+}

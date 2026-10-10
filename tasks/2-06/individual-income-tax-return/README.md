@@ -2,26 +2,32 @@
 
 依据收入、扣除与预缴材料计算年度汇算结果，在申报页面完成三位居民的逐项填报并保存结果。
 
-职业：税务专业人员（2-06-05-00）
+职业：税务专业人员 · `2-06-05-00`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是税务业务人员，需要按照任务提供的汇算规则，为三位居民整理年度申报和补退税结果。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-三名居民的 12 个月收入与扣除凭证、预缴记录、规则和申报页面。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**申报计算 · 95 分**
-
-逐人逐字段比对收入、扣除、应税所得、税额、预缴和差额，金额容差 0.01；按三人平均正确比例计分。
-
-**申报截图 · 5 分**
-
-三张截图均可读取，且宽至少 800、高至少 500 像素，取得本项分数。
-
-
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

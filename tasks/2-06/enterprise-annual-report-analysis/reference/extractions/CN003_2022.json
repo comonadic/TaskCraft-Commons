@@ -1,0 +1,18 @@
+{
+  "filing_id": "CN003_2022",
+  "company": "青禾设备",
+  "year": 2022,
+  "currency": "CNY",
+  "revenue": 503820000.0,
+  "net_income": 60458400.0,
+  "assets": 1007640000.0,
+  "liabilities": 423208800.0,
+  "cash": 90687600.0,
+  "equity": 584431200.0,
+  "operating_cashflow": 72550080.0,
+  "capex": 22671900.0,
+  "debt": 296246160.0,
+  "shares": 100000000.0,
+  "eps": 0.6046,
+  "dividends": 12091680.0
+}

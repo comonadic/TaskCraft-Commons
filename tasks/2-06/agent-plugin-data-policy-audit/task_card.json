@@ -3,14 +3,14 @@
   "title": "智能体平台插件数据政策审计",
   "brief": "依据平台数据政策检查插件字段，汇总违规与严重程度，并分析不同业务域的数据暴露范围。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-06",
   "occupation": {
     "code": "2-06-07-14",
     "name": "企业合规师"
   },
   "scene": "你是企业合规人员，需要评估智能体与插件的数据使用是否符合给定政策。",
-  "taskPrompt": "你是企业合规人员，需要评估智能体与插件的数据使用是否符合给定政策。\n\n1. 读取插件接口、动作字段和数据类型\n2. 逐字段匹配政策条款，记录违规及严重性\n3. 按业务域汇总数据类型和暴露放大率，形成审计清单\n\n交付成果：\n- policy_violations.json：字段级违规、政策条款、严重性与汇总。\n- cross_domain_exposure_report.csv：各业务域的数据类型、智能体数量及暴露放大率。",
+  "taskPrompt": "# 智能体平台插件数据政策审计\n\n你是企业合规人员，需要评估智能体与插件的数据使用是否符合给定政策。\n\n1. 读取插件接口、动作字段和数据类型\n2. 逐字段匹配政策条款，记录违规及严重性\n3. 按业务域汇总数据类型和暴露放大率，形成审计清单\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/policy_violations.json`：字段级违规、政策条款、严重性与汇总。\n- `/app/output/cross_domain_exposure_report.csv`：各业务域的数据类型、智能体数量及暴露放大率。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n审计虚构平台“星桥智能体”的离线插件接口，严格执行附带平台政策，不引用现实平台或法律规则。仅用Python标准库解析字段实体、分类表、政策映射和插件元数据。按字段识别 CRITICAL/HIGH，保留条款与字段证据。另对被至少3个不同agent使用的后端domain计算数据类型暴露放大率。\n\n## 运行与提交\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`policy_violations.json`：total_violations、severity_breakdown、violations列表（action_id,severity,policy_clause,action_domain,api_name,data_field_name,data_type）。`cross_domain_exposure_report.csv`：domain,agent_count,union_datatypes_count,avg_datatypes_per_action,amplification（3位小数加x）。\n",
   "agentMustDo": [
     "读取插件接口、动作字段和数据类型",
     "逐字段匹配政策条款，记录违规及严重性",
@@ -24,28 +24,28 @@
   "inputFiles": [
     {
       "name": "action_data_entities.json",
-      "path": "input/action_data_entities.json",
+      "path": "environment/input/action_data_entities.json",
       "format": "JSON",
       "bytes": 107779,
       "description": "action_data_entities.json，用于智能体平台插件数据政策审计。"
     },
     {
       "name": "action_metadata.json",
-      "path": "input/action_metadata.json",
+      "path": "environment/input/action_metadata.json",
       "format": "JSON",
       "bytes": 27203,
       "description": "action_metadata.json，用于智能体平台插件数据政策审计。"
     },
     {
       "name": "taxonomy.csv",
-      "path": "input/taxonomy.csv",
+      "path": "environment/input/taxonomy.csv",
       "format": "CSV",
       "bytes": 284,
       "description": "taxonomy.csv，用于智能体平台插件数据政策审计。"
     },
     {
       "name": "usage_policy.md",
-      "path": "input/usage_policy.md",
+      "path": "environment/input/usage_policy.md",
       "format": "MD",
       "bytes": 503,
       "description": "usage_policy.md，用于智能体平台插件数据政策审计。"
@@ -55,20 +55,22 @@
   "inputManifest": "materials.json",
   "referenceFiles": [
     {
-      "name": "policy_violations.json",
-      "path": "output/policy_violations.json",
-      "format": "JSON",
-      "description": "字段级违规、政策条款、严重性与汇总。"
+      "name": "cross_domain_exposure_report.csv",
+      "path": "reference/cross_domain_exposure_report.csv",
+      "format": "CSV",
+      "bytes": 1311,
+      "description": "各业务域的数据类型、智能体数量及暴露放大率。"
     },
     {
-      "name": "cross_domain_exposure_report.csv",
-      "path": "output/cross_domain_exposure_report.csv",
-      "format": "CSV",
-      "description": "各业务域的数据类型、智能体数量及暴露放大率。"
+      "name": "policy_violations.json",
+      "path": "reference/policy_violations.json",
+      "format": "JSON",
+      "bytes": 156094,
+      "description": "字段级违规、政策条款、严重性与汇总。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "字段违规",
@@ -90,6 +92,110 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "按 action_id 与 data_field_name 对齐字段级违规记录。",
+      "核对条款、严重程度及严重性汇总。",
+      "按域核对跨域暴露数量与放大率。"
+    ],
+    "metrics": [
+      "字段级违规与条款占 65%；严重性汇总占 10%；跨域报告占 25%。",
+      "违规记录使用联合主键，跨域记录使用 domain；重复主键使相应项记 0。"
+    ],
+    "gates": [],
+    "checks": [
+      {
+        "name": "字段级违规与条款",
+        "weight": 65.0,
+        "implementation": "lambda: record_score(read_json(OUTPUT / 'policy_violations.json')['violations'], e['violations'], ['action_id', 'data_field_name'])"
+      },
+      {
+        "name": "严重性汇总",
+        "weight": 10.0,
+        "implementation": "lambda: tree_score({k: v for k, v in read_json(OUTPUT / 'policy_violations.json').items() if k != 'violations'}, {'total_violations': len(e['violations']), 'severity_breakdown': e['severity']})"
+      },
+      {
+        "name": "跨域放大率",
+        "weight": 25.0,
+        "implementation": "lambda: record_score(read_csv(OUTPUT / 'cross_domain_exposure_report.csv'), e['exposure'], ['domain'])"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "policy_violations.json",
+      "path": "output/policy_violations.json",
+      "format": "JSON",
+      "description": "字段级违规、政策条款、严重性与汇总。"
+    },
+    {
+      "name": "cross_domain_exposure_report.csv",
+      "path": "output/cross_domain_exposure_report.csv",
+      "format": "CSV",
+      "description": "各业务域的数据类型、智能体数量及暴露放大率。"
+    }
+  ],
+  "referenceFileCount": 2,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/action_data_entities.json",
+      "content": "[\n  {\n    \"action_id\": \"ACT000\",\n    \"field\": \"field_00\",\n    \"type\": \"PUBLIC\"\n  },\n  {\n    \"action_id\": \"ACT000\",\n    \"field\": \"field_01\",\n    \"type\": \"contact\"\n  },\n  {\n    \"action_id\": \"ACT000\",\n    \"field\": \"field_02\",\n    \"type\": \"precise_location\"\n  },\n  {\n    \"action_id\": \"ACT000\",\n    \"field\": \"field_03\",\n    \"type\": \"PROFILE\"\n  },\n  {\n    \"action_id\": \"ACT000\",\n    \"field\": \"field_04\",\n    \"type\": \"public\"\n  },\n  {\n    \"action_id\": \"ACT001\",\n    \"field\": \"field_00\",\n    \"type\": \"CREDENTIAL\"\n  },\n  {\n    \"action_id\": \"ACT001\",\n    \"field\": \"field_01\",\n    \"type\": \"precise_location\"\n  },\n  {\n    \"action_id\": \"ACT001\",\n    \"field\": \"field_02\",\n    \"type\": \"public\"\n  },\n  {\n    \"action_id\": \"ACT001\",\n    \"field\": \"field_03\",\n    \"type\": \"USAGE\"\n  },\n  {\n    \"action_id\": \"ACT001\",\n    \"field\": \"field_04\",\n    \"type\": \"payment\"\n  },\n  {\n    \"action_id\": \"ACT001\",\n    \"field\": \"field_05\",\n    \"type\": \"usage\"\n  },\n  {\n    \"action_id\": \"ACT002\",\n    \"field\": \"field_00\",\n    \"type\": \"BIOMETRIC\"\n  },\n  {\n    \"action_id\": \"ACT002\",\n    \"field\": \"field_01\",\n    \"type\": \"id_number\"\n  },\n  {\n    \"action_id\": \"ACT002\",\n    \"field\": \"field_02\",\n    \"type\": \"precise_location\"\n  },\n  {\n    \"action_id\": \"ACT002\",\n    \"field\": \"field_03\",\n    \"type\": \"HEALTH\"\n  },\n  {\n    \"action_id\": \"ACT002\",\n    \"field\": \"field_04\",\n    \"type\": \"bank_account\"\n  },\n  {\n    \"action_id\": \"ACT002\",\n    \"field\": \"field_05\",\n    \"type\": \"biometric\"\n  },\n  {\n    \"action_id\": \"ACT002\",\n    \"field\": \"field_06\",\n    \"type\": \"USAGE\"\n  },\n  {\n    \"action_id\": \"ACT003\",\n    \"field\": \"field_00\",\n    \"type\": \"DEVICE\"\n  },\n  {\n    \"action_id\": \"ACT003\",\n    \"field\": \"field_01\",\n    \"type\": \"id_number\"\n  },\n  {\n    \"action_id\": \"ACT003\",\n    \"field\": \"field_02\",\n    \"type\": \"contact\"\n  },\n  {\n    \"action_id\": \"ACT003\",\n    \"field\": \"field_03\",\n    \"type\": \"PRECISE_LOCATION\"\n  },\n  {\n    \"action_id\": \"ACT003\",\n    \"field\": \"field_04\",\n    \"type\": \"device\"\n  },\n  {\n    \"action_id\": \"ACT003\",\n    \"field\": \"field_05\",\n    \"type\": \"biometric\"\n  },\n  {\n    \"action_id\": \"ACT003\",\n    \"field\": \"field_06\",\n    \"type\": \"ID_NUMBER\"\n  },\n  {\n    \"action_id\": \"ACT003\",\n    \"field\": \"field_07\",\n    \"type\": \"usage\"\n  },\n  {\n    \"action_id\": \"ACT004\",\n    \"field\": \"field_00\",\n    \"type\": \"DEVICE\"\n  },\n  {\n    \"action_id\": \"ACT004\",\n    \"field\": \"field_01\",\n    \"type\": \"profile\"\n  },\n  {\n    \"action_id\": \"ACT004\",\n    \"field\": \"field_02\",\n    \"type\": \"biometric\"\n  },\n  {\n    \"action_id\": \"ACT004\",\n    \"field\": \"field_03\",\n    \"type\": \"BIOMETRIC\"\n  },\n  {\n    \"action_id\": \"ACT004\",\n    \"field\": \"field_04\",\n    \"type\": \"payment\"\n  },\n  {\n    \"action_id\": \"ACT004\",\n    \"field\": \"field_05\",\n    \"type\": \"biometric\"\n  },\n  {\n    \"action_id\": \"ACT004\",\n    \"field\": \"field_06\",\n    \"type\": \"ID_NUMBER\"\n  },\n  {\n    \"action_id\": \"ACT004\",\n    \"field\": \"field_07\",\n    \"type\": \"bank_account\"\n  },\n  {\n    \"action_id\": \"ACT004\",\n    \"field\": \"field_08\",\n    \"type\": \"public\"\n  },\n  {\n    \"action_id\": \"ACT005\",\n    \"field\": \"field_00\",\n    \"type\": \"CONTACT\"\n  },\n  {\n    \"action_id\": \"ACT005\",\n    \"field\": \"field_01\",\n    \"type\": \"device\"\n  },\n  {\n    \"action_id\": \"ACT005\",\n    \"field\": \"field_02\",\n    \"type\": \"contact\"\n  },\n  {\n    \"action_id\": \"ACT005\",\n    \"field\": \"field_03\",\n    \"type\": \"ID_NUMBER\"\n  },\n  {\n    \"action_id\": \"ACT005\",\n    \"field\": \"field_04\",\n    \"type\": \"device\"\n  },\n  {\n    \"action_id\": \"ACT005\",\n    \"field\": \"field_05\",\n    \"type\": \"public\"\n  },\n  {\n    \"action_id\": \"ACT005\",\n    \"field\": \"field_06\",\n    \"type\": \"PAYMENT\"\n  },\n  {\n    \"action_id\": \"ACT005\",\n    \"field\": \"field_07\",\n    \"type\": \"credential\"\n  },\n  {\n    \"action_id\": \"ACT005\",\n    \"field\": \"field_08\",\n    \"type\": \"biometric\"\n  },\n  {\n    \"action_id\": \"ACT005\",\n    \"field\": \"field_09\",\n    \"type\": \"CREDENTIAL\"\n  },\n  {\n    \"action_id\": \"ACT006\",\n    \"field\": \"field_00\",\n    \"type\": \"CONTACT\"\n  },\n  {\n    \"action_id\": \"ACT006\",\n    \"field\": \"field_01\",\n    \"type\": \"payment\"\n  },\n  {\n    \"action_id\": \"ACT006\",\n    \"field\": \"field_02\",\n    \"type\": \"bank_account\"\n  },\n  {\n    \"action_id\": \"ACT006\",\n    \"field\": \"field_03\",\n    \"type\": \"PAYMENT\"\n  },\n  {\n    \"action_id\": \"ACT006\",\n    \"field\": \"field_04\",\n    \"type\": \"usage\"\n  },\n  {\n    \"action_id\": \"ACT006\",\n    \"field\": \"field_05\",\n    \"type\": \"contact\"\n  },\n  {\n    \"action_id\": \"ACT006\",\n    \"field\": \"field_06\",\n    \"type\": \"USAGE\"\n  },\n  {\n    \"action_id\": \"ACT006\",\n    \"field\": \"field_07\",\n    \"type\": \"credential\"\n  },\n  {\n    \"action_id\": \"ACT006\",\n    \"field\": \"field_08\",\n    \"type\": \"biometric\"\n  },\n  {\n    \"action_id\": \"ACT006\",\n    \"field\": \"field_09\",\n    \"type\": \"HEALTH\"\n  },\n  {\n    \"action_id\": \"ACT006\",\n    \"field\": \"field_10\",\n    \"type\": \"id_number\"\n  },\n  {\n    \"action_id\": \"ACT007\",\n    \"field\": \"field_00\",\n    \"type\": \"DEVICE\"\n  },\n  {\n    \"action_id\": \"ACT007\",\n    \"field\": \"field_01\",\n    \"type\": \"credential\"\n  },\n  {\n    \"action_id\": \"ACT007\",\n    \"field\": \"field_02\",\n    \"type\": \"health\"\n  },\n  {\n    \"action_id\": \"ACT007\",\n    \"field\": \"field_03\",\n    \"type\": \"BANK_ACCOUNT\"\n  },\n  {\n    \"action_id\": \"ACT007\",\n    \"field\": \"field_04\",\n    \"type\": \"id_number\"\n  },\n  {\n    \"action_id\": \"ACT008\",\n    \"field\": \"field_00\",\n    \"type\": \"PRECISE_LOCATION\"\n  },\n  {\n    \"action_id\": \"ACT008\",\n    \"field\": \"field_01\",\n    \"type\": \"profile\"\n  },\n  {\n    \"action_id\": \"ACT008\",\n    \"field\": \"field_02\",\n    \"type\": \"profile\"\n  },\n  {\n    \"action_id\": \"ACT008\",\n    \"field\": \"field_03\",\n    \"type\": \"HEALTH\"\n  },\n  {\n    \"action_id\": \"ACT008\",\n    \"field\": \"field_04\",\n    \"type\": \"health\"\n  },\n  {\n    \"action_id\": \"ACT008\",\n    \"field\": \"field_05\",\n    \"type\": \"id_number\"\n  },\n  {\n    \"action_id\": \"ACT009\",\n    \"field\": \"field_00\",\n    \"type\": \"USAGE\"\n  },\n  {\n    \"action_id\": \"ACT009\",\n    \"field\": \"field_01\",\n    \"type\": \"profile\"\n  },\n  {\n    \"action_id\": \"ACT009\",\n    \"field\": \"field_02\",\n    \"type\": \"id_number\"\n  },\n  {\n    \"action_id\": \"ACT009\",\n    \"field\": \"field_03\",\n    \"type\": \"DEVICE\"\n  },\n  {\n    \"action_id\": \"",
+      "truncated": true
+    },
+    {
+      "path": "environment/input/action_metadata.json",
+      "content": "[\n  {\n    \"action_id\": \"ACT000\",\n    \"domain\": \"d00.xingqiao.example\",\n    \"api_name\": \"api_000\",\n    \"agent_ids\": [\n      \"AG000\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT001\",\n    \"domain\": \"d01.xingqiao.example\",\n    \"api_name\": \"api_001\",\n    \"agent_ids\": [\n      \"AG001\",\n      \"AG014\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT002\",\n    \"domain\": \"d02.xingqiao.example\",\n    \"api_name\": \"api_002\",\n    \"agent_ids\": [\n      \"AG002\",\n      \"AG015\",\n      \"AG028\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT003\",\n    \"domain\": \"d03.xingqiao.example\",\n    \"api_name\": \"api_003\",\n    \"agent_ids\": [\n      \"AG003\",\n      \"AG016\",\n      \"AG029\",\n      \"AG042\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT004\",\n    \"domain\": \"d04.xingqiao.example\",\n    \"api_name\": \"api_004\",\n    \"agent_ids\": [\n      \"AG004\",\n      \"AG017\",\n      \"AG030\",\n      \"AG043\",\n      \"AG056\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT005\",\n    \"domain\": \"d05.xingqiao.example\",\n    \"api_name\": \"api_005\",\n    \"agent_ids\": [\n      \"AG005\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT006\",\n    \"domain\": \"d06.xingqiao.example\",\n    \"api_name\": \"api_006\",\n    \"agent_ids\": [\n      \"AG006\",\n      \"AG019\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT007\",\n    \"domain\": \"d07.xingqiao.example\",\n    \"api_name\": \"api_007\",\n    \"agent_ids\": [\n      \"AG007\",\n      \"AG020\",\n      \"AG033\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT008\",\n    \"domain\": \"d08.xingqiao.example\",\n    \"api_name\": \"api_008\",\n    \"agent_ids\": [\n      \"AG008\",\n      \"AG021\",\n      \"AG034\",\n      \"AG047\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT009\",\n    \"domain\": \"d09.xingqiao.example\",\n    \"api_name\": \"api_009\",\n    \"agent_ids\": [\n      \"AG009\",\n      \"AG022\",\n      \"AG035\",\n      \"AG048\",\n      \"AG061\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT010\",\n    \"domain\": \"d10.xingqiao.example\",\n    \"api_name\": \"api_010\",\n    \"agent_ids\": [\n      \"AG010\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT011\",\n    \"domain\": \"d11.xingqiao.example\",\n    \"api_name\": \"api_011\",\n    \"agent_ids\": [\n      \"AG011\",\n      \"AG024\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT012\",\n    \"domain\": \"d12.xingqiao.example\",\n    \"api_name\": \"api_012\",\n    \"agent_ids\": [\n      \"AG012\",\n      \"AG025\",\n      \"AG038\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT013\",\n    \"domain\": \"d13.xingqiao.example\",\n    \"api_name\": \"api_013\",\n    \"agent_ids\": [\n      \"AG013\",\n      \"AG026\",\n      \"AG039\",\n      \"AG052\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT014\",\n    \"domain\": \"d14.xingqiao.example\",\n    \"api_name\": \"api_014\",\n    \"agent_ids\": [\n      \"AG014\",\n      \"AG027\",\n      \"AG040\",\n      \"AG053\",\n      \"AG066\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT015\",\n    \"domain\": \"d15.xingqiao.example\",\n    \"api_name\": \"api_015\",\n    \"agent_ids\": [\n      \"AG015\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT016\",\n    \"domain\": \"d16.xingqiao.example\",\n    \"api_name\": \"api_016\",\n    \"agent_ids\": [\n      \"AG016\",\n      \"AG029\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT017\",\n    \"domain\": \"d17.xingqiao.example\",\n    \"api_name\": \"api_017\",\n    \"agent_ids\": [\n      \"AG017\",\n      \"AG030\",\n      \"AG043\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT018\",\n    \"domain\": \"d18.xingqiao.example\",\n    \"api_name\": \"api_018\",\n    \"agent_ids\": [\n      \"AG018\",\n      \"AG031\",\n      \"AG044\",\n      \"AG057\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT019\",\n    \"domain\": \"d19.xingqiao.example\",\n    \"api_name\": \"api_019\",\n    \"agent_ids\": [\n      \"AG019\",\n      \"AG032\",\n      \"AG045\",\n      \"AG058\",\n      \"AG071\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT020\",\n    \"domain\": \"d20.xingqiao.example\",\n    \"api_name\": \"api_020\",\n    \"agent_ids\": [\n      \"AG020\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT021\",\n    \"domain\": \"d21.xingqiao.example\",\n    \"api_name\": \"api_021\",\n    \"agent_ids\": [\n      \"AG021\",\n      \"AG034\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT022\",\n    \"domain\": \"d22.xingqiao.example\",\n    \"api_name\": \"api_022\",\n    \"agent_ids\": [\n      \"AG022\",\n      \"AG035\",\n      \"AG048\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT023\",\n    \"domain\": \"d23.xingqiao.example\",\n    \"api_name\": \"api_023\",\n    \"agent_ids\": [\n      \"AG023\",\n      \"AG036\",\n      \"AG049\",\n      \"AG062\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT024\",\n    \"domain\": \"d00.xingqiao.example\",\n    \"api_name\": \"api_024\",\n    \"agent_ids\": [\n      \"AG024\",\n      \"AG037\",\n      \"AG050\",\n      \"AG063\",\n      \"AG076\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT025\",\n    \"domain\": \"d01.xingqiao.example\",\n    \"api_name\": \"api_025\",\n    \"agent_ids\": [\n      \"AG025\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT026\",\n    \"domain\": \"d02.xingqiao.example\",\n    \"api_name\": \"api_026\",\n    \"agent_ids\": [\n      \"AG026\",\n      \"AG039\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT027\",\n    \"domain\": \"d03.xingqiao.example\",\n    \"api_name\": \"api_027\",\n    \"agent_ids\": [\n      \"AG027\",\n      \"AG040\",\n      \"AG053\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT028\",\n    \"domain\": \"d04.xingqiao.example\",\n    \"api_name\": \"api_028\",\n    \"agent_ids\": [\n      \"AG028\",\n      \"AG041\",\n      \"AG054\",\n      \"AG067\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT029\",\n    \"domain\": \"d05.xingqiao.example\",\n    \"api_name\": \"api_029\",\n    \"agent_ids\": [\n      \"AG029\",\n      \"AG042\",\n      \"AG055\",\n      \"AG068\",\n      \"AG001\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT030\",\n    \"domain\": \"d06.xingqiao.example\",\n    \"api_name\": \"api_030\",\n    \"agent_ids\": [\n      \"AG030\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT031\",\n    \"domain\": \"d07.xingqiao.example\",\n    \"api_name\": \"api_031\",\n    \"agent_ids\": [\n      \"AG031\",\n      \"AG044\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT032\",\n    \"domain\": \"d08.xingqiao.example\",\n    \"api_name\": \"api_032\",\n    \"agent_ids\": [\n      \"AG032\",\n      \"AG045\",\n      \"AG058\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT033\",\n    \"domain\": \"d09.xingqiao.example\",\n    \"api_name\": \"api_033\",\n    \"agent_ids\": [\n      \"AG033\",\n      \"AG046\",\n      \"AG059\",\n      \"AG072\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT034\",\n    \"domain\": \"d10.xingqiao.example\",\n    \"api_name\": \"api_034\",\n    \"agent_ids\": [\n      \"AG034\",\n      \"AG047\",\n      \"AG060\",\n      \"AG073\",\n      \"AG006\"\n    ]\n  },\n  {\n    \"action_id\": \"ACT035\",\n    \"domain\": \"d1",
+      "truncated": true
+    },
+    {
+      "path": "environment/input/taxonomy.csv",
+      "content": "data_type,severity,policy_clause\nid_number,CRITICAL,P1\nbank_account,HIGH,P2\nprecise_location,HIGH,P2\nhealth,HIGH,P2\nbiometric,CRITICAL,P1\ncontact,ALLOWED,P3\npayment,ALLOWED,P3\nprofile,ALLOWED,P3\nusage,ALLOWED,P3\ndevice,ALLOWED,P3\npublic,ALLOWED,P3\ncredential,CRITICAL,P1\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/cross_domain_exposure_report.csv",
+      "content": "domain,agent_count,union_datatypes_count,avg_datatypes_per_action,amplification\nd00.xingqiao.example,21,12,6.0,2.000x\nd01.xingqiao.example,18,12,6.142857142857143,1.953x\nd02.xingqiao.example,20,12,6.0,2.000x\nd03.xingqiao.example,22,12,6.285714285714286,1.909x\nd04.xingqiao.example,24,12,5.714285714285714,2.100x\nd05.xingqiao.example,21,12,5.714285714285714,2.100x\nd06.xingqiao.example,18,12,6.571428571428571,1.826x\nd07.xingqiao.example,20,12,6.428571428571429,1.867x\nd08.xingqiao.example,22,12,6.571428571428571,1.826x\nd09.xingqiao.example,24,12,5.857142857142857,2.049x\nd10.xingqiao.example,21,12,5.571428571428571,2.154x\nd11.xingqiao.example,18,12,6.0,2.000x\nd12.xingqiao.example,20,12,5.428571428571429,2.211x\nd13.xingqiao.example,22,12,5.571428571428571,2.154x\nd14.xingqiao.example,24,12,6.142857142857143,1.953x\nd15.xingqiao.example,21,11,5.714285714285714,1.925x\nd16.xingqiao.example,17,12,5.833333333333333,2.057x\nd17.xingqiao.example,18,12,6.333333333333333,1.895x\nd18.xingqiao.example,19,12,5.833333333333333,2.057x\nd19.xingqiao.example,20,12,5.666666666666667,2.118x\nd20.xingqiao.example,16,12,5.833333333333333,2.057x\nd21.xingqiao.example,17,12,5.666666666666667,2.118x\nd22.xingqiao.example,18,12,5.833333333333333,2.057x\nd23.xingqiao.example,19,11,5.833333333333333,1.886x\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/policy_violations.json",
+      "content": "{\n  \"total_violations\": 638,\n  \"severity_breakdown\": {\n    \"CRITICAL\": 319,\n    \"HIGH\": 319\n  },\n  \"violations\": [\n    {\n      \"action_id\": \"ACT000\",\n      \"severity\": \"HIGH\",\n      \"policy_clause\": \"P2\",\n      \"action_domain\": \"d00.xingqiao.example\",\n      \"api_name\": \"api_000\",\n      \"data_field_name\": \"field_02\",\n      \"data_type\": \"precise_location\"\n    },\n    {\n      \"action_id\": \"ACT001\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d01.xingqiao.example\",\n      \"api_name\": \"api_001\",\n      \"data_field_name\": \"field_00\",\n      \"data_type\": \"credential\"\n    },\n    {\n      \"action_id\": \"ACT001\",\n      \"severity\": \"HIGH\",\n      \"policy_clause\": \"P2\",\n      \"action_domain\": \"d01.xingqiao.example\",\n      \"api_name\": \"api_001\",\n      \"data_field_name\": \"field_01\",\n      \"data_type\": \"precise_location\"\n    },\n    {\n      \"action_id\": \"ACT002\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d02.xingqiao.example\",\n      \"api_name\": \"api_002\",\n      \"data_field_name\": \"field_00\",\n      \"data_type\": \"biometric\"\n    },\n    {\n      \"action_id\": \"ACT002\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d02.xingqiao.example\",\n      \"api_name\": \"api_002\",\n      \"data_field_name\": \"field_01\",\n      \"data_type\": \"id_number\"\n    },\n    {\n      \"action_id\": \"ACT002\",\n      \"severity\": \"HIGH\",\n      \"policy_clause\": \"P2\",\n      \"action_domain\": \"d02.xingqiao.example\",\n      \"api_name\": \"api_002\",\n      \"data_field_name\": \"field_02\",\n      \"data_type\": \"precise_location\"\n    },\n    {\n      \"action_id\": \"ACT002\",\n      \"severity\": \"HIGH\",\n      \"policy_clause\": \"P2\",\n      \"action_domain\": \"d02.xingqiao.example\",\n      \"api_name\": \"api_002\",\n      \"data_field_name\": \"field_03\",\n      \"data_type\": \"health\"\n    },\n    {\n      \"action_id\": \"ACT002\",\n      \"severity\": \"HIGH\",\n      \"policy_clause\": \"P2\",\n      \"action_domain\": \"d02.xingqiao.example\",\n      \"api_name\": \"api_002\",\n      \"data_field_name\": \"field_04\",\n      \"data_type\": \"bank_account\"\n    },\n    {\n      \"action_id\": \"ACT002\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d02.xingqiao.example\",\n      \"api_name\": \"api_002\",\n      \"data_field_name\": \"field_05\",\n      \"data_type\": \"biometric\"\n    },\n    {\n      \"action_id\": \"ACT003\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d03.xingqiao.example\",\n      \"api_name\": \"api_003\",\n      \"data_field_name\": \"field_01\",\n      \"data_type\": \"id_number\"\n    },\n    {\n      \"action_id\": \"ACT003\",\n      \"severity\": \"HIGH\",\n      \"policy_clause\": \"P2\",\n      \"action_domain\": \"d03.xingqiao.example\",\n      \"api_name\": \"api_003\",\n      \"data_field_name\": \"field_03\",\n      \"data_type\": \"precise_location\"\n    },\n    {\n      \"action_id\": \"ACT003\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d03.xingqiao.example\",\n      \"api_name\": \"api_003\",\n      \"data_field_name\": \"field_05\",\n      \"data_type\": \"biometric\"\n    },\n    {\n      \"action_id\": \"ACT003\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d03.xingqiao.example\",\n      \"api_name\": \"api_003\",\n      \"data_field_name\": \"field_06\",\n      \"data_type\": \"id_number\"\n    },\n    {\n      \"action_id\": \"ACT004\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d04.xingqiao.example\",\n      \"api_name\": \"api_004\",\n      \"data_field_name\": \"field_02\",\n      \"data_type\": \"biometric\"\n    },\n    {\n      \"action_id\": \"ACT004\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d04.xingqiao.example\",\n      \"api_name\": \"api_004\",\n      \"data_field_name\": \"field_03\",\n      \"data_type\": \"biometric\"\n    },\n    {\n      \"action_id\": \"ACT004\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d04.xingqiao.example\",\n      \"api_name\": \"api_004\",\n      \"data_field_name\": \"field_05\",\n      \"data_type\": \"biometric\"\n    },\n    {\n      \"action_id\": \"ACT004\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d04.xingqiao.example\",\n      \"api_name\": \"api_004\",\n      \"data_field_name\": \"field_06\",\n      \"data_type\": \"id_number\"\n    },\n    {\n      \"action_id\": \"ACT004\",\n      \"severity\": \"HIGH\",\n      \"policy_clause\": \"P2\",\n      \"action_domain\": \"d04.xingqiao.example\",\n      \"api_name\": \"api_004\",\n      \"data_field_name\": \"field_07\",\n      \"data_type\": \"bank_account\"\n    },\n    {\n      \"action_id\": \"ACT005\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d05.xingqiao.example\",\n      \"api_name\": \"api_005\",\n      \"data_field_name\": \"field_03\",\n      \"data_type\": \"id_number\"\n    },\n    {\n      \"action_id\": \"ACT005\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d05.xingqiao.example\",\n      \"api_name\": \"api_005\",\n      \"data_field_name\": \"field_07\",\n      \"data_type\": \"credential\"\n    },\n    {\n      \"action_id\": \"ACT005\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d05.xingqiao.example\",\n      \"api_name\": \"api_005\",\n      \"data_field_name\": \"field_08\",\n      \"data_type\": \"biometric\"\n    },\n    {\n      \"action_id\": \"ACT005\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d05.xingqiao.example\",\n      \"api_name\": \"api_005\",\n      \"data_field_name\": \"field_09\",\n      \"data_type\": \"credential\"\n    },\n    {\n      \"action_id\": \"ACT006\",\n      \"severity\": \"HIGH\",\n      \"policy_clause\": \"P2\",\n      \"action_domain\": \"d06.xingqiao.example\",\n      \"api_name\": \"api_006\",\n      \"data_field_name\": \"field_02\",\n      \"data_type\": \"bank_account\"\n    },\n    {\n      \"action_id\": \"ACT006\",\n      \"severity\": \"CRITICAL\",\n      \"policy_clause\": \"P1\",\n      \"action_domain\": \"d06.xingqiao.example\",\n      \"api_name\": \"api_006\",\n      \"data_field_name\": \"field_07\",\n      \"data_type\": \"credential\"\n    },",
+      "truncated": true
+    }
+  ]
 }

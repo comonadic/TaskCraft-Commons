@@ -1,0 +1,10 @@
+{
+  "quote_time": "2025-03-31 15:00",
+  "company": "澄海精密",
+  "currency": "CNY",
+  "pages": [
+    "quote.html",
+    "statistics.html",
+    "annual_report.html"
+  ]
+}

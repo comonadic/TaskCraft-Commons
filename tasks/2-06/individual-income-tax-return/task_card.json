@@ -3,14 +3,14 @@
   "title": "居民个人综合所得年度汇算申报",
   "brief": "依据收入、扣除与预缴材料计算年度汇算结果，在申报页面完成三位居民的逐项填报并保存结果。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-06",
   "occupation": {
     "code": "2-06-05-00",
     "name": "税务专业人员"
   },
   "scene": "你是税务业务人员，需要按照任务提供的汇算规则，为三位居民整理年度申报和补退税结果。",
-  "taskPrompt": "你是税务业务人员，需要按照任务提供的汇算规则，为三位居民整理年度申报和补退税结果。\n\n1. 核对每位居民的工资、扣除和预缴凭证\n2. 计算应纳税所得、应纳税额及补退税差额\n3. 在申报页面填写并保存三份申报结果和截图\n\n交付成果：\n- returns/T001.json～T003.json：三位居民的汇算申报字段与金额。\n- screenshots/T001.png～T003.png：各份申报保存后的页面截图。",
+  "taskPrompt": "# 居民个人综合所得年度汇算申报\n\n你是税务业务人员，需要按照任务提供的汇算规则，为三位居民整理年度申报和补退税结果。\n\n1. 核对每位居民的工资、扣除和预缴凭证\n2. 计算应纳税所得、应纳税额及补退税差额\n3. 在申报页面填写并保存三份申报结果和截图\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/returns/T001.json～T003.json`：三位居民的汇算申报字段与金额。\n- `/app/output/screenshots/T001.png～T003.png`：各份申报保存后的页面截图。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n## 运行与提交\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`returns/T001.json`至`T003.json`，字段taxpayer_id,year,income,special_deduction,additional_deduction,taxable_income,tax_due,prepaid,balance；`screenshots/T001.png`至T003.png。\n",
   "agentMustDo": [
     "核对每位居民的工资、扣除和预缴凭证",
     "计算应纳税所得、应纳税额及补退税差额",
@@ -24,56 +24,56 @@
   "inputFiles": [
     {
       "name": "T001_deductions.pdf",
-      "path": "input/T001_deductions.pdf",
+      "path": "environment/input/T001_deductions.pdf",
       "format": "PDF",
       "bytes": 24982,
       "description": "T001_deductions.pdf，用于居民个人综合所得年度汇算申报。"
     },
     {
       "name": "T001_payroll.csv",
-      "path": "input/T001_payroll.csv",
+      "path": "environment/input/T001_payroll.csv",
       "format": "CSV",
       "bytes": 424,
       "description": "T001_payroll.csv，用于居民个人综合所得年度汇算申报。"
     },
     {
       "name": "T002_deductions.pdf",
-      "path": "input/T002_deductions.pdf",
+      "path": "environment/input/T002_deductions.pdf",
       "format": "PDF",
       "bytes": 24986,
       "description": "T002_deductions.pdf，用于居民个人综合所得年度汇算申报。"
     },
     {
       "name": "T002_payroll.csv",
-      "path": "input/T002_payroll.csv",
+      "path": "environment/input/T002_payroll.csv",
       "format": "CSV",
       "bytes": 556,
       "description": "T002_payroll.csv，用于居民个人综合所得年度汇算申报。"
     },
     {
       "name": "T003_deductions.pdf",
-      "path": "input/T003_deductions.pdf",
+      "path": "environment/input/T003_deductions.pdf",
       "format": "PDF",
       "bytes": 24982,
       "description": "T003_deductions.pdf，用于居民个人综合所得年度汇算申报。"
     },
     {
       "name": "T003_payroll.csv",
-      "path": "input/T003_payroll.csv",
+      "path": "environment/input/T003_payroll.csv",
       "format": "CSV",
       "bytes": 544,
       "description": "T003_payroll.csv，用于居民个人综合所得年度汇算申报。"
     },
     {
       "name": "tax_form.html",
-      "path": "input/tax_form.html",
+      "path": "environment/input/tax_form.html",
       "format": "HTML",
       "bytes": 1706,
       "description": "tax_form.html，用于居民个人综合所得年度汇算申报。"
     },
     {
       "name": "tax_rules.md",
-      "path": "input/tax_rules.md",
+      "path": "environment/input/tax_rules.md",
       "format": "MD",
       "bytes": 985,
       "description": "tax_rules.md，用于居民个人综合所得年度汇算申报。"
@@ -83,20 +83,50 @@
   "inputManifest": "materials.json",
   "referenceFiles": [
     {
-      "name": "returns/T001.json～T003.json",
-      "path": "output/returns/T001.json～T003.json",
+      "name": "returns/T001.json",
+      "path": "reference/returns/T001.json",
       "format": "JSON",
-      "description": "三位居民的汇算申报字段与金额。"
+      "bytes": 213,
+      "description": "参考解生成的交付文件。"
     },
     {
-      "name": "screenshots/T001.png～T003.png",
-      "path": "output/screenshots/T001.png～T003.png",
+      "name": "returns/T002.json",
+      "path": "reference/returns/T002.json",
+      "format": "JSON",
+      "bytes": 211,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "returns/T003.json",
+      "path": "reference/returns/T003.json",
+      "format": "JSON",
+      "bytes": 201,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "screenshots/T001.png",
+      "path": "reference/screenshots/T001.png",
       "format": "PNG",
-      "description": "各份申报保存后的页面截图。"
+      "bytes": 46706,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "screenshots/T002.png",
+      "path": "reference/screenshots/T002.png",
+      "format": "PNG",
+      "bytes": 48754,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "screenshots/T003.png",
+      "path": "reference/screenshots/T003.png",
+      "format": "PNG",
+      "bytes": 46980,
+      "description": "参考解生成的交付文件。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "申报计算",
@@ -113,6 +143,110 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "读取三名纳税人的申报 JSON，核对各项收入、扣除与税额。",
+      "按字段比较申报结果并对三人取平均。",
+      "打开三份提交截图，检查图片可解析。"
+    ],
+    "metrics": [
+      "申报结果 95%，截图可读取 5%。",
+      "金额绝对容差 0.01，rtol=0；图片由解码器实际读取。"
+    ],
+    "gates": [],
+    "checks": [
+      {
+        "name": "三人申报字段与税额",
+        "weight": 95.0,
+        "implementation": "lambda: sum((tree_score(read_json(OUTPUT / 'returns' / f\"{r['taxpayer_id']}.json\"), r, atol=0.01, rtol=0) for r in e)) / 3"
+      },
+      {
+        "name": "提交截图可读取",
+        "weight": 5.0,
+        "implementation": "images"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "returns/T001.json～T003.json",
+      "path": "output/returns/T001.json～T003.json",
+      "format": "JSON",
+      "description": "三位居民的汇算申报字段与金额。"
+    },
+    {
+      "name": "screenshots/T001.png～T003.png",
+      "path": "output/screenshots/T001.png～T003.png",
+      "format": "PNG",
+      "description": "各份申报保存后的页面截图。"
+    }
+  ],
+  "referenceFileCount": 6,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/T001_payroll.csv",
+      "content": "month,salary,social_insurance_housing,withheld_tax\n2024-01,25000.0,3000.0,1500.0\n2024-02,25000.0,3000.0,1500.0\n2024-03,25000.0,3000.0,1500.0\n2024-04,25000.0,3000.0,1500.0\n2024-05,25000.0,3000.0,1500.0\n2024-06,25000.0,3000.0,1500.0\n2024-07,25000.0,3000.0,1500.0\n2024-08,25000.0,3000.0,1500.0\n2024-09,25000.0,3000.0,1500.0\n2024-10,25000.0,3000.0,1500.0\n2024-11,25000.0,3000.0,1500.0\n2024-12,25000.0,3000.0,1500.0\n",
+      "truncated": false
+    },
+    {
+      "path": "environment/input/T002_payroll.csv",
+      "content": "month,salary,social_insurance_housing,withheld_tax\n2024-01,13000.0,1500.0,666.6666666666666\n2024-02,13000.0,1500.0,666.6666666666666\n2024-03,13000.0,1500.0,666.6666666666666\n2024-04,13000.0,1500.0,666.6666666666666\n2024-05,13000.0,1500.0,666.6666666666666\n2024-06,13000.0,1500.0,666.6666666666666\n2024-07,13000.0,1500.0,666.6666666666666\n2024-08,13000.0,1500.0,666.6666666666666\n2024-09,13000.0,1500.0,666.6666666666666\n2024-10,13000.0,1500.0,666.6666666666666\n2024-11,13000.0,1500.0,666.6666666666666\n2024-12,13000.0,1500.0,666.6666666666666\n",
+      "truncated": false
+    },
+    {
+      "path": "environment/input/T003_payroll.csv",
+      "content": "month,salary,social_insurance_housing,withheld_tax\n2024-01,6000.0,1500.0,66.66666666666667\n2024-02,6000.0,1500.0,66.66666666666667\n2024-03,6000.0,1500.0,66.66666666666667\n2024-04,6000.0,1500.0,66.66666666666667\n2024-05,6000.0,1500.0,66.66666666666667\n2024-06,6000.0,1500.0,66.66666666666667\n2024-07,6000.0,1500.0,66.66666666666667\n2024-08,6000.0,1500.0,66.66666666666667\n2024-09,6000.0,1500.0,66.66666666666667\n2024-10,6000.0,1500.0,66.66666666666667\n2024-11,6000.0,1500.0,66.66666666666667\n2024-12,6000.0,1500.0,66.66666666666667\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/returns/T001.json",
+      "content": "{\n  \"taxpayer_id\": \"T001\",\n  \"year\": 2024,\n  \"income\": 300000,\n  \"special_deduction\": 36000,\n  \"additional_deduction\": 24000,\n  \"taxable_income\": 180000,\n  \"tax_due\": 19080,\n  \"prepaid\": 18000,\n  \"balance\": 1080\n}",
+      "truncated": false
+    },
+    {
+      "path": "reference/returns/T002.json",
+      "content": "{\n  \"taxpayer_id\": \"T002\",\n  \"year\": 2024,\n  \"income\": 156000,\n  \"special_deduction\": 18000,\n  \"additional_deduction\": 36000,\n  \"taxable_income\": 42000,\n  \"tax_due\": 1680,\n  \"prepaid\": 8000,\n  \"balance\": -6320\n}",
+      "truncated": false
+    },
+    {
+      "path": "reference/returns/T003.json",
+      "content": "{\n  \"taxpayer_id\": \"T003\",\n  \"year\": 2024,\n  \"income\": 72000,\n  \"special_deduction\": 18000,\n  \"additional_deduction\": 12000,\n  \"taxable_income\": 0,\n  \"tax_due\": 0,\n  \"prepaid\": 800,\n  \"balance\": -800\n}",
+      "truncated": false
+    }
+  ]
 }

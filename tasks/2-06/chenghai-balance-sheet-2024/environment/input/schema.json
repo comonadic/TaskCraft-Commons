@@ -1,0 +1,30 @@
+{
+  "company": "澄海精密",
+  "date": "2024-12-31",
+  "currency": "CNY",
+  "unit": "yuan",
+  "fields": {
+    "cash": "货币资金",
+    "receivables": "应收账款",
+    "inventory": "存货",
+    "other_current": "其他流动资产",
+    "current_assets": "流动资产合计",
+    "ppe": "固定资产",
+    "intangibles": "无形资产",
+    "other_noncurrent": "其他非流动资产",
+    "noncurrent_assets": "非流动资产合计",
+    "assets": "资产总计",
+    "payables": "应付账款",
+    "short_debt": "短期借款",
+    "other_current_liabilities": "其他流动负债",
+    "current_liabilities": "流动负债合计",
+    "long_debt": "长期借款",
+    "other_noncurrent_liabilities": "其他非流动负债",
+    "noncurrent_liabilities": "非流动负债合计",
+    "liabilities": "负债合计",
+    "share_capital": "股本",
+    "reserves": "资本公积及盈余公积",
+    "retained_earnings": "未分配利润",
+    "equity": "所有者权益合计"
+  }
+}

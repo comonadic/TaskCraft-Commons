@@ -1,0 +1,18 @@
+{
+  "filing_id": "CN006_2022",
+  "company": "云岫物流",
+  "year": 2022,
+  "currency": "CNY",
+  "revenue": 805940000.0,
+  "net_income": -18000000.0,
+  "assets": 1611880000.0,
+  "liabilities": 676989600.0000001,
+  "cash": 145069200.0,
+  "equity": 934890399.9999999,
+  "operating_cashflow": 174083040.0,
+  "capex": 36267300.0,
+  "debt": 473892720.0,
+  "shares": 100000000.0,
+  "eps": -0.18,
+  "dividends": 29013840.0
+}

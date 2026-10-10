@@ -1,0 +1,189 @@
+{
+  "focus": [
+    "情绪体验",
+    "认知评价",
+    "行为调节"
+  ],
+  "themes": [
+    {
+      "column": 9,
+      "name": "深夜使用",
+      "positive_statement": "连续七晚过了凌晨一点还在聊天"
+    },
+    {
+      "column": 10,
+      "name": "超过计划时长",
+      "positive_statement": "每天原计划十分钟最后用了两个小时"
+    },
+    {
+      "column": 11,
+      "name": "工作分心",
+      "positive_statement": "上班时反复切到聊天窗口而打断手头工作"
+    },
+    {
+      "column": 12,
+      "name": "拖延任务",
+      "positive_statement": "为了继续聊天把原定任务推到了第二天"
+    },
+    {
+      "column": 13,
+      "name": "情绪安慰",
+      "positive_statement": "心情低落时聊天让我得到安慰"
+    },
+    {
+      "column": 14,
+      "name": "孤独缓解",
+      "positive_statement": "独处时聊天减轻了我的孤独感"
+    },
+    {
+      "column": 15,
+      "name": "情感依恋",
+      "positive_statement": "我对这个聊天对象产生了难以割舍的感情"
+    },
+    {
+      "column": 16,
+      "name": "把AI当朋友",
+      "positive_statement": "我开始把它当成可以倾诉的朋友"
+    },
+    {
+      "column": 17,
+      "name": "焦虑缓解",
+      "positive_statement": "紧张时聊一会儿我的焦虑会减轻"
+    },
+    {
+      "column": 18,
+      "name": "使用后内疚",
+      "positive_statement": "结束聊天后我为花掉的时间感到内疚"
+    },
+    {
+      "column": 19,
+      "name": "担心依赖",
+      "positive_statement": "我担心自己越来越依赖它"
+    },
+    {
+      "column": 20,
+      "name": "主动限时",
+      "positive_statement": "我主动设置了每日三十分钟限额"
+    },
+    {
+      "column": 21,
+      "name": "卸载尝试",
+      "positive_statement": "我曾经卸载应用想停止使用"
+    },
+    {
+      "column": 22,
+      "name": "限时失败",
+      "positive_statement": "设置限额后我还是反复点了延长"
+    },
+    {
+      "column": 23,
+      "name": "重新安装",
+      "positive_statement": "卸载后我又把同一个应用装了回来"
+    },
+    {
+      "column": 24,
+      "name": "寻求人类支持",
+      "positive_statement": "我为这件事主动找真人朋友谈过"
+    },
+    {
+      "column": 25,
+      "name": "减少线下社交",
+      "positive_statement": "这段时间我减少了和朋友线下见面"
+    },
+    {
+      "column": 26,
+      "name": "睡眠减少",
+      "positive_statement": "聊天使我每晚比以前少睡了一个小时"
+    },
+    {
+      "column": 27,
+      "name": "身体疲劳",
+      "positive_statement": "长时间使用后我明显觉得身体疲劳"
+    },
+    {
+      "column": 28,
+      "name": "忽略饮食",
+      "positive_statement": "我因为聊天错过了正餐"
+    },
+    {
+      "column": 29,
+      "name": "付费升级",
+      "positive_statement": "我购买了应用的付费订阅"
+    },
+    {
+      "column": 30,
+      "name": "超预算消费",
+      "positive_statement": "我在这上面的支出超过了自己的预算"
+    },
+    {
+      "column": 31,
+      "name": "隐瞒使用",
+      "positive_statement": "我向家人隐瞒了实际使用时长"
+    },
+    {
+      "column": 32,
+      "name": "被亲友提醒",
+      "positive_statement": "亲友曾提醒我使用得太久"
+    },
+    {
+      "column": 33,
+      "name": "任务效率提升",
+      "positive_statement": "它帮助我更快完成了工作任务"
+    },
+    {
+      "column": 34,
+      "name": "学习辅助",
+      "positive_statement": "我用它辅助理解课程里的概念"
+    },
+    {
+      "column": 35,
+      "name": "创造性辅助",
+      "positive_statement": "我用它协助构思小说情节"
+    },
+    {
+      "column": 36,
+      "name": "信息核验",
+      "positive_statement": "我会拿其他来源核验它的回答"
+    },
+    {
+      "column": 37,
+      "name": "发现错误",
+      "positive_statement": "我发现过它给出的事实性错误"
+    },
+    {
+      "column": 38,
+      "name": "隐私担忧",
+      "positive_statement": "我担心输入的个人信息泄露"
+    },
+    {
+      "column": 39,
+      "name": "删除记录",
+      "positive_statement": "我因此删除过聊天记录"
+    },
+    {
+      "column": 40,
+      "name": "迁移平台",
+      "positive_statement": "我从一个聊天平台迁移到另一个平台"
+    },
+    {
+      "column": 41,
+      "name": "模型变化失落",
+      "positive_statement": "模型更新后我因表达变化感到失落"
+    },
+    {
+      "column": 42,
+      "name": "持续比较回答",
+      "positive_statement": "同一个问题我会持续比较多个回答"
+    },
+    {
+      "column": 43,
+      "name": "拟人化归因",
+      "positive_statement": "我有时觉得它具有自己的意图"
+    },
+    {
+      "column": 44,
+      "name": "明确工具定位",
+      "positive_statement": "我明确把它当作没有感受的工具"
+    }
+  ]
+}

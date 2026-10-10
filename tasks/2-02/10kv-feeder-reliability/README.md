@@ -2,34 +2,32 @@
 
 依据馈线拓扑与设备参数计算负荷点可靠性，分别整理等权和用户加权口径下的系统指标。
 
-职业：供用电工程技术人员（2-02-12-02）
+职业：供用电工程技术人员 · `2-02-12-02`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是供用电工程人员，需要分析一条 10kV 馈线的停电风险，说明指标口径与计划停电的处理。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-80 段线路、80 个变压器的拓扑、设备参数和计算规则。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**负荷点结果 · 40 分**
-
-按变压器 ID 比对路径累计结果和参数，按记录与字段正确比例计分。
-
-**等权指标 · 25 分**
-
-逐字段比对系统等权指标，按正确比例计分。
-
-**用户加权指标 · 30 分**
-
-逐字段比对加权指标与用户总数，按正确比例计分。
-
-**方法说明 · 5 分**
-
-方法正文至少 60 字，取得本项分数。
-
-
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

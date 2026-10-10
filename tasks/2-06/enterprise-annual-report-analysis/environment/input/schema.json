@@ -1,0 +1,14 @@
+{
+  "revenue": "营业收入",
+  "net_income": "归母净利润",
+  "assets": "资产总额",
+  "liabilities": "负债总额",
+  "cash": "货币资金",
+  "equity": "归母权益",
+  "operating_cashflow": "经营现金净流量",
+  "capex": "购建长期资产现金支出",
+  "debt": "有息债务",
+  "shares": "加权平均股数",
+  "eps": "基本每股收益",
+  "dividends": "分配股利现金支出"
+}

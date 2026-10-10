@@ -1,0 +1,49 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "冲突识别与证据",
+      "weight": 100,
+      "rule": "四项有效发现各计 25 分；每项需有两个不同文件的原文、页码，并在报告中引用。额外无效发现每项扣 20 分，报告分节数与发现数每差一项再扣 20 分；最低为 0 分。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "解析 findings.json 和中文审阅报告，匹配四类实质冲突。",
+    "核验每项发现至少两份不同文件的真实页码与逐字引句。",
+    "检查报告中的发现数量与结构化发现一致，再扣除额外或无效发现。"
+  ],
+  "metrics": [
+    "reward = max(0, 有效发现数 / 4 − 0.2 × 无效发现数 − 0.2 × |报告发现数−JSON发现数|)。",
+    "同一冲突类别只计一次；接受能覆盖目标差异的有效证据配对。"
+  ],
+  "gates": [
+    "每项有效发现需要双文档证据，原句、页码和报告引用须能对应。"
+  ],
+  "checks": [
+    {
+      "name": "四项证据化发现及额外发现惩罚",
+      "weight": 100,
+      "implementation": "audit"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

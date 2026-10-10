@@ -1,0 +1,18 @@
+{
+  "filing_id": "CN005_2023",
+  "company": "沐辰服务",
+  "year": 2023,
+  "currency": "CNY",
+  "revenue": 721330000.0,
+  "net_income": 115412800.0,
+  "assets": 1442660000.0,
+  "liabilities": 605917200.0,
+  "cash": 129839400.0,
+  "equity": 836742800.0,
+  "operating_cashflow": 138495360.0,
+  "capex": 32459850.0,
+  "debt": 424142040.0,
+  "shares": 100000000.0,
+  "eps": 1.1541,
+  "dividends": 23082560.0
+}

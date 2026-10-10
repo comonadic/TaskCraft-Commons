@@ -1,0 +1,6 @@
+{
+  "static": 0.7,
+  "live_cluster": 0.3,
+  "gates": "chart可渲染、values存在、Secret合法base64",
+  "live": "Pod、Service、API及数据库结果、HPA真实CPU指标、backend通/frontend不通DB"
+}

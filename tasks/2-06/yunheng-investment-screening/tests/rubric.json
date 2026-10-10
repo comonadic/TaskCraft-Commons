@@ -1,0 +1,8 @@
+{
+  "financials": 0.45,
+  "evidence_structure": 0.15,
+  "risks": 0.1,
+  "diligence": 0.1,
+  "memo_contract": 0.2,
+  "limitation": "自动评分不替代投资逻辑及事实蕴含的专家审核"
+}

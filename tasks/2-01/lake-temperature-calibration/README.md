@@ -2,22 +2,32 @@
 
 结合气象驱动与多深度水温观测，率定湖泊热力模型参数，交付模拟剖面和误差分析。
 
-职业：地球科学研究人员（2-01-06-06）
+职业：地球科学研究人员 · `2-01-06-06`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是湖泊环境研究人员，需要确定能够解释多年观测的模型参数，并整理全时段水温结果。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-2,556 日驱动数据、16 层模型设置和八个深度的定期观测记录。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**模拟与率定结果 · 100 分**
-
-重新执行水温模型，按 0.000001 绝对容差检查模拟值；报告正确比例乘以 min(1, 0.08 ÷ RMSE)，再换算为百分制。
-
-参数分别位于 mixing 0.02～0.5、exchange 0.05～0.45、attenuation 0.08～0.6；输出需覆盖全部时间与深度。
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

@@ -3,14 +3,14 @@
   "title": "中文 AI 使用体验文本心理编码",
   "brief": "依据心理编码手册标注中文 AI 使用体验文本，判断叙述焦点和行为概念，完成统一格式的编码工作簿。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-01",
   "occupation": {
     "code": "2-01-04-02",
     "name": "心理学研究人员"
   },
   "scene": "你是心理研究文本编码人员，需要让每条文本的标注可与团队使用的编码体系一致比较。",
-  "taskPrompt": "你是心理研究文本编码人员，需要让每条文本的标注可与团队使用的编码体系一致比较。\n\n1. 阅读编码手册，理解概念定义和排除情形\n2. 逐条判断文本焦点及行为标签\n3. 将 95 条文本的 39 项布尔标注填写到工作簿\n\n交付成果：\n- ai_addiction_annotations_output.xlsx：“文本编码”工作表，保留文本元信息并填写 3,705 个布尔标注。",
+  "taskPrompt": "# 中文 AI 使用体验文本心理编码\n\n你是心理研究文本编码人员，需要让每条文本的标注可与团队使用的编码体系一致比较。\n\n1. 阅读编码手册，理解概念定义和排除情形\n2. 逐条判断文本焦点及行为标签\n3. 将 95 条文本的 39 项布尔标注填写到工作簿\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/ai_addiction_annotations_output.xlsx`：“文本编码”工作表，保留文本元信息并填写 3,705 个布尔标注。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n## 运行与提交\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`ai_addiction_annotations_output.xlsx`，同模板工作表“文本编码”，95数据行、39布尔列；不得用字符串替代布尔值。\n",
   "agentMustDo": [
     "阅读编码手册，理解概念定义和排除情形",
     "逐条判断文本焦点及行为标签",
@@ -24,35 +24,35 @@
   "inputFiles": [
     {
       "name": "codebook.pdf",
-      "path": "input/codebook.pdf",
+      "path": "environment/input/codebook.pdf",
       "format": "PDF",
       "bytes": 79245,
       "description": "codebook.pdf，用于中文 AI 使用体验文本心理编码。"
     },
     {
       "name": "column_dictionary.json",
-      "path": "input/column_dictionary.json",
+      "path": "environment/input/column_dictionary.json",
       "format": "JSON",
       "bytes": 5034,
       "description": "column_dictionary.json，用于中文 AI 使用体验文本心理编码。"
     },
     {
       "name": "posts.xlsx",
-      "path": "input/posts.xlsx",
+      "path": "environment/input/posts.xlsx",
       "format": "XLSX",
       "bytes": 20861,
       "description": "posts.xlsx，用于中文 AI 使用体验文本心理编码。"
     },
     {
       "name": "posts.xlsx.inspect.ndjson",
-      "path": "input/posts.xlsx.inspect.ndjson",
+      "path": "environment/input/posts.xlsx.inspect.ndjson",
       "format": "NDJSON",
       "bytes": 229960,
       "description": "posts.xlsx.inspect.ndjson，用于中文 AI 使用体验文本心理编码。"
     },
     {
       "name": "posts.xlsx.png",
-      "path": "input/posts.xlsx.png",
+      "path": "environment/input/posts.xlsx.png",
       "format": "PNG",
       "bytes": 587381,
       "description": "posts.xlsx.png，用于中文 AI 使用体验文本心理编码。"
@@ -63,13 +63,14 @@
   "referenceFiles": [
     {
       "name": "ai_addiction_annotations_output.xlsx",
-      "path": "output/ai_addiction_annotations_output.xlsx",
+      "path": "reference/ai_addiction_annotations_output.xlsx",
       "format": "XLSX",
+      "bytes": 22871,
       "description": "“文本编码”工作表，保留文本元信息并填写 3,705 个布尔标注。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "文本编码",
@@ -81,6 +82,76 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "核对输入与输出的记录集合、原始元数据和焦点字段。",
+      "按 codebook 检查每个布尔编码的合法值。",
+      "逐格对齐并计算 3,705 个编码单元的正确率。"
+    ],
+    "metrics": [
+      "总分 = 100 × 正确编码单元数 / 3,705。",
+      "元数据保真、焦点唯一性和字段约定由 score 函数先行检查。"
+    ],
+    "gates": [
+      "记录集合、原始元数据、焦点字段与布尔格式必须满足提交约定。"
+    ],
+    "checks": [
+      {
+        "name": "元数据保真、焦点唯一与3705格编码",
+        "weight": 100,
+        "implementation": "score"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "ai_addiction_annotations_output.xlsx",
+      "path": "output/ai_addiction_annotations_output.xlsx",
+      "format": "XLSX",
+      "description": "“文本编码”工作表，保留文本元信息并填写 3,705 个布尔标注。"
+    }
+  ],
+  "referenceFileCount": 1,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/column_dictionary.json",
+      "content": "{\n  \"focus\": [\n    \"情绪体验\",\n    \"认知评价\",\n    \"行为调节\"\n  ],\n  \"themes\": [\n    {\n      \"column\": 9,\n      \"name\": \"深夜使用\",\n      \"positive_statement\": \"连续七晚过了凌晨一点还在聊天\"\n    },\n    {\n      \"column\": 10,\n      \"name\": \"超过计划时长\",\n      \"positive_statement\": \"每天原计划十分钟最后用了两个小时\"\n    },\n    {\n      \"column\": 11,\n      \"name\": \"工作分心\",\n      \"positive_statement\": \"上班时反复切到聊天窗口而打断手头工作\"\n    },\n    {\n      \"column\": 12,\n      \"name\": \"拖延任务\",\n      \"positive_statement\": \"为了继续聊天把原定任务推到了第二天\"\n    },\n    {\n      \"column\": 13,\n      \"name\": \"情绪安慰\",\n      \"positive_statement\": \"心情低落时聊天让我得到安慰\"\n    },\n    {\n      \"column\": 14,\n      \"name\": \"孤独缓解\",\n      \"positive_statement\": \"独处时聊天减轻了我的孤独感\"\n    },\n    {\n      \"column\": 15,\n      \"name\": \"情感依恋\",\n      \"positive_statement\": \"我对这个聊天对象产生了难以割舍的感情\"\n    },\n    {\n      \"column\": 16,\n      \"name\": \"把AI当朋友\",\n      \"positive_statement\": \"我开始把它当成可以倾诉的朋友\"\n    },\n    {\n      \"column\": 17,\n      \"name\": \"焦虑缓解\",\n      \"positive_statement\": \"紧张时聊一会儿我的焦虑会减轻\"\n    },\n    {\n      \"column\": 18,\n      \"name\": \"使用后内疚\",\n      \"positive_statement\": \"结束聊天后我为花掉的时间感到内疚\"\n    },\n    {\n      \"column\": 19,\n      \"name\": \"担心依赖\",\n      \"positive_statement\": \"我担心自己越来越依赖它\"\n    },\n    {\n      \"column\": 20,\n      \"name\": \"主动限时\",\n      \"positive_statement\": \"我主动设置了每日三十分钟限额\"\n    },\n    {\n      \"column\": 21,\n      \"name\": \"卸载尝试\",\n      \"positive_statement\": \"我曾经卸载应用想停止使用\"\n    },\n    {\n      \"column\": 22,\n      \"name\": \"限时失败\",\n      \"positive_statement\": \"设置限额后我还是反复点了延长\"\n    },\n    {\n      \"column\": 23,\n      \"name\": \"重新安装\",\n      \"positive_statement\": \"卸载后我又把同一个应用装了回来\"\n    },\n    {\n      \"column\": 24,\n      \"name\": \"寻求人类支持\",\n      \"positive_statement\": \"我为这件事主动找真人朋友谈过\"\n    },\n    {\n      \"column\": 25,\n      \"name\": \"减少线下社交\",\n      \"positive_statement\": \"这段时间我减少了和朋友线下见面\"\n    },\n    {\n      \"column\": 26,\n      \"name\": \"睡眠减少\",\n      \"positive_statement\": \"聊天使我每晚比以前少睡了一个小时\"\n    },\n    {\n      \"column\": 27,\n      \"name\": \"身体疲劳\",\n      \"positive_statement\": \"长时间使用后我明显觉得身体疲劳\"\n    },\n    {\n      \"column\": 28,\n      \"name\": \"忽略饮食\",\n      \"positive_statement\": \"我因为聊天错过了正餐\"\n    },\n    {\n      \"column\": 29,\n      \"name\": \"付费升级\",\n      \"positive_statement\": \"我购买了应用的付费订阅\"\n    },\n    {\n      \"column\": 30,\n      \"name\": \"超预算消费\",\n      \"positive_statement\": \"我在这上面的支出超过了自己的预算\"\n    },\n    {\n      \"column\": 31,\n      \"name\": \"隐瞒使用\",\n      \"positive_statement\": \"我向家人隐瞒了实际使用时长\"\n    },\n    {\n      \"column\": 32,\n      \"name\": \"被亲友提醒\",\n      \"positive_statement\": \"亲友曾提醒我使用得太久\"\n    },\n    {\n      \"column\": 33,\n      \"name\": \"任务效率提升\",\n      \"positive_statement\": \"它帮助我更快完成了工作任务\"\n    },\n    {\n      \"column\": 34,\n      \"name\": \"学习辅助\",\n      \"positive_statement\": \"我用它辅助理解课程里的概念\"\n    },\n    {\n      \"column\": 35,\n      \"name\": \"创造性辅助\",\n      \"positive_statement\": \"我用它协助构思小说情节\"\n    },\n    {\n      \"column\": 36,\n      \"name\": \"信息核验\",\n      \"positive_statement\": \"我会拿其他来源核验它的回答\"\n    },\n    {\n      \"column\": 37,\n      \"name\": \"发现错误\",\n      \"positive_statement\": \"我发现过它给出的事实性错误\"\n    },\n    {\n      \"column\": 38,\n      \"name\": \"隐私担忧\",\n      \"positive_statement\": \"我担心输入的个人信息泄露\"\n    },\n    {\n      \"column\": 39,\n      \"name\": \"删除记录\",\n      \"positive_statement\": \"我因此删除过聊天记录\"\n    },\n    {\n      \"column\": 40,\n      \"name\": \"迁移平台\",\n      \"positive_statement\": \"我从一个聊天平台迁移到另一个平台\"\n    },\n    {\n      \"column\": 41,\n      \"name\": \"模型变化失落\",\n      \"positive_statement\": \"模型更新后我因表达变化感到失落\"\n    },\n    {\n      \"column\": 42,\n      \"name\": \"持续比较回答\",\n      \"positive_statement\": \"同一个问题我会持续比较多个回答\"\n    },\n    {\n      \"column\": 43,\n      \"name\": \"拟人化归因\",\n      \"positive_statement\": \"我有时觉得它具有自己的意图\"\n    },\n    {\n      \"column\": 44,\n      \"name\": \"明确工具定位\",\n      \"positive_statement\": \"我明确把它当作没有感受的工具\"\n    }\n  ]\n}\n",
+      "truncated": false
+    }
+  ]
 }

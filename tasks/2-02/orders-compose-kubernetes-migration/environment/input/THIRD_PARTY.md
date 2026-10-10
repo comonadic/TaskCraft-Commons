@@ -1,0 +1,1 @@
+K3s v1.32.2+k3s1、Helm v3.17.1（Apache-2.0）；React/ReactDOM18.3.1（MIT）；Python、PostgreSQL、Flask、psycopg及容器基础发行版各遵循自身许可。React文件保留许可标头。镜像/二进制不是合成数据；仅订单、业务场景与题面为本seed合成材料。仓库清单与原始下载地址见顶层THIRD_PARTY.md。

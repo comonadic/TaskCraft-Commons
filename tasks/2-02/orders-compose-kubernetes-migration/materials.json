@@ -1,66 +1,66 @@
 [
   {
-    "path": "input/THIRD_PARTY.md",
+    "path": "environment/input/THIRD_PARTY.md",
     "bytes": 353,
     "sha256": "2e6df9efbe626fe3bbc9956d04f4b55c32f919f7c15c69c05ce1d7bcf17076b1"
   },
   {
-    "path": "input/app/backend/Dockerfile",
+    "path": "environment/input/app/backend/Dockerfile",
     "bytes": 90,
     "sha256": "a8e5d4482b07c8465eec2fb2f71daae0c0365067ad5c30aecddbaf7c60968420"
   },
   {
-    "path": "input/app/backend/backend.py",
+    "path": "environment/input/app/backend/backend.py",
     "bytes": 868,
     "sha256": "497a29f99204badf384267a51ffa784780640cd0ccaea0fb8d993d58a815de09"
   },
   {
-    "path": "input/app/backend/tests/test_app.py",
+    "path": "environment/input/app/backend/tests/test_app.py",
     "bytes": 311,
     "sha256": "a27954e07b54eb14ad99b349e1f31caaa6ec64e28c4f138ef5ad9e9f7765abe7"
   },
   {
-    "path": "input/app/db/init.sql",
+    "path": "environment/input/app/db/init.sql",
     "bytes": 134,
     "sha256": "42e5e09d7cae9ccd265765d96f714aed6f8373d549da5bb0dd393114758cc883"
   },
   {
-    "path": "input/app/docker-compose.yml",
+    "path": "environment/input/app/docker-compose.yml",
     "bytes": 425,
     "sha256": "18723341bd504f67f78d49708ec0b01dfd5940f47e058f1b93c9a3fbff5bdb30"
   },
   {
-    "path": "input/app/frontend/Dockerfile",
+    "path": "environment/input/app/frontend/Dockerfile",
     "bytes": 92,
     "sha256": "ae594804f87270863b4e51185a97ac9e301fc3e8cff8bf25d8375a0f26a7d4b9"
   },
   {
-    "path": "input/app/frontend/index.html",
+    "path": "environment/input/app/frontend/index.html",
     "bytes": 533,
     "sha256": "04ce629b615bc8253472e7ed51b2098fc7d36e2f1decf53357fb80338a24ae10"
   },
   {
-    "path": "input/app/frontend/package.json",
+    "path": "environment/input/app/frontend/package.json",
     "bytes": 138,
     "sha256": "e99c26ed0010a0977473e2ef19ba2c82421ead6444274bf1c249c4298386d03a"
   },
   {
-    "path": "input/app/frontend/react-dom.js",
+    "path": "environment/input/app/frontend/react-dom.js",
     "bytes": 131835,
     "sha256": "35f4f974f4b2bcd44da73963347f8952e341f83909e4498227d4e26b98f66f0d"
   },
   {
-    "path": "input/app/frontend/react.js",
+    "path": "environment/input/app/frontend/react.js",
     "bytes": 10751,
     "sha256": "d949f1c3687aedadcedac85261865f29b17cd273997e7f6b2bfc53b2f9d4c4dd"
   },
   {
-    "path": "input/app/frontend/test.cjs",
+    "path": "environment/input/app/frontend/test.cjs",
     "bytes": 253,
     "sha256": "cf5bfb58a987aa3579159d5efe811b079672e364a5468c9876d4d28321807de4"
   },
   {
-    "path": "input/requirements.md",
+    "path": "environment/input/requirements.md",
     "bytes": 2056,
     "sha256": "ca47bcc6f1aac468183f3c61637048802916e9981ec6118c8f5ba20af453d277"
   }

@@ -1,0 +1,18 @@
+{
+  "filing_id": "CN001_2023",
+  "company": "澄海精密",
+  "year": 2023,
+  "currency": "CNY",
+  "revenue": 325820000.0,
+  "net_income": 26065600.0,
+  "assets": 651640000.0,
+  "liabilities": 273688800.0,
+  "cash": 58647600.0,
+  "equity": 377951200.0,
+  "operating_cashflow": 31278720.0,
+  "capex": 14661900.0,
+  "debt": 191582160.0,
+  "shares": 100000000.0,
+  "eps": 0.2607,
+  "dividends": 5213120.0
+}

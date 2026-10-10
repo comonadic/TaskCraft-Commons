@@ -2,30 +2,32 @@
 
 整合行情与财报信息，完成六板块权益研究摘要，保留关键计算公式及资料对应的时间和出处。
 
-职业：证券投资专业人员（2-06-11-03）
+职业：证券投资专业人员 · `2-06-11-03`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是证券研究人员，需要把澄海精密的市场与财务信息整理进统一研究模板，供团队进一步分析。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-行情页面、公司统计页面、年度报告和六板块工作簿模板。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**数据与计算结果 · 65 分**
-
-比较模板单元格的输入与派生数值，按正确比例计分。
-
-**动态公式 · 25 分**
-
-在四组输入变化下重新检查公式结果，按与要求公式等价的比例计分。
-
-**资料索引 · 10 分**
-
-比对行情时点、公司、币种和三个资料页面，按字段正确比例计分。
-
-
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

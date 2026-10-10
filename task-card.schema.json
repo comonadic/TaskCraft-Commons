@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TaskCraft task card 0.3",
+  "type": "object",
+  "required": ["taskId", "title", "brief", "version", "language", "occupation", "scene", "taskPrompt", "agentMustDo", "inputFiles", "deliverables", "referenceFiles", "evaluation", "runtime"],
+  "properties": {
+    "taskId": {"type": "string", "pattern": "^[0-9]-[0-9]{2}/[a-z0-9-]+$"},
+    "title": {"type": "string", "minLength": 4},
+    "brief": {"type": "string", "minLength": 20},
+    "version": {"type": "string"},
+    "language": {"const": "zh-CN"},
+    "occupation": {"type": "object", "required": ["code", "name"], "properties": {"code": {"type": "string"}, "name": {"type": "string"}}},
+    "agentMustDo": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "inputFiles": {"type": "array", "items": {"$ref": "#/$defs/file"}},
+    "referenceFiles": {"type": "array", "items": {"$ref": "#/$defs/file"}},
+    "deliverables": {"type": "array", "items": {"$ref": "#/$defs/file"}},
+    "evaluation": {
+      "type": "object", "required": ["type", "entrypoint", "formula", "process", "metrics", "checks", "criteria", "resultFiles"],
+      "properties": {
+        "type": {"const": "deterministic"},
+        "entrypoint": {"const": "tests/test.sh"},
+        "process": {"type": "array", "minItems": 2, "items": {"type": "string"}},
+        "checks": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["name", "weight", "implementation"], "properties": {"weight": {"type": "number", "minimum": 0, "maximum": 100}}}}
+      }
+    },
+    "runtime": {"type": "object", "required": ["framework", "workspace", "verifierMode"], "properties": {"framework": {"const": "Harbor"}, "verifierMode": {"enum": ["shared", "separate"]}}}
+  },
+  "$defs": {"file": {"type": "object", "required": ["name", "path", "format", "description"], "properties": {"path": {"type": "string", "pattern": "^(environment/input|reference|output)/"}}}}
+}

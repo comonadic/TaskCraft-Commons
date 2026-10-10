@@ -1,0 +1,4012 @@
+{
+  "records": 400,
+  "decision_counts": {
+    "quarantine": 22,
+    "review": 28,
+    "create": 75,
+    "skip_protected": 39,
+    "overlay": 236
+  },
+  "changes": [
+    {
+      "record_id": "B00000",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00001",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00002",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00003",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00004",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00005",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00006",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00007",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00008",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00009",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00010",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00011",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00012",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00013",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00014",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00015",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00016",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00017",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00018",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00019",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00020",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00021",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00022",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00023",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00024",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00025",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00026",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00027",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00028",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00029",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00030",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00031",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00032",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00033",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00034",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00035",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00036",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00037",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00038",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00039",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00040",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00041",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00042",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00043",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00044",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00045",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00046",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00047",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00048",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00049",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00050",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00051",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00052",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00053",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00054",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00055",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00056",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00057",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00058",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00059",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00060",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00061",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00062",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00063",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00064",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00065",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00066",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00067",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00068",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00069",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00070",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00071",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00072",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00073",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00074",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00075",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00076",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00077",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00078",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00079",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00080",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00081",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00082",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00083",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00084",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00085",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00086",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00087",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00088",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00089",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00090",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00091",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00092",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00093",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00094",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00095",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00096",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00097",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00098",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00099",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00100",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00101",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00102",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00103",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00104",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00105",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00106",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00107",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00108",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00109",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00110",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00111",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00112",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00113",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00114",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00115",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00116",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00117",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00118",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00119",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00120",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00121",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00122",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00123",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00124",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00125",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00126",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00127",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00128",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00129",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00130",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00131",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00132",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00133",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00134",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00135",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00136",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00137",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00138",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00139",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00140",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00141",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00142",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00143",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00144",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00145",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00146",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00147",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00148",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00149",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00150",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00151",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00152",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00153",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00154",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00155",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00156",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00157",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00158",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00159",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00160",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00161",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00162",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00163",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00164",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00165",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00166",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00167",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00168",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00169",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00170",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00171",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00172",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00173",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00174",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00175",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00176",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00177",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00178",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00179",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00180",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00181",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00182",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00183",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00184",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00185",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00186",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00187",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00188",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00189",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00190",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00191",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00192",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00193",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00194",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00195",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00196",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00197",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00198",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00199",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00200",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00201",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00202",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00203",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00204",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00205",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00206",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00207",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00208",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00209",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00210",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00211",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00212",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00213",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00214",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00215",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00216",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00217",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00218",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00219",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00220",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00221",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00222",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00223",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00224",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00225",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00226",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00227",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00228",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00229",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00230",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00231",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00232",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00233",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00234",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00235",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00236",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00237",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00238",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00239",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00240",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00241",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00242",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00243",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00244",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00245",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00246",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00247",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00248",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00249",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00250",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00251",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00252",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00253",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00254",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00255",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00256",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00257",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00258",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00259",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00260",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00261",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00262",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00263",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00264",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00265",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00266",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00267",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00268",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00269",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00270",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00271",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00272",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00273",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00274",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00275",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00276",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00277",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00278",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00279",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00280",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00281",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00282",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00283",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00284",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00285",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00286",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00287",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00288",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00289",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00290",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00291",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00292",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00293",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00294",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00295",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00296",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00297",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00298",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00299",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00300",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00301",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00302",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00303",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00304",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00305",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00306",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00307",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00308",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00309",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00310",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00311",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00312",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00313",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00314",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00315",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00316",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00317",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00318",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00319",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00320",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00321",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00322",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00323",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00324",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00325",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00326",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00327",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00328",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00329",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00330",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00331",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00332",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00333",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00334",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00335",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00336",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00337",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00338",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00339",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00340",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00341",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00342",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00343",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00344",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00345",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00346",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00347",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00348",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00349",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00350",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00351",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00352",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00353",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00354",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00355",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00356",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00357",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00358",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00359",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00360",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00361",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00362",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00363",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00364",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00365",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00366",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00367",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00368",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00369",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00370",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00371",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00372",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00373",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00374",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00375",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00376",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00377",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00378",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00379",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00380",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00381",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00382",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00383",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00384",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00385",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00386",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00387",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00388",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00389",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00390",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00391",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00392",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00393",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00394",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00395",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00396",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00397",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00398",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    },
+    {
+      "record_id": "B00399",
+      "changes": [
+        "title",
+        "language",
+        "authority",
+        "isbn",
+        "url"
+      ]
+    }
+  ]
+}

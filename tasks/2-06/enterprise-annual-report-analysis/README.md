@@ -2,34 +2,32 @@
 
 批量整理企业年度报告中的财务指标与原文依据，回答跨公司、跨年度问题，并检查重复处理的一致性。
 
-职业：会计专业人员（2-06-03-00）
+职业：会计专业人员 · `2-06-03-00`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是财务数据分析人员，需要把六家企业三年的报告整理为结构化数据，为研究团队提供可追溯的分析结果。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-六家企业三年的 18 份 PDF 年报、指标说明和问题清单。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**指标抽取 · 60 分**
-
-逐报告比对财务字段，金额绝对容差为 0.01，按报告平均正确比例计分。
-
-**原文覆盖 · 10 分**
-
-逐份检查公司、年度及利润、现金流和营收相关原文，按完整报告比例计分。
-
-**跨报告问答 · 20 分**
-
-按答案字段比对计算结果，金额绝对容差为 0.01。
-
-**重复处理 · 10 分**
-
-对五份指定报告再次比对字段，按平均正确比例计分。
-
-
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

@@ -1,0 +1,54 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "表现判断",
+      "weight": 70,
+      "rule": "跌倒或跟踪 RMSE > 0.35 判为 failed；无跌倒且 RMSE ≤ 0.15 为 successful，其余为 nearly_successful。按八例正确比例计分。"
+    },
+    {
+      "name": "观察与指标",
+      "weight": 30,
+      "rule": "比对最低高度、跟踪 RMSE 和跌倒时间，绝对容差为 0.0001；中文观察至少 20 字，按八例平均正确比例计分。"
+    }
+  ],
+  "notes": "每例先核对轨迹与独立回放指标，视频时长大于 5.7 秒，并抽取三帧与回放画面比对。",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "在独立 MuJoCo 环境逐个复跑策略与给定测试场景。",
+    "读取 episode 指标，核对分类和中文证据。",
+    "检查每段视频时长与三个抽样帧，再按分类和证据加权计分。"
+  ],
+  "metrics": [
+    "每段视频要求覆盖 6 秒；三个抽样帧与独立回放进行像素比较。",
+    "视频条件通过后，分类占 70%、证据占 30%。"
+  ],
+  "gates": [
+    "视频内容与独立回放一致，才对该场景的分类和证据计分。"
+  ],
+  "checks": [
+    {
+      "name": "独立MuJoCo回放、视频内容、中文证据与分类",
+      "weight": 100,
+      "implementation": "evaluate"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

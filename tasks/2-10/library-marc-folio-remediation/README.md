@@ -2,38 +2,32 @@
 
 按照编目政策修复 MARC 书目，判断 FOLIO 中的覆盖、新建与隔离动作，并整理导入计划和质量报告。
 
-职业：文献信息专业人员（2-10-06-01）
+职业：文献信息专业人员 · `2-10-06-01`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是图书馆文献信息人员，需要把批量书目中的字段问题修复为可导入的记录，并说明每条处理决定。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-400 条书目、作者权威映射、馆藏资料、FOLIO 快照和编目政策。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**书目字段 · 30 分**
-
-按记录 ID 比对 ISBN、作者、题名、语言、链接和馆藏字段，按正确比例计分。
-
-**处理决策 · 20 分**
-
-比对覆盖、新建、隔离、复核和跳过等动作及目标记录，按正确比例计分。
-
-**导入计划 · 10 分**
-
-比对记录、动作、目标实例和分馆，按正确比例计分。
-
-**质量与程序 · 10 分**
-
-检查决策数量、400 条变化记录、修复摘要与程序文件。
-
-**新增案例处理 · 30 分**
-
-将程序用于另外 80 条案例；字段修复、处理决策、导入计划按 40%、40%、20% 加权计分。
-
-
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

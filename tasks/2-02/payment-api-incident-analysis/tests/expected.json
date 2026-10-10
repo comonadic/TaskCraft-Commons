@@ -1,0 +1,36 @@
+{
+  "roots": [
+    {
+      "type": "memory_limit",
+      "resource": "deployment/payment-api",
+      "evidence_file": "failing_pod.txt",
+      "evidence_quote": "Last State: Terminated Reason: OOMKilled Exit Code: 137"
+    },
+    {
+      "type": "premature_liveness",
+      "resource": "deployment/payment-api",
+      "evidence_file": "failing_pod.txt",
+      "evidence_quote": "Liveness probe failed: connect: connection refused during initialization"
+    },
+    {
+      "type": "metrics_port_mismatch",
+      "resource": "ServiceMonitor/payment-api",
+      "evidence_file": "failing_pod.txt",
+      "evidence_quote": "metrics listener bound to port 9100; ServiceMonitor targetPort=9090"
+    }
+  ],
+  "affected_resources": [
+    "deployment/payment-api",
+    "svc/payment-api",
+    "ServiceMonitor/payment-api"
+  ],
+  "parameters": {
+    "memory_limit": "512Mi",
+    "initialDelaySeconds": 30,
+    "metrics_target_port": 9100
+  },
+  "rollback": {
+    "revision": 16,
+    "image": "registry.local/payment:1.6.2"
+  }
+}

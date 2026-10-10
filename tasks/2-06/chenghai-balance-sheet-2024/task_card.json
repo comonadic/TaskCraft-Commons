@@ -3,14 +3,14 @@
   "title": "澄海精密 2024 年合并资产负债表重构",
   "brief": "阅读澄海精密年度报告，整理报告期末的合并资产负债表，并为各项金额提供可定位的报告依据。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-06",
   "occupation": {
     "code": "2-06-03-00",
     "name": "会计专业人员"
   },
   "scene": "你负责为财务分析团队整理澄海精密的年度财务数据。报告同时列有合并报表、母公司报表和上年比较数，需要将目标期间的数据整理为统一口径。",
-  "taskPrompt": "你负责为财务分析团队整理澄海精密的年度财务数据。报告同时列有合并报表、母公司报表和上年比较数，需要将目标期间的数据整理为统一口径。\n\n1. 定位 2024 年 12 月 31 日的合并资产负债表\n2. 按照字段说明提取 22 项金额，统一换算为人民币元\n3. 为每项金额记录报告文件、页码和原文，交付结构化报表与证据表\n\n交付成果：\n- balance_sheet.json：合并资产负债表，包含公司、报告日期、币种、单位及 22 项金额。\n- evidence.json：逐项列出金额对应的报告文件、页码和原文摘录。",
+  "taskPrompt": "# 澄海精密 2024 年合并资产负债表重构\n\n你负责为财务分析团队整理澄海精密的年度财务数据。报告同时列有合并报表、母公司报表和上年比较数，需要将目标期间的数据整理为统一口径。\n\n1. 定位 2024 年 12 月 31 日的合并资产负债表\n2. 按照字段说明提取 22 项金额，统一换算为人民币元\n3. 为每项金额记录报告文件、页码和原文，交付结构化报表与证据表\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/balance_sheet.json`：合并资产负债表，包含公司、报告日期、币种、单位及 22 项金额。\n- `/app/output/evidence.json`：逐项列出金额对应的报告文件、页码和原文摘录。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n你是会计数据复核人员。根据 `chenghai_2024.pdf` 与 HTML 镜像，重建 2024-12-31 的合并资产负债表。报告包含母公司和合并表、上年比较数、万元与元单位的附注。只抽取合并表本年数，输出统一为人民币元。括号表示负数，横杠表示零。字段与科目映射见 `schema.json`。同时提交每个字段的文件、PDF 页码、原文摘录与单位转换说明，不得把母公司数据混入。\n\n## 运行与提交\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`balance_sheet.json`：schema 中全部 22 个数值字段及 company、date、currency、unit。`evidence.json`：以字段为键，值含 page、quote、source。\n",
   "agentMustDo": [
     "定位 2024 年 12 月 31 日的合并资产负债表",
     "按照字段说明提取 22 项金额，统一换算为人民币元",
@@ -24,21 +24,21 @@
   "inputFiles": [
     {
       "name": "澄海精密年度报告 · 网页",
-      "path": "input/chenghai_2024.html",
+      "path": "environment/input/chenghai_2024.html",
       "format": "HTML",
       "bytes": 2783,
       "description": "澄海精密年度报告 · 网页，用于澄海精密 2024 年合并资产负债表重构。"
     },
     {
       "name": "澄海精密年度报告 · PDF",
-      "path": "input/chenghai_2024.pdf",
+      "path": "environment/input/chenghai_2024.pdf",
       "format": "PDF",
       "bytes": 35623,
       "description": "澄海精密年度报告 · PDF，用于澄海精密 2024 年合并资产负债表重构。"
     },
     {
       "name": "结果字段说明",
-      "path": "input/schema.json",
+      "path": "environment/input/schema.json",
       "format": "JSON",
       "bytes": 996,
       "description": "结果字段说明，用于澄海精密 2024 年合并资产负债表重构。"
@@ -49,19 +49,21 @@
   "referenceFiles": [
     {
       "name": "balance_sheet.json",
-      "path": "output/balance_sheet.json",
+      "path": "reference/balance_sheet.json",
       "format": "JSON",
+      "bytes": 798,
       "description": "合并资产负债表，包含公司、报告日期、币种、单位及 22 项金额。"
     },
     {
       "name": "evidence.json",
-      "path": "output/evidence.json",
+      "path": "reference/evidence.json",
       "format": "JSON",
+      "bytes": 2898,
       "description": "逐项列出金额对应的报告文件、页码和原文摘录。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "金额与报表信息",
@@ -78,6 +80,96 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "读取 balance_sheet.json，核对公司、期间、币种、金额单位和 22 个资产负债字段。",
+      "将数值与指定期间合并口径的评分数据逐字段比较。",
+      "读取 evidence.json，逐字段核对报告页码、原文引句和材料文件名。"
+    ],
+    "metrics": [
+      "金额相等条件：|提交值−目标值| ≤ 0.01 + 0.00001 × |目标值|。",
+      "结构化字典使用实际与目标字段的并集作为分母，多余或缺少字段会降低字段匹配得分。",
+      "金额与期间口径占 80%；可定位证据占 20%。"
+    ],
+    "gates": [],
+    "checks": [
+      {
+        "name": "期间口径与22个金额",
+        "weight": 80.0,
+        "implementation": "lambda: tree_score(read_json(OUTPUT / 'balance_sheet.json'), read_json(TESTS / 'expected.json'), atol=0.01)"
+      },
+      {
+        "name": "逐字段可定位证据",
+        "weight": 20.0,
+        "implementation": "lambda: tree_score(read_json(OUTPUT / 'evidence.json'), read_json(TESTS / 'quotes.json'))"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "balance_sheet.json",
+      "path": "output/balance_sheet.json",
+      "format": "JSON",
+      "description": "合并资产负债表，包含公司、报告日期、币种、单位及 22 项金额。"
+    },
+    {
+      "name": "evidence.json",
+      "path": "output/evidence.json",
+      "format": "JSON",
+      "description": "逐项列出金额对应的报告文件、页码和原文摘录。"
+    }
+  ],
+  "referenceFileCount": 2,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/schema.json",
+      "content": "{\n  \"company\": \"澄海精密\",\n  \"date\": \"2024-12-31\",\n  \"currency\": \"CNY\",\n  \"unit\": \"yuan\",\n  \"fields\": {\n    \"cash\": \"货币资金\",\n    \"receivables\": \"应收账款\",\n    \"inventory\": \"存货\",\n    \"other_current\": \"其他流动资产\",\n    \"current_assets\": \"流动资产合计\",\n    \"ppe\": \"固定资产\",\n    \"intangibles\": \"无形资产\",\n    \"other_noncurrent\": \"其他非流动资产\",\n    \"noncurrent_assets\": \"非流动资产合计\",\n    \"assets\": \"资产总计\",\n    \"payables\": \"应付账款\",\n    \"short_debt\": \"短期借款\",\n    \"other_current_liabilities\": \"其他流动负债\",\n    \"current_liabilities\": \"流动负债合计\",\n    \"long_debt\": \"长期借款\",\n    \"other_noncurrent_liabilities\": \"其他非流动负债\",\n    \"noncurrent_liabilities\": \"非流动负债合计\",\n    \"liabilities\": \"负债合计\",\n    \"share_capital\": \"股本\",\n    \"reserves\": \"资本公积及盈余公积\",\n    \"retained_earnings\": \"未分配利润\",\n    \"equity\": \"所有者权益合计\"\n  }\n}\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/balance_sheet.json",
+      "content": "{\n  \"company\": \"澄海精密\",\n  \"date\": \"2024-12-31\",\n  \"currency\": \"CNY\",\n  \"unit\": \"yuan\",\n  \"cash\": 383000000.0,\n  \"receivables\": 580000000.0,\n  \"inventory\": 517000000.0,\n  \"other_current\": 615000000.0,\n  \"current_assets\": 2095000000.0,\n  \"ppe\": 465000000.0,\n  \"intangibles\": 395000000.0,\n  \"other_noncurrent\": 564000000.0,\n  \"noncurrent_assets\": 1424000000.0,\n  \"assets\": 3519000000.0,\n  \"payables\": 95000000.0,\n  \"short_debt\": 241000000.0,\n  \"other_current_liabilities\": 539000000.0,\n  \"current_liabilities\": 875000000.0,\n  \"long_debt\": 507000000.0,\n  \"other_noncurrent_liabilities\": 172000000.0,\n  \"noncurrent_liabilities\": 679000000.0,\n  \"liabilities\": 1554000000.0,\n  \"share_capital\": 456000000.0,\n  \"reserves\": 297000000.0,\n  \"retained_earnings\": 1212000000.0,\n  \"equity\": 1965000000.0\n}\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/evidence.json",
+      "content": "{\n  \"cash\": {\n    \"page\": 1,\n    \"quote\": \"货币资金 | 38,300.00 | 21,900.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"receivables\": {\n    \"page\": 1,\n    \"quote\": \"应收账款 | 58,000.00 | 30,000.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"inventory\": {\n    \"page\": 1,\n    \"quote\": \"存货 | 51,700.00 | 43,100.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"other_current\": {\n    \"page\": 1,\n    \"quote\": \"其他流动资产 | 61,500.00 | 56,000.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"current_assets\": {\n    \"page\": 1,\n    \"quote\": \"流动资产合计 | 209,500.00 | 151,000.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"ppe\": {\n    \"page\": 1,\n    \"quote\": \"固定资产 | 46,500.00 | 21,900.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"intangibles\": {\n    \"page\": 1,\n    \"quote\": \"无形资产 | 39,500.00 | 48,700.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"other_noncurrent\": {\n    \"page\": 1,\n    \"quote\": \"其他非流动资产 | 56,400.00 | 49,000.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"noncurrent_assets\": {\n    \"page\": 1,\n    \"quote\": \"非流动资产合计 | 142,400.00 | 119,600.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"assets\": {\n    \"page\": 1,\n    \"quote\": \"资产总计 | 351,900.00 | 270,600.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"payables\": {\n    \"page\": 2,\n    \"quote\": \"应付账款 | 9,500.00 | 15,500.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"short_debt\": {\n    \"page\": 2,\n    \"quote\": \"短期借款 | 24,100.00 | 46,100.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"other_current_liabilities\": {\n    \"page\": 2,\n    \"quote\": \"其他流动负债 | 53,900.00 | 13,100.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"current_liabilities\": {\n    \"page\": 2,\n    \"quote\": \"流动负债合计 | 87,500.00 | 74,700.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"long_debt\": {\n    \"page\": 2,\n    \"quote\": \"长期借款 | 50,700.00 | 10,700.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"other_noncurrent_liabilities\": {\n    \"page\": 2,\n    \"quote\": \"其他非流动负债 | 17,200.00 | 34,600.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"noncurrent_liabilities\": {\n    \"page\": 2,\n    \"quote\": \"非流动负债合计 | 67,900.00 | 45,300.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"liabilities\": {\n    \"page\": 2,\n    \"quote\": \"负债合计 | 155,400.00 | 120,000.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"share_capital\": {\n    \"page\": 2,\n    \"quote\": \"股本 | 45,600.00 | 51,300.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"reserves\": {\n    \"page\": 2,\n    \"quote\": \"资本公积及盈余公积 | 29,700.00 | 27,300.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"retained_earnings\": {\n    \"page\": 2,\n    \"quote\": \"未分配利润 | 121,200.00 | 72,000.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  },\n  \"equity\": {\n    \"page\": 2,\n    \"quote\": \"所有者权益合计 | 196,500.00 | 150,600.00\",\n    \"source\": \"chenghai_2024.pdf\"\n  }\n}\n",
+      "truncated": false
+    }
+  ]
 }

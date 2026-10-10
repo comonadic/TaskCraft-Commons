@@ -3,14 +3,14 @@
   "title": "医疗资源分配的费用代理偏差审计",
   "brief": "比较费用导向与需要导向的资源分配排名，分析不同群体的入选比例和健康需要覆盖情况。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-02",
   "occupation": {
     "code": "2-02-30-09",
     "name": "数据分析处理工程技术人员"
   },
   "scene": "你是医疗数据分析人员，需要评估费用评分作为资源分配依据时产生的群体差异。",
-  "taskPrompt": "你是医疗数据分析人员，需要评估费用评分作为资源分配依据时产生的群体差异。\n\n1. 保留原始评分并重建基线入选名单\n2. 建立需要导向的修订评分，按固定名额选择对象\n3. 比较两种方案的群体构成与需要覆盖，说明差异机制\n\n交付成果：\n- full_predictions.csv：原始与修订评分，以及两种方案的入选标记。\n- baseline_report.json / revised_report.json：入选数量、群体占比与需要覆盖指标。\n- analysis.md：对费用代理、差异机制和适用范围的分析。",
+  "taskPrompt": "# 医疗资源分配的费用代理偏差审计\n\n你是医疗数据分析人员，需要评估费用评分作为资源分配依据时产生的群体差异。\n\n1. 保留原始评分并重建基线入选名单\n2. 建立需要导向的修订评分，按固定名额选择对象\n3. 比较两种方案的群体构成与需要覆盖，说明差异机制\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/full_predictions.csv`：原始与修订评分，以及两种方案的入选标记。\n- `/app/output/baseline_report.json / revised_report.json`：入选数量、群体占比与需要覆盖指标。\n- `/app/output/analysis.md`：对费用代理、差异机制和适用范围的分析。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`full_predictions.csv`列patient_id,baseline_score,revised_score,baseline_selected,revised_selected；`baseline_report.json`与`revised_report.json`含selected_count,group_a_share,group_b_share,mean_need,total_need_captured；`analysis.md`。\n",
   "agentMustDo": [
     "保留原始评分并重建基线入选名单",
     "建立需要导向的修订评分，按固定名额选择对象",
@@ -24,14 +24,14 @@
   "inputFiles": [
     {
       "name": "patients.csv",
-      "path": "input/patients.csv",
+      "path": "environment/input/patients.csv",
       "format": "CSV",
       "bytes": 298978,
       "description": "patients.csv，用于医疗资源分配的费用代理偏差审计。"
     },
     {
       "name": "protocol.md",
-      "path": "input/protocol.md",
+      "path": "environment/input/protocol.md",
       "format": "MD",
       "bytes": 562,
       "description": "protocol.md，用于医疗资源分配的费用代理偏差审计。"
@@ -41,26 +41,36 @@
   "inputManifest": "materials.json",
   "referenceFiles": [
     {
+      "name": "analysis.md",
+      "path": "reference/analysis.md",
+      "format": "MD",
+      "bytes": 247,
+      "description": "对费用代理、差异机制和适用范围的分析。"
+    },
+    {
+      "name": "baseline_report.json",
+      "path": "reference/baseline_report.json",
+      "format": "JSON",
+      "bytes": 175,
+      "description": "参考解生成的交付文件。"
+    },
+    {
       "name": "full_predictions.csv",
-      "path": "output/full_predictions.csv",
+      "path": "reference/full_predictions.csv",
       "format": "CSV",
+      "bytes": 190319,
       "description": "原始与修订评分，以及两种方案的入选标记。"
     },
     {
-      "name": "baseline_report.json / revised_report.json",
-      "path": "output/baseline_report.json / revised_report.json",
+      "name": "revised_report.json",
+      "path": "reference/revised_report.json",
       "format": "JSON",
-      "description": "入选数量、群体占比与需要覆盖指标。"
-    },
-    {
-      "name": "analysis.md",
-      "path": "output/analysis.md",
-      "format": "MD",
-      "description": "对费用代理、差异机制和适用范围的分析。"
+      "bytes": 137,
+      "description": "参考解生成的交付文件。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "评分与排序",
@@ -82,6 +92,113 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "读取 6,000 人预测，核对基线分数、入选标志和改进分数。",
+      "按改进分数与 patient_id 排序选取 1,200 人，比较目标人群。",
+      "核对两个人群报告中的需要程度与构成，并检查机制解释。"
+    ],
+    "metrics": [
+      "排序项 = 0.3 × 基线分数正确率 + 0.2 × 基线入选F1 + 0.3 × 改进入选F1 + 0.2 × 重排入选F1；该项占 65%。",
+      "baseline、revised 报告各占 15%，机制说明占 5%。"
+    ],
+    "gates": [
+      "预测文件须恰好包含 6,000 个唯一患者 ID。"
+    ],
+    "checks": [
+      {
+        "name": "原分数与两种排序",
+        "weight": 65.0,
+        "implementation": "predictions"
+      },
+      {
+        "name": "机制及外推限制说明",
+        "weight": 5.0,
+        "implementation": "lambda: len((OUTPUT / 'analysis.md').read_text()) >= 60"
+      },
+      {
+        "name": "baseline人群需要与构成",
+        "weight": 15.0,
+        "implementation": "lambda name=name: tree_score(read_json(OUTPUT / f'{name}_report.json'), e[name + '_report'])"
+      },
+      {
+        "name": "revised人群需要与构成",
+        "weight": 15.0,
+        "implementation": "lambda name=name: tree_score(read_json(OUTPUT / f'{name}_report.json'), e[name + '_report'])"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "full_predictions.csv",
+      "path": "output/full_predictions.csv",
+      "format": "CSV",
+      "description": "原始与修订评分，以及两种方案的入选标记。"
+    },
+    {
+      "name": "baseline_report.json / revised_report.json",
+      "path": "output/baseline_report.json / revised_report.json",
+      "format": "JSON",
+      "description": "入选数量、群体占比与需要覆盖指标。"
+    },
+    {
+      "name": "analysis.md",
+      "path": "output/analysis.md",
+      "format": "MD",
+      "description": "对费用代理、差异机制和适用范围的分析。"
+    }
+  ],
+  "referenceFileCount": 4,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/patients.csv",
+      "content": "patient_id,group,age,chronic_count,acute_events,functional_limitations,systolic_bp,hba1c,bmi,baseline_score,cost_cny\nR00000,A,73,5,0,3,135,8.2,27.3,15.992889,15992.89\nR00001,B,85,1,2,1,135,7.2,21.9,5.746162,5746.16\nR00002,A,58,2,3,1,106,8.5,29.9,17.204284,17204.28\nR00003,B,32,1,3,4,177,8.7,28.3,9.587353,9587.35\nR00004,A,46,4,0,3,152,5.4,20.4,13.0122,13012.2\nR00005,B,53,1,2,1,175,5.8,25.6,6.581562,6581.56\nR00006,A,37,1,3,0,135,7.7,22.2,13.072074,13072.07\nR00007,B,36,4,1,0,132,7.1,33.5,7.498466,7498.47\nR00008,A,50,0,1,3,136,7.8,27.0,7.472634,7472.63\nR00009,B,32,5,0,2,147,6.6,33.5,8.436516,8436.52\nR00010,A,31,6,3,2,176,5.8,29.1,27.793678,27793.68\nR00011,B,63,0,2,4,148,6.4,31.8,7.618675,7618.68\nR00012,A,64,4,3,2,123,7.4,26.3,22.345447,22345.45\nR00013,B,82,2,3,0,178,8.9,19.8,7.6259,7625.9\nR00014,A,28,4,1,2,163,8.1,21.3,15.842733,15842.73\nR00015,B,85,4,0,0,165,7.6,29.4,3.879838,3879.84\nR00016,A,33,3,0,3,157,7.3,19.2,11.873647,11873.65\nR00017,B,38,4,0,1,136,5.8,24.5,4.470033,4470.03\nR00018,A,45,1,0,4,174,4.9,24.9,6.830285,6830.28\nR00019,B,55,6,1,2,127,6.4,27.9,11.022386,11022.39\nR00020,A,48,6,1,2,174,7.8,29.2,19.937862,19937.86\nR00021,B,43,6,2,4,103,5.3,19.7,14.401028,14401.03\nR00022,A,22,2,0,1,147,4.6,21.7,6.281165,6281.17\nR00023,B,60,3,3,3,140,6.9,18.1,10.151721,10151.72\nR00024,A,79,5,2,4,149,5.5,32.1,23.315915,23315.91\nR00025,B,77,0,1,2,158,5.2,32.3,2.701527,2701.53\nR00026,A,64,2,2,0,154,4.6,29.7,12.712265,12712.26\nR00027,B,52,3,3,4,164,4.8,25.9,13.040422,13040.42\nR00028,A,61,6,0,0,116,7.2,30.6,12.163325,12163.33\nR00029,B,44,4,1,0,133,4.8,19.9,6.782404,6782.4\nR00030,A,63,3,1,3,170,4.6,27.3,14.357796,14357.8\nR00031,B,29,4,3,0,170,6.9,23.2,11.409696,11409.7\nR00032,A,59,2,0,0,149,8.8,18.7,4.753703,4753.7\nR00033,B,47,0,1,1,128,4.7,24.7,4.489093,4489.09\nR00034,A,72,5,3,2,120,7.1,29.7,24.130073,24130.07\nR00035,B,25,2,2,4,120,6.3,27.8,9.066794,9066.79\nR00036,A,65,5,1,2,140,5.7,21.2,18.135631,18135.63\nR00037,B,36,3,1,1,152,6.0,29.9,6.624822,6624.82\nR00038,A,68,6,0,2,139,9.0,20.9,16.067555,16067.55\nR00039,B,20,5,1,2,140,6.0,30.4,8.849332,8849.33\nR00040,A,81,3,3,0,152,7.4,31.9,17.139858,17139.86\nR00041,B,20,5,1,2,139,4.8,31.4,10.776844,10776.84\nR00042,A,46,1,3,0,171,7.5,31.9,11.172121,11172.12\nR00043,B,72,6,0,2,167,8.8,32.5,10.140736,10140.74\nR00044,A,36,4,1,3,150,9.0,34.5,15.984167,15984.17\nR00045,B,34,0,2,3,122,5.0,24.6,6.6578,6657.8\nR00046,A,22,6,3,0,146,7.9,33.4,23.982384,23982.38\nR00047,B,70,1,3,0,148,7.8,26.0,6.468898,6468.9\nR00048,A,33,5,0,4,111,5.1,25.2,17.068332,17068.33\nR00049,B,52,5,3,2,116,5.2,33.2,13.467818,13467.82\nR00050,A,45,5,3,3,124,7.8,25.6,26.746428,26746.43\nR00051,B,88,4,0,2,144,6.4,24.5,7.298702,7298.7\nR00052,A,83,6,1,4,101,8.9,22.8,22.671449,22671.45\nR00053,B,31,4,3,1,101,8.7,20.4,11.713696,11713.7\nR00054,A,63,1,2,1,172,4.7,23.7,10.884635,10884.63\nR00055,B,84,3,0,4,127,4.9,25.2,7.358904,7358.9\nR00056,A,78,5,3,1,129,4.9,20.0,25.143894,25143.89\nR00057,B,44,6,3,1,101,5.4,29.6,16.28898,16288.98\nR00058,A,63,5,1,2,165,7.0,28.0,18.240045,18240.05\nR00059,B,39,4,3,4,123,7.3,24.9,13.583746,13583.75\nR00060,A,62,0,2,3,137,5.9,22.3,10.978297,10978.3\nR00061,B,33,2,3,1,100,5.2,22.2,8.909042,8909.04\nR00062,A,23,6,0,1,133,7.2,19.9,15.587931,15587.93\nR00063,B,42,2,1,4,165,8.5,23.8,7.202329,7202.33\nR00064,A,35,2,3,1,106,7.8,25.8,17.198325,17198.33\nR00065,B,64,3,3,3,157,8.1,30.7,12.573395,12573.4\nR00066,A,38,5,3,3,164,5.4,32.1,26.664275,26664.27\nR00067,B,77,0,0,0,130,6.9,33.6,0.591428,591.43\nR00068,A,31,3,1,4,103,7.7,27.7,14.038828,14038.83\nR00069,B,65,4,0,4,119,7.7,21.9,7.29417,7294.17\nR00070,A,67,4,0,3,138,4.6,23.4,13.426802,13426.8\nR00071,B,66,0,1,4,148,9.0,20.6,1.688307,1688.31\nR00072,A,36,6,0,0,106,8.6,20.3,14.787888,14787.89\nR00073,B,64,1,2,2,175,8.5,34.4,6.445472,6445.47\nR00074,A,36,3,1,0,140,4.6,30.2,11.044206,11044.21\nR00075,B,73,4,1,0,136,6.5,18.8,7.139901,7139.9\nR00076,A,44,0,1,0,129,6.0,18.9,3.489066,3489.07\nR00077,B,25,5,1,2,167,7.4,22.2,10.262955,10262.96\nR00078,A,60,4,2,4,154,6.4,31.5,21.245506,21245.51\nR00079,B,73,3,3,0,160,8.7,33.7,9.289382,9289.38\nR00080,A,55,5,0,1,118,7.7,25.7,13.158004,13158.0\nR00081,B,52,3,1,4,109,6.8,34.4,9.065547,9065.55\nR00082,A,50,0,3,2,128,7.0,29.6,12.921827,12921.83\nR00083,B,23,3,2,0,128,5.1,21.1,7.642272,7642.27\nR00084,A,46,6,0,2,138,5.2,21.0,17.537862,17537.86\nR00085,B,25,0,3,1,116,7.0,25.4,5.10572,5105.72\nR00086,A,80,1,2,1,101,4.6,18.7,10.956198,10956.2\nR00087,B,20,4,0,1,124,8.0,33.3,6.394314,6394.31\nR00088,A,64,1,0,0,175,8.5,20.7,1.467166,1467.17\nR00089,B,89,4,0,1,134,7.6,31.3,4.85875,4858.75\nR00090,A,81,6,0,2,115,5.6,34.0,17.313897,17313.9\nR00091,B,88,1,2,0,166,6.0,27.3,4.111086,4111.09\nR00092,A,38,4,3,3,136,6.4,29.0,24.423895,24423.89\nR00093,B,34,4,1,3,154,6.1,29.1,9.537772,9537.77\nR00094,A,89,0,3,0,173,5.6,31.1,11.632891,11632.89\nR00095,B,30,5,2,3,123,9.0,31.2,11.837741,11837.74\nR00096,A,67,3,0,2,106,8.1,19.9,9.444919,9444.92\nR00097,B,64,3,0,4,104,6.3,18.9,6.73435,6734.35\nR00098,A,37,0,0,3,122,6.9,22.6,3.859745,3859.74\nR00099,B,26,0,2,3,146,6.0,30.4,4.507408,4507.41\nR00100,A,39,6,2,0,138,6.2,25.1,21.497745,21497.74\nR00101,B,89,2,3,2,100,5.0,26.3,8.939574,8939.57\nR00102,A,38,1,2,1,140,5.0,24.9,10.275223,10275.22\nR00103,B,43,2,1,2,124,6.9,28.7,4.796019,4796.02\nR00104,A,61,6,0,0,165,5.7,34.0,14.145391,14145.39\nR00105,B,51,6,2,2,106,5.0,33.8,13.053931,13053.93\nR00106,A,39,2,0,1,167,5.1,29.3,6.14233,6142.33\nR00107,B,76,1,0,2,170,7.4,32.0,2.540697,2540.7\nR00108,A,82,1,1,3,107,8.6,19.3,10.371287,10371.29\nR00109,B,79,2,2,0,151,6.3,28.4,6.291564,6291.56\nR00110,A,83,2,0,1,150,7.1,29.5,6.106307,6106.31\nR00111,B,44,6,2,4,107,5.5,19.8,14.011476,14011.48\nR00112,A,53,3,2,1,120,6.3,20.9,15.093675,15093.67\nR00113,B,73,1,0,1,151,8.5,18.6,1.391307,1391.31\nR00114,A,51,0,0,1,177,8.2,29.5,1.280325,1280.32\nR00115,B,59,6,1,0,106,8.5,21.9,9.189352,9189.35\nR00116,A,73,1,0,3,111,6.0,21.2,5.123392,5123.39\nR00117,B,21,2,1,0,174,4.6,18.1,4.476064,4476.06\nR00118,A,73,2,3,4,128,6.3,20.6,20.261444,20261.44\nR00119,B,89,2,1,1,110,6.3,28.0,5.518427,5518.43\nR00120,A,85,3,0,0,115,7.8,3",
+      "truncated": true
+    },
+    {
+      "path": "reference/baseline_report.json",
+      "content": "{\n  \"selected_count\": 1200,\n  \"group_a_share\": 0.9933333333333333,\n  \"group_b_share\": 0.00666666666666671,\n  \"mean_need\": 17.739166666666666,\n  \"total_need_captured\": 21287\n}\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/full_predictions.csv",
+      "content": "patient_id,baseline_score,revised_score,baseline_selected,revised_selected\nR00000,15.992889,13,False,False\nR00001,5.746162,9,False,False\nR00002,17.204284,14,True,False\nR00003,9.587353,15,False,False\nR00004,13.0122,11,False,False\nR00005,6.581562,9,False,False\nR00006,13.072074,11,False,False\nR00007,7.498466,11,False,False\nR00008,7.472634,6,False,False\nR00009,8.436516,12,False,False\nR00010,27.793678,23,True,True\nR00011,7.618675,10,False,False\nR00012,22.345447,19,True,True\nR00013,7.6259,13,False,False\nR00014,15.842733,13,False,False\nR00015,3.879838,8,False,False\nR00016,11.873647,9,False,False\nR00017,4.470033,9,False,False\nR00018,6.830285,6,False,False\nR00019,11.022386,17,False,True\nR00020,19.937862,17,True,True\nR00021,14.401028,22,False,True\nR00022,6.281165,5,False,False\nR00023,10.151721,18,False,True\nR00024,23.315915,20,True,True\nR00025,2.701527,5,False,False\nR00026,12.712265,10,False,False\nR00027,13.040422,19,False,True\nR00028,12.163325,12,False,False\nR00029,6.782404,11,False,False\nR00030,14.357796,12,False,False\nR00031,11.409696,17,False,True\nR00032,4.753703,4,False,False\nR00033,4.489093,4,False,False\nR00034,24.130073,21,True,True\nR00035,9.066794,14,False,False\nR00036,18.135631,15,True,False\nR00037,6.624822,10,False,False\nR00038,16.067555,14,False,False\nR00039,8.849332,15,False,False\nR00040,17.139858,15,True,False\nR00041,10.776844,15,False,False\nR00042,11.172121,11,False,False\nR00043,10.140736,14,False,False\nR00044,15.984167,14,False,False\nR00045,6.6578,9,False,False\nR00046,23.982384,21,True,True\nR00047,6.468898,11,False,False\nR00048,17.068332,14,True,False\nR00049,13.467818,21,False,True\nR00050,26.746428,22,True,True\nR00051,7.298702,10,False,False\nR00052,22.671449,19,True,True\nR00053,11.713696,18,False,True\nR00054,10.884635,9,False,False\nR00055,7.358904,10,False,False\nR00056,25.143894,20,True,True\nR00057,16.28898,22,False,True\nR00058,18.240045,15,True,False\nR00059,13.583746,21,False,True\nR00060,10.978297,9,False,False\nR00061,8.909042,14,False,False\nR00062,15.587931,13,False,False\nR00063,7.202329,11,False,False\nR00064,17.198325,14,True,False\nR00065,12.573395,18,False,True\nR00066,26.664275,22,True,True\nR00067,0.591428,0,False,False\nR00068,14.038828,13,False,False\nR00069,7.29417,12,False,False\nR00070,13.426802,11,False,False\nR00071,1.688307,7,False,False\nR00072,14.787888,12,False,False\nR00073,6.445472,10,False,False\nR00074,11.044206,9,False,False\nR00075,7.139901,11,False,False\nR00076,3.489066,3,False,False\nR00077,10.262955,15,False,False\nR00078,21.245506,18,True,True\nR00079,9.289382,15,False,False\nR00080,13.158004,11,False,False\nR00081,9.065547,13,False,False\nR00082,12.921827,11,False,False\nR00083,7.642272,12,False,False\nR00084,17.537862,14,True,False\nR00085,5.10572,10,False,False\nR00086,10.956198,9,False,False\nR00087,6.394314,9,False,False\nR00088,1.467166,2,False,False\nR00089,4.85875,9,False,False\nR00090,17.313897,14,True,False\nR00091,4.111086,8,False,False\nR00092,24.423895,20,True,True\nR00093,9.537772,14,False,False\nR00094,11.632891,9,False,False\nR00095,11.837741,19,False,True\nR00096,9.444919,8,False,False\nR00097,6.73435,10,False,False\nR00098,3.859745,3,False,False\nR00099,4.507408,9,False,False\nR00100,21.497745,18,True,True\nR00101,8.939574,15,False,False\nR00102,10.275223,9,False,False\nR00103,4.796019,9,False,False\nR00104,14.145391,12,False,False\nR00105,13.053931,20,False,True\nR00106,6.14233,5,False,False\nR00107,2.540697,4,False,False\nR00108,10.371287,8,False,False\nR00109,6.291564,10,False,False\nR00110,6.106307,5,False,False\nR00111,14.011476,22,False,True\nR00112,15.093675,13,False,False\nR00113,1.391307,3,False,False\nR00114,1.280325,1,False,False\nR00115,9.189352,15,False,False\nR00116,5.123392,5,False,False\nR00117,4.476064,7,False,False\nR00118,20.261444,17,True,True\nR00119,5.518427,8,False,False\nR00120,6.179593,6,False,False\nR00121,10.156206,15,False,False\nR00122,10.822551,10,False,False\nR00123,7.279982,13,False,False\nR00124,14.819805,13,False,False\nR00125,10.437918,13,False,False\nR00126,17.022077,14,True,False\nR00127,6.737344,10,False,False\nR00128,12.215247,12,False,False\nR00129,10.835126,17,False,True\nR00130,22.625075,19,True,True\nR00131,14.797591,21,False,True\nR00132,16.416774,12,False,False\nR00133,9.113403,12,False,False\nR00134,21.819367,19,True,True\nR00135,2.266108,2,False,False\nR00136,13.60179,11,False,False\nR00137,12.421812,20,False,True\nR00138,14.941543,13,False,False\nR00139,6.787696,11,False,False\nR00140,8.382685,7,False,False\nR00141,2.838497,4,False,False\nR00142,17.196287,14,True,False\nR00143,6.819893,10,False,False\nR00144,15.117435,13,False,False\nR00145,12.194448,18,False,True\nR00146,16.533404,13,False,False\nR00147,5.660226,9,False,False\nR00148,19.927478,17,True,True\nR00149,8.590903,15,False,False\nR00150,11.129319,9,False,False\nR00151,1.053206,3,False,False\nR00152,11.348268,10,False,False\nR00153,5.652417,10,False,False\nR00154,11.174703,10,False,False\nR00155,7.114176,13,False,False\nR00156,11.406054,9,False,False\nR00157,12.849846,21,False,True\nR00158,16.18977,13,False,False\nR00159,4.815357,7,False,False\nR00160,6.493634,5,False,False\nR00161,16.185767,25,False,True\nR00162,10.673583,10,False,False\nR00163,8.172628,12,False,False\nR00164,26.407133,22,True,True\nR00165,6.423531,9,False,False\nR00166,12.582821,11,False,False\nR00167,4.725655,6,False,False\nR00168,15.688704,13,False,False\nR00169,5.192901,9,False,False\nR00170,18.217782,14,True,False\nR00171,11.622421,15,False,False\nR00172,15.208402,13,False,False\nR00173,9.686232,14,False,False\nR00174,8.374712,7,False,False\nR00175,9.366625,14,False,False\nR00176,9.086816,8,False,False\nR00177,10.882864,16,False,False\nR00178,14.123686,12,False,False\nR00179,4.029536,6,False,False\nR00180,16.59353,13,False,False\nR00181,3.990302,6,False,False\nR00182,22.242545,19,True,True\nR00183,1.524914,3,False,False\nR00184,19.097356,15,True,False\nR00185,7.613833,13,False,False\nR00186,23.14171,19,True,True\nR00187,8.646627,14,False,False\nR00188,0.178775,0,False,False\nR00189,11.786774,18,False,True\nR00190,10.283247,9,False,False\nR00191,16.021451,23,False,True\nR00192,13.4723",
+      "truncated": true
+    }
+  ]
 }

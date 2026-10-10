@@ -1,0 +1,49 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "文本编码",
+      "weight": 100,
+      "rule": "先检查原始五列与模板一致、每行焦点三选一、标签为布尔值；随后按 3,705 个单元格的正确比例计分。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "核对输入与输出的记录集合、原始元数据和焦点字段。",
+    "按 codebook 检查每个布尔编码的合法值。",
+    "逐格对齐并计算 3,705 个编码单元的正确率。"
+  ],
+  "metrics": [
+    "总分 = 100 × 正确编码单元数 / 3,705。",
+    "元数据保真、焦点唯一性和字段约定由 score 函数先行检查。"
+  ],
+  "gates": [
+    "记录集合、原始元数据、焦点字段与布尔格式必须满足提交约定。"
+  ],
+  "checks": [
+    {
+      "name": "元数据保真、焦点唯一与3705格编码",
+      "weight": 100,
+      "implementation": "score"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

@@ -1,16 +1,16 @@
 [
   {
-    "path": "input/data_dictionary.md",
+    "path": "environment/input/data_dictionary.md",
     "bytes": 280,
     "sha256": "b7a19b100e7de44dc8605f8493efe0c7404cdf9ea49933a87392652b0f13d5fd"
   },
   {
-    "path": "input/history.csv",
+    "path": "environment/input/history.csv",
     "bytes": 80596,
     "sha256": "02c7c7f8ba8f31fbe19dc5302659733b1cb234db02fd716c77f096888e11f276"
   },
   {
-    "path": "input/template.csv",
+    "path": "environment/input/template.csv",
     "bytes": 2796,
     "sha256": "369c9e57e154f40adb38061e05219d568e073e8ffbf4b79dbe4ff654643afdcb"
   }

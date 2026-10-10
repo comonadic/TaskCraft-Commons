@@ -2,38 +2,32 @@
 
 结合支付服务日志与集群配置定位故障，整理影响范围，并提出有优先级的整改、回滚与验证步骤。
 
-职业：云计算工程技术人员（2-02-38-04）
+职业：云计算工程技术人员 · `2-02-38-04`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是支付平台运维工程师，收到一次服务异常的诊断资料，需要形成可供事故响应团队执行的恢复计划。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-三份集群事故材料，涵盖日志、配置与事件记录。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**根因与证据 · 50 分**
-
-逐项比较根因类型、资源和日志原文，按正确比例计分。
-
-**影响范围 · 10 分**
-
-受影响资源集合采用 F1 计分。
-
-**整改计划 · 25 分**
-
-检查动作说明、整数优先级和结构化参数，按参数正确比例计分。
-
-**回滚方案 · 10 分**
-
-比对回滚版本和镜像，按字段正确比例计分。
-
-**摘要与验证 · 5 分**
-
-诊断摘要至少 20 字且恢复验证说明至少 10 字，取得本项分数。
-
-
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

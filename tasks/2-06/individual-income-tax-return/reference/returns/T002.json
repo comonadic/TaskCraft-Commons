@@ -1,0 +1,11 @@
+{
+  "taxpayer_id": "T002",
+  "year": 2024,
+  "income": 156000,
+  "special_deduction": 18000,
+  "additional_deduction": 36000,
+  "taxable_income": 42000,
+  "tax_due": 1680,
+  "prepaid": 8000,
+  "balance": -6320
+}

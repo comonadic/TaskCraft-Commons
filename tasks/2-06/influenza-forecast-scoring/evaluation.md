@@ -1,0 +1,34 @@
+# 流感住院预测评分与模型比较：评分方法
+
+评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。
+
+## 计算流程
+
+1. 按 model、location、target_date、horizon 对齐共同预测单元。
+2. 逐单元核对分位数、观测值、WIS 和误差结果。
+3. 按模型汇总共同单元分数，比较相对基线 WIS。
+
+## 指标与阈值
+
+- 单元级结果占 75%，模型汇总与相对 WIS 占 25%。
+- 数值绝对容差 1e−6；记录集合按联合主键比较，重复记录使该项记 0。
+
+## 检查项
+
+| 检查项 | 权重 | 程序入口 |
+|---|---:|---|
+| 全部共同cell的评分 | 75% | `lambda: record_score(read_csv(OUTPUT / 'per_cell_scores.csv'), e['cells'], ['model', 'location', 'target_date', 'horizon'], atol=1e-06)` |
+| 模型汇总和相对WIS | 25% | `lambda: record_score(read_csv(OUTPUT / 'submission.csv'), e['summary'], ['model'], atol=1e-06)` |
+
+## 业务规则
+
+- **逐单元评分（75 分）**：按模型、地区、日期和预测期联合定位记录，比对 WIS、MAE 和覆盖率，绝对容差为 0.000001。
+- **模型汇总（25 分）**：逐模型比较单元数量、平均指标与相对 WIS，按字段正确比例计分。
+
+## 分数与日志
+
+`reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward`
+
+缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。
+
+完整实现见 [grade.py](tests/grade.py) 与 [support.py](tests/support.py)。

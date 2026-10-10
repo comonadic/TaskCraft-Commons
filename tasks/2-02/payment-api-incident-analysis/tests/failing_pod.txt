@@ -1,0 +1,7 @@
+Last State: Terminated Reason: OOMKilled Exit Code: 137
+startup profile: required working set 380Mi, initialization duration 24s
+Liveness probe failed: connect: connection refused during initialization
+metrics listener bound to port 9100; ServiceMonitor targetPort=9090
+database ping succeeded; DNS lookup succeeded; credentials accepted
+Readiness endpoint stays false until initialization completes
+known approved memory limit=512Mi; minimum probe delay=30s

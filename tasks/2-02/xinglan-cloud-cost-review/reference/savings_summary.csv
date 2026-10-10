@@ -1,0 +1,17 @@
+resource_id,resource_type,name,action,current_cost,projected_cost,monthly_savings
+CVM-000,CVM,project-0-res-0,schedule_stop,576.0,172.8,403.2
+CVM-001,CVM,project-0-res-1,schedule_stop,576.0,172.8,403.2
+CDB-000,CDB,project-1-res-0,downsize,1080.0,540.0,540.0
+CDB-001,CDB,project-1-res-1,downsize,1080.0,540.0,540.0
+CDB-002,CDB,project-1-res-2,downsize,1080.0,540.0,540.0
+COS-000,COS,project-2-res-0,archive,240.0,60.0,180.0
+COS-001,COS,project-2-res-1,archive,276.0,69.0,207.0
+NAT-000,NAT,project-3-res-0,delete_idle,360.0,0.0,360.0
+EIP-000,EIP,project-4-res-0,release,144.0,0.0,144.0
+EIP-001,EIP,project-4-res-1,release,144.0,0.0,144.0
+LOG-000,LOG,project-5-res-0,shorten_retention,120.0,20.0,100.0
+LOG-001,LOG,project-5-res-1,shorten_retention,138.0,34.5,103.5
+LOG-002,LOG,project-5-res-2,shorten_retention,156.0,78.0,78.0
+EIP-img-901,EIP,orphan-ip-image,release,144.0,0.0,144.0
+LOG-img-902,LOG,debug-log-image,shorten_retention,240.0,40.0,200.0
+CVM-img-903,CVM,idle-dev-image,schedule_stop,576.0,172.8,403.2

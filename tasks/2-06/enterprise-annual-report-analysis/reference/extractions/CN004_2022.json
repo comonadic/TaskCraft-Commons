@@ -1,0 +1,18 @@
+{
+  "filing_id": "CN004_2022",
+  "company": "岚川材料",
+  "year": 2022,
+  "currency": "CNY",
+  "revenue": 605240000.0,
+  "net_income": 84733600.0,
+  "assets": 1210480000.0,
+  "liabilities": 508401600.00000006,
+  "cash": 108943200.0,
+  "equity": 702078400.0,
+  "operating_cashflow": 101680319.99999999,
+  "capex": 27235800.0,
+  "debt": 355881120.0,
+  "shares": 100000000.0,
+  "eps": 0.8473,
+  "dividends": 16946720.0
+}

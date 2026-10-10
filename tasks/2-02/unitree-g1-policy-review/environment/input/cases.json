@@ -1,0 +1,66 @@
+[
+  {
+    "case_id": "G1-01",
+    "amplitude": 0,
+    "frequency": 0.3,
+    "gain_scale": 1,
+    "push_newton": 0,
+    "delay": 0
+  },
+  {
+    "case_id": "G1-02",
+    "amplitude": 0.25,
+    "frequency": 0.3,
+    "gain_scale": 1,
+    "push_newton": 0,
+    "delay": 0
+  },
+  {
+    "case_id": "G1-03",
+    "amplitude": 0.55,
+    "frequency": 0.7,
+    "gain_scale": 1,
+    "push_newton": 0,
+    "delay": 0
+  },
+  {
+    "case_id": "G1-04",
+    "amplitude": 0.25,
+    "frequency": 0.3,
+    "gain_scale": 1,
+    "push_newton": 25,
+    "delay": 0
+  },
+  {
+    "case_id": "G1-05",
+    "amplitude": 0.25,
+    "frequency": 0.3,
+    "gain_scale": 1,
+    "push_newton": 140,
+    "delay": 0
+  },
+  {
+    "case_id": "G1-06",
+    "amplitude": 0.8,
+    "frequency": 1.5,
+    "gain_scale": 0.1,
+    "push_newton": 0,
+    "delay": 0
+  },
+  {
+    "case_id": "G1-07",
+    "amplitude": 0.5,
+    "frequency": 0.5,
+    "gain_scale": 1,
+    "push_newton": 0,
+    "delay": 0.8
+  },
+  {
+    "case_id": "G1-08",
+    "amplitude": 0.1,
+    "frequency": 0.2,
+    "gain_scale": 0.6,
+    "push_newton": 8,
+    "delay": 0
+  }
+]

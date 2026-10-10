@@ -1,0 +1,6 @@
+{
+  "database_checks": 0.95,
+  "report_and_record_index": 0.05,
+  "checks": "13项，权重见grade.py；不依赖用户提交的自报业务状态",
+  "environment": "shared verifier reads real Odoo ORM models"
+}

@@ -1,0 +1,2 @@
+200 {"market":"CN-SYNTHETIC","orders":3,"status":"healthy"}
+

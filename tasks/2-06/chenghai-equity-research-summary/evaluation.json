@@ -1,0 +1,67 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "数据与计算结果",
+      "weight": 65,
+      "rule": "比较模板单元格的输入与派生数值，按正确比例计分。"
+    },
+    {
+      "name": "动态公式",
+      "weight": 25,
+      "rule": "在四组输入变化下重新检查公式结果，按与要求公式等价的比例计分。"
+    },
+    {
+      "name": "资料索引",
+      "weight": 10,
+      "rule": "比对行情时点、公司、币种和三个资料页面，按字段正确比例计分。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "读取 Excel 工作簿的原始输入、派生指标和公式。",
+    "核对估值、盈利、增长与资产负债指标。",
+    "对关键输入应用四组扰动，检查公式计算是否等价，再核对来源时点。"
+  ],
+  "metrics": [
+    "数值占 65%，动态公式占 25%，公司、币种和报价时点占 10%。",
+    "公式项按四组输入扰动后的计算结果判断等价，支持等价写法。"
+  ],
+  "gates": [],
+  "checks": [
+    {
+      "name": "全部输入与派生数值",
+      "weight": 65.0,
+      "implementation": "lambda: tree_score({k: read_xlsx(OUTPUT / 'CN_Financial_Summary.xlsx')[0].get(k) for k in e}, e)"
+    },
+    {
+      "name": "动态公式四组扰动等价",
+      "weight": 25.0,
+      "implementation": "lambda: equivalence(read_xlsx(OUTPUT / 'CN_Financial_Summary.xlsx')[1], f, e)"
+    },
+    {
+      "name": "来源与时点",
+      "weight": 10.0,
+      "implementation": "lambda: tree_score(read_json(OUTPUT / 'sources.json'), {'quote_time': '2025-03-31 15:00', 'company': '澄海精密', 'currency': 'CNY', 'pages': ['quote.html', 'statistics.html', 'annual_report.html']})"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

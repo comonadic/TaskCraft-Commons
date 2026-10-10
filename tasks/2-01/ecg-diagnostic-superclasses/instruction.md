@@ -6,6 +6,23 @@
 2. 训练模型并进行验证，确定分类方式
 3. 预测测试波形的五类标签，编写模型报告
 
-交付成果：
-- predictions.csv：每条 ecg_id 对应五类 0/1 预测。
-- model_report.md：记录预处理、模型、验证方法和适用范围。
+## 工作空间
+
+输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。
+
+## 交付文件
+
+- `/app/output/predictions.csv`：每条 ecg_id 对应五类 0/1 预测。
+- `/app/output/model_report.md`：记录预处理、模型、验证方法和适用范围。
+
+## 运行约定
+
+保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。
+
+## 具体工作要求
+
+输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。
+
+## 交付要求
+
+`predictions.csv`：ecg_id及labels.json中的标签列，均为0/1；`model_report.md`：预处理、模型、验证方法、适用限制。

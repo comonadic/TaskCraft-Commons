@@ -1,0 +1,5296 @@
+{
+  "patients": [
+    "P0000",
+    "P0001",
+    "P0004",
+    "P0005",
+    "P0006",
+    "P0012",
+    "P0013",
+    "P0016",
+    "P0017",
+    "P0018",
+    "P0024",
+    "P0025",
+    "P0028",
+    "P0029",
+    "P0030",
+    "P0036",
+    "P0037",
+    "P0040",
+    "P0041",
+    "P0042",
+    "P0048",
+    "P0049",
+    "P0052",
+    "P0053",
+    "P0054",
+    "P0060",
+    "P0061",
+    "P0064",
+    "P0065",
+    "P0066",
+    "P0072",
+    "P0073",
+    "P0076",
+    "P0077",
+    "P0078",
+    "P0084",
+    "P0085",
+    "P0088",
+    "P0089",
+    "P0090",
+    "P0096",
+    "P0097",
+    "P0100",
+    "P0101",
+    "P0102",
+    "P0108",
+    "P0109",
+    "P0112",
+    "P0113",
+    "P0114",
+    "P0120",
+    "P0121",
+    "P0124",
+    "P0125",
+    "P0126",
+    "P0132",
+    "P0133",
+    "P0136",
+    "P0137",
+    "P0138",
+    "P0144",
+    "P0145",
+    "P0148",
+    "P0149",
+    "P0150",
+    "P0156",
+    "P0157",
+    "P0160",
+    "P0161",
+    "P0162",
+    "P0168",
+    "P0169",
+    "P0172",
+    "P0173",
+    "P0174",
+    "P0180",
+    "P0181",
+    "P0184",
+    "P0185",
+    "P0186",
+    "P0192",
+    "P0193",
+    "P0196",
+    "P0197",
+    "P0198",
+    "P0204",
+    "P0205",
+    "P0208",
+    "P0209",
+    "P0210",
+    "P0216",
+    "P0217",
+    "P0220",
+    "P0221",
+    "P0222",
+    "P0228",
+    "P0229",
+    "P0232",
+    "P0233",
+    "P0234",
+    "P0240",
+    "P0241",
+    "P0244",
+    "P0245",
+    "P0246",
+    "P0252",
+    "P0253",
+    "P0256",
+    "P0257",
+    "P0258",
+    "P0264",
+    "P0265",
+    "P0268",
+    "P0269",
+    "P0270",
+    "P0276",
+    "P0277",
+    "P0280",
+    "P0281",
+    "P0282",
+    "P0288",
+    "P0289",
+    "P0292",
+    "P0293",
+    "P0294",
+    "P0300",
+    "P0301",
+    "P0304",
+    "P0305",
+    "P0306",
+    "P0312",
+    "P0313",
+    "P0316",
+    "P0317",
+    "P0318",
+    "P0324",
+    "P0325",
+    "P0328",
+    "P0329",
+    "P0330",
+    "P0336",
+    "P0337",
+    "P0340",
+    "P0341",
+    "P0342",
+    "P0348",
+    "P0349",
+    "P0352",
+    "P0353",
+    "P0354",
+    "P0360",
+    "P0361",
+    "P0364",
+    "P0365",
+    "P0366",
+    "P0372",
+    "P0373",
+    "P0376",
+    "P0377",
+    "P0378",
+    "P0384",
+    "P0385",
+    "P0388",
+    "P0389",
+    "P0390",
+    "P0396",
+    "P0397",
+    "P0400",
+    "P0401",
+    "P0402",
+    "P0408",
+    "P0409",
+    "P0412",
+    "P0413",
+    "P0414",
+    "P0420",
+    "P0421",
+    "P0424",
+    "P0425",
+    "P0426",
+    "P0432",
+    "P0433",
+    "P0436",
+    "P0437",
+    "P0438",
+    "P0444",
+    "P0445",
+    "P0448",
+    "P0449",
+    "P0450",
+    "P0456",
+    "P0457",
+    "P0460",
+    "P0461",
+    "P0462",
+    "P0468",
+    "P0469",
+    "P0472",
+    "P0473",
+    "P0474",
+    "P0480",
+    "P0481",
+    "P0484",
+    "P0485",
+    "P0486",
+    "P0492",
+    "P0493",
+    "P0496",
+    "P0497",
+    "P0498",
+    "P0504",
+    "P0505",
+    "P0508",
+    "P0509",
+    "P0510",
+    "P0516",
+    "P0517",
+    "P0520",
+    "P0521",
+    "P0522",
+    "P0528",
+    "P0529",
+    "P0532",
+    "P0533",
+    "P0534",
+    "P0540",
+    "P0541",
+    "P0544",
+    "P0545",
+    "P0546",
+    "P0552",
+    "P0553",
+    "P0556",
+    "P0557",
+    "P0558",
+    "P0564",
+    "P0565",
+    "P0568",
+    "P0569",
+    "P0570",
+    "P0576",
+    "P0577",
+    "P0580",
+    "P0581",
+    "P0582",
+    "P0588",
+    "P0589",
+    "P0592",
+    "P0593",
+    "P0594"
+  ],
+  "audit": [
+    {
+      "stay_id": "ICU0000",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0001",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0002",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0003",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0004",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0005",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0006",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0007",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0008",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0009",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0010",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0011",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0012",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0013",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0014",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0015",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0016",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0017",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0018",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0019",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0020",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0021",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0022",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0023",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0024",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0025",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0026",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0027",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0028",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0029",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0030",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0031",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0032",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0033",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0034",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0035",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0036",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0037",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0038",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0039",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0040",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0041",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0042",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0043",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0044",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0045",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0046",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0047",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0048",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0049",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0050",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0051",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0052",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0053",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0054",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0055",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0056",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0057",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0058",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0059",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0060",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0061",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0062",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0063",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0064",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0065",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0066",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0067",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0068",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0069",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0070",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0071",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0072",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0073",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0074",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0075",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0076",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0077",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0078",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0079",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0080",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0081",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0082",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0083",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0084",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0085",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0086",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0087",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0088",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0089",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0090",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0091",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0092",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0093",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0094",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0095",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0096",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0097",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0098",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0099",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0100",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0101",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0102",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0103",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0104",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0105",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0106",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0107",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0108",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0109",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0110",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0111",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0112",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0113",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0114",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0115",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0116",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0117",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0118",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0119",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0120",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0121",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0122",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0123",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0124",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0125",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0126",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0127",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0128",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0129",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0130",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0131",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0132",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0133",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0134",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0135",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0136",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0137",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0138",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0139",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0140",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0141",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0142",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0143",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0144",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0145",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0146",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0147",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0148",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0149",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0150",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0151",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0152",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0153",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0154",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0155",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0156",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0157",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0158",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0159",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0160",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0161",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0162",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0163",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0164",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0165",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0166",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0167",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0168",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0169",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0170",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0171",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0172",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0173",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0174",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0175",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0176",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0177",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0178",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0179",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0180",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0181",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0182",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0183",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0184",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0185",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0186",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0187",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0188",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0189",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0190",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0191",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0192",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0193",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0194",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0195",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0196",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0197",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0198",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0199",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0200",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0201",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0202",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0203",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0204",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0205",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0206",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0207",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0208",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0209",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0210",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0211",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0212",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0213",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0214",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0215",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0216",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0217",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0218",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0219",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0220",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0221",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0222",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0223",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0224",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0225",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0226",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0227",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0228",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0229",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0230",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0231",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0232",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0233",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0234",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0235",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0236",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0237",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0238",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0239",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0240",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0241",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0242",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0243",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0244",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0245",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0246",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0247",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0248",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0249",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0250",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0251",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0252",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0253",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0254",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0255",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0256",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0257",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0258",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0259",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0260",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0261",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0262",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0263",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0264",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0265",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0266",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0267",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0268",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0269",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0270",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0271",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0272",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0273",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0274",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0275",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0276",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0277",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0278",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0279",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0280",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0281",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0282",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0283",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0284",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0285",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0286",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0287",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0288",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0289",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0290",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0291",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0292",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0293",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0294",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0295",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0296",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0297",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0298",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0299",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0300",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0301",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0302",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0303",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0304",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0305",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0306",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0307",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0308",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0309",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0310",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0311",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0312",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0313",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0314",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0315",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0316",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0317",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0318",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0319",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0320",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0321",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0322",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0323",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0324",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0325",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0326",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0327",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0328",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0329",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0330",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0331",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0332",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0333",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0334",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0335",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0336",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0337",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0338",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0339",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0340",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0341",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0342",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0343",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0344",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0345",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0346",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0347",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0348",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0349",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0350",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0351",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0352",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0353",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0354",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0355",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0356",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0357",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0358",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0359",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0360",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0361",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0362",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0363",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0364",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0365",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0366",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0367",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0368",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0369",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0370",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0371",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0372",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0373",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0374",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0375",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0376",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0377",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0378",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0379",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0380",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0381",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0382",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0383",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0384",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0385",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0386",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0387",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0388",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0389",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0390",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0391",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0392",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0393",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0394",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0395",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0396",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0397",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0398",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0399",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0400",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0401",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0402",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0403",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0404",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0405",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0406",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0407",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0408",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0409",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0410",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0411",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0412",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0413",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0414",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0415",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0416",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0417",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0418",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0419",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0420",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0421",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0422",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0423",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0424",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0425",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0426",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0427",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0428",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0429",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0430",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0431",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0432",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0433",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0434",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0435",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0436",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0437",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0438",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0439",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0440",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0441",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0442",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0443",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0444",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0445",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0446",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0447",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0448",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0449",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0450",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0451",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0452",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0453",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0454",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0455",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0456",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0457",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0458",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0459",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0460",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0461",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0462",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0463",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0464",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0465",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0466",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0467",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0468",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0469",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0470",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0471",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0472",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0473",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0474",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0475",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0476",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0477",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0478",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0479",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0480",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0481",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0482",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0483",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0484",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0485",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0486",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0487",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0488",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0489",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0490",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0491",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0492",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0493",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0494",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0495",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0496",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0497",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0498",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0499",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0500",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0501",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0502",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0503",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0504",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0505",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0506",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0507",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0508",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0509",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0510",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0511",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0512",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0513",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0514",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0515",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0516",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0517",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0518",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0519",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0520",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0521",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0522",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0523",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0524",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0525",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0526",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0527",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0528",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0529",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0530",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0531",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0532",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0533",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0534",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0535",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0536",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0537",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0538",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0539",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0540",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0541",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0542",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0543",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0544",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0545",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0546",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0547",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0548",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0549",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0550",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0551",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0552",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0553",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0554",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0555",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0556",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0557",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0558",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0559",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0560",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0561",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0562",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0563",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0564",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0565",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0566",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0567",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0568",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0569",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0570",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0571",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0572",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0573",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0574",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0575",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0576",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0577",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0578",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0579",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0580",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0581",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0582",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0583",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0584",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0585",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0586",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0587",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0588",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0589",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0590",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0591",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0592",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0593",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0594",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0595",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0596",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0597",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0598",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0599",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0600",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0601",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0602",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0603",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0604",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0605",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0606",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0607",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0608",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0609",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0610",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0611",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0612",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0613",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0614",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0615",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0616",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0617",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0618",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0619",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0620",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0621",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0622",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0623",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0624",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0625",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0626",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0627",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0628",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0629",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0630",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0631",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0632",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0633",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0634",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0635",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0636",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0637",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0638",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0639",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0640",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0641",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0642",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0643",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0644",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0645",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0646",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0647",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0648",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0649",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0650",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0651",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0652",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0653",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0654",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0655",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0656",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0657",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0658",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0659",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0660",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0661",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0662",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0663",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0664",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0665",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0666",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0667",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0668",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0669",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0670",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0671",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0672",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0673",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0674",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0675",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0676",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0677",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0678",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0679",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0680",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0681",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0682",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0683",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0684",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0685",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0686",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0687",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0688",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0689",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0690",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0691",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0692",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0693",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0694",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0695",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0696",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0697",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0698",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0699",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0700",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0701",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0702",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0703",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0704",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0705",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0706",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0707",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0708",
+      "sepsis_hour": 24,
+      "aki_hour": 30,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0709",
+      "sepsis_hour": 24,
+      "aki_hour": 192,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0710",
+      "sepsis_hour": 24,
+      "aki_hour": 195,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0711",
+      "sepsis_hour": 24,
+      "aki_hour": 12,
+      "eligible": false,
+      "reason": "aki_before_sepsis"
+    },
+    {
+      "stay_id": "ICU0712",
+      "sepsis_hour": 24,
+      "aki_hour": 58,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0713",
+      "sepsis_hour": 24,
+      "aki_hour": 48,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0714",
+      "sepsis_hour": 24,
+      "aki_hour": 90,
+      "eligible": true,
+      "reason": "eligible"
+    },
+    {
+      "stay_id": "ICU0715",
+      "sepsis_hour": 24,
+      "aki_hour": 240,
+      "eligible": false,
+      "reason": "outside_7d"
+    },
+    {
+      "stay_id": "ICU0716",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    },
+    {
+      "stay_id": "ICU0717",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0718",
+      "sepsis_hour": "",
+      "aki_hour": 36,
+      "eligible": false,
+      "reason": "no_sepsis"
+    },
+    {
+      "stay_id": "ICU0719",
+      "sepsis_hour": 24,
+      "aki_hour": "",
+      "eligible": false,
+      "reason": "no_aki"
+    }
+  ]
+}

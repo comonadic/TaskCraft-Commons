@@ -1,0 +1,16 @@
+{
+  "dt_hours": 0.25,
+  "initial_state": [
+    26,
+    27
+  ],
+  "horizon": 24,
+  "cooling_range_kw": [
+    0,
+    8
+  ],
+  "cost_target": "至少比基线节费1%",
+  "peak_target": "至少比基线削峰1%",
+  "state_alignment": "timeseries air/wall为执行本步动作后的状态；舒适范围按该步occupied判断",
+  "model": "identified_model包含air_coefficients与wall_coefficients，顺序air,wall,outside,solar,occupied,cooling；诊断train_rmse"
+}

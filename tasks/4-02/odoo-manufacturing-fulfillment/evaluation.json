@@ -1,0 +1,115 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "业务处理",
+      "weight": 95,
+      "rule": "直接读取 Odoo 业务记录：估值 5 分、成本分摊 10 分、制造 10 分、交付 8 分、收款 10 分、退款 7 分、库存 12 分、分包 9 分、直运 5 分、报废补购 5 分、供应商发票 7 分、报销 7 分。"
+    },
+    {
+      "name": "记录与报告",
+      "weight": 5,
+      "rule": "中文操作报告超过 100 字，记录索引至少列出 10 项，取得本项分数。"
+    }
+  ],
+  "notes": "先检查业务环境与提交入口；金额检查容差为 0.01。",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "shared",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "连接真实 Odoo ORM，读取会计、采购、库存、制造、销售与报销模型。",
+    "逐项核验成本分摊、两级制造、交付欠单、外币发票与退款、最终库存、分包与直运。",
+    "核对报废、补购、供应商付款、报销及分析账户，再检查中文操作报告与记录索引。"
+  ],
+  "metrics": [
+    "实际业务状态占 95%，操作报告与记录索引占 5%。",
+    "13 项检查直接读取数据库中单据关系、付款核销与库存记录，权重见检查表。",
+    "成本分摊要求 600/400，交付要求 2+1，退款要求 200 EUR，直运要求 3 件。"
+  ],
+  "gates": [
+    "业务状态可读取且 submission.json 等提交入口可解析，才进入逐项评分。"
+  ],
+  "checks": [
+    {
+      "name": "人民币与FIFO自动估值",
+      "weight": 5.0,
+      "implementation": "fifo"
+    },
+    {
+      "name": "实际成本分摊600/400",
+      "weight": 10.0,
+      "implementation": "landed"
+    },
+    {
+      "name": "两级真实制造完成",
+      "weight": 10.0,
+      "implementation": "manufactured"
+    },
+    {
+      "name": "2+1实际交付与欠单",
+      "weight": 8.0,
+      "implementation": "pickings"
+    },
+    {
+      "name": "两张EUR发票已付款核销",
+      "weight": 10.0,
+      "implementation": "invoices"
+    },
+    {
+      "name": "200EUR已付退款及原发票关联",
+      "weight": 7.0,
+      "implementation": "refunds"
+    },
+    {
+      "name": "最终库存与退回序列位置",
+      "weight": 12.0,
+      "implementation": "stock"
+    },
+    {
+      "name": "分包供料、制造与CS序列",
+      "weight": 9.0,
+      "implementation": "subcontract"
+    },
+    {
+      "name": "供应商直运3件",
+      "weight": 5.0,
+      "implementation": "dropship"
+    },
+    {
+      "name": "真实报废与额外补购",
+      "weight": 5.0,
+      "implementation": "scrap"
+    },
+    {
+      "name": "六张供应商发票已付",
+      "weight": 7.0,
+      "implementation": "bills"
+    },
+    {
+      "name": "差旅报销与分析账户",
+      "weight": 7.0,
+      "implementation": "expense"
+    },
+    {
+      "name": "中文操作报告与记录索引",
+      "weight": 5.0,
+      "implementation": "lambda: len((OUTPUT / 'workflow_report.md').read_text()) > 100 and len(read_json(OUTPUT / 'submission.json')) >= 10"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

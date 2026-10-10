@@ -1,0 +1,18 @@
+{
+  "filing_id": "CN005_2022",
+  "company": "沐辰服务",
+  "year": 2022,
+  "currency": "CNY",
+  "revenue": 708260000.0,
+  "net_income": 113321600.0,
+  "assets": 1416520000.0,
+  "liabilities": 594938400.0,
+  "cash": 127486800.0,
+  "equity": 821581600.0,
+  "operating_cashflow": 135985920.0,
+  "capex": 31871700.0,
+  "debt": 416456880.0,
+  "shares": 100000000.0,
+  "eps": 1.1332,
+  "dividends": 22664320.0
+}

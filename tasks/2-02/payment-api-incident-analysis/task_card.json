@@ -3,14 +3,14 @@
   "title": "支付服务 Kubernetes 故障归因与恢复计划",
   "brief": "结合支付服务日志与集群配置定位故障，整理影响范围，并提出有优先级的整改、回滚与验证步骤。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-02",
   "occupation": {
     "code": "2-02-38-04",
     "name": "云计算工程技术人员"
   },
   "scene": "你是支付平台运维工程师，收到一次服务异常的诊断资料，需要形成可供事故响应团队执行的恢复计划。",
-  "taskPrompt": "你是支付平台运维工程师，收到一次服务异常的诊断资料，需要形成可供事故响应团队执行的恢复计划。\n\n1. 阅读事故材料，关联配置、事件和日志中的证据\n2. 定位多个根因及受影响资源\n3. 提出参数明确的整改动作、回滚版本和恢复验证步骤\n\n交付成果：\n- root_cause_analysis.json：根因、资源、原文证据、优先级整改、回滚及诊断摘要。",
+  "taskPrompt": "# 支付服务 Kubernetes 故障归因与恢复计划\n\n你是支付平台运维工程师，收到一次服务异常的诊断资料，需要形成可供事故响应团队执行的恢复计划。\n\n1. 阅读事故材料，关联配置、事件和日志中的证据\n2. 定位多个根因及受影响资源\n3. 提出参数明确的整改动作、回滚版本和恢复验证步骤\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/root_cause_analysis.json`：根因、资源、原文证据、优先级整改、回滚及诊断摘要。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n基于三份静态事故证据，分析支付API发布后的故障。不得连接真实集群。区分根因、症状与无关告警；为每个根因引用文件名及逐字原文，给出优先级、受影响资源、结构化整改参数与可回滚恢复顺序。中文说明不改变证据原文。输出合同见 schema.json。\n\n## 运行与提交\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`root_cause_analysis.json`，含 roots、affected_resources、remediation、rollback、summary。\n",
   "agentMustDo": [
     "阅读事故材料，关联配置、事件和日志中的证据",
     "定位多个根因及受影响资源",
@@ -24,28 +24,28 @@
   "inputFiles": [
     {
       "name": "cluster_state.txt",
-      "path": "input/cluster_state.txt",
+      "path": "environment/input/cluster_state.txt",
       "format": "TXT",
       "bytes": 1456,
       "description": "cluster_state.txt，用于支付服务 Kubernetes 故障归因与恢复计划。"
     },
     {
       "name": "deployment.yaml",
-      "path": "input/deployment.yaml",
+      "path": "environment/input/deployment.yaml",
       "format": "YAML",
       "bytes": 552,
       "description": "deployment.yaml，用于支付服务 Kubernetes 故障归因与恢复计划。"
     },
     {
       "name": "failing_pod.txt",
-      "path": "input/failing_pod.txt",
+      "path": "environment/input/failing_pod.txt",
       "format": "TXT",
       "bytes": 459,
       "description": "failing_pod.txt，用于支付服务 Kubernetes 故障归因与恢复计划。"
     },
     {
       "name": "结果字段说明",
-      "path": "input/schema.json",
+      "path": "environment/input/schema.json",
       "format": "JSON",
       "bytes": 515,
       "description": "结果字段说明，用于支付服务 Kubernetes 故障归因与恢复计划。"
@@ -56,13 +56,14 @@
   "referenceFiles": [
     {
       "name": "root_cause_analysis.json",
-      "path": "output/root_cause_analysis.json",
+      "path": "reference/root_cause_analysis.json",
       "format": "JSON",
+      "bytes": 1705,
       "description": "根因、资源、原文证据、优先级整改、回滚及诊断摘要。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "根因与证据",
@@ -94,6 +95,109 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "读取 RCA JSON，逐项匹配根因、受影响资源与逐字日志证据。",
+      "检查结构化整改参数，包括配置键、目标值与操作步骤。",
+      "核对回滚版本、镜像与中文诊断摘要和验证步骤。"
+    ],
+    "metrics": [
+      "根因和证据占 50%；受影响资源 F1 占 10%；整改参数占 25%；回滚占 10%；摘要占 5%。",
+      "根因证据按材料中的原文核验；资源集合使用 F1。"
+    ],
+    "gates": [],
+    "checks": [
+      {
+        "name": "根因与逐字证据",
+        "weight": 50.0,
+        "implementation": "roots"
+      },
+      {
+        "name": "受影响资源",
+        "weight": 10.0,
+        "implementation": "lambda: f1_set(read_json(OUTPUT / 'root_cause_analysis.json')['affected_resources'], e['affected_resources'])"
+      },
+      {
+        "name": "中文整改结构化参数",
+        "weight": 25.0,
+        "implementation": "params"
+      },
+      {
+        "name": "回滚版本与镜像",
+        "weight": 10.0,
+        "implementation": "lambda: tree_score({k: read_json(OUTPUT / 'root_cause_analysis.json')['rollback'][k] for k in e['rollback']}, e['rollback'])"
+      },
+      {
+        "name": "诊断摘要与验证步骤",
+        "weight": 5.0,
+        "implementation": "lambda: len(read_json(OUTPUT / 'root_cause_analysis.json')['summary']) >= 20 and len(read_json(OUTPUT / 'root_cause_analysis.json')['rollback']['verify']) >= 10"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "root_cause_analysis.json",
+      "path": "output/root_cause_analysis.json",
+      "format": "JSON",
+      "description": "根因、资源、原文证据、优先级整改、回滚及诊断摘要。"
+    }
+  ],
+  "referenceFileCount": 1,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/cluster_state.txt",
+      "content": "2025-02-18T09:31:00Z kubectl get pods -n payments\npayment-api-7c9d6-1 0/1 CrashLoopBackOff 6\npayment-api-7c9d6-2 0/1 CrashLoopBackOff 5\npayment-db-0 1/1 Running 0\nNodeReady=True MemoryPressure=False DiskPressure=False\nsvc/payment-api targetPort=8080 endpoints=0\ndeployment/payment-api rollout revision=17 previous_revision=16\nold revision16 image=registry.local/payment:1.6.2\nIngress reports upstream 503; certificate valid until 2025-12-31.\nPrometheus scrape payment-api:9090 fails; app endpoint listens on 9100.\n09:30:00Z unrelated batch-job-0 completed successfully\n09:31:00Z unrelated batch-job-1 completed successfully\n09:32:00Z unrelated batch-job-2 completed successfully\n09:33:00Z unrelated batch-job-3 completed successfully\n09:34:00Z unrelated batch-job-4 completed successfully\n09:35:00Z unrelated batch-job-5 completed successfully\n09:36:00Z unrelated batch-job-6 completed successfully\n09:37:00Z unrelated batch-job-7 completed successfully\n09:38:00Z unrelated batch-job-8 completed successfully\n09:39:00Z unrelated batch-job-9 completed successfully\n09:30:00Z unrelated batch-job-10 completed successfully\n09:31:00Z unrelated batch-job-11 completed successfully\n09:32:00Z unrelated batch-job-12 completed successfully\n09:33:00Z unrelated batch-job-13 completed successfully\n09:34:00Z unrelated batch-job-14 completed successfully\n09:35:00Z unrelated batch-job-15 completed successfully\n09:36:00Z unrelated batch-job-16 completed successfully\n",
+      "truncated": false
+    },
+    {
+      "path": "environment/input/failing_pod.txt",
+      "content": "Last State: Terminated Reason: OOMKilled Exit Code: 137\nstartup profile: required working set 380Mi, initialization duration 24s\nLiveness probe failed: connect: connection refused during initialization\nmetrics listener bound to port 9100; ServiceMonitor targetPort=9090\ndatabase ping succeeded; DNS lookup succeeded; credentials accepted\nReadiness endpoint stays false until initialization completes\nknown approved memory limit=512Mi; minimum probe delay=30s\n",
+      "truncated": false
+    },
+    {
+      "path": "environment/input/schema.json",
+      "content": "{\n  \"root_types\": [\n    \"memory_limit\",\n    \"premature_liveness\",\n    \"metrics_port_mismatch\"\n  ],\n  \"root_fields\": [\n    \"type\",\n    \"resource\",\n    \"evidence_file\",\n    \"evidence_quote\",\n    \"description\"\n  ],\n  \"remediation_fields\": [\n    \"priority\",\n    \"resource\",\n    \"action\",\n    \"parameters\"\n  ],\n  \"parameter_keys\": [\n    \"memory_limit\",\n    \"initialDelaySeconds\",\n    \"metrics_target_port\"\n  ],\n  \"rollback\": \"object with revision,image,verify\",\n  \"affected_resources\": \"array of exact resource names\"\n}\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/root_cause_analysis.json",
+      "content": "{\n  \"roots\": [\n    {\n      \"type\": \"memory_limit\",\n      \"resource\": \"deployment/payment-api\",\n      \"evidence_file\": \"failing_pod.txt\",\n      \"evidence_quote\": \"Last State: Terminated Reason: OOMKilled Exit Code: 137\",\n      \"description\": \"容器内存限制低于启动工作集，导致OOM终止。\"\n    },\n    {\n      \"type\": \"premature_liveness\",\n      \"resource\": \"deployment/payment-api\",\n      \"evidence_file\": \"failing_pod.txt\",\n      \"evidence_quote\": \"Liveness probe failed: connect: connection refused during initialization\",\n      \"description\": \"启动需要24秒，过早存活探针触发重启。\"\n    },\n    {\n      \"type\": \"metrics_port_mismatch\",\n      \"resource\": \"ServiceMonitor/payment-api\",\n      \"evidence_file\": \"failing_pod.txt\",\n      \"evidence_quote\": \"metrics listener bound to port 9100; ServiceMonitor targetPort=9090\",\n      \"description\": \"指标监听端口与采集目标不一致。\"\n    }\n  ],\n  \"affected_resources\": [\n    \"deployment/payment-api\",\n    \"svc/payment-api\",\n    \"ServiceMonitor/payment-api\"\n  ],\n  \"remediation\": [\n    {\n      \"priority\": 1,\n      \"resource\": \"deployment/payment-api\",\n      \"action\": \"先回滚恢复服务，再调整内存及探针并灰度发布；采集端口对齐。\",\n      \"parameters\": {\n        \"memory_limit\": \"512Mi\",\n        \"initialDelaySeconds\": 30,\n        \"metrics_target_port\": 9100\n      }\n    }\n  ],\n  \"rollback\": {\n    \"revision\": 16,\n    \"image\": \"registry.local/payment:1.6.2\",\n    \"verify\": \"检查双副本就绪、503恢复、无OOM及指标采集成功\"\n  },\n  \"summary\": \"发布后资源与探针配置导致重启，指标端口另有配置错误。数据库和DNS证据正常，不应当作根因。\"\n}\n",
+      "truncated": false
+    }
+  ]
 }

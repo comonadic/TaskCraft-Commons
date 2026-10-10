@@ -2,26 +2,32 @@
 
 回放八组人形机器人控制策略，判断稳定性和跟踪效果，用视频与轨迹指标支持每项结论。
 
-职业：机器人工程技术人员（2-02-38-10）
+职业：机器人工程技术人员 · `2-02-38-10`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是机器人控制评估人员，需要向研发团队说明不同控制策略的表现和问题出现的时间。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-G1 模型、八组控制配置、回放工具与评价规则。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**表现判断 · 70 分**
-
-跌倒或跟踪 RMSE > 0.35 判为 failed；无跌倒且 RMSE ≤ 0.15 为 successful，其余为 nearly_successful。按八例正确比例计分。
-
-**观察与指标 · 30 分**
-
-比对最低高度、跟踪 RMSE 和跌倒时间，绝对容差为 0.0001；中文观察至少 20 字，按八例平均正确比例计分。
-
-每例先核对轨迹与独立回放指标，视频时长大于 5.7 秒，并抽取三帧与回放画面比对。
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

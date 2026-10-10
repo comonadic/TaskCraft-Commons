@@ -6,7 +6,24 @@
 2. 完成制造、分包供料、分批交付与直运
 3. 完成发票核销、退货退款、报废补购与报销，整理记录索引
 
-交付成果：
-- Odoo 业务记录：完成后的库存、制造、交付、发票、退款与报销记录。
-- submission.json：创建和处理的业务记录 ID 索引。
-- workflow_report.md：数量、成本、付款、退款与关联关系说明。
+## 工作空间
+
+输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。
+
+## 交付文件
+
+- `/app/output/Odoo 业务记录`：完成后的库存、制造、交付、发票、退款与报销记录。
+- `/app/output/submission.json`：创建和处理的业务记录 ID 索引。
+- `/app/output/workflow_report.md`：数量、成本、付款、退款与关联关系说明。
+
+## 运行约定
+
+保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。
+
+## 具体工作要求
+
+输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。
+
+## 交付要求
+
+Odoo数据库最终状态；`submission.json`列出创建的业务记录ID；`workflow_report.md`说明数量、成本、发票、退货关系；`screenshots/`可选GUI证据。

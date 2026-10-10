@@ -3,14 +3,14 @@
   "title": "图书馆书目修复与 FOLIO 覆盖计划",
   "brief": "按照编目政策修复 MARC 书目，判断 FOLIO 中的覆盖、新建与隔离动作，并整理导入计划和质量报告。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-10",
   "occupation": {
     "code": "2-10-06-01",
     "name": "文献信息专业人员"
   },
   "scene": "你是图书馆文献信息人员，需要把批量书目中的字段问题修复为可导入的记录，并说明每条处理决定。",
-  "taskPrompt": "你是图书馆文献信息人员，需要把批量书目中的字段问题修复为可导入的记录，并说明每条处理决定。\n\n1. 结合权威映射、馆藏和编目政策修复字段\n2. 与 FOLIO 记录匹配，逐记录确定处理动作\n3. 生成导入计划、质量报告和可复用的处理程序\n\n交付成果：\n- submission/scripts/remediate_catalog.py：支持输入与输出目录参数的书目处理程序。\n- submission/outputs/public_case/：修复 XML、处理决策 CSV、导入计划 JSON、QA 报告与修复摘要。",
+  "taskPrompt": "# 图书馆书目修复与 FOLIO 覆盖计划\n\n你是图书馆文献信息人员，需要把批量书目中的字段问题修复为可导入的记录，并说明每条处理决定。\n\n1. 结合权威映射、馆藏和编目政策修复字段\n2. 与 FOLIO 记录匹配，逐记录确定处理动作\n3. 生成导入计划、质量报告和可复用的处理程序\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/submission/scripts/remediate_catalog.py`：支持输入与输出目录参数的书目处理程序。\n- `/app/output/submission/outputs/public_case/`：修复 XML、处理决策 CSV、导入计划 JSON、QA 报告与修复摘要。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n## 运行与提交\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`submission/scripts/remediate_catalog.py`支持 --case-dir 与 --output-dir；公开输出位于submission/outputs/public_case：remediated_records.xml、overlay_decisions.csv、folio_import_plan.json、qa_report.json、remediation_summary.md。\n",
   "agentMustDo": [
     "结合权威映射、馆藏和编目政策修复字段",
     "与 FOLIO 记录匹配，逐记录确定处理动作",
@@ -24,14 +24,14 @@
   "inputFiles": [
     {
       "name": "case 资料",
-      "path": "input/case/",
+      "path": "environment/input/case/",
       "format": "目录",
       "bytes": 254342,
       "description": "case 资料，共 5 个文件。"
     },
     {
       "name": "starter_project 资料",
-      "path": "input/starter_project/",
+      "path": "environment/input/starter_project/",
       "format": "目录",
       "bytes": 90,
       "description": "starter_project 资料，共 1 个文件。"
@@ -41,20 +41,50 @@
   "inputManifest": "materials.json",
   "referenceFiles": [
     {
-      "name": "submission/scripts/remediate_catalog.py",
-      "path": "output/submission/scripts/remediate_catalog.py",
-      "format": "PY",
-      "description": "支持输入与输出目录参数的书目处理程序。"
+      "name": "submission/outputs/public_case/folio_import_plan.json",
+      "path": "reference/submission/outputs/public_case/folio_import_plan.json",
+      "format": "JSON",
+      "bytes": 44050,
+      "description": "参考解生成的交付文件。"
     },
     {
-      "name": "submission/outputs/public_case/",
-      "path": "output/submission/outputs/public_case/",
-      "format": "目录",
-      "description": "修复 XML、处理决策 CSV、导入计划 JSON、QA 报告与修复摘要。"
+      "name": "submission/outputs/public_case/overlay_decisions.csv",
+      "path": "reference/submission/outputs/public_case/overlay_decisions.csv",
+      "format": "CSV",
+      "bytes": 8818,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "submission/outputs/public_case/qa_report.json",
+      "path": "reference/submission/outputs/public_case/qa_report.json",
+      "format": "JSON",
+      "bytes": 62970,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "submission/outputs/public_case/remediated_records.xml",
+      "path": "reference/submission/outputs/public_case/remediated_records.xml",
+      "format": "XML",
+      "bytes": 211620,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "submission/outputs/public_case/remediation_summary.md",
+      "path": "reference/submission/outputs/public_case/remediation_summary.md",
+      "format": "MD",
+      "bytes": 231,
+      "description": "参考解生成的交付文件。"
+    },
+    {
+      "name": "submission/scripts/remediate_catalog.py",
+      "path": "reference/submission/scripts/remediate_catalog.py",
+      "format": "PY",
+      "bytes": 2777,
+      "description": "支持输入与输出目录参数的书目处理程序。"
     }
   ],
   "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
     "criteria": [
       {
         "name": "书目字段",
@@ -86,6 +116,125 @@
     "scoreRange": [
       0,
       100
-    ]
-  }
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "解析 400 条 MARC 记录并逐字段核对修复结果。",
+      "按 record_id 检查覆盖、创建或隔离决策及导入计划。",
+      "检查 QA 证据，并用 80 条独立案例运行提交 CLI。"
+    ],
+    "metrics": [
+      "字段修复 30%、决策 20%、导入计划 10%、QA与CLI材料 10%、独立案例复跑 30%。",
+      "隐藏案例复跑在新目录进行；评分文件与目标记录留在验证器中。"
+    ],
+    "gates": [],
+    "checks": [
+      {
+        "name": "400条字段修复",
+        "weight": 30.0,
+        "implementation": "records"
+      },
+      {
+        "name": "覆盖/创建/隔离决策",
+        "weight": 20.0,
+        "implementation": "lambda: record_score(read_csv(out / 'overlay_decisions.csv'), e['decisions'], ['record_id'])"
+      },
+      {
+        "name": "导入计划",
+        "weight": 10.0,
+        "implementation": "plans"
+      },
+      {
+        "name": "QA与CLI材料",
+        "weight": 10.0,
+        "implementation": "qa"
+      },
+      {
+        "name": "80条隐藏案例CLI复跑",
+        "weight": 30.0,
+        "implementation": "hidden"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
+    {
+      "name": "submission/scripts/remediate_catalog.py",
+      "path": "output/submission/scripts/remediate_catalog.py",
+      "format": "PY",
+      "description": "支持输入与输出目录参数的书目处理程序。"
+    },
+    {
+      "name": "submission/outputs/public_case/",
+      "path": "output/submission/outputs/public_case/",
+      "format": "目录",
+      "description": "修复 XML、处理决策 CSV、导入计划 JSON、QA 报告与修复摘要。"
+    }
+  ],
+  "referenceFileCount": 6,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
+    ],
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/case/authority.json",
+      "content": "{\n  \"作者00（旧名）\": \"作者00\",\n  \"作者01（旧名）\": \"作者01\",\n  \"作者02（旧名）\": \"作者02\",\n  \"作者03（旧名）\": \"作者03\",\n  \"作者04（旧名）\": \"作者04\",\n  \"作者05（旧名）\": \"作者05\",\n  \"作者06（旧名）\": \"作者06\",\n  \"作者07（旧名）\": \"作者07\",\n  \"作者08（旧名）\": \"作者08\",\n  \"作者09（旧名）\": \"作者09\",\n  \"作者10（旧名）\": \"作者10\",\n  \"作者11（旧名）\": \"作者11\",\n  \"作者12（旧名）\": \"作者12\",\n  \"作者13（旧名）\": \"作者13\",\n  \"作者14（旧名）\": \"作者14\",\n  \"作者15（旧名）\": \"作者15\",\n  \"作者16（旧名）\": \"作者16\",\n  \"作者17（旧名）\": \"作者17\",\n  \"作者18（旧名）\": \"作者18\",\n  \"作者19（旧名）\": \"作者19\",\n  \"作者20（旧名）\": \"作者20\",\n  \"作者21（旧名）\": \"作者21\",\n  \"作者22（旧名）\": \"作者22\",\n  \"作者23（旧名）\": \"作者23\",\n  \"作者24（旧名）\": \"作者24\",\n  \"作者25（旧名）\": \"作者25\",\n  \"作者26（旧名）\": \"作者26\",\n  \"作者27（旧名）\": \"作者27\",\n  \"作者28（旧名）\": \"作者28\",\n  \"作者29（旧名）\": \"作者29\",\n  \"作者30（旧名）\": \"作者30\",\n  \"作者31（旧名）\": \"作者31\",\n  \"作者32（旧名）\": \"作者32\",\n  \"作者33（旧名）\": \"作者33\",\n  \"作者34（旧名）\": \"作者34\",\n  \"作者35（旧名）\": \"作者35\",\n  \"作者36（旧名）\": \"作者36\",\n  \"作者37（旧名）\": \"作者37\",\n  \"作者38（旧名）\": \"作者38\",\n  \"作者39（旧名）\": \"作者39\"\n}\n",
+      "truncated": false
+    },
+    {
+      "path": "environment/input/case/folio_matches.json",
+      "content": "{\n  \"9787000000000\": [],\n  \"9787000000001\": [\n    {\n      \"instance_id\": \"F00001\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000002\": [\n    {\n      \"instance_id\": \"F00002\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000003\": [\n    {\n      \"instance_id\": \"F00003\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000004\": [\n    {\n      \"instance_id\": \"F00004\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000005\": [],\n  \"9787000000006\": [\n    {\n      \"instance_id\": \"F00006\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000007\": [\n    {\n      \"instance_id\": \"F00007\",\n      \"protected\": true\n    }\n  ],\n  \"9787000000008\": [\n    {\n      \"instance_id\": \"F00008\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000009\": [\n    {\n      \"instance_id\": \"F00009\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000010\": [],\n  \"9787000000011\": [\n    {\n      \"instance_id\": \"F00011\",\n      \"protected\": false\n    },\n    {\n      \"instance_id\": \"D00011\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000012\": [\n    {\n      \"instance_id\": \"F00012\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000013\": [\n    {\n      \"instance_id\": \"F00013\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000014\": [\n    {\n      \"instance_id\": \"F00014\",\n      \"protected\": true\n    }\n  ],\n  \"9787000000015\": [],\n  \"9787000000016\": [\n    {\n      \"instance_id\": \"F00016\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000017\": [\n    {\n      \"instance_id\": \"F00017\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000018\": [\n    {\n      \"instance_id\": \"F00018\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000019\": [\n    {\n      \"instance_id\": \"F00019\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000020\": [],\n  \"9787000000021\": [\n    {\n      \"instance_id\": \"F00021\",\n      \"protected\": true\n    }\n  ],\n  \"9787000000022\": [\n    {\n      \"instance_id\": \"F00022\",\n      \"protected\": false\n    },\n    {\n      \"instance_id\": \"D00022\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000023\": [\n    {\n      \"instance_id\": \"F00023\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000024\": [\n    {\n      \"instance_id\": \"F00024\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000025\": [],\n  \"9787000000026\": [\n    {\n      \"instance_id\": \"F00026\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000027\": [\n    {\n      \"instance_id\": \"F00027\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000028\": [\n    {\n      \"instance_id\": \"F00028\",\n      \"protected\": true\n    }\n  ],\n  \"9787000000029\": [\n    {\n      \"instance_id\": \"F00029\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000030\": [],\n  \"9787000000031\": [\n    {\n      \"instance_id\": \"F00031\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000032\": [\n    {\n      \"instance_id\": \"F00032\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000033\": [\n    {\n      \"instance_id\": \"F00033\",\n      \"protected\": false\n    },\n    {\n      \"instance_id\": \"D00033\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000034\": [\n    {\n      \"instance_id\": \"F00034\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000035\": [],\n  \"9787000000036\": [\n    {\n      \"instance_id\": \"F00036\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000037\": [\n    {\n      \"instance_id\": \"F00037\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000038\": [\n    {\n      \"instance_id\": \"F00038\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000039\": [\n    {\n      \"instance_id\": \"F00039\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000040\": [],\n  \"9787000000041\": [\n    {\n      \"instance_id\": \"F00041\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000042\": [\n    {\n      \"instance_id\": \"F00042\",\n      \"protected\": true\n    }\n  ],\n  \"9787000000043\": [\n    {\n      \"instance_id\": \"F00043\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000044\": [\n    {\n      \"instance_id\": \"F00044\",\n      \"protected\": false\n    },\n    {\n      \"instance_id\": \"D00044\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000045\": [],\n  \"9787000000046\": [\n    {\n      \"instance_id\": \"F00046\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000047\": [\n    {\n      \"instance_id\": \"F00047\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000048\": [\n    {\n      \"instance_id\": \"F00048\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000049\": [\n    {\n      \"instance_id\": \"F00049\",\n      \"protected\": true\n    }\n  ],\n  \"9787000000050\": [],\n  \"9787000000051\": [\n    {\n      \"instance_id\": \"F00051\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000052\": [\n    {\n      \"instance_id\": \"F00052\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000053\": [\n    {\n      \"instance_id\": \"F00053\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000054\": [\n    {\n      \"instance_id\": \"F00054\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000055\": [],\n  \"9787000000056\": [\n    {\n      \"instance_id\": \"F00056\",\n      \"protected\": true\n    }\n  ],\n  \"9787000000057\": [\n    {\n      \"instance_id\": \"F00057\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000058\": [\n    {\n      \"instance_id\": \"F00058\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000059\": [\n    {\n      \"instance_id\": \"F00059\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000060\": [],\n  \"9787000000061\": [\n    {\n      \"instance_id\": \"F00061\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000062\": [\n    {\n      \"instance_id\": \"F00062\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000063\": [\n    {\n      \"instance_id\": \"F00063\",\n      \"protected\": true\n    }\n  ],\n  \"9787000000064\": [\n    {\n      \"instance_id\": \"F00064\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000065\": [],\n  \"9787000000066\": [\n    {\n      \"instance_id\": \"F00066\",\n      \"protected\": false\n    },\n    {\n      \"instance_id\": \"D00066\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000067\": [\n    {\n      \"instance_id\": \"F00067\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000068\": [\n    {\n      \"instance_id\": \"F00068\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000069\": [\n    {\n      \"instance_id\": \"F00069\",\n      \"protected\": false\n    }\n  ],\n  \"9787000000070\": [],\n  \"9787000000071\": [\n    {\n      \"instance_id\": \"F00",
+      "truncated": true
+    },
+    {
+      "path": "environment/input/case/policy.json",
+      "content": "{\n  \"valid_branches\": [\n    \"MAIN\",\n    \"EAST\",\n    \"WEST\"\n  ]\n}\n",
+      "truncated": false
+    },
+    {
+      "path": "reference/submission/outputs/public_case/folio_import_plan.json",
+      "content": "[\n  {\n    \"record_id\": \"B00000\",\n    \"action\": \"quarantine\",\n    \"instance_id\": \"\",\n    \"branch\": \"UNKNOWN\"\n  },\n  {\n    \"record_id\": \"B00001\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00001\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00002\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00002\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00003\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00003\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00004\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00004\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00005\",\n    \"action\": \"create\",\n    \"instance_id\": \"\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00006\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00006\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00007\",\n    \"action\": \"skip_protected\",\n    \"instance_id\": \"F00007\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00008\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00008\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00009\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00009\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00010\",\n    \"action\": \"create\",\n    \"instance_id\": \"\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00011\",\n    \"action\": \"review\",\n    \"instance_id\": \"\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00012\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00012\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00013\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00013\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00014\",\n    \"action\": \"skip_protected\",\n    \"instance_id\": \"F00014\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00015\",\n    \"action\": \"create\",\n    \"instance_id\": \"\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00016\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00016\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00017\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00017\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00018\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00018\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00019\",\n    \"action\": \"quarantine\",\n    \"instance_id\": \"F00019\",\n    \"branch\": \"UNKNOWN\"\n  },\n  {\n    \"record_id\": \"B00020\",\n    \"action\": \"create\",\n    \"instance_id\": \"\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00021\",\n    \"action\": \"skip_protected\",\n    \"instance_id\": \"F00021\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00022\",\n    \"action\": \"review\",\n    \"instance_id\": \"\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00023\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00023\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00024\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00024\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00025\",\n    \"action\": \"create\",\n    \"instance_id\": \"\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00026\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00026\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00027\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00027\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00028\",\n    \"action\": \"skip_protected\",\n    \"instance_id\": \"F00028\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00029\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00029\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00030\",\n    \"action\": \"create\",\n    \"instance_id\": \"\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00031\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00031\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00032\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00032\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00033\",\n    \"action\": \"review\",\n    \"instance_id\": \"\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00034\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00034\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00035\",\n    \"action\": \"create\",\n    \"instance_id\": \"\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00036\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00036\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00037\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00037\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00038\",\n    \"action\": \"quarantine\",\n    \"instance_id\": \"F00038\",\n    \"branch\": \"UNKNOWN\"\n  },\n  {\n    \"record_id\": \"B00039\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00039\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00040\",\n    \"action\": \"create\",\n    \"instance_id\": \"\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00041\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00041\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00042\",\n    \"action\": \"skip_protected\",\n    \"instance_id\": \"F00042\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00043\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00043\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00044\",\n    \"action\": \"review\",\n    \"instance_id\": \"\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00045\",\n    \"action\": \"create\",\n    \"instance_id\": \"\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00046\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00046\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00047\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00047\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00048\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00048\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00049\",\n    \"action\": \"skip_protected\",\n    \"instance_id\": \"F00049\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00050\",\n    \"action\": \"create\",\n    \"instance_id\": \"\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00051\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00051\",\n    \"branch\": \"MAIN\"\n  },\n  {\n    \"record_id\": \"B00052\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00052\",\n    \"branch\": \"EAST\"\n  },\n  {\n    \"record_id\": \"B00053\",\n    \"action\": \"overlay\",\n    \"instance_id\": \"F00053\",\n    \"branch\": \"WEST\"\n  },\n  {\n    \"record_id\": \"B00054\",\n    \"action\": \"ov",
+      "truncated": true
+    },
+    {
+      "path": "reference/submission/outputs/public_case/overlay_decisions.csv",
+      "content": "record_id,decision,target_instance\nB00000,quarantine,\nB00001,overlay,F00001\nB00002,overlay,F00002\nB00003,overlay,F00003\nB00004,overlay,F00004\nB00005,create,\nB00006,overlay,F00006\nB00007,skip_protected,F00007\nB00008,overlay,F00008\nB00009,overlay,F00009\nB00010,create,\nB00011,review,\nB00012,overlay,F00012\nB00013,overlay,F00013\nB00014,skip_protected,F00014\nB00015,create,\nB00016,overlay,F00016\nB00017,overlay,F00017\nB00018,overlay,F00018\nB00019,quarantine,F00019\nB00020,create,\nB00021,skip_protected,F00021\nB00022,review,\nB00023,overlay,F00023\nB00024,overlay,F00024\nB00025,create,\nB00026,overlay,F00026\nB00027,overlay,F00027\nB00028,skip_protected,F00028\nB00029,overlay,F00029\nB00030,create,\nB00031,overlay,F00031\nB00032,overlay,F00032\nB00033,review,\nB00034,overlay,F00034\nB00035,create,\nB00036,overlay,F00036\nB00037,overlay,F00037\nB00038,quarantine,F00038\nB00039,overlay,F00039\nB00040,create,\nB00041,overlay,F00041\nB00042,skip_protected,F00042\nB00043,overlay,F00043\nB00044,review,\nB00045,create,\nB00046,overlay,F00046\nB00047,overlay,F00047\nB00048,overlay,F00048\nB00049,skip_protected,F00049\nB00050,create,\nB00051,overlay,F00051\nB00052,overlay,F00052\nB00053,overlay,F00053\nB00054,overlay,F00054\nB00055,create,\nB00056,skip_protected,F00056\nB00057,quarantine,F00057\nB00058,overlay,F00058\nB00059,overlay,F00059\nB00060,create,\nB00061,overlay,F00061\nB00062,overlay,F00062\nB00063,skip_protected,F00063\nB00064,overlay,F00064\nB00065,create,\nB00066,review,\nB00067,overlay,F00067\nB00068,overlay,F00068\nB00069,overlay,F00069\nB00070,create,\nB00071,overlay,F00071\nB00072,overlay,F00072\nB00073,overlay,F00073\nB00074,overlay,F00074\nB00075,create,\nB00076,quarantine,F00076\nB00077,review,\nB00078,overlay,F00078\nB00079,overlay,F00079\nB00080,create,\nB00081,overlay,F00081\nB00082,overlay,F00082\nB00083,overlay,F00083\nB00084,skip_protected,F00084\nB00085,create,\nB00086,overlay,F00086\nB00087,overlay,F00087\nB00088,review,\nB00089,overlay,F00089\nB00090,create,\nB00091,skip_protected,F00091\nB00092,overlay,F00092\nB00093,overlay,F00093\nB00094,overlay,F00094\nB00095,quarantine,\nB00096,overlay,F00096\nB00097,overlay,F00097\nB00098,skip_protected,F00098\nB00099,review,\nB00100,create,\nB00101,overlay,F00101\nB00102,overlay,F00102\nB00103,overlay,F00103\nB00104,overlay,F00104\nB00105,create,\nB00106,overlay,F00106\nB00107,overlay,F00107\nB00108,overlay,F00108\nB00109,overlay,F00109\nB00110,create,\nB00111,overlay,F00111\nB00112,skip_protected,F00112\nB00113,overlay,F00113\nB00114,quarantine,F00114\nB00115,create,\nB00116,overlay,F00116\nB00117,overlay,F00117\nB00118,overlay,F00118\nB00119,skip_protected,F00119\nB00120,create,\nB00121,review,\nB00122,overlay,F00122\nB00123,overlay,F00123\nB00124,overlay,F00124\nB00125,create,\nB00126,skip_protected,F00126\nB00127,overlay,F00127\nB00128,overlay,F00128\nB00129,overlay,F00129\nB00130,create,\nB00131,overlay,F00131\nB00132,review,\nB00133,quarantine,F00133\nB00134,overlay,F00134\nB00135,create,\nB00136,overlay,F00136\nB00137,overlay,F00137\nB00138,overlay,F00138\nB00139,overlay,F00139\nB00140,create,\nB00141,overlay,F00141\nB00142,overlay,F00142\nB00143,review,\nB00144,overlay,F00144\nB00145,create,\nB00146,overlay,F00146\nB00147,skip_protected,F00147\nB00148,overlay,F00148\nB00149,overlay,F00149\nB00150,create,\nB00151,overlay,F00151\nB00152,quarantine,F00152\nB00153,overlay,F00153\nB00154,review,\nB00155,create,\nB00156,overlay,F00156\nB00157,overlay,F00157\nB00158,overlay,F00158\nB00159,overlay,F00159\nB00160,create,\nB00161,skip_protected,F00161\nB00162,overlay,F00162\nB00163,overlay,F00163\nB00164,overlay,F00164\nB00165,create,\nB00166,overlay,F00166\nB00167,overlay,F00167\nB00168,skip_protected,F00168\nB00169,overlay,F00169\nB00170,create,\nB00171,quarantine,F00171\nB00172,overlay,F00172\nB00173,overlay,F00173\nB00174,overlay,F00174\nB00175,create,\nB00176,review,\nB00177,overlay,F00177\nB00178,overlay,F00178\nB00179,overlay,F00179\nB00180,create,\nB00181,overlay,F00181\nB00182,skip_protected,F00182\nB00183,overlay,F00183\nB00184,overlay,F00184\nB00185,create,\nB00186,overlay,F00186\nB00187,review,\nB00188,overlay,F00188\nB00189,skip_protected,F00189\nB00190,quarantine,\nB00191,overlay,F00191\nB00192,overlay,F00192\nB00193,overlay,F00193\nB00194,overlay,F00194\nB00195,create,\nB00196,skip_protected,F00196\nB00197,overlay,F00197\nB00198,review,\nB00199,overlay,F00199\nB00200,create,\nB00201,overlay,F00201\nB00202,overlay,F00202\nB00203,skip_protected,F00203\nB00204,overlay,F00204\nB00205,create,\nB00206,overlay,F00206\nB00207,overlay,F00207\nB00208,overlay,F00208\nB00209,quarantine,\nB00210,create,\nB00211,overlay,F00211\nB00212,overlay,F00212\nB00213,overlay,F00213\nB00214,overlay,F00214\nB00215,create,\nB00216,overlay,F00216\nB00217,skip_protected,F00217\nB00218,overlay,F00218\nB00219,overlay,F00219\nB00220,create,\nB00221,overlay,F00221\nB00222,overlay,F00222\nB00223,overlay,F00223\nB00224,skip_protected,F00224\nB00225,create,\nB00226,overlay,F00226\nB00227,overlay,F00227\nB00228,quarantine,F00228\nB00229,overlay,F00229\nB00230,create,\nB00231,review,\nB00232,overlay,F00232\nB00233,overlay,F00233\nB00234,overlay,F00234\nB00235,create,\nB00236,overlay,F00236\nB00237,overlay,F00237\nB00238,skip_protected,F00238\nB00239,overlay,F00239\nB00240,create,\nB00241,overlay,F00241\nB00242,review,\nB00243,overlay,F00243\nB00244,overlay,F00244\nB00245,create,\nB00246,overlay,F00246\nB00247,quarantine,F00247\nB00248,overlay,F00248\nB00249,overlay,F00249\nB00250,create,\nB00251,overlay,F00251\nB00252,skip_protected,F00252\nB00253,review,\nB00254,overlay,F00254\nB00255,create,\nB00256,overlay,F00256\nB00257,overlay,F00257\nB00258,overlay,F00258\nB00259,skip_protected,F00259\nB00260,create,\nB00261,overlay,F00261\nB00262,overlay,F00262\nB00263,overlay,F00263\nB00264,review,\nB00265,create,\nB00266,quarantine,F00266\nB00267,overlay,F00267\nB00268,overlay,F00268\nB00269,overlay,F00269\nB00270,create,\nB00271,overlay,F00271\nB00272,overlay,F00272\nB00273,skip_protected,F00273\nB00274,overlay,F00274\nB00275,create,\nB00276,overlay,F00276\nB00277,overlay,F00277\nB00278,overlay,F00278\nB00279,overlay,F00279\nB00280,create,\nB00281,overlay,F00281\nB00282,overlay,F00282\nB00283,overlay,F00283\nB00284,overlay,F00",
+      "truncated": true
+    },
+    {
+      "path": "reference/submission/outputs/public_case/qa_report.json",
+      "content": "{\n  \"records\": 400,\n  \"decision_counts\": {\n    \"quarantine\": 22,\n    \"review\": 28,\n    \"create\": 75,\n    \"skip_protected\": 39,\n    \"overlay\": 236\n  },\n  \"changes\": [\n    {\n      \"record_id\": \"B00000\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00001\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00002\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00003\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00004\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00005\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00006\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00007\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00008\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00009\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00010\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00011\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00012\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00013\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00014\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00015\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00016\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00017\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00018\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00019\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00020\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00021\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00022\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00023\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00024\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00025\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00026\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00027\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00028\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00029\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00030\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00031\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00032\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00033\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00034\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00035\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": \"B00036\",\n      \"changes\": [\n        \"title\",\n        \"language\",\n        \"authority\",\n        \"isbn\",\n        \"url\"\n      ]\n    },\n    {\n      \"record_id\": ",
+      "truncated": true
+    }
+  ]
 }

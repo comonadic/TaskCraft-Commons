@@ -1,0 +1,4 @@
+active_support_suppression: true
+opt_out_overrides_opt_in: true
+missing_consent_is_ineligible: true
+remove_fields: [age, gender, city, state]

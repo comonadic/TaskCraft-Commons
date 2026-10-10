@@ -1,0 +1,6 @@
+{
+  "point_metrics": 0.4,
+  "equal_weight": 0.25,
+  "customer_weight": 0.3,
+  "method": 0.05
+}

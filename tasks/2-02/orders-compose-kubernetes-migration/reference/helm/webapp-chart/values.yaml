@@ -1,0 +1,3 @@
+frontendReplicas: 2
+backendReplicas: 2
+market: CN-SYNTHETIC

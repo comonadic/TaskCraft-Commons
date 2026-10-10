@@ -1,0 +1,18 @@
+{
+  "filing_id": "CN002_2024",
+  "company": "松岳软件",
+  "year": 2024,
+  "currency": "CNY",
+  "revenue": 439650000.0,
+  "net_income": 43965000.0,
+  "assets": 879300000.0,
+  "liabilities": 369306000.0,
+  "cash": 79137000.0,
+  "equity": 509994000.0,
+  "operating_cashflow": 52758000.0,
+  "capex": 19784250.0,
+  "debt": 258514199.99999997,
+  "shares": 100000000.0,
+  "eps": 0.4396,
+  "dividends": 0
+}

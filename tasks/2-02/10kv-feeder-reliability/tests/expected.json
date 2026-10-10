@@ -1,0 +1,579 @@
+{
+  "original": {
+    "SAIFI": 0.3724325,
+    "SAIDI": 1.146862825,
+    "CAIDI": 3.079384385089915,
+    "ASAI": 0.9998690795861872,
+    "ENS_kWh": 19659.208218
+  },
+  "cn": {
+    "SAIFI": 0.3795151784334929,
+    "SAIDI": 2.432262963772594,
+    "CAIDI": 6.408868740934506,
+    "ASAI": 0.9997223444105282,
+    "ENS_kWh": 40496.649617999996,
+    "total_customers": 12946
+  },
+  "points": [
+    {
+      "transformer_id": "T001",
+      "lambda_per_year": 0.1124,
+      "outage_hours": 0.62944,
+      "customers": 289,
+      "kw": 567
+    },
+    {
+      "transformer_id": "T002",
+      "lambda_per_year": 0.0274,
+      "outage_hours": 0.143302,
+      "customers": 116,
+      "kw": 585
+    },
+    {
+      "transformer_id": "T003",
+      "lambda_per_year": 0.1797,
+      "outage_hours": 0.646265,
+      "customers": 134,
+      "kw": 559
+    },
+    {
+      "transformer_id": "T004",
+      "lambda_per_year": 0.1686,
+      "outage_hours": 0.850868,
+      "customers": 160,
+      "kw": 453
+    },
+    {
+      "transformer_id": "T005",
+      "lambda_per_year": 0.1112,
+      "outage_hours": 0.336042,
+      "customers": 111,
+      "kw": 223
+    },
+    {
+      "transformer_id": "T006",
+      "lambda_per_year": 0.10370000000000001,
+      "outage_hours": 0.16237700000000002,
+      "customers": 71,
+      "kw": 266
+    },
+    {
+      "transformer_id": "T007",
+      "lambda_per_year": 0.3023,
+      "outage_hours": 1.074139,
+      "customers": 178,
+      "kw": 337
+    },
+    {
+      "transformer_id": "T008",
+      "lambda_per_year": 0.2643,
+      "outage_hours": 0.959285,
+      "customers": 92,
+      "kw": 582
+    },
+    {
+      "transformer_id": "T009",
+      "lambda_per_year": 0.2151,
+      "outage_hours": 0.862493,
+      "customers": 129,
+      "kw": 214
+    },
+    {
+      "transformer_id": "T010",
+      "lambda_per_year": 0.22970000000000002,
+      "outage_hours": 1.203415,
+      "customers": 202,
+      "kw": 543
+    },
+    {
+      "transformer_id": "T011",
+      "lambda_per_year": 0.2009,
+      "outage_hours": 0.5916870000000001,
+      "customers": 288,
+      "kw": 456
+    },
+    {
+      "transformer_id": "T012",
+      "lambda_per_year": 0.1818,
+      "outage_hours": 0.353692,
+      "customers": 91,
+      "kw": 245
+    },
+    {
+      "transformer_id": "T013",
+      "lambda_per_year": 0.2009,
+      "outage_hours": 0.641573,
+      "customers": 53,
+      "kw": 176
+    },
+    {
+      "transformer_id": "T014",
+      "lambda_per_year": 0.2235,
+      "outage_hours": 0.7434069999999999,
+      "customers": 284,
+      "kw": 305
+    },
+    {
+      "transformer_id": "T015",
+      "lambda_per_year": 0.3937,
+      "outage_hours": 1.096989,
+      "customers": 68,
+      "kw": 508
+    },
+    {
+      "transformer_id": "T016",
+      "lambda_per_year": 0.3372,
+      "outage_hours": 1.175349,
+      "customers": 84,
+      "kw": 102
+    },
+    {
+      "transformer_id": "T017",
+      "lambda_per_year": 0.29309999999999997,
+      "outage_hours": 1.1015570000000001,
+      "customers": 162,
+      "kw": 184
+    },
+    {
+      "transformer_id": "T018",
+      "lambda_per_year": 0.4134,
+      "outage_hours": 0.99656,
+      "customers": 283,
+      "kw": 286
+    },
+    {
+      "transformer_id": "T019",
+      "lambda_per_year": 0.2491,
+      "outage_hours": 0.967553,
+      "customers": 20,
+      "kw": 579
+    },
+    {
+      "transformer_id": "T020",
+      "lambda_per_year": 0.2629,
+      "outage_hours": 1.085719,
+      "customers": 186,
+      "kw": 85
+    },
+    {
+      "transformer_id": "T021",
+      "lambda_per_year": 0.3185,
+      "outage_hours": 1.225615,
+      "customers": 192,
+      "kw": 412
+    },
+    {
+      "transformer_id": "T022",
+      "lambda_per_year": 0.2655,
+      "outage_hours": 1.414635,
+      "customers": 156,
+      "kw": 114
+    },
+    {
+      "transformer_id": "T023",
+      "lambda_per_year": 0.2363,
+      "outage_hours": 0.7782450000000001,
+      "customers": 211,
+      "kw": 504
+    },
+    {
+      "transformer_id": "T024",
+      "lambda_per_year": 0.321,
+      "outage_hours": 0.621712,
+      "customers": 256,
+      "kw": 321
+    },
+    {
+      "transformer_id": "T025",
+      "lambda_per_year": 0.2797,
+      "outage_hours": 0.672846,
+      "customers": 23,
+      "kw": 505
+    },
+    {
+      "transformer_id": "T026",
+      "lambda_per_year": 0.245,
+      "outage_hours": 0.494628,
+      "customers": 168,
+      "kw": 232
+    },
+    {
+      "transformer_id": "T027",
+      "lambda_per_year": 0.3368,
+      "outage_hours": 0.6755479999999999,
+      "customers": 78,
+      "kw": 364
+    },
+    {
+      "transformer_id": "T028",
+      "lambda_per_year": 0.3201,
+      "outage_hours": 1.195853,
+      "customers": 122,
+      "kw": 425
+    },
+    {
+      "transformer_id": "T029",
+      "lambda_per_year": 0.3383,
+      "outage_hours": 1.094695,
+      "customers": 102,
+      "kw": 454
+    },
+    {
+      "transformer_id": "T030",
+      "lambda_per_year": 0.2635,
+      "outage_hours": 0.7534069999999999,
+      "customers": 246,
+      "kw": 275
+    },
+    {
+      "transformer_id": "T031",
+      "lambda_per_year": 0.5287999999999999,
+      "outage_hours": 1.610369,
+      "customers": 64,
+      "kw": 538
+    },
+    {
+      "transformer_id": "T032",
+      "lambda_per_year": 0.4745,
+      "outage_hours": 1.287677,
+      "customers": 224,
+      "kw": 291
+    },
+    {
+      "transformer_id": "T033",
+      "lambda_per_year": 0.4626,
+      "outage_hours": 1.206699,
+      "customers": 31,
+      "kw": 341
+    },
+    {
+      "transformer_id": "T034",
+      "lambda_per_year": 0.4373,
+      "outage_hours": 1.685859,
+      "customers": 193,
+      "kw": 366
+    },
+    {
+      "transformer_id": "T035",
+      "lambda_per_year": 0.4068,
+      "outage_hours": 1.7416880000000001,
+      "customers": 55,
+      "kw": 171
+    },
+    {
+      "transformer_id": "T036",
+      "lambda_per_year": 0.4425,
+      "outage_hours": 1.1389070000000001,
+      "customers": 254,
+      "kw": 248
+    },
+    {
+      "transformer_id": "T037",
+      "lambda_per_year": 0.4927,
+      "outage_hours": 1.398611,
+      "customers": 133,
+      "kw": 595
+    },
+    {
+      "transformer_id": "T038",
+      "lambda_per_year": 0.538,
+      "outage_hours": 1.498698,
+      "customers": 23,
+      "kw": 219
+    },
+    {
+      "transformer_id": "T039",
+      "lambda_per_year": 0.35209999999999997,
+      "outage_hours": 0.9933029999999999,
+      "customers": 294,
+      "kw": 134
+    },
+    {
+      "transformer_id": "T040",
+      "lambda_per_year": 0.2736,
+      "outage_hours": 1.027823,
+      "customers": 160,
+      "kw": 396
+    },
+    {
+      "transformer_id": "T041",
+      "lambda_per_year": 0.3351,
+      "outage_hours": 1.408453,
+      "customers": 70,
+      "kw": 580
+    },
+    {
+      "transformer_id": "T042",
+      "lambda_per_year": 0.362,
+      "outage_hours": 1.110494,
+      "customers": 70,
+      "kw": 165
+    },
+    {
+      "transformer_id": "T043",
+      "lambda_per_year": 0.4678,
+      "outage_hours": 1.887014,
+      "customers": 243,
+      "kw": 543
+    },
+    {
+      "transformer_id": "T044",
+      "lambda_per_year": 0.4256,
+      "outage_hours": 1.508359,
+      "customers": 237,
+      "kw": 598
+    },
+    {
+      "transformer_id": "T045",
+      "lambda_per_year": 0.3839,
+      "outage_hours": 1.444235,
+      "customers": 277,
+      "kw": 583
+    },
+    {
+      "transformer_id": "T046",
+      "lambda_per_year": 0.2908,
+      "outage_hours": 1.5332919999999999,
+      "customers": 144,
+      "kw": 584
+    },
+    {
+      "transformer_id": "T047",
+      "lambda_per_year": 0.2787,
+      "outage_hours": 0.999997,
+      "customers": 176,
+      "kw": 229
+    },
+    {
+      "transformer_id": "T048",
+      "lambda_per_year": 0.33390000000000003,
+      "outage_hours": 0.802645,
+      "customers": 63,
+      "kw": 501
+    },
+    {
+      "transformer_id": "T049",
+      "lambda_per_year": 0.3858,
+      "outage_hours": 0.870544,
+      "customers": 199,
+      "kw": 274
+    },
+    {
+      "transformer_id": "T050",
+      "lambda_per_year": 0.3724,
+      "outage_hours": 0.726568,
+      "customers": 96,
+      "kw": 162
+    },
+    {
+      "transformer_id": "T051",
+      "lambda_per_year": 0.358,
+      "outage_hours": 0.692421,
+      "customers": 268,
+      "kw": 394
+    },
+    {
+      "transformer_id": "T052",
+      "lambda_per_year": 0.3264,
+      "outage_hours": 0.766713,
+      "customers": 82,
+      "kw": 234
+    },
+    {
+      "transformer_id": "T053",
+      "lambda_per_year": 0.37320000000000003,
+      "outage_hours": 0.9215340000000001,
+      "customers": 135,
+      "kw": 319
+    },
+    {
+      "transformer_id": "T054",
+      "lambda_per_year": 0.2875,
+      "outage_hours": 0.5052530000000001,
+      "customers": 105,
+      "kw": 179
+    },
+    {
+      "transformer_id": "T055",
+      "lambda_per_year": 0.3883,
+      "outage_hours": 0.9690979999999999,
+      "customers": 203,
+      "kw": 332
+    },
+    {
+      "transformer_id": "T056",
+      "lambda_per_year": 0.3832,
+      "outage_hours": 0.9098679999999999,
+      "customers": 99,
+      "kw": 493
+    },
+    {
+      "transformer_id": "T057",
+      "lambda_per_year": 0.3987,
+      "outage_hours": 1.215503,
+      "customers": 156,
+      "kw": 593
+    },
+    {
+      "transformer_id": "T058",
+      "lambda_per_year": 0.4666,
+      "outage_hours": 1.696883,
+      "customers": 277,
+      "kw": 144
+    },
+    {
+      "transformer_id": "T059",
+      "lambda_per_year": 0.4161,
+      "outage_hours": 1.4953649999999998,
+      "customers": 199,
+      "kw": 145
+    },
+    {
+      "transformer_id": "T060",
+      "lambda_per_year": 0.4869,
+      "outage_hours": 1.131845,
+      "customers": 255,
+      "kw": 521
+    },
+    {
+      "transformer_id": "T061",
+      "lambda_per_year": 0.3875,
+      "outage_hours": 1.1365669999999999,
+      "customers": 138,
+      "kw": 583
+    },
+    {
+      "transformer_id": "T062",
+      "lambda_per_year": 0.3744,
+      "outage_hours": 1.131576,
+      "customers": 235,
+      "kw": 367
+    },
+    {
+      "transformer_id": "T063",
+      "lambda_per_year": 0.5751999999999999,
+      "outage_hours": 1.621969,
+      "customers": 233,
+      "kw": 150
+    },
+    {
+      "transformer_id": "T064",
+      "lambda_per_year": 0.616,
+      "outage_hours": 1.840577,
+      "customers": 132,
+      "kw": 93
+    },
+    {
+      "transformer_id": "T065",
+      "lambda_per_year": 0.5684,
+      "outage_hours": 1.480172,
+      "customers": 72,
+      "kw": 580
+    },
+    {
+      "transformer_id": "T066",
+      "lambda_per_year": 0.5734,
+      "outage_hours": 1.312402,
+      "customers": 283,
+      "kw": 273
+    },
+    {
+      "transformer_id": "T067",
+      "lambda_per_year": 0.5455,
+      "outage_hours": 1.621199,
+      "customers": 204,
+      "kw": 306
+    },
+    {
+      "transformer_id": "T068",
+      "lambda_per_year": 0.5991,
+      "outage_hours": 1.5151890000000001,
+      "customers": 187,
+      "kw": 361
+    },
+    {
+      "transformer_id": "T069",
+      "lambda_per_year": 0.5295,
+      "outage_hours": 1.708909,
+      "customers": 52,
+      "kw": 143
+    },
+    {
+      "transformer_id": "T070",
+      "lambda_per_year": 0.5603,
+      "outage_hours": 2.176629,
+      "customers": 298,
+      "kw": 334
+    },
+    {
+      "transformer_id": "T071",
+      "lambda_per_year": 0.4411,
+      "outage_hours": 1.81509,
+      "customers": 230,
+      "kw": 270
+    },
+    {
+      "transformer_id": "T072",
+      "lambda_per_year": 0.435,
+      "outage_hours": 1.7487380000000001,
+      "customers": 270,
+      "kw": 309
+    },
+    {
+      "transformer_id": "T073",
+      "lambda_per_year": 0.5728,
+      "outage_hours": 1.630138,
+      "customers": 38,
+      "kw": 465
+    },
+    {
+      "transformer_id": "T074",
+      "lambda_per_year": 0.46699999999999997,
+      "outage_hours": 1.241562,
+      "customers": 104,
+      "kw": 212
+    },
+    {
+      "transformer_id": "T075",
+      "lambda_per_year": 0.5642,
+      "outage_hours": 1.416486,
+      "customers": 104,
+      "kw": 94
+    },
+    {
+      "transformer_id": "T076",
+      "lambda_per_year": 0.5233,
+      "outage_hours": 1.551305,
+      "customers": 282,
+      "kw": 414
+    },
+    {
+      "transformer_id": "T077",
+      "lambda_per_year": 0.612,
+      "outage_hours": 1.8124580000000001,
+      "customers": 244,
+      "kw": 506
+    },
+    {
+      "transformer_id": "T078",
+      "lambda_per_year": 0.6102,
+      "outage_hours": 1.5167480000000002,
+      "customers": 145,
+      "kw": 560
+    },
+    {
+      "transformer_id": "T079",
+      "lambda_per_year": 0.4392,
+      "outage_hours": 1.360865,
+      "customers": 154,
+      "kw": 218
+    },
+    {
+      "transformer_id": "T080",
+      "lambda_per_year": 0.47509999999999997,
+      "outage_hours": 1.3758329999999999,
+      "customers": 201,
+      "kw": 598
+    }
+  ]
+}

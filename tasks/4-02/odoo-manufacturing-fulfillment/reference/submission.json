@@ -1,0 +1,82 @@
+{
+  "products": {
+    "RM-A": 7,
+    "RM-B": 8,
+    "SUB": 9,
+    "KIT": 10
+  },
+  "category": 4,
+  "supplier": 7,
+  "customer": 8,
+  "cny": 6,
+  "eur": 126,
+  "journal": 3,
+  "expense": 1,
+  "purchase": 1,
+  "receipt_first": 1,
+  "boms": {
+    "SUB": 1,
+    "KIT": 2
+  },
+  "sub_mo": 1,
+  "shortage_snapshot": {
+    "id": 1,
+    "reservation_state": "confirmed",
+    "components_availability_state": "expected",
+    "move_raw_ids": [
+      5,
+      6
+    ]
+  },
+  "receipt_second": 2,
+  "landed_cost": 1,
+  "manufactured": [
+    2,
+    3,
+    4
+  ],
+  "lots": [
+    1,
+    2,
+    3
+  ],
+  "sale": 1,
+  "delivery_first": 3,
+  "delivery_second": 4,
+  "invoices": [
+    20,
+    22
+  ],
+  "payments": [
+    2,
+    1
+  ],
+  "return_picking": 5,
+  "refund": 25,
+  "subcontract_receipt": 8,
+  "subcontract_resupply": 7,
+  "subcontract_bom": 3,
+  "subcontract_pos": [
+    2,
+    3
+  ],
+  "subcontract_products": {
+    "RM-C": 12,
+    "SC": 13
+  },
+  "dropship": 9,
+  "dropship_po": 4,
+  "dropship_product": 14,
+  "scrap": 1,
+  "replacement_po": 5,
+  "vendor_bills": [
+    37,
+    40,
+    43,
+    46,
+    49,
+    52
+  ],
+  "expense_sheet": 1,
+  "analytic": 1
+}

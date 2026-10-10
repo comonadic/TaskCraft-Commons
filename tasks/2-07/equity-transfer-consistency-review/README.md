@@ -2,22 +2,32 @@
 
 交叉阅读股权转让相关公告，找出实质信息冲突，并为每项发现提供两份文件中的原文依据。
 
-职业：法律顾问（2-07-08-00）
+职业：法律顾问 · `2-07-08-00`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是法律与交易文件审核人员，需要帮助团队识别公告之间影响交易理解的信息差异。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-四份股权转让公告 PDF 和审核字段说明。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**冲突识别与证据 · 100 分**
-
-四项有效发现各计 25 分；每项需有两个不同文件的原文、页码，并在报告中引用。额外无效发现每项扣 20 分，报告分节数与发现数每差一项再扣 20 分；最低为 0 分。
-
-
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: webapp
+    tier: frontend
+spec:
+  replicas: {{ .Values.frontendReplicas }}
+  selector:
+    matchLabels:
+      app: webapp
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: webapp
+        tier: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: python:3.13-alpine
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            cpu: 100m
+            memory: 64Mi
+          limits:
+            cpu: 500m
+            memory: 256Mi
+        volumeMounts:
+        - name: source
+          mountPath: /site
+          readOnly: true
+        command:
+        - python
+        - -m
+        - http.server
+        - '3000'
+        - --directory
+        - /site
+      volumes:
+      - name: source
+        configMap:
+          name: app-config

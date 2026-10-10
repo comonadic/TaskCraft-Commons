@@ -2,26 +2,32 @@
 
 使用地区历史住院数据预测未来四周人数，给出点预测与区间，并提交能够复现结果的预测程序。
 
-职业：医学研究人员（2-01-08-00）
+职业：医学研究人员 · `2-01-08-00`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你是公共卫生预测研究人员，需要为 53 个地区整理未来四周的住院需求预测。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-53 个地区的历史数据快照、辅助数据和预测时间说明。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**预测表现 · 90 分**
-
-分别计算相对朴素基线的 WIS 与 MAE 改进率，两者按 70% 和 30% 加权；改进率除以 35% 并截在 0～1 后计分。
-
-**结果复现 · 10 分**
-
-重新执行预测程序，将生成结果与提交表逐记录比较；方法说明至少 30 个字符。
-
-预测表覆盖全部 212 个目标，区间与点预测满足 0 ≤ 下界 ≤ 点预测 ≤ 上界。
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

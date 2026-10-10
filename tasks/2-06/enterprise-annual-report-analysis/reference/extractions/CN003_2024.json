@@ -1,0 +1,18 @@
+{
+  "filing_id": "CN003_2024",
+  "company": "青禾设备",
+  "year": 2024,
+  "currency": "CNY",
+  "revenue": 539110000.0,
+  "net_income": 64693200.0,
+  "assets": 1078220000.0,
+  "liabilities": 452852400.0,
+  "cash": 97039800.0,
+  "equity": 625367600.0,
+  "operating_cashflow": 77631840.0,
+  "capex": 24259950.0,
+  "debt": 316996680.0,
+  "shares": 100000000.0,
+  "eps": 0.6469,
+  "dividends": 12938640.0
+}

@@ -1,41 +1,41 @@
 [
   {
-    "path": "input/T001_deductions.pdf",
+    "path": "environment/input/T001_deductions.pdf",
     "bytes": 24982,
     "sha256": "05182eb53bbe9df5c7c2ae02ba5d32db1ca7b3bee7086e5ae1ad8085ab0f26d4"
   },
   {
-    "path": "input/T001_payroll.csv",
+    "path": "environment/input/T001_payroll.csv",
     "bytes": 424,
     "sha256": "bf8304bc9eca73be3482403e2328b4935153f60fa45b35a3879a002f4ff38cf3"
   },
   {
-    "path": "input/T002_deductions.pdf",
+    "path": "environment/input/T002_deductions.pdf",
     "bytes": 24986,
     "sha256": "9e66584ae5f6b9eb077275d4f4656ca900a87dd1d76c3d66df2cd253cde80692"
   },
   {
-    "path": "input/T002_payroll.csv",
+    "path": "environment/input/T002_payroll.csv",
     "bytes": 556,
     "sha256": "5ebff62cec19532857127acac4e5b5835d0b924ad1fbcb78e7d1b6faf6afff38"
   },
   {
-    "path": "input/T003_deductions.pdf",
+    "path": "environment/input/T003_deductions.pdf",
     "bytes": 24982,
     "sha256": "709aaed96a890aab961abc36cc0ad8a5ec362ef696b62620924cc9ff5d681b02"
   },
   {
-    "path": "input/T003_payroll.csv",
+    "path": "environment/input/T003_payroll.csv",
     "bytes": 544,
     "sha256": "3e2ba9f96a734315e8387d4254bee0720d3d15e48549d47315fd4034b58f7470"
   },
   {
-    "path": "input/tax_form.html",
+    "path": "environment/input/tax_form.html",
     "bytes": 1706,
     "sha256": "2635ae7d690cf069fb01f52ffb23be1bd6d5ca4768b8fdae16c34e7d84216895"
   },
   {
-    "path": "input/tax_rules.md",
+    "path": "environment/input/tax_rules.md",
     "bytes": 985,
     "sha256": "8856e68a396d0cf316aea673a52b312e802d8a0b9e22959ee3aa9aa12ec34151"
   }

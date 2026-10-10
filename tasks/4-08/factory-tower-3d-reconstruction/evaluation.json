@@ -1,0 +1,57 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "原生模型",
+      "weight": 50,
+      "rule": "检查毫米单位和闭合构件；按构件名称比对位置与尺寸，允许 1 mm 绝对误差，按正确构件比例计分。"
+    },
+    {
+      "name": "OBJ 模型",
+      "weight": 50,
+      "rule": "检查顶点、闭合实体与构件名称，并按位置和尺寸正确的构件比例计分；最少包含 1,000 个顶点。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "打开 3DM 与 OBJ 文件，读取单位、构件名称和实体网格。",
+    "按图纸构件索引匹配实体，计算包围盒位置与尺寸差。",
+    "分别统计正确构件比例，原生模型和 OBJ 各占 50%。"
+  ],
+  "metrics": [
+    "几何比较允许 1 mm 绝对误差；构件完整性按预期名称逐项计算。",
+    "OBJ 须含至少 1,000 个顶点，构件须组成闭合实体。"
+  ],
+  "gates": [],
+  "checks": [
+    {
+      "name": "原生模型毫米坐标与全部实体",
+      "weight": 50.0,
+      "implementation": "native"
+    },
+    {
+      "name": "OBJ实体与几何一致",
+      "weight": 50.0,
+      "implementation": "obj"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

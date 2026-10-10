@@ -2,30 +2,32 @@
 
 依据十年作物记录与轮作规则，判断地块资格，整理风险地块，并交付可用于 GIS 的审计成果。
 
-职业：地理信息系统工程技术人员（2-02-02-07）
+职业：地理信息系统工程技术人员 · `2-02-02-07`
 
-[任务卡](task_card.json) · [任务说明](instruction.md)
+## 运行
 
-## 工作场景
+需要 Python 3.11+、Docker Compose 和 Harbor 0.22.0。
 
-你负责县域农业地块数据审计，需要将逐年的种植记录转为可追踪的资格和风险结果。
+```bash
+pip install harbor==0.22.0
+python3 run.py check
+python3 run.py oracle --jobs-dir ./runs
+python3 run.py nop --jobs-dir ./runs
+# 运行自己的智能体，参数交给 Harbor
+python3 run.py run -a terminus-2 -m <model> --jobs-dir ./runs
+```
 
-## 材料
+`oracle` 运行参考解并评分，`nop` 检查空提交。下载这一任务目录即可运行；`run.py` 会准备资产并调用 Harbor。
 
-地块 GeoPackage、作物编码字典和轮作审计规则。
+## 文件
 
-## 评分方法
+- [task_card.json](task_card.json)：职业场景、任务说明、文件索引和评分规则
+- [instruction.md](instruction.md)：智能体收到的任务说明
+- [evaluation.md](evaluation.md)：评分过程、指标、阈值与检查项
+- [task.toml](task.toml)：Harbor 运行配置
+- `environment/`：容器环境、实际输入与工具
+- `solution/`：参考解
+- `reference/`：参考解的交付文件
+- `tests/`：评分器与评分数据
 
-**资格与审计字段 · 60 分**
-
-按地块 ID 比对资格和八项字段，按记录与字段的正确比例计分。
-
-**空间信息 · 20 分**
-
-检查地块 ID 集合、原始字段、几何和 EPSG:4547 坐标系；全部一致取得本项分数。
-
-**风险地块 · 20 分**
-
-比对风险子集的地块和审计字段，按正确比例计分。
-
-
+评分输出位于运行目录的 `verifier/reward.txt` 与 `verifier/score.json`。参考解和评分文件由运行器在对应阶段提供。

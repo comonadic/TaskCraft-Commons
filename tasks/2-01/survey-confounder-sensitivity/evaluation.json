@@ -1,0 +1,57 @@
+{
+  "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+  "criteria": [
+    {
+      "name": "分析样本",
+      "weight": 40,
+      "rule": "按个体 ID 比对病例集合和变量，按记录与字段的正确比例计分。"
+    },
+    {
+      "name": "模型结果",
+      "weight": 60,
+      "rule": "按模型比对估计值、置信区间、P 值与变化比例，绝对容差为 0.00001。"
+    }
+  ],
+  "notes": "",
+  "scoreRange": [
+    0,
+    100
+  ],
+  "type": "deterministic",
+  "entrypoint": "tests/test.sh",
+  "verifierMode": "separate",
+  "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+  "process": [
+    "按 id 核对完整病例筛选、变量编码与抽样权重。",
+    "比较三种统计模型的估计、区间与敏感性变化。",
+    "核对输出行集合与模型标签。"
+  ],
+  "metrics": [
+    "病例与字段 40%，三模型估计与变化 60%。",
+    "模型结果绝对容差 1e−5；按 model 主键对齐，重复键记 0。"
+  ],
+  "gates": [],
+  "checks": [
+    {
+      "name": "完整病例与字段",
+      "weight": 40.0,
+      "implementation": "lambda: record_score(read_csv(OUTPUT / 'hpyl_nsaid_subset.csv'), e['subset'], ['id'])"
+    },
+    {
+      "name": "三模型估计与变化",
+      "weight": 60.0,
+      "implementation": "lambda: record_score(read_csv(OUTPUT / 'sensitivity_summary.csv'), e['models'], ['model'], atol=1e-05)"
+    }
+  ],
+  "resultFiles": [
+    {
+      "path": "/logs/verifier/reward.txt",
+      "description": "0～1 的最终得分。"
+    },
+    {
+      "path": "/logs/verifier/score.json",
+      "description": "各检查项的名称、权重、得分与错误原因。"
+    }
+  ],
+  "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+}

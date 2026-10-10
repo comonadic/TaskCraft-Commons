@@ -3,14 +3,14 @@
   "title": "四份股权转让公告一致性审阅",
   "brief": "交叉阅读股权转让相关公告，找出实质信息冲突，并为每项发现提供两份文件中的原文依据。",
   "language": "zh-CN",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "category": "2-07",
   "occupation": {
     "code": "2-07-08-00",
     "name": "法律顾问"
   },
   "scene": "你是法律与交易文件审核人员，需要帮助团队识别公告之间影响交易理解的信息差异。",
-  "taskPrompt": "你是法律与交易文件审核人员，需要帮助团队识别公告之间影响交易理解的信息差异。\n\n1. 阅读四份公告，按交易事项对齐金额、股份与日期等信息\n2. 判断哪些差异构成实质冲突\n3. 为每项发现记录两份文件的页码与原文，编写审核报告\n\n交付成果：\n- audit_report.md：按“发现”分节的一致性审核报告。\n- findings.json：每项发现的事项、字段、冲突值与双文档证据。",
+  "taskPrompt": "# 四份股权转让公告一致性审阅\n\n你是法律与交易文件审核人员，需要帮助团队识别公告之间影响交易理解的信息差异。\n\n1. 阅读四份公告，按交易事项对齐金额、股份与日期等信息\n2. 判断哪些差异构成实质冲突\n3. 为每项发现记录两份文件的页码与原文，编写审核报告\n\n## 工作空间\n\n输入材料位于 `/app/input/`，工具与接口位于 `/app/software/`。成果保存到 `/app/output/`。\n\n## 交付文件\n\n- `/app/output/audit_report.md`：按“发现”分节的一致性审核报告。\n- `/app/output/findings.json`：每项发现的事项、字段、冲突值与双文档证据。\n\n## 运行约定\n\n保留输入材料，以交付文件或服务状态提交结果。根据任务说明使用提供的离线数据与工具。\n\n## 具体工作要求\n\n## 运行与提交\n\n输入目录 `/app/input`，工具目录 `/app/software`，工作目录 `/app`。仅向 `/app/output` 写入最终产物。可用 Python 科学计算环境；无需外网或私有账号。输入保持不变，所有报告正文使用中文，技术字段、ID 和枚举保持约定值。\n\n## 交付要求\n\n`audit_report.md`：每项发现用“## 发现N”分节；`findings.json`：数组，每项含 subject、field、values（两个原文值）、evidence（两个{document,page,quote}）。field可选 amount/share_count/ownership/approval_date/address/contact/payment_deadline。\n",
   "agentMustDo": [
     "阅读四份公告，按交易事项对齐金额、股份与日期等信息",
     "判断哪些差异构成实质冲突",
@@ -24,63 +24,63 @@
   "inputFiles": [
     {
       "name": "A.html",
-      "path": "input/A.html",
+      "path": "environment/input/A.html",
       "format": "HTML",
       "bytes": 1282,
       "description": "A.html，用于四份股权转让公告一致性审阅。"
     },
     {
       "name": "A.pdf",
-      "path": "input/A.pdf",
+      "path": "environment/input/A.pdf",
       "format": "PDF",
       "bytes": 31648,
       "description": "A.pdf，用于四份股权转让公告一致性审阅。"
     },
     {
       "name": "B.html",
-      "path": "input/B.html",
+      "path": "environment/input/B.html",
       "format": "HTML",
       "bytes": 1269,
       "description": "B.html，用于四份股权转让公告一致性审阅。"
     },
     {
       "name": "B.pdf",
-      "path": "input/B.pdf",
+      "path": "environment/input/B.pdf",
       "format": "PDF",
       "bytes": 33444,
       "description": "B.pdf，用于四份股权转让公告一致性审阅。"
     },
     {
       "name": "C.html",
-      "path": "input/C.html",
+      "path": "environment/input/C.html",
       "format": "HTML",
       "bytes": 1336,
       "description": "C.html，用于四份股权转让公告一致性审阅。"
     },
     {
       "name": "C.pdf",
-      "path": "input/C.pdf",
+      "path": "environment/input/C.pdf",
       "format": "PDF",
       "bytes": 33192,
       "description": "C.pdf，用于四份股权转让公告一致性审阅。"
     },
     {
       "name": "D.html",
-      "path": "input/D.html",
+      "path": "environment/input/D.html",
       "format": "HTML",
       "bytes": 1269,
       "description": "D.html，用于四份股权转让公告一致性审阅。"
     },
     {
       "name": "D.pdf",
-      "path": "input/D.pdf",
+      "path": "environment/input/D.pdf",
       "format": "PDF",
       "bytes": 32812,
       "description": "D.pdf，用于四份股权转让公告一致性审阅。"
     },
     {
       "name": "evidence_contract.md",
-      "path": "input/evidence_contract.md",
+      "path": "environment/input/evidence_contract.md",
       "format": "MD",
       "bytes": 363,
       "description": "evidence_contract.md，用于四份股权转让公告一致性审阅。"
@@ -89,6 +89,71 @@
   "inputFileCount": 9,
   "inputManifest": "materials.json",
   "referenceFiles": [
+    {
+      "name": "audit_report.md",
+      "path": "reference/audit_report.md",
+      "format": "MD",
+      "bytes": 1060,
+      "description": "按“发现”分节的一致性审核报告。"
+    },
+    {
+      "name": "findings.json",
+      "path": "reference/findings.json",
+      "format": "JSON",
+      "bytes": 1683,
+      "description": "每项发现的事项、字段、冲突值与双文档证据。"
+    }
+  ],
+  "evaluation": {
+    "method": "评分器读取交付文件，逐项计算 0～1 的得分，再按权重求加权平均。网站以 100 分制展示结果。",
+    "criteria": [
+      {
+        "name": "冲突识别与证据",
+        "weight": 100,
+        "rule": "四项有效发现各计 25 分；每项需有两个不同文件的原文、页码，并在报告中引用。额外无效发现每项扣 20 分，报告分节数与发现数每差一项再扣 20 分；最低为 0 分。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ],
+    "type": "deterministic",
+    "entrypoint": "tests/test.sh",
+    "verifierMode": "separate",
+    "formula": "reward = Σ(weight × check_score) / Σ(weight)；网站得分 = 100 × reward",
+    "process": [
+      "解析 findings.json 和中文审阅报告，匹配四类实质冲突。",
+      "核验每项发现至少两份不同文件的真实页码与逐字引句。",
+      "检查报告中的发现数量与结构化发现一致，再扣除额外或无效发现。"
+    ],
+    "metrics": [
+      "reward = max(0, 有效发现数 / 4 − 0.2 × 无效发现数 − 0.2 × |报告发现数−JSON发现数|)。",
+      "同一冲突类别只计一次；接受能覆盖目标差异的有效证据配对。"
+    ],
+    "gates": [
+      "每项有效发现需要双文档证据，原句、页码和报告引用须能对应。"
+    ],
+    "checks": [
+      {
+        "name": "四项证据化发现及额外发现惩罚",
+        "weight": 100,
+        "implementation": "audit"
+      }
+    ],
+    "resultFiles": [
+      {
+        "path": "/logs/verifier/reward.txt",
+        "description": "0～1 的最终得分。"
+      },
+      {
+        "path": "/logs/verifier/score.json",
+        "description": "各检查项的名称、权重、得分与错误原因。"
+      }
+    ],
+    "failurePolicy": "缺少文件、解析失败或检查异常时，该检查项记 0 分，并在 score.json 中记录原因。"
+  },
+  "deliverables": [
     {
       "name": "audit_report.md",
       "path": "output/audit_report.md",
@@ -102,19 +167,37 @@
       "description": "每项发现的事项、字段、冲突值与双文档证据。"
     }
   ],
-  "evaluation": {
-    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
-    "criteria": [
-      {
-        "name": "冲突识别与证据",
-        "weight": 100,
-        "rule": "四项有效发现各计 25 分；每项需有两个不同文件的原文、页码，并在报告中引用。额外无效发现每项扣 20 分，报告分节数与发现数每差一项再扣 20 分；最低为 0 分。"
-      }
+  "referenceFileCount": 2,
+  "runtime": {
+    "framework": "Harbor",
+    "configuration": "task.toml",
+    "os": "Linux",
+    "architecture": "linux/arm64、linux/amd64",
+    "workspace": {
+      "input": "/app/input",
+      "software": "/app/software",
+      "output": "/app/output"
+    },
+    "agentTimeoutSec": 3600.0,
+    "verifierTimeoutSec": 1200.0,
+    "verifierMode": "separate",
+    "commands": [
+      "python3 run.py check",
+      "python3 run.py oracle",
+      "python3 run.py nop"
     ],
-    "notes": "",
-    "scoreRange": [
-      0,
-      100
-    ]
-  }
+    "services": []
+  },
+  "filePreviews": [
+    {
+      "path": "environment/input/evidence_contract.md",
+      "content": "每条发现需要 field 和 subject。values 保存至少两个可比的原文值。evidence 必须使用真实文件名A.pdf至D.pdf、从1开始的PDF页码、完整原句。允许不同的有效文件配对。报告要说明单位换算或日期语义。原文亿元和万元可比较，四舍五入净资产和员工截止日变化有解释，不应误报。",
+      "truncated": false
+    },
+    {
+      "path": "reference/findings.json",
+      "content": "[\n  {\n    \"subject\": \"云汐设备股权转让\",\n    \"field\": \"amount\",\n    \"values\": [\n      \"24000万元\",\n      \"2.6亿元\"\n    ],\n    \"evidence\": [\n      {\n        \"document\": \"A.pdf\",\n        \"page\": 1,\n        \"quote\": \"本次交易对价为人民币24000万元。\"\n      },\n      {\n        \"document\": \"B.pdf\",\n        \"page\": 1,\n        \"quote\": \"本次交易对价为人民币2.6亿元。\"\n      }\n    ]\n  },\n  {\n    \"subject\": \"云汐设备股权转让\",\n    \"field\": \"ownership\",\n    \"values\": [\n      \"30%\",\n      \"35%\"\n    ],\n    \"evidence\": [\n      {\n        \"document\": \"A.pdf\",\n        \"page\": 1,\n        \"quote\": \"受让方拟取得标的公司30%股权。\"\n      },\n      {\n        \"document\": \"C.pdf\",\n        \"page\": 1,\n        \"quote\": \"权益变动完成后青岚产业持股比例为35%。\"\n      }\n    ]\n  },\n  {\n    \"subject\": \"云汐设备股权转让\",\n    \"field\": \"share_count\",\n    \"values\": [\n      \"3000万股\",\n      \"3200万股\"\n    ],\n    \"evidence\": [\n      {\n        \"document\": \"A.pdf\",\n        \"page\": 2,\n        \"quote\": \"转让股数为3000万股，每股价格8元。\"\n      },\n      {\n        \"document\": \"D.pdf\",\n        \"page\": 1,\n        \"quote\": \"受让股数为3200万股。\"\n      }\n    ]\n  },\n  {\n    \"subject\": \"云汐设备股权转让\",\n    \"field\": \"approval_date\",\n    \"values\": [\n      \"2024年11月18日\",\n      \"2024年11月19日\"\n    ],\n    \"evidence\": [\n      {\n        \"document\": \"A.pdf\",\n        \"page\": 2,\n        \"quote\": \"董事会审议日期为2024年11月18日。\"\n      },\n      {\n        \"document\": \"D.pdf\",\n        \"page\": 2,\n        \"quote\": \"董事会审议日期为2024年11月19日。\"\n      }\n    ]\n  }\n]\n",
+      "truncated": false
+    }
+  ]
 }
