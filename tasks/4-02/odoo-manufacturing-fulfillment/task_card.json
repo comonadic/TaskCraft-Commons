@@ -1,0 +1,75 @@
+{
+  "taskId": "4-02/odoo-manufacturing-fulfillment",
+  "title": "Odoo 企业采购制造交付与退款",
+  "brief": "在 Odoo 中完成采购、制造、交付、收款与退款流程，处理分包、缺料与成本分摊，并整理业务记录。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "4-02",
+  "occupation": {
+    "code": "4-02-06-05",
+    "name": "供应链管理师"
+  },
+  "scene": "你是供应链业务人员，需要完成一组关联的订单与财务流程，使库存、制造和会计记录相互对应。",
+  "taskPrompt": "你是供应链业务人员，需要完成一组关联的订单与财务流程，使库存、制造和会计记录相互对应。\n\n1. 配置产品、两级 BOM、估值与采购，处理到货及成本分摊\n2. 完成制造、分包供料、分批交付与直运\n3. 完成发票核销、退货退款、报废补购与报销，整理记录索引\n\n交付成果：\n- Odoo 业务记录：完成后的库存、制造、交付、发票、退款与报销记录。\n- submission.json：创建和处理的业务记录 ID 索引。\n- workflow_report.md：数量、成本、付款、退款与关联关系说明。",
+  "agentMustDo": [
+    "配置产品、两级 BOM、估值与采购，处理到货及成本分摊",
+    "完成制造、分包供料、分批交付与直运",
+    "完成发票核销、退货退款、报废补购与报销，整理记录索引"
+  ],
+  "software": [
+    "Odoo",
+    "浏览器"
+  ],
+  "materials": "Odoo 业务环境、产品与订单资料、业务操作要求及汇率信息。",
+  "inputFiles": [
+    {
+      "name": "business_brief.md",
+      "path": "input/business_brief.md",
+      "format": "MD",
+      "bytes": 2311,
+      "description": "business_brief.md，用于Odoo 企业采购制造交付与退款。"
+    }
+  ],
+  "inputFileCount": 1,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "Odoo 业务记录",
+      "path": "output/Odoo 业务记录",
+      "format": "目录",
+      "description": "完成后的库存、制造、交付、发票、退款与报销记录。"
+    },
+    {
+      "name": "submission.json",
+      "path": "output/submission.json",
+      "format": "JSON",
+      "description": "创建和处理的业务记录 ID 索引。"
+    },
+    {
+      "name": "workflow_report.md",
+      "path": "output/workflow_report.md",
+      "format": "MD",
+      "description": "数量、成本、付款、退款与关联关系说明。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "业务处理",
+        "weight": 95,
+        "rule": "直接读取 Odoo 业务记录：估值 5 分、成本分摊 10 分、制造 10 分、交付 8 分、收款 10 分、退款 7 分、库存 12 分、分包 9 分、直运 5 分、报废补购 5 分、供应商发票 7 分、报销 7 分。"
+      },
+      {
+        "name": "记录与报告",
+        "weight": 5,
+        "rule": "中文操作报告超过 100 字，记录索引至少列出 10 项，取得本项分数。"
+      }
+    ],
+    "notes": "先检查业务环境与提交入口；金额检查容差为 0.01。",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

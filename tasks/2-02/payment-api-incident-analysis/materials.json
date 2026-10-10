@@ -1,0 +1,22 @@
+[
+  {
+    "path": "input/cluster_state.txt",
+    "bytes": 1456,
+    "sha256": "af51622be220005394737b2edb7abe05c7544ed8a909727e8c7e951530c82f78"
+  },
+  {
+    "path": "input/deployment.yaml",
+    "bytes": 552,
+    "sha256": "d0cfac35d1727121037e322e7e3496286431d2b24eabeecbb0433646a5bba000"
+  },
+  {
+    "path": "input/failing_pod.txt",
+    "bytes": 459,
+    "sha256": "7da1a96833bb12214a49479b429eb011da2023850a42890fe36dac4af3bca28f"
+  },
+  {
+    "path": "input/schema.json",
+    "bytes": 515,
+    "sha256": "62bd817e59735c76ae7831aef6969f868b9739df8c77eaaa8dbb44fc3818c37e"
+  }
+]

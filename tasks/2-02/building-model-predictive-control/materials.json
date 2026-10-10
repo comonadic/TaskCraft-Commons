@@ -1,0 +1,17 @@
+[
+  {
+    "path": "input/calibration.csv",
+    "bytes": 65541,
+    "sha256": "fe77269348703cde20a06614e0d7210577ef2cc8a1d8174f2516f82a9bf7ecd8"
+  },
+  {
+    "path": "input/contract.json",
+    "bytes": 466,
+    "sha256": "f2f81a59efa4e8d8bb26400ebb3de5edc0ed029353fe06f8c1777116b2356296"
+  },
+  {
+    "path": "input/eval_weather.csv",
+    "bytes": 26253,
+    "sha256": "ca400b89455209afdda827596214e7cf9dcff5d8a56b8e554283ca8cfe03d43c"
+  }
+]

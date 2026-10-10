@@ -1,0 +1,196 @@
+{
+  "taskId": "2-06/yunheng-investment-screening",
+  "title": "云衡软件私募投资初筛备忘录",
+  "brief": "阅读云衡软件的公司、财务与客户资料，形成投资初筛建议，列出投资论点、风险和后续尽调问题。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-06",
+  "occupation": {
+    "code": "2-06-11-03",
+    "name": "证券投资专业人员"
+  },
+  "scene": "你是投资研究人员，需要向团队提交一份结构完整、结论明确并能追溯资料的初筛备忘录。",
+  "taskPrompt": "你是投资研究人员，需要向团队提交一份结构完整、结论明确并能追溯资料的初筛备忘录。\n\n1. 整理八份公司资料，计算八项关键财务指标\n2. 形成三条投资论点、四类风险与四项尽调问题\n3. 写出 Go、No-Go 或 Hold 建议，逐项引用资料\n\n交付成果：\n- screening_memo.md：投资建议、公司产品、论点、财务、估值、风险、尽调和证据附录八章。\n- analysis.json：财务指标、论点、风险、尽调问题、建议与理由。",
+  "agentMustDo": [
+    "整理八份公司资料，计算八项关键财务指标",
+    "形成三条投资论点、四类风险与四项尽调问题",
+    "写出 Go、No-Go 或 Hold 建议，逐项引用资料"
+  ],
+  "software": [
+    "Python",
+    "表格与文档阅读工具"
+  ],
+  "materials": "八份公司与经营资料，包含三年财务、客户队列、董事会与销售信息。",
+  "inputFiles": [
+    {
+      "name": "公司资料 D01 · HTML",
+      "path": "input/D01.html",
+      "format": "HTML",
+      "bytes": 842,
+      "description": "公司资料 D01 · HTML，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "公司资料 D01 · PDF",
+      "path": "input/D01.pdf",
+      "format": "PDF",
+      "bytes": 25125,
+      "description": "公司资料 D01 · PDF，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "公司资料 D02 · HTML",
+      "path": "input/D02.html",
+      "format": "HTML",
+      "bytes": 915,
+      "description": "公司资料 D02 · HTML，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "公司资料 D02 · PDF",
+      "path": "input/D02.pdf",
+      "format": "PDF",
+      "bytes": 22428,
+      "description": "公司资料 D02 · PDF，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "公司资料 D03 · HTML",
+      "path": "input/D03.html",
+      "format": "HTML",
+      "bytes": 865,
+      "description": "公司资料 D03 · HTML，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "公司资料 D03 · PDF",
+      "path": "input/D03.pdf",
+      "format": "PDF",
+      "bytes": 24422,
+      "description": "公司资料 D03 · PDF，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "公司资料 D04 · HTML",
+      "path": "input/D04.html",
+      "format": "HTML",
+      "bytes": 653,
+      "description": "公司资料 D04 · HTML，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "公司资料 D04 · PDF",
+      "path": "input/D04.pdf",
+      "format": "PDF",
+      "bytes": 19863,
+      "description": "公司资料 D04 · PDF，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "公司资料 D05 · HTML",
+      "path": "input/D05.html",
+      "format": "HTML",
+      "bytes": 812,
+      "description": "公司资料 D05 · HTML，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "公司资料 D05 · PDF",
+      "path": "input/D05.pdf",
+      "format": "PDF",
+      "bytes": 25918,
+      "description": "公司资料 D05 · PDF，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "公司资料 D06 · HTML",
+      "path": "input/D06.html",
+      "format": "HTML",
+      "bytes": 776,
+      "description": "公司资料 D06 · HTML，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "公司资料 D06 · PDF",
+      "path": "input/D06.pdf",
+      "format": "PDF",
+      "bytes": 24425,
+      "description": "公司资料 D06 · PDF，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "公司资料 D07 · HTML",
+      "path": "input/D07.html",
+      "format": "HTML",
+      "bytes": 798,
+      "description": "公司资料 D07 · HTML，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "公司资料 D07 · PDF",
+      "path": "input/D07.pdf",
+      "format": "PDF",
+      "bytes": 25687,
+      "description": "公司资料 D07 · PDF，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "公司资料 D08 · HTML",
+      "path": "input/D08.html",
+      "format": "HTML",
+      "bytes": 900,
+      "description": "公司资料 D08 · HTML，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "公司资料 D08 · PDF",
+      "path": "input/D08.pdf",
+      "format": "PDF",
+      "bytes": 27852,
+      "description": "公司资料 D08 · PDF，用于云衡软件私募投资初筛备忘录。"
+    },
+    {
+      "name": "备忘录模板",
+      "path": "input/memo_template.md",
+      "format": "MD",
+      "bytes": 557,
+      "description": "备忘录模板，用于云衡软件私募投资初筛备忘录。"
+    }
+  ],
+  "inputFileCount": 17,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "screening_memo.md",
+      "path": "output/screening_memo.md",
+      "format": "MD",
+      "description": "投资建议、公司产品、论点、财务、估值、风险、尽调和证据附录八章。"
+    },
+    {
+      "name": "analysis.json",
+      "path": "output/analysis.json",
+      "format": "JSON",
+      "description": "财务指标、论点、风险、尽调问题、建议与理由。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "财务指标",
+        "weight": 45,
+        "rule": "逐字段比对八项财务计算，按正确比例计分。"
+      },
+      {
+        "name": "论点与引文",
+        "weight": 15,
+        "rule": "检查论点、风险和尽调项的引文是否对应资料文件及页码，按有效条目比例计分。"
+      },
+      {
+        "name": "风险识别",
+        "weight": 10,
+        "rule": "四类风险 ID 集合按 F1 计分。"
+      },
+      {
+        "name": "尽调问题",
+        "weight": 10,
+        "rule": "四项尽调 ID 集合按 F1 计分。"
+      },
+      {
+        "name": "备忘录与建议",
+        "weight": 20,
+        "rule": "检查八章完整、建议枚举及报告与结构化建议一致，建议理由至少 20 字。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

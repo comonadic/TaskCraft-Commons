@@ -1,0 +1,83 @@
+{
+  "taskId": "2-06/cn-equity-five-factor-model",
+  "title": "中国股票市场五因子月度重建",
+  "brief": "依据股票行情与财报披露时间构建五因子月度序列，整理投资组合计算结果和样本筛选记录。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-06",
+  "occupation": {
+    "code": "2-06-11-03",
+    "name": "证券投资专业人员"
+  },
+  "scene": "你是资产定价研究人员，需要从原始市场和财务数据构建可追踪的五因子序列。",
+  "taskPrompt": "你是资产定价研究人员，需要从原始市场和财务数据构建可追踪的五因子序列。\n\n1. 对齐月度行情与当时可获取的财务数据\n2. 按规模、价值、盈利与投资特征分组并计算组合收益\n3. 生成 MKT_RF、SMB、HML、RMW、CMA 月度序列与样本审计\n\n交付成果：\n- ff5_factors_monthly_2015_onward.csv：134 个月的五因子收益序列。\n- method_audit.json：每月合格样本数及迟到披露剔除数。",
+  "agentMustDo": [
+    "对齐月度行情与当时可获取的财务数据",
+    "按规模、价值、盈利与投资特征分组并计算组合收益",
+    "生成 MKT_RF、SMB、HML、RMW、CMA 月度序列与样本审计"
+  ],
+  "software": [
+    "Python",
+    "表格与文档阅读工具"
+  ],
+  "materials": "180 只股票的行情、财务与披露记录，以及无风险收益和计算规则。",
+  "inputFiles": [
+    {
+      "name": "methodology.md",
+      "path": "input/methodology.md",
+      "format": "MD",
+      "bytes": 854,
+      "description": "methodology.md，用于中国股票市场五因子月度重建。"
+    },
+    {
+      "name": "monthly_stock_panel.csv",
+      "path": "input/monthly_stock_panel.csv",
+      "format": "CSV",
+      "bytes": 1888745,
+      "description": "monthly_stock_panel.csv，用于中国股票市场五因子月度重建。"
+    },
+    {
+      "name": "risk_free.csv",
+      "path": "input/risk_free.csv",
+      "format": "CSV",
+      "bytes": 2539,
+      "description": "risk_free.csv，用于中国股票市场五因子月度重建。"
+    }
+  ],
+  "inputFileCount": 3,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "ff5_factors_monthly_2015_onward.csv",
+      "path": "output/ff5_factors_monthly_2015_onward.csv",
+      "format": "CSV",
+      "description": "134 个月的五因子收益序列。"
+    },
+    {
+      "name": "method_audit.json",
+      "path": "output/method_audit.json",
+      "format": "JSON",
+      "description": "每月合格样本数及迟到披露剔除数。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "五因子序列",
+        "weight": 90,
+        "rule": "按月份比对全部五因子数值及月份集合，绝对容差为 0.00001，按正确比例计分。"
+      },
+      {
+        "name": "样本审计",
+        "weight": 10,
+        "rule": "按月份比对合格样本数与迟到披露剔除数，按正确比例计分。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

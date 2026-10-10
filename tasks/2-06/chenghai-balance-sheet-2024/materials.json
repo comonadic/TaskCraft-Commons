@@ -1,0 +1,17 @@
+[
+  {
+    "path": "input/chenghai_2024.html",
+    "bytes": 2783,
+    "sha256": "092a450e129597d4b260effbdcea3e6c98dd6e00741047e9ff28a1a9135700fb"
+  },
+  {
+    "path": "input/chenghai_2024.pdf",
+    "bytes": 35623,
+    "sha256": "56073658136310a78e18b6ae302bac17260355f1561a2591381f7de72d4f7a2d"
+  },
+  {
+    "path": "input/schema.json",
+    "bytes": 996,
+    "sha256": "0da76a6ef6872efa94bd6779f04ae8cc283864e1ae358aeeffb8a47809c8a429"
+  }
+]

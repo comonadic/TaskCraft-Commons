@@ -1,0 +1,104 @@
+{
+  "taskId": "2-01/ecg-diagnostic-superclasses",
+  "title": "12 导联心电诊断类别建模",
+  "brief": "对 12 导联心电波形进行五类诊断标签建模，交付完整预测表，并说明模型的训练与验证过程。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-01",
+  "occupation": {
+    "code": "2-01-08-00",
+    "name": "医学研究人员"
+  },
+  "scene": "你负责心电信号研究，需要建立覆盖正常、心肌梗死、ST-T 改变、传导异常和肥厚类别的多标签模型。",
+  "taskPrompt": "你负责心电信号研究，需要建立覆盖正常、心肌梗死、ST-T 改变、传导异常和肥厚类别的多标签模型。\n\n1. 整理训练波形和标签，建立预处理流程\n2. 训练模型并进行验证，确定分类方式\n3. 预测测试波形的五类标签，编写模型报告\n\n交付成果：\n- predictions.csv：每条 ecg_id 对应五类 0/1 预测。\n- model_report.md：记录预处理、模型、验证方法和适用范围。",
+  "agentMustDo": [
+    "整理训练波形和标签，建立预处理流程",
+    "训练模型并进行验证，确定分类方式",
+    "预测测试波形的五类标签，编写模型报告"
+  ],
+  "software": [
+    "Python",
+    "表格与文档阅读工具"
+  ],
+  "materials": "800 条训练记录、1,386 条测试波形及 NORM、MI、STTC、CD、HYP 五类定义。",
+  "inputFiles": [
+    {
+      "name": "类别标签定义",
+      "path": "input/labels.json",
+      "format": "JSON",
+      "bytes": 48,
+      "description": "类别标签定义，用于12 导联心电诊断类别建模。"
+    },
+    {
+      "name": "标签体系说明",
+      "path": "input/ontology.md",
+      "format": "MD",
+      "bytes": 350,
+      "description": "标签体系说明，用于12 导联心电诊断类别建模。"
+    },
+    {
+      "name": "测试记录编号",
+      "path": "input/record_ids.csv",
+      "format": "CSV",
+      "bytes": 24956,
+      "description": "测试记录编号，用于12 导联心电诊断类别建模。"
+    },
+    {
+      "name": "训练标签",
+      "path": "input/train_labels.csv",
+      "format": "CSV",
+      "bytes": 22428,
+      "description": "训练标签，用于12 导联心电诊断类别建模。"
+    },
+    {
+      "name": "测试心电波形",
+      "path": "input/records/",
+      "format": "目录",
+      "bytes": 34153149,
+      "description": "测试心电波形，共 2,772 个文件。"
+    },
+    {
+      "name": "训练心电波形",
+      "path": "input/train/",
+      "format": "目录",
+      "bytes": 19713079,
+      "description": "训练心电波形，共 1,600 个文件。"
+    }
+  ],
+  "inputFileCount": 4376,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "predictions.csv",
+      "path": "output/predictions.csv",
+      "format": "CSV",
+      "description": "每条 ecg_id 对应五类 0/1 预测。"
+    },
+    {
+      "name": "model_report.md",
+      "path": "output/model_report.md",
+      "format": "MD",
+      "description": "记录预处理、模型、验证方法和适用范围。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "分类效果",
+        "weight": 98,
+        "rule": "按测试 ID 对齐预测与参考标签，计算宏平均 F1；本项得分为 98 × min(1, F1 ÷ 0.75)。"
+      },
+      {
+        "name": "方法说明",
+        "weight": 2,
+        "rule": "读取方法报告，正文超过 60 个字符取得本项分数。"
+      }
+    ],
+    "notes": "预测文件需完整覆盖测试 ID，每个 ID 唯一，标签列取值为 0 或 1。",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

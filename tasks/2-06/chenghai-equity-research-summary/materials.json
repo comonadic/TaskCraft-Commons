@@ -1,0 +1,42 @@
+[
+  {
+    "path": "input/annual_report.html",
+    "bytes": 816,
+    "sha256": "09b46eb7b07162fbcc4838b866e94a0a06466c93a576b995da7ff33b970ff399"
+  },
+  {
+    "path": "input/formula_contract.md",
+    "bytes": 270,
+    "sha256": "047d39fb7c319d4fa030731aaef907b5eafda0ce080aa26a711cbe5974b67387"
+  },
+  {
+    "path": "input/output_contract.json",
+    "bytes": 1049,
+    "sha256": "2c4c33fa8c0edd1e237d7433488c60f331a0dce48d026f6df42ddc592f32b283"
+  },
+  {
+    "path": "input/quote.html",
+    "bytes": 735,
+    "sha256": "d210063abb47380c0ba76bea3d8e94aa2730261bd40eb4b9f6d411503912de87"
+  },
+  {
+    "path": "input/statistics.html",
+    "bytes": 663,
+    "sha256": "0cc5c2b6efb0830f71569803715dbc54f3c1882653c5c70f4086f85e36684a02"
+  },
+  {
+    "path": "input/template.xlsx",
+    "bytes": 4466,
+    "sha256": "b773a41a809788801fcc0e1b9e2fa4539f66447e5b117dffc72ecab5daeb4d6b"
+  },
+  {
+    "path": "input/template.xlsx.inspect.ndjson",
+    "bytes": 10839,
+    "sha256": "232fcedc79a80f0a4e97c9600c099188af3e144a9b015ed2376a0b971559f0bf"
+  },
+  {
+    "path": "input/template.xlsx.png",
+    "bytes": 65446,
+    "sha256": "40b72412700dca54dce150e526aeb7a10b6d7369065180c5eff17b768d08493f"
+  }
+]

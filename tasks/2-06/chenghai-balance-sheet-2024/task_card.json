@@ -1,0 +1,83 @@
+{
+  "taskId": "2-06/chenghai-balance-sheet-2024",
+  "title": "澄海精密 2024 年合并资产负债表重构",
+  "brief": "阅读澄海精密年度报告，整理报告期末的合并资产负债表，并为各项金额提供可定位的报告依据。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-06",
+  "occupation": {
+    "code": "2-06-03-00",
+    "name": "会计专业人员"
+  },
+  "scene": "你负责为财务分析团队整理澄海精密的年度财务数据。报告同时列有合并报表、母公司报表和上年比较数，需要将目标期间的数据整理为统一口径。",
+  "taskPrompt": "你负责为财务分析团队整理澄海精密的年度财务数据。报告同时列有合并报表、母公司报表和上年比较数，需要将目标期间的数据整理为统一口径。\n\n1. 定位 2024 年 12 月 31 日的合并资产负债表\n2. 按照字段说明提取 22 项金额，统一换算为人民币元\n3. 为每项金额记录报告文件、页码和原文，交付结构化报表与证据表\n\n交付成果：\n- balance_sheet.json：合并资产负债表，包含公司、报告日期、币种、单位及 22 项金额。\n- evidence.json：逐项列出金额对应的报告文件、页码和原文摘录。",
+  "agentMustDo": [
+    "定位 2024 年 12 月 31 日的合并资产负债表",
+    "按照字段说明提取 22 项金额，统一换算为人民币元",
+    "为每项金额记录报告文件、页码和原文，交付结构化报表与证据表"
+  ],
+  "software": [
+    "Python",
+    "表格与文档阅读工具"
+  ],
+  "materials": "提供年度报告的 PDF 与 HTML 两种阅读格式，以及报表字段说明。",
+  "inputFiles": [
+    {
+      "name": "澄海精密年度报告 · 网页",
+      "path": "input/chenghai_2024.html",
+      "format": "HTML",
+      "bytes": 2783,
+      "description": "澄海精密年度报告 · 网页，用于澄海精密 2024 年合并资产负债表重构。"
+    },
+    {
+      "name": "澄海精密年度报告 · PDF",
+      "path": "input/chenghai_2024.pdf",
+      "format": "PDF",
+      "bytes": 35623,
+      "description": "澄海精密年度报告 · PDF，用于澄海精密 2024 年合并资产负债表重构。"
+    },
+    {
+      "name": "结果字段说明",
+      "path": "input/schema.json",
+      "format": "JSON",
+      "bytes": 996,
+      "description": "结果字段说明，用于澄海精密 2024 年合并资产负债表重构。"
+    }
+  ],
+  "inputFileCount": 3,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "balance_sheet.json",
+      "path": "output/balance_sheet.json",
+      "format": "JSON",
+      "description": "合并资产负债表，包含公司、报告日期、币种、单位及 22 项金额。"
+    },
+    {
+      "name": "evidence.json",
+      "path": "output/evidence.json",
+      "format": "JSON",
+      "description": "逐项列出金额对应的报告文件、页码和原文摘录。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "金额与报表信息",
+        "weight": 80,
+        "rule": "逐字段比对报告期、币种、单位及金额。金额采用 0.01 元绝对容差，并结合相对容差 0.001%；本项按正确字段比例计分。"
+      },
+      {
+        "name": "报告依据",
+        "weight": 20,
+        "rule": "比对每个字段的文件、页码与原文摘录，按证据字段的正确比例计分。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

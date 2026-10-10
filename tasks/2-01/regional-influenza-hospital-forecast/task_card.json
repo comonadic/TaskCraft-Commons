@@ -1,0 +1,89 @@
+{
+  "taskId": "2-01/regional-influenza-hospital-forecast",
+  "title": "地区四周流感住院预测",
+  "brief": "使用地区历史住院数据预测未来四周人数，给出点预测与区间，并提交能够复现结果的预测程序。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-01",
+  "occupation": {
+    "code": "2-01-08-00",
+    "name": "医学研究人员"
+  },
+  "scene": "你是公共卫生预测研究人员，需要为 53 个地区整理未来四周的住院需求预测。",
+  "taskPrompt": "你是公共卫生预测研究人员，需要为 53 个地区整理未来四周的住院需求预测。\n\n1. 分析 104 周的历史住院与辅助数据\n2. 为各地区未来四周生成点预测和 95% 区间\n3. 整理预测文件、预测程序与方法说明\n\n交付成果：\n- submission.csv：212 条地区与预测期记录，包含点预测和 95% 区间。\n- forecast.py：使用输入材料生成预测的程序。\n- method.md：模型、特征、训练与区间估计方法。",
+  "agentMustDo": [
+    "分析 104 周的历史住院与辅助数据",
+    "为各地区未来四周生成点预测和 95% 区间",
+    "整理预测文件、预测程序与方法说明"
+  ],
+  "software": [
+    "Python",
+    "表格与文档阅读工具"
+  ],
+  "materials": "53 个地区的历史数据快照、辅助数据和预测时间说明。",
+  "inputFiles": [
+    {
+      "name": "data_dictionary.md",
+      "path": "input/data_dictionary.md",
+      "format": "MD",
+      "bytes": 280,
+      "description": "data_dictionary.md，用于地区四周流感住院预测。"
+    },
+    {
+      "name": "history.csv",
+      "path": "input/history.csv",
+      "format": "CSV",
+      "bytes": 80596,
+      "description": "history.csv，用于地区四周流感住院预测。"
+    },
+    {
+      "name": "template.csv",
+      "path": "input/template.csv",
+      "format": "CSV",
+      "bytes": 2796,
+      "description": "template.csv，用于地区四周流感住院预测。"
+    }
+  ],
+  "inputFileCount": 3,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "submission.csv",
+      "path": "output/submission.csv",
+      "format": "CSV",
+      "description": "212 条地区与预测期记录，包含点预测和 95% 区间。"
+    },
+    {
+      "name": "forecast.py",
+      "path": "output/forecast.py",
+      "format": "PY",
+      "description": "使用输入材料生成预测的程序。"
+    },
+    {
+      "name": "method.md",
+      "path": "output/method.md",
+      "format": "MD",
+      "description": "模型、特征、训练与区间估计方法。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "预测表现",
+        "weight": 90,
+        "rule": "分别计算相对朴素基线的 WIS 与 MAE 改进率，两者按 70% 和 30% 加权；改进率除以 35% 并截在 0～1 后计分。"
+      },
+      {
+        "name": "结果复现",
+        "weight": 10,
+        "rule": "重新执行预测程序，将生成结果与提交表逐记录比较；方法说明至少 30 个字符。"
+      }
+    ],
+    "notes": "预测表覆盖全部 212 个目标，区间与点预测满足 0 ≤ 下界 ≤ 点预测 ≤ 上界。",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

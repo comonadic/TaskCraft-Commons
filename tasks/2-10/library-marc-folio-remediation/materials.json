@@ -1,0 +1,32 @@
+[
+  {
+    "path": "input/case/authority.json",
+    "bytes": 1523,
+    "sha256": "08e4981a5f424fda0018ac2d7877606a4d7c10cc12e4bb586ddedcb065837127"
+  },
+  {
+    "path": "input/case/folio_matches.json",
+    "bytes": 33878,
+    "sha256": "043e99a71186639025731b5623a6b63237f5d1bd587d1b034c9e5c061cdce6d5"
+  },
+  {
+    "path": "input/case/policy.json",
+    "bytes": 65,
+    "sha256": "79f3da9aa822b98ed89c1a07f254e79515b1b787241025f1939b711169774e1a"
+  },
+  {
+    "path": "input/case/policy.md",
+    "bytes": 456,
+    "sha256": "8e5802a02503aa8f98a147f11e040cacaa0959bf5c1fd69e075eda368cff3ab4"
+  },
+  {
+    "path": "input/case/records.xml",
+    "bytes": 218420,
+    "sha256": "4d93a8923502c89e59e8ad9599614ab8cdd2a911abfa01466b528ea29dd4b568"
+  },
+  {
+    "path": "input/starter_project/scripts/remediate_catalog.py",
+    "bytes": 90,
+    "sha256": "cad8fee3a6bf419ee29e3469d1db7df0983027ad455800502c667f780680df9e"
+  }
+]

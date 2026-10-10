@@ -1,0 +1,118 @@
+{
+  "taskId": "2-06/individual-income-tax-return",
+  "title": "居民个人综合所得年度汇算申报",
+  "brief": "依据收入、扣除与预缴材料计算年度汇算结果，在申报页面完成三位居民的逐项填报并保存结果。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-06",
+  "occupation": {
+    "code": "2-06-05-00",
+    "name": "税务专业人员"
+  },
+  "scene": "你是税务业务人员，需要按照任务提供的汇算规则，为三位居民整理年度申报和补退税结果。",
+  "taskPrompt": "你是税务业务人员，需要按照任务提供的汇算规则，为三位居民整理年度申报和补退税结果。\n\n1. 核对每位居民的工资、扣除和预缴凭证\n2. 计算应纳税所得、应纳税额及补退税差额\n3. 在申报页面填写并保存三份申报结果和截图\n\n交付成果：\n- returns/T001.json～T003.json：三位居民的汇算申报字段与金额。\n- screenshots/T001.png～T003.png：各份申报保存后的页面截图。",
+  "agentMustDo": [
+    "核对每位居民的工资、扣除和预缴凭证",
+    "计算应纳税所得、应纳税额及补退税差额",
+    "在申报页面填写并保存三份申报结果和截图"
+  ],
+  "software": [
+    "浏览器",
+    "计算与表格工具"
+  ],
+  "materials": "三名居民的 12 个月收入与扣除凭证、预缴记录、规则和申报页面。",
+  "inputFiles": [
+    {
+      "name": "T001_deductions.pdf",
+      "path": "input/T001_deductions.pdf",
+      "format": "PDF",
+      "bytes": 24982,
+      "description": "T001_deductions.pdf，用于居民个人综合所得年度汇算申报。"
+    },
+    {
+      "name": "T001_payroll.csv",
+      "path": "input/T001_payroll.csv",
+      "format": "CSV",
+      "bytes": 424,
+      "description": "T001_payroll.csv，用于居民个人综合所得年度汇算申报。"
+    },
+    {
+      "name": "T002_deductions.pdf",
+      "path": "input/T002_deductions.pdf",
+      "format": "PDF",
+      "bytes": 24986,
+      "description": "T002_deductions.pdf，用于居民个人综合所得年度汇算申报。"
+    },
+    {
+      "name": "T002_payroll.csv",
+      "path": "input/T002_payroll.csv",
+      "format": "CSV",
+      "bytes": 556,
+      "description": "T002_payroll.csv，用于居民个人综合所得年度汇算申报。"
+    },
+    {
+      "name": "T003_deductions.pdf",
+      "path": "input/T003_deductions.pdf",
+      "format": "PDF",
+      "bytes": 24982,
+      "description": "T003_deductions.pdf，用于居民个人综合所得年度汇算申报。"
+    },
+    {
+      "name": "T003_payroll.csv",
+      "path": "input/T003_payroll.csv",
+      "format": "CSV",
+      "bytes": 544,
+      "description": "T003_payroll.csv，用于居民个人综合所得年度汇算申报。"
+    },
+    {
+      "name": "tax_form.html",
+      "path": "input/tax_form.html",
+      "format": "HTML",
+      "bytes": 1706,
+      "description": "tax_form.html，用于居民个人综合所得年度汇算申报。"
+    },
+    {
+      "name": "tax_rules.md",
+      "path": "input/tax_rules.md",
+      "format": "MD",
+      "bytes": 985,
+      "description": "tax_rules.md，用于居民个人综合所得年度汇算申报。"
+    }
+  ],
+  "inputFileCount": 8,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "returns/T001.json～T003.json",
+      "path": "output/returns/T001.json～T003.json",
+      "format": "JSON",
+      "description": "三位居民的汇算申报字段与金额。"
+    },
+    {
+      "name": "screenshots/T001.png～T003.png",
+      "path": "output/screenshots/T001.png～T003.png",
+      "format": "PNG",
+      "description": "各份申报保存后的页面截图。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "申报计算",
+        "weight": 95,
+        "rule": "逐人逐字段比对收入、扣除、应税所得、税额、预缴和差额，金额容差 0.01；按三人平均正确比例计分。"
+      },
+      {
+        "name": "申报截图",
+        "weight": 5,
+        "rule": "三张截图均可读取，且宽至少 800、高至少 500 像素，取得本项分数。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

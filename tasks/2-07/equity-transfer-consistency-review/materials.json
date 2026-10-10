@@ -1,0 +1,47 @@
+[
+  {
+    "path": "input/A.html",
+    "bytes": 1282,
+    "sha256": "13ccb08547c2691141067af5806afcf702f8c24e4c172b09e611e6385fed2f05"
+  },
+  {
+    "path": "input/A.pdf",
+    "bytes": 31648,
+    "sha256": "592f1930bab91f2b1126aa825770a3f5354491b07d5b233e47114c47f7b4995a"
+  },
+  {
+    "path": "input/B.html",
+    "bytes": 1269,
+    "sha256": "17ee3958b6d6b7779b7e8a0faba1ddbdc082cb5cfc70c8d436597981d3ed0979"
+  },
+  {
+    "path": "input/B.pdf",
+    "bytes": 33444,
+    "sha256": "7333ae9b2ab81d9f3823535cf643c92e4aa3fbcf12de7992cb9b307ca65250a8"
+  },
+  {
+    "path": "input/C.html",
+    "bytes": 1336,
+    "sha256": "30e4ce17ccfc5c11d9c577b3be142114e9473b958c87170bd9a9d0ec2cafb4f4"
+  },
+  {
+    "path": "input/C.pdf",
+    "bytes": 33192,
+    "sha256": "12d2aea194e288cb3d4f4235a091f763c23c62ae226f26c546538a82d152674d"
+  },
+  {
+    "path": "input/D.html",
+    "bytes": 1269,
+    "sha256": "4c3bf2a74bb78c519c5525bc1a5c7894539d0e5136f61195852d3789bf564c66"
+  },
+  {
+    "path": "input/D.pdf",
+    "bytes": 32812,
+    "sha256": "5abb3d6ecc00978ca779d0c8e061af6c669bf04517c07b5976cb4fbcf9a03ba7"
+  },
+  {
+    "path": "input/evidence_contract.md",
+    "bytes": 363,
+    "sha256": "5b8634fd44ee4eab5086db5d2953bde0bda5003dd62dd4df3bd5590ff24bacd1"
+  }
+]

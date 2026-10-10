@@ -1,0 +1,22 @@
+[
+  {
+    "path": "input/feeder_cim.xml",
+    "bytes": 10636,
+    "sha256": "8a8aea083f9778c6a4b697923c1b59376616cdd6454d59725885dc93c6fe18ee"
+  },
+  {
+    "path": "input/rules.md",
+    "bytes": 728,
+    "sha256": "7d9949ac5d31d9b1912ad011ad16dc296587d2fcf4cbe4594cbc6da8975c4c8f"
+  },
+  {
+    "path": "input/topology.svg",
+    "bytes": 8436,
+    "sha256": "a94cefe58a688dfddc45e2a1cec4af1ccc0b042298c46410ccee09256889bed9"
+  },
+  {
+    "path": "input/transformers.csv",
+    "bytes": 1360,
+    "sha256": "98544e9611059c8fc1efdd576d929c783ea5578b6d4e489332cf651a1b2ff8cc"
+  }
+]

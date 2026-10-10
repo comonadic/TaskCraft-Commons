@@ -1,0 +1,99 @@
+{
+  "taskId": "2-02/payment-api-incident-analysis",
+  "title": "支付服务 Kubernetes 故障归因与恢复计划",
+  "brief": "结合支付服务日志与集群配置定位故障，整理影响范围，并提出有优先级的整改、回滚与验证步骤。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-02",
+  "occupation": {
+    "code": "2-02-38-04",
+    "name": "云计算工程技术人员"
+  },
+  "scene": "你是支付平台运维工程师，收到一次服务异常的诊断资料，需要形成可供事故响应团队执行的恢复计划。",
+  "taskPrompt": "你是支付平台运维工程师，收到一次服务异常的诊断资料，需要形成可供事故响应团队执行的恢复计划。\n\n1. 阅读事故材料，关联配置、事件和日志中的证据\n2. 定位多个根因及受影响资源\n3. 提出参数明确的整改动作、回滚版本和恢复验证步骤\n\n交付成果：\n- root_cause_analysis.json：根因、资源、原文证据、优先级整改、回滚及诊断摘要。",
+  "agentMustDo": [
+    "阅读事故材料，关联配置、事件和日志中的证据",
+    "定位多个根因及受影响资源",
+    "提出参数明确的整改动作、回滚版本和恢复验证步骤"
+  ],
+  "software": [
+    "Python",
+    "表格与文档阅读工具"
+  ],
+  "materials": "三份集群事故材料，涵盖日志、配置与事件记录。",
+  "inputFiles": [
+    {
+      "name": "cluster_state.txt",
+      "path": "input/cluster_state.txt",
+      "format": "TXT",
+      "bytes": 1456,
+      "description": "cluster_state.txt，用于支付服务 Kubernetes 故障归因与恢复计划。"
+    },
+    {
+      "name": "deployment.yaml",
+      "path": "input/deployment.yaml",
+      "format": "YAML",
+      "bytes": 552,
+      "description": "deployment.yaml，用于支付服务 Kubernetes 故障归因与恢复计划。"
+    },
+    {
+      "name": "failing_pod.txt",
+      "path": "input/failing_pod.txt",
+      "format": "TXT",
+      "bytes": 459,
+      "description": "failing_pod.txt，用于支付服务 Kubernetes 故障归因与恢复计划。"
+    },
+    {
+      "name": "结果字段说明",
+      "path": "input/schema.json",
+      "format": "JSON",
+      "bytes": 515,
+      "description": "结果字段说明，用于支付服务 Kubernetes 故障归因与恢复计划。"
+    }
+  ],
+  "inputFileCount": 4,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "root_cause_analysis.json",
+      "path": "output/root_cause_analysis.json",
+      "format": "JSON",
+      "description": "根因、资源、原文证据、优先级整改、回滚及诊断摘要。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "根因与证据",
+        "weight": 50,
+        "rule": "逐项比较根因类型、资源和日志原文，按正确比例计分。"
+      },
+      {
+        "name": "影响范围",
+        "weight": 10,
+        "rule": "受影响资源集合采用 F1 计分。"
+      },
+      {
+        "name": "整改计划",
+        "weight": 25,
+        "rule": "检查动作说明、整数优先级和结构化参数，按参数正确比例计分。"
+      },
+      {
+        "name": "回滚方案",
+        "weight": 10,
+        "rule": "比对回滚版本和镜像，按字段正确比例计分。"
+      },
+      {
+        "name": "摘要与验证",
+        "weight": 5,
+        "rule": "诊断摘要至少 20 字且恢复验证说明至少 10 字，取得本项分数。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

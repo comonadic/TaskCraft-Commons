@@ -1,0 +1,100 @@
+{
+  "taskId": "2-02/xinglan-cloud-cost-review",
+  "title": "星澜云账单与资源成本优化",
+  "brief": "分析星澜的云资源账单与使用情况，提出逐资源优化建议，并核算优化后的月度费用和节约金额。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-02",
+  "occupation": {
+    "code": "2-02-38-04",
+    "name": "云计算工程技术人员"
+  },
+  "scene": "你是云平台成本管理人员，需要为运营团队整理一份能够落地的资源优化清单，说明每项建议的依据和预计收益。",
+  "taskPrompt": "你是云平台成本管理人员，需要为运营团队整理一份能够落地的资源优化清单，说明每项建议的依据和预计收益。\n\n1. 结合资源清单、使用数据和截图识别可优化资源\n2. 为各项资源选择合适的优化动作，计算现有费用和预计费用\n3. 汇总月度节约金额，形成管理摘要和资源明细\n\n交付成果：\n- optimization_report.json：包含整体费用、节约金额、建议数量与逐资源建议的优化报告。\n- savings_summary.csv：逐资源费用测算表，列出资源名称、动作和节约金额。",
+  "agentMustDo": [
+    "结合资源清单、使用数据和截图识别可优化资源",
+    "为各项资源选择合适的优化动作，计算现有费用和预计费用",
+    "汇总月度节约金额，形成管理摘要和资源明细"
+  ],
+  "software": [
+    "Python",
+    "表格与文档阅读工具"
+  ],
+  "materials": "资源与账单 CSV、使用情况截图，以及费用和动作规则。",
+  "inputFiles": [
+    {
+      "name": "dashboard.png",
+      "path": "input/dashboard.png",
+      "format": "PNG",
+      "bytes": 66702,
+      "description": "dashboard.png，用于星澜云账单与资源成本优化。"
+    },
+    {
+      "name": "pricing.csv",
+      "path": "input/pricing.csv",
+      "format": "CSV",
+      "bytes": 137,
+      "description": "pricing.csv，用于星澜云账单与资源成本优化。"
+    },
+    {
+      "name": "业务规则说明",
+      "path": "input/rules.md",
+      "format": "MD",
+      "bytes": 637,
+      "description": "业务规则说明，用于星澜云账单与资源成本优化。"
+    },
+    {
+      "name": "usage.csv",
+      "path": "input/usage.csv",
+      "format": "CSV",
+      "bytes": 2059,
+      "description": "usage.csv，用于星澜云账单与资源成本优化。"
+    }
+  ],
+  "inputFileCount": 4,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "optimization_report.json",
+      "path": "output/optimization_report.json",
+      "format": "JSON",
+      "description": "包含整体费用、节约金额、建议数量与逐资源建议的优化报告。"
+    },
+    {
+      "name": "savings_summary.csv",
+      "path": "output/savings_summary.csv",
+      "format": "CSV",
+      "description": "逐资源费用测算表，列出资源名称、动作和节约金额。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "资源识别",
+        "weight": 30,
+        "rule": "将建议中的资源 ID 与应优化资源集合比较，以 F1 衡量覆盖率和准确率，得分为 30 × F1。"
+      },
+      {
+        "name": "优化动作",
+        "weight": 30,
+        "rule": "按资源 ID 比对动作，按记录与字段的正确比例计分。"
+      },
+      {
+        "name": "费用测算",
+        "weight": 25,
+        "rule": "逐资源比较现有费用、预计费用和月度节约，金额容差为 0.01，按正确比例计分。"
+      },
+      {
+        "name": "报告汇总",
+        "weight": 15,
+        "rule": "整体摘要与建议明细各占本项一半，检查费用合计、建议数量和逐项内容。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

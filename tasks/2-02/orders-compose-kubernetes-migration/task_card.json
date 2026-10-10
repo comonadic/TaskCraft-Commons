@@ -1,0 +1,103 @@
+{
+  "taskId": "2-02/orders-compose-kubernetes-migration",
+  "title": "订单应用 Compose 到 Kubernetes 迁移",
+  "brief": "将订单应用迁移到 Kubernetes，完成 Helm 部署、基础设施和流水线配置，并检查服务运行与网络访问。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-02",
+  "occupation": {
+    "code": "2-02-38-04",
+    "name": "云计算工程技术人员"
+  },
+  "scene": "你是云平台工程师，需要迁移包含 React 前端、Flask 后端和 PostgreSQL 数据库的订单应用。",
+  "taskPrompt": "你是云平台工程师，需要迁移包含 React 前端、Flask 后端和 PostgreSQL 数据库的订单应用。\n\n1. 把 Compose 服务整理为 Helm Chart 和配置参数\n2. 准备 Terraform、Jenkins 流水线及持久化和扩缩容设置\n3. 部署应用，检查接口、数据库、网络策略并提交运行记录\n\n交付成果：\n- helm/webapp-chart/：可渲染的 Helm Chart、values 与资源模板。\n- terraform/main.tf：基础设施与 Helm 发布配置。\n- Jenkinsfile：构建、测试、发布等五阶段流水线。\n- verification/：Pod、Service、Helm 和接口检查记录。\n- migration_report.md：迁移步骤、配置选择与运行结果。",
+  "agentMustDo": [
+    "把 Compose 服务整理为 Helm Chart 和配置参数",
+    "准备 Terraform、Jenkins 流水线及持久化和扩缩容设置",
+    "部署应用，检查接口、数据库、网络策略并提交运行记录"
+  ],
+  "software": [
+    "Kubernetes",
+    "Helm",
+    "Terraform",
+    "Jenkins"
+  ],
+  "materials": "订单应用源码、Compose 配置、部署要求和任务集群。",
+  "inputFiles": [
+    {
+      "name": "工具与模型资料",
+      "path": "input/THIRD_PARTY.md",
+      "format": "MD",
+      "bytes": 353,
+      "description": "工具与模型资料，用于订单应用 Compose 到 Kubernetes 迁移。"
+    },
+    {
+      "name": "requirements.md",
+      "path": "input/requirements.md",
+      "format": "MD",
+      "bytes": 2056,
+      "description": "requirements.md，用于订单应用 Compose 到 Kubernetes 迁移。"
+    },
+    {
+      "name": "app 资料",
+      "path": "input/app/",
+      "format": "目录",
+      "bytes": 145430,
+      "description": "app 资料，共 11 个文件。"
+    }
+  ],
+  "inputFileCount": 13,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "helm/webapp-chart/",
+      "path": "output/helm/webapp-chart/",
+      "format": "目录",
+      "description": "可渲染的 Helm Chart、values 与资源模板。"
+    },
+    {
+      "name": "terraform/main.tf",
+      "path": "output/terraform/main.tf",
+      "format": "TF",
+      "description": "基础设施与 Helm 发布配置。"
+    },
+    {
+      "name": "Jenkinsfile",
+      "path": "output/Jenkinsfile",
+      "format": "目录",
+      "description": "构建、测试、发布等五阶段流水线。"
+    },
+    {
+      "name": "verification/",
+      "path": "output/verification/",
+      "format": "目录",
+      "description": "Pod、Service、Helm 和接口检查记录。"
+    },
+    {
+      "name": "migration_report.md",
+      "path": "output/migration_report.md",
+      "format": "MD",
+      "description": "迁移步骤、配置选择与运行结果。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "部署配置",
+        "weight": 70,
+        "rule": "资源覆盖 20 分、资源配置 25 分、Terraform 10 分、五阶段流水线 10 分、运行记录和中文报告 5 分；各项按满足要求的比例计分。"
+      },
+      {
+        "name": "集群运行",
+        "weight": 30,
+        "rule": "Pod 可用性 12 分；Service、接口与数据库、HPA 指标、网络连接各 4.5 分，按实际集群检查结果计分。"
+      }
+    ],
+    "notes": "先检查 Chart 渲染、values 文件及 Secret 编码，满足这些条件后计算各项得分。",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

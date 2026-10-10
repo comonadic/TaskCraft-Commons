@@ -1,0 +1,22 @@
+[
+  {
+    "path": "input/dashboard.png",
+    "bytes": 66702,
+    "sha256": "15b4cc758570232e7c1d1ec88d04e97482b8d5228263f121e632eba096da3f2c"
+  },
+  {
+    "path": "input/pricing.csv",
+    "bytes": 137,
+    "sha256": "66057324268f8e0cec239fad58c465b80bafa738ae81ddab7833c62deebf488c"
+  },
+  {
+    "path": "input/rules.md",
+    "bytes": 637,
+    "sha256": "06c22c9cd05a28235c6d1906ea24b814eb67fc41b57a7c441ed2da06d0fccf00"
+  },
+  {
+    "path": "input/usage.csv",
+    "bytes": 2059,
+    "sha256": "9ddb46f3eb11a82435b91fb99d30709ad545c8aba9e28ad3689b9eff4d8c5e62"
+  }
+]

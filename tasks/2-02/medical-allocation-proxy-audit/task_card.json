@@ -1,0 +1,87 @@
+{
+  "taskId": "2-02/medical-allocation-proxy-audit",
+  "title": "医疗资源分配的费用代理偏差审计",
+  "brief": "比较费用导向与需要导向的资源分配排名，分析不同群体的入选比例和健康需要覆盖情况。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-02",
+  "occupation": {
+    "code": "2-02-30-09",
+    "name": "数据分析处理工程技术人员"
+  },
+  "scene": "你是医疗数据分析人员，需要评估费用评分作为资源分配依据时产生的群体差异。",
+  "taskPrompt": "你是医疗数据分析人员，需要评估费用评分作为资源分配依据时产生的群体差异。\n\n1. 保留原始评分并重建基线入选名单\n2. 建立需要导向的修订评分，按固定名额选择对象\n3. 比较两种方案的群体构成与需要覆盖，说明差异机制\n\n交付成果：\n- full_predictions.csv：原始与修订评分，以及两种方案的入选标记。\n- baseline_report.json / revised_report.json：入选数量、群体占比与需要覆盖指标。\n- analysis.md：对费用代理、差异机制和适用范围的分析。",
+  "agentMustDo": [
+    "保留原始评分并重建基线入选名单",
+    "建立需要导向的修订评分，按固定名额选择对象",
+    "比较两种方案的群体构成与需要覆盖，说明差异机制"
+  ],
+  "software": [
+    "Python",
+    "表格与文档阅读工具"
+  ],
+  "materials": "6,000 条记录、两个群体、临床变量、原始评分和固定 20% 分配名额。",
+  "inputFiles": [
+    {
+      "name": "patients.csv",
+      "path": "input/patients.csv",
+      "format": "CSV",
+      "bytes": 298978,
+      "description": "patients.csv，用于医疗资源分配的费用代理偏差审计。"
+    },
+    {
+      "name": "protocol.md",
+      "path": "input/protocol.md",
+      "format": "MD",
+      "bytes": 562,
+      "description": "protocol.md，用于医疗资源分配的费用代理偏差审计。"
+    }
+  ],
+  "inputFileCount": 2,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "full_predictions.csv",
+      "path": "output/full_predictions.csv",
+      "format": "CSV",
+      "description": "原始与修订评分，以及两种方案的入选标记。"
+    },
+    {
+      "name": "baseline_report.json / revised_report.json",
+      "path": "output/baseline_report.json / revised_report.json",
+      "format": "JSON",
+      "description": "入选数量、群体占比与需要覆盖指标。"
+    },
+    {
+      "name": "analysis.md",
+      "path": "output/analysis.md",
+      "format": "MD",
+      "description": "对费用代理、差异机制和适用范围的分析。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "评分与排序",
+        "weight": 65,
+        "rule": "本项内原始分数保留占 30%，基线入选 F1 占 20%，修订入选 F1 占 30%，按修订分数排序的名单 F1 占 20%。"
+      },
+      {
+        "name": "群体与需要指标",
+        "weight": 30,
+        "rule": "基线与修订报告各占 15 分，逐字段比较入选数量、群体占比与需要指标。"
+      },
+      {
+        "name": "分析说明",
+        "weight": 5,
+        "rule": "分析正文至少 60 字，取得本项分数。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

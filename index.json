@@ -1,0 +1,2862 @@
+[
+  {
+    "taskId": "4-08/factory-tower-3d-reconstruction",
+    "title": "厂房与塔楼图纸三维重建",
+    "brief": "根据建筑平面、立面和剖面图重建厂房与塔楼，整理构件名称与尺寸，并交付可继续编辑的三维模型。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "4-08",
+    "occupation": {
+      "code": "4-08-08-23",
+      "name": "建筑信息模型技术员"
+    },
+    "scene": "你是建筑信息模型技术员，需要依据六张建筑图纸搭建包含大厅与塔楼的三维模型，供设计团队查看和后续使用。",
+    "taskPrompt": "你是建筑信息模型技术员，需要依据六张建筑图纸搭建包含大厅与塔楼的三维模型，供设计团队查看和后续使用。\n\n1. 阅读总平面、楼层、立面与剖面图，确认轴网和构件尺寸\n2. 在统一毫米坐标系中建立柱、梁、楼板、墙体、玻璃与塔楼构件\n3. 按图纸标签命名构件，导出 Rhino 原生模型和 OBJ 模型\n\n交付成果：\n- model.3dm：Rhino 原生模型，采用毫米单位并保留命名构件。\n- model.obj：与原生模型对应的实体模型，供跨工具查看。",
+    "agentMustDo": [
+      "阅读总平面、楼层、立面与剖面图，确认轴网和构件尺寸",
+      "在统一毫米坐标系中建立柱、梁、楼板、墙体、玻璃与塔楼构件",
+      "按图纸标签命名构件，导出 Rhino 原生模型和 OBJ 模型"
+    ],
+    "software": [
+      "Rhino 或 rhino3dm",
+      "PDF 阅读工具"
+    ],
+    "materials": "六张 PDF 建筑图纸，以及构件名称与尺寸说明。",
+    "inputFiles": [
+      {
+        "name": "01总平面.pdf",
+        "path": "input/01总平面.pdf",
+        "format": "PDF",
+        "bytes": 15739,
+        "description": "01总平面.pdf，用于厂房与塔楼图纸三维重建。"
+      },
+      {
+        "name": "02首层平面.pdf",
+        "path": "input/02首层平面.pdf",
+        "format": "PDF",
+        "bytes": 15853,
+        "description": "02首层平面.pdf，用于厂房与塔楼图纸三维重建。"
+      },
+      {
+        "name": "03屋面平面.pdf",
+        "path": "input/03屋面平面.pdf",
+        "format": "PDF",
+        "bytes": 15738,
+        "description": "03屋面平面.pdf，用于厂房与塔楼图纸三维重建。"
+      },
+      {
+        "name": "04南立面.pdf",
+        "path": "input/04南立面.pdf",
+        "format": "PDF",
+        "bytes": 15655,
+        "description": "04南立面.pdf，用于厂房与塔楼图纸三维重建。"
+      },
+      {
+        "name": "05东立面.pdf",
+        "path": "input/05东立面.pdf",
+        "format": "PDF",
+        "bytes": 15551,
+        "description": "05东立面.pdf，用于厂房与塔楼图纸三维重建。"
+      },
+      {
+        "name": "06剖面.pdf",
+        "path": "input/06剖面.pdf",
+        "format": "PDF",
+        "bytes": 15565,
+        "description": "06剖面.pdf，用于厂房与塔楼图纸三维重建。"
+      },
+      {
+        "name": "建筑构件与尺寸说明",
+        "path": "input/drawing_schedule.md",
+        "format": "MD",
+        "bytes": 998,
+        "description": "建筑构件与尺寸说明，用于厂房与塔楼图纸三维重建。"
+      }
+    ],
+    "inputFileCount": 7,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "model.3dm",
+        "path": "output/model.3dm",
+        "format": "3DM",
+        "description": "Rhino 原生模型，采用毫米单位并保留命名构件。"
+      },
+      {
+        "name": "model.obj",
+        "path": "output/model.obj",
+        "format": "OBJ",
+        "description": "与原生模型对应的实体模型，供跨工具查看。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "原生模型",
+          "weight": 50,
+          "rule": "检查毫米单位和闭合构件；按构件名称比对位置与尺寸，允许 1 mm 绝对误差，按正确构件比例计分。"
+        },
+        {
+          "name": "OBJ 模型",
+          "weight": 50,
+          "rule": "检查顶点、闭合实体与构件名称，并按位置和尺寸正确的构件比例计分；最少包含 1,000 个顶点。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-06/chenghai-balance-sheet-2024",
+    "title": "澄海精密 2024 年合并资产负债表重构",
+    "brief": "阅读澄海精密年度报告，整理报告期末的合并资产负债表，并为各项金额提供可定位的报告依据。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-06",
+    "occupation": {
+      "code": "2-06-03-00",
+      "name": "会计专业人员"
+    },
+    "scene": "你负责为财务分析团队整理澄海精密的年度财务数据。报告同时列有合并报表、母公司报表和上年比较数，需要将目标期间的数据整理为统一口径。",
+    "taskPrompt": "你负责为财务分析团队整理澄海精密的年度财务数据。报告同时列有合并报表、母公司报表和上年比较数，需要将目标期间的数据整理为统一口径。\n\n1. 定位 2024 年 12 月 31 日的合并资产负债表\n2. 按照字段说明提取 22 项金额，统一换算为人民币元\n3. 为每项金额记录报告文件、页码和原文，交付结构化报表与证据表\n\n交付成果：\n- balance_sheet.json：合并资产负债表，包含公司、报告日期、币种、单位及 22 项金额。\n- evidence.json：逐项列出金额对应的报告文件、页码和原文摘录。",
+    "agentMustDo": [
+      "定位 2024 年 12 月 31 日的合并资产负债表",
+      "按照字段说明提取 22 项金额，统一换算为人民币元",
+      "为每项金额记录报告文件、页码和原文，交付结构化报表与证据表"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "提供年度报告的 PDF 与 HTML 两种阅读格式，以及报表字段说明。",
+    "inputFiles": [
+      {
+        "name": "澄海精密年度报告 · 网页",
+        "path": "input/chenghai_2024.html",
+        "format": "HTML",
+        "bytes": 2783,
+        "description": "澄海精密年度报告 · 网页，用于澄海精密 2024 年合并资产负债表重构。"
+      },
+      {
+        "name": "澄海精密年度报告 · PDF",
+        "path": "input/chenghai_2024.pdf",
+        "format": "PDF",
+        "bytes": 35623,
+        "description": "澄海精密年度报告 · PDF，用于澄海精密 2024 年合并资产负债表重构。"
+      },
+      {
+        "name": "结果字段说明",
+        "path": "input/schema.json",
+        "format": "JSON",
+        "bytes": 996,
+        "description": "结果字段说明，用于澄海精密 2024 年合并资产负债表重构。"
+      }
+    ],
+    "inputFileCount": 3,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "balance_sheet.json",
+        "path": "output/balance_sheet.json",
+        "format": "JSON",
+        "description": "合并资产负债表，包含公司、报告日期、币种、单位及 22 项金额。"
+      },
+      {
+        "name": "evidence.json",
+        "path": "output/evidence.json",
+        "format": "JSON",
+        "description": "逐项列出金额对应的报告文件、页码和原文摘录。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "金额与报表信息",
+          "weight": 80,
+          "rule": "逐字段比对报告期、币种、单位及金额。金额采用 0.01 元绝对容差，并结合相对容差 0.001%；本项按正确字段比例计分。"
+        },
+        {
+          "name": "报告依据",
+          "weight": 20,
+          "rule": "比对每个字段的文件、页码与原文摘录，按证据字段的正确比例计分。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-02/xinglan-cloud-cost-review",
+    "title": "星澜云账单与资源成本优化",
+    "brief": "分析星澜的云资源账单与使用情况，提出逐资源优化建议，并核算优化后的月度费用和节约金额。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-02",
+    "occupation": {
+      "code": "2-02-38-04",
+      "name": "云计算工程技术人员"
+    },
+    "scene": "你是云平台成本管理人员，需要为运营团队整理一份能够落地的资源优化清单，说明每项建议的依据和预计收益。",
+    "taskPrompt": "你是云平台成本管理人员，需要为运营团队整理一份能够落地的资源优化清单，说明每项建议的依据和预计收益。\n\n1. 结合资源清单、使用数据和截图识别可优化资源\n2. 为各项资源选择合适的优化动作，计算现有费用和预计费用\n3. 汇总月度节约金额，形成管理摘要和资源明细\n\n交付成果：\n- optimization_report.json：包含整体费用、节约金额、建议数量与逐资源建议的优化报告。\n- savings_summary.csv：逐资源费用测算表，列出资源名称、动作和节约金额。",
+    "agentMustDo": [
+      "结合资源清单、使用数据和截图识别可优化资源",
+      "为各项资源选择合适的优化动作，计算现有费用和预计费用",
+      "汇总月度节约金额，形成管理摘要和资源明细"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "资源与账单 CSV、使用情况截图，以及费用和动作规则。",
+    "inputFiles": [
+      {
+        "name": "dashboard.png",
+        "path": "input/dashboard.png",
+        "format": "PNG",
+        "bytes": 66702,
+        "description": "dashboard.png，用于星澜云账单与资源成本优化。"
+      },
+      {
+        "name": "pricing.csv",
+        "path": "input/pricing.csv",
+        "format": "CSV",
+        "bytes": 137,
+        "description": "pricing.csv，用于星澜云账单与资源成本优化。"
+      },
+      {
+        "name": "业务规则说明",
+        "path": "input/rules.md",
+        "format": "MD",
+        "bytes": 637,
+        "description": "业务规则说明，用于星澜云账单与资源成本优化。"
+      },
+      {
+        "name": "usage.csv",
+        "path": "input/usage.csv",
+        "format": "CSV",
+        "bytes": 2059,
+        "description": "usage.csv，用于星澜云账单与资源成本优化。"
+      }
+    ],
+    "inputFileCount": 4,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "optimization_report.json",
+        "path": "output/optimization_report.json",
+        "format": "JSON",
+        "description": "包含整体费用、节约金额、建议数量与逐资源建议的优化报告。"
+      },
+      {
+        "name": "savings_summary.csv",
+        "path": "output/savings_summary.csv",
+        "format": "CSV",
+        "description": "逐资源费用测算表，列出资源名称、动作和节约金额。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "资源识别",
+          "weight": 30,
+          "rule": "将建议中的资源 ID 与应优化资源集合比较，以 F1 衡量覆盖率和准确率，得分为 30 × F1。"
+        },
+        {
+          "name": "优化动作",
+          "weight": 30,
+          "rule": "按资源 ID 比对动作，按记录与字段的正确比例计分。"
+        },
+        {
+          "name": "费用测算",
+          "weight": 25,
+          "rule": "逐资源比较现有费用、预计费用和月度节约，金额容差为 0.01，按正确比例计分。"
+        },
+        {
+          "name": "报告汇总",
+          "weight": 15,
+          "rule": "整体摘要与建议明细各占本项一半，检查费用合计、建议数量和逐项内容。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-02/county-crop-rotation-audit",
+    "title": "县域十年地块轮作资格审计",
+    "brief": "依据十年作物记录与轮作规则，判断地块资格，整理风险地块，并交付可用于 GIS 的审计成果。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-02",
+    "occupation": {
+      "code": "2-02-02-07",
+      "name": "地理信息系统工程技术人员"
+    },
+    "scene": "你负责县域农业地块数据审计，需要将逐年的种植记录转为可追踪的资格和风险结果。",
+    "taskPrompt": "你负责县域农业地块数据审计，需要将逐年的种植记录转为可追踪的资格和风险结果。\n\n1. 读取地块和年度作物数据，按规则处理缺失与未知编码\n2. 为符合条件的地块计算八项审计字段\n3. 分别导出合格地块及风险子集，保留地块空间信息\n\n交付成果：\n- eligible_units.gpkg：合格地块图层，包含原始属性与八项审计字段。\n- flagged_units.gpkg：需要关注的风险地块图层。",
+    "agentMustDo": [
+      "读取地块和年度作物数据，按规则处理缺失与未知编码",
+      "为符合条件的地块计算八项审计字段",
+      "分别导出合格地块及风险子集，保留地块空间信息"
+    ],
+    "software": [
+      "Python",
+      "GeoPandas",
+      "GIS 阅读工具"
+    ],
+    "materials": "地块 GeoPackage、作物编码字典和轮作审计规则。",
+    "inputFiles": [
+      {
+        "name": "业务规则说明",
+        "path": "input/rules.md",
+        "format": "MD",
+        "bytes": 841,
+        "description": "业务规则说明，用于县域十年地块轮作资格审计。"
+      },
+      {
+        "name": "seq1524_cn.gpkg",
+        "path": "input/seq1524_cn.gpkg",
+        "format": "GPKG",
+        "bytes": 438272,
+        "description": "seq1524_cn.gpkg，用于县域十年地块轮作资格审计。"
+      }
+    ],
+    "inputFileCount": 2,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "eligible_units.gpkg",
+        "path": "output/eligible_units.gpkg",
+        "format": "GPKG",
+        "description": "合格地块图层，包含原始属性与八项审计字段。"
+      },
+      {
+        "name": "flagged_units.gpkg",
+        "path": "output/flagged_units.gpkg",
+        "format": "GPKG",
+        "description": "需要关注的风险地块图层。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "资格与审计字段",
+          "weight": 60,
+          "rule": "按地块 ID 比对资格和八项字段，按记录与字段的正确比例计分。"
+        },
+        {
+          "name": "空间信息",
+          "weight": 20,
+          "rule": "检查地块 ID 集合、原始字段、几何和 EPSG:4547 坐标系；全部一致取得本项分数。"
+        },
+        {
+          "name": "风险地块",
+          "weight": 20,
+          "rule": "比对风险子集的地块和审计字段，按正确比例计分。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-06/retail-remarketing-audience",
+    "title": "零售企业再营销受众与渠道资格",
+    "brief": "结合交易、邮件与客服记录筛选再营销受众，判定可联系渠道，并分析新受众与现有分群的重叠。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-06",
+    "occupation": {
+      "code": "2-06-07-02",
+      "name": "市场营销专业人员"
+    },
+    "scene": "你是零售企业营销分析人员，需要为下一轮活动准备一份符合客户授权和业务规则的受众名单。",
+    "taskPrompt": "你是零售企业营销分析人员，需要为下一轮活动准备一份符合客户授权和业务规则的受众名单。\n\n1. 连接客户、交易、邮件及工单资料\n2. 按活动规则筛选受众，逐客户确定可用渠道\n3. 整理分群定义、受众名单和与现有分群的重叠结果\n\n交付成果：\n- segment_definition.json：分群规则、人数和关键统计。\n- audience_roster.csv：受众名单及逐客户渠道资格。\n- overlap_report.tsv：与现有分群的重叠人数和比例。",
+    "agentMustDo": [
+      "连接客户、交易、邮件及工单资料",
+      "按活动规则筛选受众，逐客户确定可用渠道",
+      "整理分群定义、受众名单和与现有分群的重叠结果"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "客户与交易记录、邮件活动数据、工单记录、授权规则及既有分群。",
+    "inputFiles": [
+      {
+        "name": "brief.md",
+        "path": "input/brief.md",
+        "format": "MD",
+        "bytes": 757,
+        "description": "brief.md，用于零售企业再营销受众与渠道资格。"
+      },
+      {
+        "name": "existing_segments.csv",
+        "path": "input/existing_segments.csv",
+        "format": "CSV",
+        "bytes": 133993,
+        "description": "existing_segments.csv，用于零售企业再营销受众与渠道资格。"
+      },
+      {
+        "name": "governance.yaml",
+        "path": "input/governance.yaml",
+        "format": "YAML",
+        "bytes": 142,
+        "description": "governance.yaml，用于零售企业再营销受众与渠道资格。"
+      },
+      {
+        "name": "unified_profiles.parquet",
+        "path": "input/unified_profiles.parquet",
+        "format": "PARQUET",
+        "bytes": 154608,
+        "description": "unified_profiles.parquet，用于零售企业再营销受众与渠道资格。"
+      }
+    ],
+    "inputFileCount": 4,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "segment_definition.json",
+        "path": "output/segment_definition.json",
+        "format": "JSON",
+        "description": "分群规则、人数和关键统计。"
+      },
+      {
+        "name": "audience_roster.csv",
+        "path": "output/audience_roster.csv",
+        "format": "CSV",
+        "description": "受众名单及逐客户渠道资格。"
+      },
+      {
+        "name": "overlap_report.tsv",
+        "path": "output/overlap_report.tsv",
+        "format": "TSV",
+        "description": "与现有分群的重叠人数和比例。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "受众与渠道",
+          "weight": 65,
+          "rule": "按客户 ID 比对入选名单和渠道资格，按记录与字段的正确比例计分。"
+        },
+        {
+          "name": "分群摘要",
+          "weight": 15,
+          "rule": "比对分群定义与统计字段，按正确比例计分。"
+        },
+        {
+          "name": "重叠分析",
+          "weight": 20,
+          "rule": "按既有分群 ID 比较重叠人数及比例，数值绝对容差为 0.000001。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-01/ecg-rhythm-conduction-classification",
+    "title": "12 导联心电心律与传导分类",
+    "brief": "利用 12 导联心电波形训练多标签模型，识别心律和传导类别，并整理预测结果与建模方法。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-01",
+    "occupation": {
+      "code": "2-01-08-00",
+      "name": "医学研究人员"
+    },
+    "scene": "你负责心电信号研究分析，需要以训练集建立分类流程，并在测试波形上生成 13 类标签预测。",
+    "taskPrompt": "你负责心电信号研究分析，需要以训练集建立分类流程，并在测试波形上生成 13 类标签预测。\n\n1. 阅读标签定义，对训练波形进行预处理\n2. 训练并验证多标签分类模型\n3. 生成测试集预测，说明模型、验证方法和适用范围\n\n交付成果：\n- predictions.csv：每条 ecg_id 对应 13 类 0/1 预测。\n- model_report.md：说明预处理、模型、验证方法和适用范围。",
+    "agentMustDo": [
+      "阅读标签定义，对训练波形进行预处理",
+      "训练并验证多标签分类模型",
+      "生成测试集预测，说明模型、验证方法和适用范围"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "800 条训练记录、2,263 条测试波形和 13 类标签定义；每条波形为 10 秒、100 Hz、12 导联。",
+    "inputFiles": [
+      {
+        "name": "类别标签定义",
+        "path": "input/labels.json",
+        "format": "JSON",
+        "bytes": 137,
+        "description": "类别标签定义，用于12 导联心电心律与传导分类。"
+      },
+      {
+        "name": "标签体系说明",
+        "path": "input/ontology.md",
+        "format": "MD",
+        "bytes": 345,
+        "description": "标签体系说明，用于12 导联心电心律与传导分类。"
+      },
+      {
+        "name": "测试记录编号",
+        "path": "input/record_ids.csv",
+        "format": "CSV",
+        "bytes": 40742,
+        "description": "测试记录编号，用于12 导联心电心律与传导分类。"
+      },
+      {
+        "name": "训练标签",
+        "path": "input/train_labels.csv",
+        "format": "CSV",
+        "bytes": 35277,
+        "description": "训练标签，用于12 导联心电心律与传导分类。"
+      },
+      {
+        "name": "测试心电波形",
+        "path": "input/records/",
+        "format": "目录",
+        "bytes": 55765334,
+        "description": "测试心电波形，共 4,526 个文件。"
+      },
+      {
+        "name": "训练心电波形",
+        "path": "input/train/",
+        "format": "目录",
+        "bytes": 19713747,
+        "description": "训练心电波形，共 1,600 个文件。"
+      }
+    ],
+    "inputFileCount": 6130,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "predictions.csv",
+        "path": "output/predictions.csv",
+        "format": "CSV",
+        "description": "每条 ecg_id 对应 13 类 0/1 预测。"
+      },
+      {
+        "name": "model_report.md",
+        "path": "output/model_report.md",
+        "format": "MD",
+        "description": "说明预处理、模型、验证方法和适用范围。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "分类效果",
+          "weight": 98,
+          "rule": "按测试 ID 对齐预测与参考标签，计算宏平均 F1；本项得分为 98 × min(1, F1 ÷ 0.75)。"
+        },
+        {
+          "name": "方法说明",
+          "weight": 2,
+          "rule": "读取方法报告，正文超过 60 个字符取得本项分数。"
+        }
+      ],
+      "notes": "预测文件需完整覆盖测试 ID，每个 ID 唯一，标签列取值为 0 或 1。",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-01/ecg-diagnostic-superclasses",
+    "title": "12 导联心电诊断类别建模",
+    "brief": "对 12 导联心电波形进行五类诊断标签建模，交付完整预测表，并说明模型的训练与验证过程。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-01",
+    "occupation": {
+      "code": "2-01-08-00",
+      "name": "医学研究人员"
+    },
+    "scene": "你负责心电信号研究，需要建立覆盖正常、心肌梗死、ST-T 改变、传导异常和肥厚类别的多标签模型。",
+    "taskPrompt": "你负责心电信号研究，需要建立覆盖正常、心肌梗死、ST-T 改变、传导异常和肥厚类别的多标签模型。\n\n1. 整理训练波形和标签，建立预处理流程\n2. 训练模型并进行验证，确定分类方式\n3. 预测测试波形的五类标签，编写模型报告\n\n交付成果：\n- predictions.csv：每条 ecg_id 对应五类 0/1 预测。\n- model_report.md：记录预处理、模型、验证方法和适用范围。",
+    "agentMustDo": [
+      "整理训练波形和标签，建立预处理流程",
+      "训练模型并进行验证，确定分类方式",
+      "预测测试波形的五类标签，编写模型报告"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "800 条训练记录、1,386 条测试波形及 NORM、MI、STTC、CD、HYP 五类定义。",
+    "inputFiles": [
+      {
+        "name": "类别标签定义",
+        "path": "input/labels.json",
+        "format": "JSON",
+        "bytes": 48,
+        "description": "类别标签定义，用于12 导联心电诊断类别建模。"
+      },
+      {
+        "name": "标签体系说明",
+        "path": "input/ontology.md",
+        "format": "MD",
+        "bytes": 350,
+        "description": "标签体系说明，用于12 导联心电诊断类别建模。"
+      },
+      {
+        "name": "测试记录编号",
+        "path": "input/record_ids.csv",
+        "format": "CSV",
+        "bytes": 24956,
+        "description": "测试记录编号，用于12 导联心电诊断类别建模。"
+      },
+      {
+        "name": "训练标签",
+        "path": "input/train_labels.csv",
+        "format": "CSV",
+        "bytes": 22428,
+        "description": "训练标签，用于12 导联心电诊断类别建模。"
+      },
+      {
+        "name": "测试心电波形",
+        "path": "input/records/",
+        "format": "目录",
+        "bytes": 34153149,
+        "description": "测试心电波形，共 2,772 个文件。"
+      },
+      {
+        "name": "训练心电波形",
+        "path": "input/train/",
+        "format": "目录",
+        "bytes": 19713079,
+        "description": "训练心电波形，共 1,600 个文件。"
+      }
+    ],
+    "inputFileCount": 4376,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "predictions.csv",
+        "path": "output/predictions.csv",
+        "format": "CSV",
+        "description": "每条 ecg_id 对应五类 0/1 预测。"
+      },
+      {
+        "name": "model_report.md",
+        "path": "output/model_report.md",
+        "format": "MD",
+        "description": "记录预处理、模型、验证方法和适用范围。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "分类效果",
+          "weight": 98,
+          "rule": "按测试 ID 对齐预测与参考标签，计算宏平均 F1；本项得分为 98 × min(1, F1 ÷ 0.75)。"
+        },
+        {
+          "name": "方法说明",
+          "weight": 2,
+          "rule": "读取方法报告，正文超过 60 个字符取得本项分数。"
+        }
+      ],
+      "notes": "预测文件需完整覆盖测试 ID，每个 ID 唯一，标签列取值为 0 或 1。",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-06/influenza-forecast-scoring",
+    "title": "流感住院预测评分与模型比较",
+    "brief": "复算多模型的流感住院预测表现，整理逐预测单元的误差、区间覆盖率和模型汇总排名。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-06",
+    "occupation": {
+      "code": "2-06-02-00",
+      "name": "统计专业人员"
+    },
+    "scene": "你是预测评估分析人员，需要把不同模型的预测与观测值对齐，形成可比较的评分表。",
+    "taskPrompt": "你是预测评估分析人员，需要把不同模型的预测与观测值对齐，形成可比较的评分表。\n\n1. 根据时间和可用性规则对齐预测与观测值\n2. 为共同预测单元计算 WIS、MAE 和区间覆盖率\n3. 按模型汇总指标，计算相对基线表现\n\n交付成果：\n- per_cell_scores.csv：逐模型、地区、日期及预测期的评分明细。\n- submission.csv：各模型的单元数、平均误差、覆盖率及相对 WIS。",
+    "agentMustDo": [
+      "根据时间和可用性规则对齐预测与观测值",
+      "为共同预测单元计算 WIS、MAE 和区间覆盖率",
+      "按模型汇总指标，计算相对基线表现"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "五个模型的分位数预测、12 个地区的观测记录、18 周数据及评分规则。",
+    "inputFiles": [
+      {
+        "name": "forecast_archive.parquet",
+        "path": "input/forecast_archive.parquet",
+        "format": "PARQUET",
+        "bytes": 1006318,
+        "description": "forecast_archive.parquet，用于流感住院预测评分与模型比较。"
+      },
+      {
+        "name": "quantiles.json",
+        "path": "input/quantiles.json",
+        "format": "JSON",
+        "bytes": 180,
+        "description": "quantiles.json，用于流感住院预测评分与模型比较。"
+      },
+      {
+        "name": "scoring.md",
+        "path": "input/scoring.md",
+        "format": "MD",
+        "bytes": 579,
+        "description": "scoring.md，用于流感住院预测评分与模型比较。"
+      },
+      {
+        "name": "truth.csv",
+        "path": "input/truth.csv",
+        "format": "CSV",
+        "bytes": 21281,
+        "description": "truth.csv，用于流感住院预测评分与模型比较。"
+      }
+    ],
+    "inputFileCount": 4,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "per_cell_scores.csv",
+        "path": "output/per_cell_scores.csv",
+        "format": "CSV",
+        "description": "逐模型、地区、日期及预测期的评分明细。"
+      },
+      {
+        "name": "submission.csv",
+        "path": "output/submission.csv",
+        "format": "CSV",
+        "description": "各模型的单元数、平均误差、覆盖率及相对 WIS。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "逐单元评分",
+          "weight": 75,
+          "rule": "按模型、地区、日期和预测期联合定位记录，比对 WIS、MAE 和覆盖率，绝对容差为 0.000001。"
+        },
+        {
+          "name": "模型汇总",
+          "weight": 25,
+          "rule": "逐模型比较单元数量、平均指标与相对 WIS，按字段正确比例计分。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-06/chenghai-equity-research-summary",
+    "title": "澄海精密权益研究摘要工作簿",
+    "brief": "整合行情与财报信息，完成六板块权益研究摘要，保留关键计算公式及资料对应的时间和出处。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-06",
+    "occupation": {
+      "code": "2-06-11-03",
+      "name": "证券投资专业人员"
+    },
+    "scene": "你是证券研究人员，需要把澄海精密的市场与财务信息整理进统一研究模板，供团队进一步分析。",
+    "taskPrompt": "你是证券研究人员，需要把澄海精密的市场与财务信息整理进统一研究模板，供团队进一步分析。\n\n1. 读取行情、统计及年报页面，提取指定时点的数据\n2. 填入研究摘要模板，建立派生指标公式\n3. 检查工作簿计算结果并整理资料索引\n\n交付成果：\n- CN_Financial_Summary.xlsx：“研究摘要”工作表，包含输入值、派生指标和动态公式。\n- sources.json：行情时点、公司、币种与资料页面索引。",
+    "agentMustDo": [
+      "读取行情、统计及年报页面，提取指定时点的数据",
+      "填入研究摘要模板，建立派生指标公式",
+      "检查工作簿计算结果并整理资料索引"
+    ],
+    "software": [
+      "Python",
+      "LibreOffice Calc",
+      "文档阅读工具"
+    ],
+    "materials": "行情页面、公司统计页面、年度报告和六板块工作簿模板。",
+    "inputFiles": [
+      {
+        "name": "annual_report.html",
+        "path": "input/annual_report.html",
+        "format": "HTML",
+        "bytes": 816,
+        "description": "annual_report.html，用于澄海精密权益研究摘要工作簿。"
+      },
+      {
+        "name": "formula_contract.md",
+        "path": "input/formula_contract.md",
+        "format": "MD",
+        "bytes": 270,
+        "description": "formula_contract.md，用于澄海精密权益研究摘要工作簿。"
+      },
+      {
+        "name": "output_contract.json",
+        "path": "input/output_contract.json",
+        "format": "JSON",
+        "bytes": 1049,
+        "description": "output_contract.json，用于澄海精密权益研究摘要工作簿。"
+      },
+      {
+        "name": "quote.html",
+        "path": "input/quote.html",
+        "format": "HTML",
+        "bytes": 735,
+        "description": "quote.html，用于澄海精密权益研究摘要工作簿。"
+      },
+      {
+        "name": "statistics.html",
+        "path": "input/statistics.html",
+        "format": "HTML",
+        "bytes": 663,
+        "description": "statistics.html，用于澄海精密权益研究摘要工作簿。"
+      },
+      {
+        "name": "template.xlsx",
+        "path": "input/template.xlsx",
+        "format": "XLSX",
+        "bytes": 4466,
+        "description": "template.xlsx，用于澄海精密权益研究摘要工作簿。"
+      },
+      {
+        "name": "template.xlsx.inspect.ndjson",
+        "path": "input/template.xlsx.inspect.ndjson",
+        "format": "NDJSON",
+        "bytes": 10839,
+        "description": "template.xlsx.inspect.ndjson，用于澄海精密权益研究摘要工作簿。"
+      },
+      {
+        "name": "template.xlsx.png",
+        "path": "input/template.xlsx.png",
+        "format": "PNG",
+        "bytes": 65446,
+        "description": "template.xlsx.png，用于澄海精密权益研究摘要工作簿。"
+      }
+    ],
+    "inputFileCount": 8,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "CN_Financial_Summary.xlsx",
+        "path": "output/CN_Financial_Summary.xlsx",
+        "format": "XLSX",
+        "description": "“研究摘要”工作表，包含输入值、派生指标和动态公式。"
+      },
+      {
+        "name": "sources.json",
+        "path": "output/sources.json",
+        "format": "JSON",
+        "description": "行情时点、公司、币种与资料页面索引。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "数据与计算结果",
+          "weight": 65,
+          "rule": "比较模板单元格的输入与派生数值，按正确比例计分。"
+        },
+        {
+          "name": "动态公式",
+          "weight": 25,
+          "rule": "在四组输入变化下重新检查公式结果，按与要求公式等价的比例计分。"
+        },
+        {
+          "name": "资料索引",
+          "weight": 10,
+          "rule": "比对行情时点、公司、币种和三个资料页面，按字段正确比例计分。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-06/cn-equity-five-factor-model",
+    "title": "中国股票市场五因子月度重建",
+    "brief": "依据股票行情与财报披露时间构建五因子月度序列，整理投资组合计算结果和样本筛选记录。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-06",
+    "occupation": {
+      "code": "2-06-11-03",
+      "name": "证券投资专业人员"
+    },
+    "scene": "你是资产定价研究人员，需要从原始市场和财务数据构建可追踪的五因子序列。",
+    "taskPrompt": "你是资产定价研究人员，需要从原始市场和财务数据构建可追踪的五因子序列。\n\n1. 对齐月度行情与当时可获取的财务数据\n2. 按规模、价值、盈利与投资特征分组并计算组合收益\n3. 生成 MKT_RF、SMB、HML、RMW、CMA 月度序列与样本审计\n\n交付成果：\n- ff5_factors_monthly_2015_onward.csv：134 个月的五因子收益序列。\n- method_audit.json：每月合格样本数及迟到披露剔除数。",
+    "agentMustDo": [
+      "对齐月度行情与当时可获取的财务数据",
+      "按规模、价值、盈利与投资特征分组并计算组合收益",
+      "生成 MKT_RF、SMB、HML、RMW、CMA 月度序列与样本审计"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "180 只股票的行情、财务与披露记录，以及无风险收益和计算规则。",
+    "inputFiles": [
+      {
+        "name": "methodology.md",
+        "path": "input/methodology.md",
+        "format": "MD",
+        "bytes": 854,
+        "description": "methodology.md，用于中国股票市场五因子月度重建。"
+      },
+      {
+        "name": "monthly_stock_panel.csv",
+        "path": "input/monthly_stock_panel.csv",
+        "format": "CSV",
+        "bytes": 1888745,
+        "description": "monthly_stock_panel.csv，用于中国股票市场五因子月度重建。"
+      },
+      {
+        "name": "risk_free.csv",
+        "path": "input/risk_free.csv",
+        "format": "CSV",
+        "bytes": 2539,
+        "description": "risk_free.csv，用于中国股票市场五因子月度重建。"
+      }
+    ],
+    "inputFileCount": 3,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "ff5_factors_monthly_2015_onward.csv",
+        "path": "output/ff5_factors_monthly_2015_onward.csv",
+        "format": "CSV",
+        "description": "134 个月的五因子收益序列。"
+      },
+      {
+        "name": "method_audit.json",
+        "path": "output/method_audit.json",
+        "format": "JSON",
+        "description": "每月合格样本数及迟到披露剔除数。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "五因子序列",
+          "weight": 90,
+          "rule": "按月份比对全部五因子数值及月份集合，绝对容差为 0.00001，按正确比例计分。"
+        },
+        {
+          "name": "样本审计",
+          "weight": 10,
+          "rule": "按月份比对合格样本数与迟到披露剔除数，按正确比例计分。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-01/regional-influenza-hospital-forecast",
+    "title": "地区四周流感住院预测",
+    "brief": "使用地区历史住院数据预测未来四周人数，给出点预测与区间，并提交能够复现结果的预测程序。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-01",
+    "occupation": {
+      "code": "2-01-08-00",
+      "name": "医学研究人员"
+    },
+    "scene": "你是公共卫生预测研究人员，需要为 53 个地区整理未来四周的住院需求预测。",
+    "taskPrompt": "你是公共卫生预测研究人员，需要为 53 个地区整理未来四周的住院需求预测。\n\n1. 分析 104 周的历史住院与辅助数据\n2. 为各地区未来四周生成点预测和 95% 区间\n3. 整理预测文件、预测程序与方法说明\n\n交付成果：\n- submission.csv：212 条地区与预测期记录，包含点预测和 95% 区间。\n- forecast.py：使用输入材料生成预测的程序。\n- method.md：模型、特征、训练与区间估计方法。",
+    "agentMustDo": [
+      "分析 104 周的历史住院与辅助数据",
+      "为各地区未来四周生成点预测和 95% 区间",
+      "整理预测文件、预测程序与方法说明"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "53 个地区的历史数据快照、辅助数据和预测时间说明。",
+    "inputFiles": [
+      {
+        "name": "data_dictionary.md",
+        "path": "input/data_dictionary.md",
+        "format": "MD",
+        "bytes": 280,
+        "description": "data_dictionary.md，用于地区四周流感住院预测。"
+      },
+      {
+        "name": "history.csv",
+        "path": "input/history.csv",
+        "format": "CSV",
+        "bytes": 80596,
+        "description": "history.csv，用于地区四周流感住院预测。"
+      },
+      {
+        "name": "template.csv",
+        "path": "input/template.csv",
+        "format": "CSV",
+        "bytes": 2796,
+        "description": "template.csv，用于地区四周流感住院预测。"
+      }
+    ],
+    "inputFileCount": 3,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "submission.csv",
+        "path": "output/submission.csv",
+        "format": "CSV",
+        "description": "212 条地区与预测期记录，包含点预测和 95% 区间。"
+      },
+      {
+        "name": "forecast.py",
+        "path": "output/forecast.py",
+        "format": "PY",
+        "description": "使用输入材料生成预测的程序。"
+      },
+      {
+        "name": "method.md",
+        "path": "output/method.md",
+        "format": "MD",
+        "description": "模型、特征、训练与区间估计方法。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "预测表现",
+          "weight": 90,
+          "rule": "分别计算相对朴素基线的 WIS 与 MAE 改进率，两者按 70% 和 30% 加权；改进率除以 35% 并截在 0～1 后计分。"
+        },
+        {
+          "name": "结果复现",
+          "weight": 10,
+          "rule": "重新执行预测程序，将生成结果与提交表逐记录比较；方法说明至少 30 个字符。"
+        }
+      ],
+      "notes": "预测表覆盖全部 212 个目标，区间与点预测满足 0 ≤ 下界 ≤ 点预测 ≤ 上界。",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-01/lake-temperature-calibration",
+    "title": "湖泊多年水温剖面参数率定",
+    "brief": "结合气象驱动与多深度水温观测，率定湖泊热力模型参数，交付模拟剖面和误差分析。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-01",
+    "occupation": {
+      "code": "2-01-06-06",
+      "name": "地球科学研究人员"
+    },
+    "scene": "你是湖泊环境研究人员，需要确定能够解释多年观测的模型参数，并整理全时段水温结果。",
+    "taskPrompt": "你是湖泊环境研究人员，需要确定能够解释多年观测的模型参数，并整理全时段水温结果。\n\n1. 读取气象驱动、观测记录和模型参数范围\n2. 调整混合、交换与衰减参数，运行水温模拟\n3. 导出时间与深度剖面，计算观测点 RMSE 并记录率定参数\n\n交付成果：\n- calibrated.nml：最终混合、交换与衰减参数。\n- output.nc：完整时间与深度的水温 NetCDF。\n- calibration_report.json：观测误差、观测数量和率定参数。",
+    "agentMustDo": [
+      "读取气象驱动、观测记录和模型参数范围",
+      "调整混合、交换与衰减参数，运行水温模拟",
+      "导出时间与深度剖面，计算观测点 RMSE 并记录率定参数"
+    ],
+    "software": [
+      "Python",
+      "NetCDF4",
+      "水温模型工具"
+    ],
+    "materials": "2,556 日驱动数据、16 层模型设置和八个深度的定期观测记录。",
+    "inputFiles": [
+      {
+        "name": "README.md",
+        "path": "input/README.md",
+        "format": "MD",
+        "bytes": 334,
+        "description": "README.md，用于湖泊多年水温剖面参数率定。"
+      },
+      {
+        "name": "forcing.csv",
+        "path": "input/forcing.csv",
+        "format": "CSV",
+        "bytes": 172248,
+        "description": "forcing.csv，用于湖泊多年水温剖面参数率定。"
+      },
+      {
+        "name": "initial.nml",
+        "path": "input/initial.nml",
+        "format": "NML",
+        "bytes": 53,
+        "description": "initial.nml，用于湖泊多年水温剖面参数率定。"
+      },
+      {
+        "name": "observations.csv",
+        "path": "input/observations.csv",
+        "format": "CSV",
+        "bytes": 77337,
+        "description": "observations.csv，用于湖泊多年水温剖面参数率定。"
+      }
+    ],
+    "inputFileCount": 4,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "calibrated.nml",
+        "path": "output/calibrated.nml",
+        "format": "NML",
+        "description": "最终混合、交换与衰减参数。"
+      },
+      {
+        "name": "output.nc",
+        "path": "output/output.nc",
+        "format": "NC",
+        "description": "完整时间与深度的水温 NetCDF。"
+      },
+      {
+        "name": "calibration_report.json",
+        "path": "output/calibration_report.json",
+        "format": "JSON",
+        "description": "观测误差、观测数量和率定参数。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "模拟与率定结果",
+          "weight": 100,
+          "rule": "重新执行水温模型，按 0.000001 绝对容差检查模拟值；报告正确比例乘以 min(1, 0.08 ÷ RMSE)，再换算为百分制。"
+        }
+      ],
+      "notes": "参数分别位于 mixing 0.02～0.5、exchange 0.05～0.45、attenuation 0.08～0.6；输出需覆盖全部时间与深度。",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-02/unitree-g1-policy-review",
+    "title": "Unitree G1 八组控制策略回放评估",
+    "brief": "回放八组人形机器人控制策略，判断稳定性和跟踪效果，用视频与轨迹指标支持每项结论。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-02",
+    "occupation": {
+      "code": "2-02-38-10",
+      "name": "机器人工程技术人员"
+    },
+    "scene": "你是机器人控制评估人员，需要向研发团队说明不同控制策略的表现和问题出现的时间。",
+    "taskPrompt": "你是机器人控制评估人员，需要向研发团队说明不同控制策略的表现和问题出现的时间。\n\n1. 对八组控制设置进行完整回放\n2. 记录高度、跟踪误差与跌倒时间，判断策略表现\n3. 逐案例整理中文观察、关键指标、视频和轨迹\n\n交付成果：\n- policy_evaluation_report.json：八个案例的分类、中文观察与量化证据。\n- visual_demos/：每个案例的六秒回放视频和 trajectory.csv。",
+    "agentMustDo": [
+      "对八组控制设置进行完整回放",
+      "记录高度、跟踪误差与跌倒时间，判断策略表现",
+      "逐案例整理中文观察、关键指标、视频和轨迹"
+    ],
+    "software": [
+      "Python",
+      "MuJoCo",
+      "视频阅读工具"
+    ],
+    "materials": "G1 模型、八组控制配置、回放工具与评价规则。",
+    "inputFiles": [
+      {
+        "name": "工具与模型资料",
+        "path": "input/THIRD_PARTY.md",
+        "format": "MD",
+        "bytes": 372,
+        "description": "工具与模型资料，用于Unitree G1 八组控制策略回放评估。"
+      },
+      {
+        "name": "控制策略案例",
+        "path": "input/cases.json",
+        "format": "JSON",
+        "bytes": 1094,
+        "description": "控制策略案例，用于Unitree G1 八组控制策略回放评估。"
+      },
+      {
+        "name": "运行步骤",
+        "path": "input/run_instructions.md",
+        "format": "MD",
+        "bytes": 618,
+        "description": "运行步骤，用于Unitree G1 八组控制策略回放评估。"
+      },
+      {
+        "name": "G1 机器人模型资源",
+        "path": "input/g1/",
+        "format": "目录",
+        "bytes": 36051042,
+        "description": "G1 机器人模型资源，共 60 个文件。"
+      }
+    ],
+    "inputFileCount": 63,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "policy_evaluation_report.json",
+        "path": "output/policy_evaluation_report.json",
+        "format": "JSON",
+        "description": "八个案例的分类、中文观察与量化证据。"
+      },
+      {
+        "name": "visual_demos/",
+        "path": "output/visual_demos/",
+        "format": "目录",
+        "description": "每个案例的六秒回放视频和 trajectory.csv。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "表现判断",
+          "weight": 70,
+          "rule": "跌倒或跟踪 RMSE > 0.35 判为 failed；无跌倒且 RMSE ≤ 0.15 为 successful，其余为 nearly_successful。按八例正确比例计分。"
+        },
+        {
+          "name": "观察与指标",
+          "weight": 30,
+          "rule": "比对最低高度、跟踪 RMSE 和跌倒时间，绝对容差为 0.0001；中文观察至少 20 字，按八例平均正确比例计分。"
+        }
+      ],
+      "notes": "每例先核对轨迹与独立回放指标，视频时长大于 5.7 秒，并抽取三帧与回放画面比对。",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-02/orders-compose-kubernetes-migration",
+    "title": "订单应用 Compose 到 Kubernetes 迁移",
+    "brief": "将订单应用迁移到 Kubernetes，完成 Helm 部署、基础设施和流水线配置，并检查服务运行与网络访问。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-02",
+    "occupation": {
+      "code": "2-02-38-04",
+      "name": "云计算工程技术人员"
+    },
+    "scene": "你是云平台工程师，需要迁移包含 React 前端、Flask 后端和 PostgreSQL 数据库的订单应用。",
+    "taskPrompt": "你是云平台工程师，需要迁移包含 React 前端、Flask 后端和 PostgreSQL 数据库的订单应用。\n\n1. 把 Compose 服务整理为 Helm Chart 和配置参数\n2. 准备 Terraform、Jenkins 流水线及持久化和扩缩容设置\n3. 部署应用，检查接口、数据库、网络策略并提交运行记录\n\n交付成果：\n- helm/webapp-chart/：可渲染的 Helm Chart、values 与资源模板。\n- terraform/main.tf：基础设施与 Helm 发布配置。\n- Jenkinsfile：构建、测试、发布等五阶段流水线。\n- verification/：Pod、Service、Helm 和接口检查记录。\n- migration_report.md：迁移步骤、配置选择与运行结果。",
+    "agentMustDo": [
+      "把 Compose 服务整理为 Helm Chart 和配置参数",
+      "准备 Terraform、Jenkins 流水线及持久化和扩缩容设置",
+      "部署应用，检查接口、数据库、网络策略并提交运行记录"
+    ],
+    "software": [
+      "Kubernetes",
+      "Helm",
+      "Terraform",
+      "Jenkins"
+    ],
+    "materials": "订单应用源码、Compose 配置、部署要求和任务集群。",
+    "inputFiles": [
+      {
+        "name": "工具与模型资料",
+        "path": "input/THIRD_PARTY.md",
+        "format": "MD",
+        "bytes": 353,
+        "description": "工具与模型资料，用于订单应用 Compose 到 Kubernetes 迁移。"
+      },
+      {
+        "name": "requirements.md",
+        "path": "input/requirements.md",
+        "format": "MD",
+        "bytes": 2056,
+        "description": "requirements.md，用于订单应用 Compose 到 Kubernetes 迁移。"
+      },
+      {
+        "name": "app 资料",
+        "path": "input/app/",
+        "format": "目录",
+        "bytes": 145430,
+        "description": "app 资料，共 11 个文件。"
+      }
+    ],
+    "inputFileCount": 13,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "helm/webapp-chart/",
+        "path": "output/helm/webapp-chart/",
+        "format": "目录",
+        "description": "可渲染的 Helm Chart、values 与资源模板。"
+      },
+      {
+        "name": "terraform/main.tf",
+        "path": "output/terraform/main.tf",
+        "format": "TF",
+        "description": "基础设施与 Helm 发布配置。"
+      },
+      {
+        "name": "Jenkinsfile",
+        "path": "output/Jenkinsfile",
+        "format": "目录",
+        "description": "构建、测试、发布等五阶段流水线。"
+      },
+      {
+        "name": "verification/",
+        "path": "output/verification/",
+        "format": "目录",
+        "description": "Pod、Service、Helm 和接口检查记录。"
+      },
+      {
+        "name": "migration_report.md",
+        "path": "output/migration_report.md",
+        "format": "MD",
+        "description": "迁移步骤、配置选择与运行结果。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "部署配置",
+          "weight": 70,
+          "rule": "资源覆盖 20 分、资源配置 25 分、Terraform 10 分、五阶段流水线 10 分、运行记录和中文报告 5 分；各项按满足要求的比例计分。"
+        },
+        {
+          "name": "集群运行",
+          "weight": 30,
+          "rule": "Pod 可用性 12 分；Service、接口与数据库、HPA 指标、网络连接各 4.5 分，按实际集群检查结果计分。"
+        }
+      ],
+      "notes": "先检查 Chart 渲染、values 文件及 Secret 编码，满足这些条件后计算各项得分。",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-02/payment-api-incident-analysis",
+    "title": "支付服务 Kubernetes 故障归因与恢复计划",
+    "brief": "结合支付服务日志与集群配置定位故障，整理影响范围，并提出有优先级的整改、回滚与验证步骤。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-02",
+    "occupation": {
+      "code": "2-02-38-04",
+      "name": "云计算工程技术人员"
+    },
+    "scene": "你是支付平台运维工程师，收到一次服务异常的诊断资料，需要形成可供事故响应团队执行的恢复计划。",
+    "taskPrompt": "你是支付平台运维工程师，收到一次服务异常的诊断资料，需要形成可供事故响应团队执行的恢复计划。\n\n1. 阅读事故材料，关联配置、事件和日志中的证据\n2. 定位多个根因及受影响资源\n3. 提出参数明确的整改动作、回滚版本和恢复验证步骤\n\n交付成果：\n- root_cause_analysis.json：根因、资源、原文证据、优先级整改、回滚及诊断摘要。",
+    "agentMustDo": [
+      "阅读事故材料，关联配置、事件和日志中的证据",
+      "定位多个根因及受影响资源",
+      "提出参数明确的整改动作、回滚版本和恢复验证步骤"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "三份集群事故材料，涵盖日志、配置与事件记录。",
+    "inputFiles": [
+      {
+        "name": "cluster_state.txt",
+        "path": "input/cluster_state.txt",
+        "format": "TXT",
+        "bytes": 1456,
+        "description": "cluster_state.txt，用于支付服务 Kubernetes 故障归因与恢复计划。"
+      },
+      {
+        "name": "deployment.yaml",
+        "path": "input/deployment.yaml",
+        "format": "YAML",
+        "bytes": 552,
+        "description": "deployment.yaml，用于支付服务 Kubernetes 故障归因与恢复计划。"
+      },
+      {
+        "name": "failing_pod.txt",
+        "path": "input/failing_pod.txt",
+        "format": "TXT",
+        "bytes": 459,
+        "description": "failing_pod.txt，用于支付服务 Kubernetes 故障归因与恢复计划。"
+      },
+      {
+        "name": "结果字段说明",
+        "path": "input/schema.json",
+        "format": "JSON",
+        "bytes": 515,
+        "description": "结果字段说明，用于支付服务 Kubernetes 故障归因与恢复计划。"
+      }
+    ],
+    "inputFileCount": 4,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "root_cause_analysis.json",
+        "path": "output/root_cause_analysis.json",
+        "format": "JSON",
+        "description": "根因、资源、原文证据、优先级整改、回滚及诊断摘要。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "根因与证据",
+          "weight": 50,
+          "rule": "逐项比较根因类型、资源和日志原文，按正确比例计分。"
+        },
+        {
+          "name": "影响范围",
+          "weight": 10,
+          "rule": "受影响资源集合采用 F1 计分。"
+        },
+        {
+          "name": "整改计划",
+          "weight": 25,
+          "rule": "检查动作说明、整数优先级和结构化参数，按参数正确比例计分。"
+        },
+        {
+          "name": "回滚方案",
+          "weight": 10,
+          "rule": "比对回滚版本和镜像，按字段正确比例计分。"
+        },
+        {
+          "name": "摘要与验证",
+          "weight": 5,
+          "rule": "诊断摘要至少 20 字且恢复验证说明至少 10 字，取得本项分数。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-07/equity-transfer-consistency-review",
+    "title": "四份股权转让公告一致性审阅",
+    "brief": "交叉阅读股权转让相关公告，找出实质信息冲突，并为每项发现提供两份文件中的原文依据。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-07",
+    "occupation": {
+      "code": "2-07-08-00",
+      "name": "法律顾问"
+    },
+    "scene": "你是法律与交易文件审核人员，需要帮助团队识别公告之间影响交易理解的信息差异。",
+    "taskPrompt": "你是法律与交易文件审核人员，需要帮助团队识别公告之间影响交易理解的信息差异。\n\n1. 阅读四份公告，按交易事项对齐金额、股份与日期等信息\n2. 判断哪些差异构成实质冲突\n3. 为每项发现记录两份文件的页码与原文，编写审核报告\n\n交付成果：\n- audit_report.md：按“发现”分节的一致性审核报告。\n- findings.json：每项发现的事项、字段、冲突值与双文档证据。",
+    "agentMustDo": [
+      "阅读四份公告，按交易事项对齐金额、股份与日期等信息",
+      "判断哪些差异构成实质冲突",
+      "为每项发现记录两份文件的页码与原文，编写审核报告"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "四份股权转让公告 PDF 和审核字段说明。",
+    "inputFiles": [
+      {
+        "name": "A.html",
+        "path": "input/A.html",
+        "format": "HTML",
+        "bytes": 1282,
+        "description": "A.html，用于四份股权转让公告一致性审阅。"
+      },
+      {
+        "name": "A.pdf",
+        "path": "input/A.pdf",
+        "format": "PDF",
+        "bytes": 31648,
+        "description": "A.pdf，用于四份股权转让公告一致性审阅。"
+      },
+      {
+        "name": "B.html",
+        "path": "input/B.html",
+        "format": "HTML",
+        "bytes": 1269,
+        "description": "B.html，用于四份股权转让公告一致性审阅。"
+      },
+      {
+        "name": "B.pdf",
+        "path": "input/B.pdf",
+        "format": "PDF",
+        "bytes": 33444,
+        "description": "B.pdf，用于四份股权转让公告一致性审阅。"
+      },
+      {
+        "name": "C.html",
+        "path": "input/C.html",
+        "format": "HTML",
+        "bytes": 1336,
+        "description": "C.html，用于四份股权转让公告一致性审阅。"
+      },
+      {
+        "name": "C.pdf",
+        "path": "input/C.pdf",
+        "format": "PDF",
+        "bytes": 33192,
+        "description": "C.pdf，用于四份股权转让公告一致性审阅。"
+      },
+      {
+        "name": "D.html",
+        "path": "input/D.html",
+        "format": "HTML",
+        "bytes": 1269,
+        "description": "D.html，用于四份股权转让公告一致性审阅。"
+      },
+      {
+        "name": "D.pdf",
+        "path": "input/D.pdf",
+        "format": "PDF",
+        "bytes": 32812,
+        "description": "D.pdf，用于四份股权转让公告一致性审阅。"
+      },
+      {
+        "name": "evidence_contract.md",
+        "path": "input/evidence_contract.md",
+        "format": "MD",
+        "bytes": 363,
+        "description": "evidence_contract.md，用于四份股权转让公告一致性审阅。"
+      }
+    ],
+    "inputFileCount": 9,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "audit_report.md",
+        "path": "output/audit_report.md",
+        "format": "MD",
+        "description": "按“发现”分节的一致性审核报告。"
+      },
+      {
+        "name": "findings.json",
+        "path": "output/findings.json",
+        "format": "JSON",
+        "description": "每项发现的事项、字段、冲突值与双文档证据。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "冲突识别与证据",
+          "weight": 100,
+          "rule": "四项有效发现各计 25 分；每项需有两个不同文件的原文、页码，并在报告中引用。额外无效发现每项扣 20 分，报告分节数与发现数每差一项再扣 20 分；最低为 0 分。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-06/agent-plugin-data-policy-audit",
+    "title": "智能体平台插件数据政策审计",
+    "brief": "依据平台数据政策检查插件字段，汇总违规与严重程度，并分析不同业务域的数据暴露范围。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-06",
+    "occupation": {
+      "code": "2-06-07-14",
+      "name": "企业合规师"
+    },
+    "scene": "你是企业合规人员，需要评估智能体与插件的数据使用是否符合给定政策。",
+    "taskPrompt": "你是企业合规人员，需要评估智能体与插件的数据使用是否符合给定政策。\n\n1. 读取插件接口、动作字段和数据类型\n2. 逐字段匹配政策条款，记录违规及严重性\n3. 按业务域汇总数据类型和暴露放大率，形成审计清单\n\n交付成果：\n- policy_violations.json：字段级违规、政策条款、严重性与汇总。\n- cross_domain_exposure_report.csv：各业务域的数据类型、智能体数量及暴露放大率。",
+    "agentMustDo": [
+      "读取插件接口、动作字段和数据类型",
+      "逐字段匹配政策条款，记录违规及严重性",
+      "按业务域汇总数据类型和暴露放大率，形成审计清单"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "80 个智能体、160 个动作的接口字段、24 个业务域和平台政策。",
+    "inputFiles": [
+      {
+        "name": "action_data_entities.json",
+        "path": "input/action_data_entities.json",
+        "format": "JSON",
+        "bytes": 107779,
+        "description": "action_data_entities.json，用于智能体平台插件数据政策审计。"
+      },
+      {
+        "name": "action_metadata.json",
+        "path": "input/action_metadata.json",
+        "format": "JSON",
+        "bytes": 27203,
+        "description": "action_metadata.json，用于智能体平台插件数据政策审计。"
+      },
+      {
+        "name": "taxonomy.csv",
+        "path": "input/taxonomy.csv",
+        "format": "CSV",
+        "bytes": 284,
+        "description": "taxonomy.csv，用于智能体平台插件数据政策审计。"
+      },
+      {
+        "name": "usage_policy.md",
+        "path": "input/usage_policy.md",
+        "format": "MD",
+        "bytes": 503,
+        "description": "usage_policy.md，用于智能体平台插件数据政策审计。"
+      }
+    ],
+    "inputFileCount": 4,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "policy_violations.json",
+        "path": "output/policy_violations.json",
+        "format": "JSON",
+        "description": "字段级违规、政策条款、严重性与汇总。"
+      },
+      {
+        "name": "cross_domain_exposure_report.csv",
+        "path": "output/cross_domain_exposure_report.csv",
+        "format": "CSV",
+        "description": "各业务域的数据类型、智能体数量及暴露放大率。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "字段违规",
+          "weight": 65,
+          "rule": "按动作 ID 与字段名比对违规记录、条款和严重性，按正确比例计分。"
+        },
+        {
+          "name": "违规汇总",
+          "weight": 10,
+          "rule": "比对违规总数和严重性分布，按字段正确比例计分。"
+        },
+        {
+          "name": "业务域暴露",
+          "weight": 25,
+          "rule": "按业务域比较聚合人数、数据类型数量和放大率，按正确比例计分。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-10/library-marc-folio-remediation",
+    "title": "图书馆书目修复与 FOLIO 覆盖计划",
+    "brief": "按照编目政策修复 MARC 书目，判断 FOLIO 中的覆盖、新建与隔离动作，并整理导入计划和质量报告。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-10",
+    "occupation": {
+      "code": "2-10-06-01",
+      "name": "文献信息专业人员"
+    },
+    "scene": "你是图书馆文献信息人员，需要把批量书目中的字段问题修复为可导入的记录，并说明每条处理决定。",
+    "taskPrompt": "你是图书馆文献信息人员，需要把批量书目中的字段问题修复为可导入的记录，并说明每条处理决定。\n\n1. 结合权威映射、馆藏和编目政策修复字段\n2. 与 FOLIO 记录匹配，逐记录确定处理动作\n3. 生成导入计划、质量报告和可复用的处理程序\n\n交付成果：\n- submission/scripts/remediate_catalog.py：支持输入与输出目录参数的书目处理程序。\n- submission/outputs/public_case/：修复 XML、处理决策 CSV、导入计划 JSON、QA 报告与修复摘要。",
+    "agentMustDo": [
+      "结合权威映射、馆藏和编目政策修复字段",
+      "与 FOLIO 记录匹配，逐记录确定处理动作",
+      "生成导入计划、质量报告和可复用的处理程序"
+    ],
+    "software": [
+      "Python",
+      "MARC/XML 阅读工具"
+    ],
+    "materials": "400 条书目、作者权威映射、馆藏资料、FOLIO 快照和编目政策。",
+    "inputFiles": [
+      {
+        "name": "case 资料",
+        "path": "input/case/",
+        "format": "目录",
+        "bytes": 254342,
+        "description": "case 资料，共 5 个文件。"
+      },
+      {
+        "name": "starter_project 资料",
+        "path": "input/starter_project/",
+        "format": "目录",
+        "bytes": 90,
+        "description": "starter_project 资料，共 1 个文件。"
+      }
+    ],
+    "inputFileCount": 6,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "submission/scripts/remediate_catalog.py",
+        "path": "output/submission/scripts/remediate_catalog.py",
+        "format": "PY",
+        "description": "支持输入与输出目录参数的书目处理程序。"
+      },
+      {
+        "name": "submission/outputs/public_case/",
+        "path": "output/submission/outputs/public_case/",
+        "format": "目录",
+        "description": "修复 XML、处理决策 CSV、导入计划 JSON、QA 报告与修复摘要。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "书目字段",
+          "weight": 30,
+          "rule": "按记录 ID 比对 ISBN、作者、题名、语言、链接和馆藏字段，按正确比例计分。"
+        },
+        {
+          "name": "处理决策",
+          "weight": 20,
+          "rule": "比对覆盖、新建、隔离、复核和跳过等动作及目标记录，按正确比例计分。"
+        },
+        {
+          "name": "导入计划",
+          "weight": 10,
+          "rule": "比对记录、动作、目标实例和分馆，按正确比例计分。"
+        },
+        {
+          "name": "质量与程序",
+          "weight": 10,
+          "rule": "检查决策数量、400 条变化记录、修复摘要与程序文件。"
+        },
+        {
+          "name": "新增案例处理",
+          "weight": 30,
+          "rule": "将程序用于另外 80 条案例；字段修复、处理决策、导入计划按 40%、40%、20% 加权计分。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-02/building-model-predictive-control",
+    "title": "建筑节费与削峰模型预测控制",
+    "brief": "识别建筑热力模型，分别设计节费与削峰控制策略，比较能耗表现并保持占用期间的舒适度。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-02",
+    "occupation": {
+      "code": "2-02-07-07",
+      "name": "自动控制工程技术人员"
+    },
+    "scene": "你是建筑控制工程师，需要在 15 分钟控制周期下比较基线、节费和削峰三种策略。",
+    "taskPrompt": "你是建筑控制工程师，需要在 15 分钟控制周期下比较基线、节费和削峰三种策略。\n\n1. 利用辨识数据估计空气与墙体温度模型\n2. 设计两种滚动控制策略并运行 672 步评估\n3. 整理温度、动作、费用、峰值和舒适度指标，提交控制器\n\n交付成果：\n- identified_model.json：辨识得到的模型系数。\n- rc_diagnostics.json：训练误差与诊断。\n- *_timeseries.csv / *_actions.csv：基线、节费、削峰温度轨迹和控制动作。\n- metrics.json：三种策略的费用、峰值和舒适度指标。\n- controller.py：可复现控制结果的程序。",
+    "agentMustDo": [
+      "利用辨识数据估计空气与墙体温度模型",
+      "设计两种滚动控制策略并运行 672 步评估",
+      "整理温度、动作、费用、峰值和舒适度指标，提交控制器"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "480 步辨识数据、672 步天气与电价数据，以及建筑热力与舒适度规则。",
+    "inputFiles": [
+      {
+        "name": "calibration.csv",
+        "path": "input/calibration.csv",
+        "format": "CSV",
+        "bytes": 65541,
+        "description": "calibration.csv，用于建筑节费与削峰模型预测控制。"
+      },
+      {
+        "name": "contract.json",
+        "path": "input/contract.json",
+        "format": "JSON",
+        "bytes": 466,
+        "description": "contract.json，用于建筑节费与削峰模型预测控制。"
+      },
+      {
+        "name": "eval_weather.csv",
+        "path": "input/eval_weather.csv",
+        "format": "CSV",
+        "bytes": 26253,
+        "description": "eval_weather.csv，用于建筑节费与削峰模型预测控制。"
+      }
+    ],
+    "inputFileCount": 3,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "identified_model.json",
+        "path": "output/identified_model.json",
+        "format": "JSON",
+        "description": "辨识得到的模型系数。"
+      },
+      {
+        "name": "rc_diagnostics.json",
+        "path": "output/rc_diagnostics.json",
+        "format": "JSON",
+        "description": "训练误差与诊断。"
+      },
+      {
+        "name": "*_timeseries.csv / *_actions.csv",
+        "path": "output/*_timeseries.csv / *_actions.csv",
+        "format": "CSV",
+        "description": "基线、节费、削峰温度轨迹和控制动作。"
+      },
+      {
+        "name": "metrics.json",
+        "path": "output/metrics.json",
+        "format": "JSON",
+        "description": "三种策略的费用、峰值和舒适度指标。"
+      },
+      {
+        "name": "controller.py",
+        "path": "output/controller.py",
+        "format": "PY",
+        "description": "可复现控制结果的程序。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "温度与指标",
+          "weight": 60,
+          "rule": "独立执行 672 步动力学，逐步比对温度、动作及指标；数值绝对容差为 0.00001，并检查舒适度约束。"
+        },
+        {
+          "name": "节费与削峰",
+          "weight": 25,
+          "rule": "费用与峰值改进各占本项一半；相对基线改进达到 1% 时该半项满分，较低改进按比例计分。"
+        },
+        {
+          "name": "模型辨识",
+          "weight": 10,
+          "rule": "比对模型系数，绝对容差为 0.000001。"
+        },
+        {
+          "name": "程序复现与诊断",
+          "weight": 5,
+          "rule": "训练 RMSE 小于 0.00001，并重新执行控制器、比对指标结果。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-01/survey-confounder-sensitivity",
+    "title": "调查队列混杂敏感性分析",
+    "brief": "连接调查队列和用药事件数据，重建分析样本，并比较加入不同混杂因素后的关联估计。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-01",
+    "occupation": {
+      "code": "2-01-08-00",
+      "name": "医学研究人员"
+    },
+    "scene": "你是医学研究分析人员，需要检验幽门螺杆菌与 NSAID 用药等因素对目标关联估计的影响。",
+    "taskPrompt": "你是医学研究分析人员，需要检验幽门螺杆菌与 NSAID 用药等因素对目标关联估计的影响。\n\n1. 连接四张数据表，整理符合条件的完整病例\n2. 拟合三组逐步调整混杂因素的模型\n3. 比较样本量、优势比、置信区间与变化幅度，交付分析表\n\n交付成果：\n- hpyl_nsaid_subset.csv：逐人的分析样本及研究变量。\n- sensitivity_summary.csv：三个模型的样本量、估计值、区间、P 值和变化比例。",
+    "agentMustDo": [
+      "连接四张数据表，整理符合条件的完整病例",
+      "拟合三组逐步调整混杂因素的模型",
+      "比较样本量、优势比、置信区间与变化幅度，交付分析表"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "5,000 人的调查队列、用药事件和变量定义。",
+    "inputFiles": [
+      {
+        "name": "demographics.csv",
+        "path": "input/demographics.csv",
+        "format": "CSV",
+        "bytes": 153994,
+        "description": "demographics.csv，用于调查队列混杂敏感性分析。"
+      },
+      {
+        "name": "labs.csv",
+        "path": "input/labs.csv",
+        "format": "CSV",
+        "bytes": 52863,
+        "description": "labs.csv，用于调查队列混杂敏感性分析。"
+      },
+      {
+        "name": "medications.csv",
+        "path": "input/medications.csv",
+        "format": "CSV",
+        "bytes": 170038,
+        "description": "medications.csv，用于调查队列混杂敏感性分析。"
+      },
+      {
+        "name": "protocol.md",
+        "path": "input/protocol.md",
+        "format": "MD",
+        "bytes": 666,
+        "description": "protocol.md，用于调查队列混杂敏感性分析。"
+      },
+      {
+        "name": "questionnaire.csv",
+        "path": "input/questionnaire.csv",
+        "format": "CSV",
+        "bytes": 148031,
+        "description": "questionnaire.csv，用于调查队列混杂敏感性分析。"
+      }
+    ],
+    "inputFileCount": 5,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "hpyl_nsaid_subset.csv",
+        "path": "output/hpyl_nsaid_subset.csv",
+        "format": "CSV",
+        "description": "逐人的分析样本及研究变量。"
+      },
+      {
+        "name": "sensitivity_summary.csv",
+        "path": "output/sensitivity_summary.csv",
+        "format": "CSV",
+        "description": "三个模型的样本量、估计值、区间、P 值和变化比例。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "分析样本",
+          "weight": 40,
+          "rule": "按个体 ID 比对病例集合和变量，按记录与字段的正确比例计分。"
+        },
+        {
+          "name": "模型结果",
+          "weight": 60,
+          "rule": "按模型比对估计值、置信区间、P 值与变化比例，绝对容差为 0.00001。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-02/medical-allocation-proxy-audit",
+    "title": "医疗资源分配的费用代理偏差审计",
+    "brief": "比较费用导向与需要导向的资源分配排名，分析不同群体的入选比例和健康需要覆盖情况。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-02",
+    "occupation": {
+      "code": "2-02-30-09",
+      "name": "数据分析处理工程技术人员"
+    },
+    "scene": "你是医疗数据分析人员，需要评估费用评分作为资源分配依据时产生的群体差异。",
+    "taskPrompt": "你是医疗数据分析人员，需要评估费用评分作为资源分配依据时产生的群体差异。\n\n1. 保留原始评分并重建基线入选名单\n2. 建立需要导向的修订评分，按固定名额选择对象\n3. 比较两种方案的群体构成与需要覆盖，说明差异机制\n\n交付成果：\n- full_predictions.csv：原始与修订评分，以及两种方案的入选标记。\n- baseline_report.json / revised_report.json：入选数量、群体占比与需要覆盖指标。\n- analysis.md：对费用代理、差异机制和适用范围的分析。",
+    "agentMustDo": [
+      "保留原始评分并重建基线入选名单",
+      "建立需要导向的修订评分，按固定名额选择对象",
+      "比较两种方案的群体构成与需要覆盖，说明差异机制"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "6,000 条记录、两个群体、临床变量、原始评分和固定 20% 分配名额。",
+    "inputFiles": [
+      {
+        "name": "patients.csv",
+        "path": "input/patients.csv",
+        "format": "CSV",
+        "bytes": 298978,
+        "description": "patients.csv，用于医疗资源分配的费用代理偏差审计。"
+      },
+      {
+        "name": "protocol.md",
+        "path": "input/protocol.md",
+        "format": "MD",
+        "bytes": 562,
+        "description": "protocol.md，用于医疗资源分配的费用代理偏差审计。"
+      }
+    ],
+    "inputFileCount": 2,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "full_predictions.csv",
+        "path": "output/full_predictions.csv",
+        "format": "CSV",
+        "description": "原始与修订评分，以及两种方案的入选标记。"
+      },
+      {
+        "name": "baseline_report.json / revised_report.json",
+        "path": "output/baseline_report.json / revised_report.json",
+        "format": "JSON",
+        "description": "入选数量、群体占比与需要覆盖指标。"
+      },
+      {
+        "name": "analysis.md",
+        "path": "output/analysis.md",
+        "format": "MD",
+        "description": "对费用代理、差异机制和适用范围的分析。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "评分与排序",
+          "weight": 65,
+          "rule": "本项内原始分数保留占 30%，基线入选 F1 占 20%，修订入选 F1 占 30%，按修订分数排序的名单 F1 占 20%。"
+        },
+        {
+          "name": "群体与需要指标",
+          "weight": 30,
+          "rule": "基线与修订报告各占 15 分，逐字段比较入选数量、群体占比与需要指标。"
+        },
+        {
+          "name": "分析说明",
+          "weight": 5,
+          "rule": "分析正文至少 60 字，取得本项分数。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "4-02/odoo-manufacturing-fulfillment",
+    "title": "Odoo 企业采购制造交付与退款",
+    "brief": "在 Odoo 中完成采购、制造、交付、收款与退款流程，处理分包、缺料与成本分摊，并整理业务记录。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "4-02",
+    "occupation": {
+      "code": "4-02-06-05",
+      "name": "供应链管理师"
+    },
+    "scene": "你是供应链业务人员，需要完成一组关联的订单与财务流程，使库存、制造和会计记录相互对应。",
+    "taskPrompt": "你是供应链业务人员，需要完成一组关联的订单与财务流程，使库存、制造和会计记录相互对应。\n\n1. 配置产品、两级 BOM、估值与采购，处理到货及成本分摊\n2. 完成制造、分包供料、分批交付与直运\n3. 完成发票核销、退货退款、报废补购与报销，整理记录索引\n\n交付成果：\n- Odoo 业务记录：完成后的库存、制造、交付、发票、退款与报销记录。\n- submission.json：创建和处理的业务记录 ID 索引。\n- workflow_report.md：数量、成本、付款、退款与关联关系说明。",
+    "agentMustDo": [
+      "配置产品、两级 BOM、估值与采购，处理到货及成本分摊",
+      "完成制造、分包供料、分批交付与直运",
+      "完成发票核销、退货退款、报废补购与报销，整理记录索引"
+    ],
+    "software": [
+      "Odoo",
+      "浏览器"
+    ],
+    "materials": "Odoo 业务环境、产品与订单资料、业务操作要求及汇率信息。",
+    "inputFiles": [
+      {
+        "name": "business_brief.md",
+        "path": "input/business_brief.md",
+        "format": "MD",
+        "bytes": 2311,
+        "description": "business_brief.md，用于Odoo 企业采购制造交付与退款。"
+      }
+    ],
+    "inputFileCount": 1,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "Odoo 业务记录",
+        "path": "output/Odoo 业务记录",
+        "format": "目录",
+        "description": "完成后的库存、制造、交付、发票、退款与报销记录。"
+      },
+      {
+        "name": "submission.json",
+        "path": "output/submission.json",
+        "format": "JSON",
+        "description": "创建和处理的业务记录 ID 索引。"
+      },
+      {
+        "name": "workflow_report.md",
+        "path": "output/workflow_report.md",
+        "format": "MD",
+        "description": "数量、成本、付款、退款与关联关系说明。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "业务处理",
+          "weight": 95,
+          "rule": "直接读取 Odoo 业务记录：估值 5 分、成本分摊 10 分、制造 10 分、交付 8 分、收款 10 分、退款 7 分、库存 12 分、分包 9 分、直运 5 分、报废补购 5 分、供应商发票 7 分、报销 7 分。"
+        },
+        {
+          "name": "记录与报告",
+          "weight": 5,
+          "rule": "中文操作报告超过 100 字，记录索引至少列出 10 项，取得本项分数。"
+        }
+      ],
+      "notes": "先检查业务环境与提交入口；金额检查容差为 0.01。",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-06/yunheng-investment-screening",
+    "title": "云衡软件私募投资初筛备忘录",
+    "brief": "阅读云衡软件的公司、财务与客户资料，形成投资初筛建议，列出投资论点、风险和后续尽调问题。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-06",
+    "occupation": {
+      "code": "2-06-11-03",
+      "name": "证券投资专业人员"
+    },
+    "scene": "你是投资研究人员，需要向团队提交一份结构完整、结论明确并能追溯资料的初筛备忘录。",
+    "taskPrompt": "你是投资研究人员，需要向团队提交一份结构完整、结论明确并能追溯资料的初筛备忘录。\n\n1. 整理八份公司资料，计算八项关键财务指标\n2. 形成三条投资论点、四类风险与四项尽调问题\n3. 写出 Go、No-Go 或 Hold 建议，逐项引用资料\n\n交付成果：\n- screening_memo.md：投资建议、公司产品、论点、财务、估值、风险、尽调和证据附录八章。\n- analysis.json：财务指标、论点、风险、尽调问题、建议与理由。",
+    "agentMustDo": [
+      "整理八份公司资料，计算八项关键财务指标",
+      "形成三条投资论点、四类风险与四项尽调问题",
+      "写出 Go、No-Go 或 Hold 建议，逐项引用资料"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "八份公司与经营资料，包含三年财务、客户队列、董事会与销售信息。",
+    "inputFiles": [
+      {
+        "name": "公司资料 D01 · HTML",
+        "path": "input/D01.html",
+        "format": "HTML",
+        "bytes": 842,
+        "description": "公司资料 D01 · HTML，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "公司资料 D01 · PDF",
+        "path": "input/D01.pdf",
+        "format": "PDF",
+        "bytes": 25125,
+        "description": "公司资料 D01 · PDF，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "公司资料 D02 · HTML",
+        "path": "input/D02.html",
+        "format": "HTML",
+        "bytes": 915,
+        "description": "公司资料 D02 · HTML，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "公司资料 D02 · PDF",
+        "path": "input/D02.pdf",
+        "format": "PDF",
+        "bytes": 22428,
+        "description": "公司资料 D02 · PDF，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "公司资料 D03 · HTML",
+        "path": "input/D03.html",
+        "format": "HTML",
+        "bytes": 865,
+        "description": "公司资料 D03 · HTML，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "公司资料 D03 · PDF",
+        "path": "input/D03.pdf",
+        "format": "PDF",
+        "bytes": 24422,
+        "description": "公司资料 D03 · PDF，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "公司资料 D04 · HTML",
+        "path": "input/D04.html",
+        "format": "HTML",
+        "bytes": 653,
+        "description": "公司资料 D04 · HTML，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "公司资料 D04 · PDF",
+        "path": "input/D04.pdf",
+        "format": "PDF",
+        "bytes": 19863,
+        "description": "公司资料 D04 · PDF，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "公司资料 D05 · HTML",
+        "path": "input/D05.html",
+        "format": "HTML",
+        "bytes": 812,
+        "description": "公司资料 D05 · HTML，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "公司资料 D05 · PDF",
+        "path": "input/D05.pdf",
+        "format": "PDF",
+        "bytes": 25918,
+        "description": "公司资料 D05 · PDF，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "公司资料 D06 · HTML",
+        "path": "input/D06.html",
+        "format": "HTML",
+        "bytes": 776,
+        "description": "公司资料 D06 · HTML，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "公司资料 D06 · PDF",
+        "path": "input/D06.pdf",
+        "format": "PDF",
+        "bytes": 24425,
+        "description": "公司资料 D06 · PDF，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "公司资料 D07 · HTML",
+        "path": "input/D07.html",
+        "format": "HTML",
+        "bytes": 798,
+        "description": "公司资料 D07 · HTML，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "公司资料 D07 · PDF",
+        "path": "input/D07.pdf",
+        "format": "PDF",
+        "bytes": 25687,
+        "description": "公司资料 D07 · PDF，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "公司资料 D08 · HTML",
+        "path": "input/D08.html",
+        "format": "HTML",
+        "bytes": 900,
+        "description": "公司资料 D08 · HTML，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "公司资料 D08 · PDF",
+        "path": "input/D08.pdf",
+        "format": "PDF",
+        "bytes": 27852,
+        "description": "公司资料 D08 · PDF，用于云衡软件私募投资初筛备忘录。"
+      },
+      {
+        "name": "备忘录模板",
+        "path": "input/memo_template.md",
+        "format": "MD",
+        "bytes": 557,
+        "description": "备忘录模板，用于云衡软件私募投资初筛备忘录。"
+      }
+    ],
+    "inputFileCount": 17,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "screening_memo.md",
+        "path": "output/screening_memo.md",
+        "format": "MD",
+        "description": "投资建议、公司产品、论点、财务、估值、风险、尽调和证据附录八章。"
+      },
+      {
+        "name": "analysis.json",
+        "path": "output/analysis.json",
+        "format": "JSON",
+        "description": "财务指标、论点、风险、尽调问题、建议与理由。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "财务指标",
+          "weight": 45,
+          "rule": "逐字段比对八项财务计算，按正确比例计分。"
+        },
+        {
+          "name": "论点与引文",
+          "weight": 15,
+          "rule": "检查论点、风险和尽调项的引文是否对应资料文件及页码，按有效条目比例计分。"
+        },
+        {
+          "name": "风险识别",
+          "weight": 10,
+          "rule": "四类风险 ID 集合按 F1 计分。"
+        },
+        {
+          "name": "尽调问题",
+          "weight": 10,
+          "rule": "四项尽调 ID 集合按 F1 计分。"
+        },
+        {
+          "name": "备忘录与建议",
+          "weight": 20,
+          "rule": "检查八章完整、建议枚举及报告与结构化建议一致，建议理由至少 20 字。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-02/10kv-feeder-reliability",
+    "title": "10kV 馈线双口径可靠性分析",
+    "brief": "依据馈线拓扑与设备参数计算负荷点可靠性，分别整理等权和用户加权口径下的系统指标。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-02",
+    "occupation": {
+      "code": "2-02-12-02",
+      "name": "供用电工程技术人员"
+    },
+    "scene": "你是供用电工程人员，需要分析一条 10kV 馈线的停电风险，说明指标口径与计划停电的处理。",
+    "taskPrompt": "你是供用电工程人员，需要分析一条 10kV 馈线的停电风险，说明指标口径与计划停电的处理。\n\n1. 读取 CIM/XML 和拓扑图，确认路径与设备参数\n2. 累计各负荷点的故障率、停电时长与供电参数\n3. 计算 SAIFI、SAIDI、CAIDI、ASAI 和 ENS，交付双口径报告\n\n交付成果：\n- loadpoint_metrics.csv：逐变压器故障率、停电时长、用户数与负荷。\n- reliability_indices.json：等权口径的系统可靠性指标。\n- cn_reliability_report.json：用户加权口径指标及用户总数。\n- method.md：路径累计、计划停电和指标口径说明。",
+    "agentMustDo": [
+      "读取 CIM/XML 和拓扑图，确认路径与设备参数",
+      "累计各负荷点的故障率、停电时长与供电参数",
+      "计算 SAIFI、SAIDI、CAIDI、ASAI 和 ENS，交付双口径报告"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "80 段线路、80 个变压器的拓扑、设备参数和计算规则。",
+    "inputFiles": [
+      {
+        "name": "feeder_cim.xml",
+        "path": "input/feeder_cim.xml",
+        "format": "XML",
+        "bytes": 10636,
+        "description": "feeder_cim.xml，用于10kV 馈线双口径可靠性分析。"
+      },
+      {
+        "name": "业务规则说明",
+        "path": "input/rules.md",
+        "format": "MD",
+        "bytes": 728,
+        "description": "业务规则说明，用于10kV 馈线双口径可靠性分析。"
+      },
+      {
+        "name": "topology.svg",
+        "path": "input/topology.svg",
+        "format": "SVG",
+        "bytes": 8436,
+        "description": "topology.svg，用于10kV 馈线双口径可靠性分析。"
+      },
+      {
+        "name": "transformers.csv",
+        "path": "input/transformers.csv",
+        "format": "CSV",
+        "bytes": 1360,
+        "description": "transformers.csv，用于10kV 馈线双口径可靠性分析。"
+      }
+    ],
+    "inputFileCount": 4,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "loadpoint_metrics.csv",
+        "path": "output/loadpoint_metrics.csv",
+        "format": "CSV",
+        "description": "逐变压器故障率、停电时长、用户数与负荷。"
+      },
+      {
+        "name": "reliability_indices.json",
+        "path": "output/reliability_indices.json",
+        "format": "JSON",
+        "description": "等权口径的系统可靠性指标。"
+      },
+      {
+        "name": "cn_reliability_report.json",
+        "path": "output/cn_reliability_report.json",
+        "format": "JSON",
+        "description": "用户加权口径指标及用户总数。"
+      },
+      {
+        "name": "method.md",
+        "path": "output/method.md",
+        "format": "MD",
+        "description": "路径累计、计划停电和指标口径说明。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "负荷点结果",
+          "weight": 40,
+          "rule": "按变压器 ID 比对路径累计结果和参数，按记录与字段正确比例计分。"
+        },
+        {
+          "name": "等权指标",
+          "weight": 25,
+          "rule": "逐字段比对系统等权指标，按正确比例计分。"
+        },
+        {
+          "name": "用户加权指标",
+          "weight": 30,
+          "rule": "逐字段比对加权指标与用户总数，按正确比例计分。"
+        },
+        {
+          "name": "方法说明",
+          "weight": 5,
+          "rule": "方法正文至少 60 字，取得本项分数。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-01/chinese-ai-experience-text-coding",
+    "title": "中文 AI 使用体验文本心理编码",
+    "brief": "依据心理编码手册标注中文 AI 使用体验文本，判断叙述焦点和行为概念，完成统一格式的编码工作簿。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-01",
+    "occupation": {
+      "code": "2-01-04-02",
+      "name": "心理学研究人员"
+    },
+    "scene": "你是心理研究文本编码人员，需要让每条文本的标注可与团队使用的编码体系一致比较。",
+    "taskPrompt": "你是心理研究文本编码人员，需要让每条文本的标注可与团队使用的编码体系一致比较。\n\n1. 阅读编码手册，理解概念定义和排除情形\n2. 逐条判断文本焦点及行为标签\n3. 将 95 条文本的 39 项布尔标注填写到工作簿\n\n交付成果：\n- ai_addiction_annotations_output.xlsx：“文本编码”工作表，保留文本元信息并填写 3,705 个布尔标注。",
+    "agentMustDo": [
+      "阅读编码手册，理解概念定义和排除情形",
+      "逐条判断文本焦点及行为标签",
+      "将 95 条文本的 39 项布尔标注填写到工作簿"
+    ],
+    "software": [
+      "LibreOffice Calc",
+      "文本阅读工具"
+    ],
+    "materials": "95 条中文文本、编码手册及工作簿模板。",
+    "inputFiles": [
+      {
+        "name": "codebook.pdf",
+        "path": "input/codebook.pdf",
+        "format": "PDF",
+        "bytes": 79245,
+        "description": "codebook.pdf，用于中文 AI 使用体验文本心理编码。"
+      },
+      {
+        "name": "column_dictionary.json",
+        "path": "input/column_dictionary.json",
+        "format": "JSON",
+        "bytes": 5034,
+        "description": "column_dictionary.json，用于中文 AI 使用体验文本心理编码。"
+      },
+      {
+        "name": "posts.xlsx",
+        "path": "input/posts.xlsx",
+        "format": "XLSX",
+        "bytes": 20861,
+        "description": "posts.xlsx，用于中文 AI 使用体验文本心理编码。"
+      },
+      {
+        "name": "posts.xlsx.inspect.ndjson",
+        "path": "input/posts.xlsx.inspect.ndjson",
+        "format": "NDJSON",
+        "bytes": 229960,
+        "description": "posts.xlsx.inspect.ndjson，用于中文 AI 使用体验文本心理编码。"
+      },
+      {
+        "name": "posts.xlsx.png",
+        "path": "input/posts.xlsx.png",
+        "format": "PNG",
+        "bytes": 587381,
+        "description": "posts.xlsx.png，用于中文 AI 使用体验文本心理编码。"
+      }
+    ],
+    "inputFileCount": 5,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "ai_addiction_annotations_output.xlsx",
+        "path": "output/ai_addiction_annotations_output.xlsx",
+        "format": "XLSX",
+        "description": "“文本编码”工作表，保留文本元信息并填写 3,705 个布尔标注。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "文本编码",
+          "weight": 100,
+          "rule": "先检查原始五列与模板一致、每行焦点三选一、标签为布尔值；随后按 3,705 个单元格的正确比例计分。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-02/icu-sa-aki-phenotyping",
+    "title": "医院多系统事件表 SA-AKI 表型提取",
+    "brief": "连接 ICU 住院与临床事件记录，按时间窗识别 SA-AKI 表型，交付患者名单和逐住院判定记录。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-02",
+    "occupation": {
+      "code": "2-02-30-09",
+      "name": "数据分析处理工程技术人员"
+    },
+    "scene": "你是医学数据分析人员，需要将分散在不同系统的事件整理为一致的住院时间线和表型结果。",
+    "taskPrompt": "你是医学数据分析人员，需要将分散在不同系统的事件整理为一致的住院时间线和表型结果。\n\n1. 连接 720 次 ICU 住院的感染、器官功能与肾功能事件\n2. 按给定 Sepsis-3、KDIGO 和七天时间窗规则判定\n3. 整理唯一患者名单，记录每次住院的起始时间与判定理由\n\n交付成果：\n- sa_aki_patients.csv：符合条件的唯一 subject_id 名单。\n- phenotype_audit.csv：逐 stay_id 的起始时间、资格与判定理由。",
+    "agentMustDo": [
+      "连接 720 次 ICU 住院的感染、器官功能与肾功能事件",
+      "按给定 Sepsis-3、KDIGO 和七天时间窗规则判定",
+      "整理唯一患者名单，记录每次住院的起始时间与判定理由"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "600 人的 ICU 住院、感染、SOFA、肌酐与尿量事件表和判定规则。",
+    "inputFiles": [
+      {
+        "name": "his_icu_stays.csv",
+        "path": "input/his_icu_stays.csv",
+        "format": "CSV",
+        "bytes": 40080,
+        "description": "his_icu_stays.csv，用于医院多系统事件表 SA-AKI 表型提取。"
+      },
+      {
+        "name": "infection_orders.csv",
+        "path": "input/infection_orders.csv",
+        "format": "CSV",
+        "bytes": 10113,
+        "description": "infection_orders.csv，用于医院多系统事件表 SA-AKI 表型提取。"
+      },
+      {
+        "name": "lis_labs.csv",
+        "path": "input/lis_labs.csv",
+        "format": "CSV",
+        "bytes": 1813617,
+        "description": "lis_labs.csv，用于医院多系统事件表 SA-AKI 表型提取。"
+      },
+      {
+        "name": "nursing_urine.csv",
+        "path": "input/nursing_urine.csv",
+        "format": "CSV",
+        "bytes": 3173105,
+        "description": "nursing_urine.csv，用于医院多系统事件表 SA-AKI 表型提取。"
+      },
+      {
+        "name": "protocol.md",
+        "path": "input/protocol.md",
+        "format": "MD",
+        "bytes": 1019,
+        "description": "protocol.md，用于医院多系统事件表 SA-AKI 表型提取。"
+      },
+      {
+        "name": "sofa_assessments.csv",
+        "path": "input/sofa_assessments.csv",
+        "format": "CSV",
+        "bytes": 11560,
+        "description": "sofa_assessments.csv，用于医院多系统事件表 SA-AKI 表型提取。"
+      }
+    ],
+    "inputFileCount": 6,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "sa_aki_patients.csv",
+        "path": "output/sa_aki_patients.csv",
+        "format": "CSV",
+        "description": "符合条件的唯一 subject_id 名单。"
+      },
+      {
+        "name": "phenotype_audit.csv",
+        "path": "output/phenotype_audit.csv",
+        "format": "CSV",
+        "description": "逐 stay_id 的起始时间、资格与判定理由。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "患者名单",
+          "weight": 65,
+          "rule": "与参考患者集合计算 F1，按 65 × F1 计分；患者 ID 唯一且列名为 subject_id。"
+        },
+        {
+          "name": "时间线与判定",
+          "weight": 35,
+          "rule": "按住院 ID 比对起始时间、资格和理由，按记录与字段正确比例计分。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-06/enterprise-annual-report-analysis",
+    "title": "企业年度报告批量抽取与跨报告问答",
+    "brief": "批量整理企业年度报告中的财务指标与原文依据，回答跨公司、跨年度问题，并检查重复处理的一致性。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-06",
+    "occupation": {
+      "code": "2-06-03-00",
+      "name": "会计专业人员"
+    },
+    "scene": "你是财务数据分析人员，需要把六家企业三年的报告整理为结构化数据，为研究团队提供可追溯的分析结果。",
+    "taskPrompt": "你是财务数据分析人员，需要把六家企业三年的报告整理为结构化数据，为研究团队提供可追溯的分析结果。\n\n1. 从 18 份年报提取指定财务指标，统一数值与单位\n2. 保留原文并完成三项跨报告分析问题\n3. 重复处理指定五份报告，检查结果一致性\n\n交付成果：\n- extractions/：18 份结构化财务指标 JSON。\n- raw_extractions/：对应报告的原文摘录。\n- qa_answers.json：三项跨报告问题的答案。\n- run2_extractions/：指定五份报告再次处理的结果。",
+    "agentMustDo": [
+      "从 18 份年报提取指定财务指标，统一数值与单位",
+      "保留原文并完成三项跨报告分析问题",
+      "重复处理指定五份报告，检查结果一致性"
+    ],
+    "software": [
+      "Python",
+      "表格与文档阅读工具"
+    ],
+    "materials": "六家企业三年的 18 份 PDF 年报、指标说明和问题清单。",
+    "inputFiles": [
+      {
+        "name": "分析问题清单",
+        "path": "input/questions.json",
+        "format": "JSON",
+        "bytes": 218,
+        "description": "分析问题清单，用于企业年度报告批量抽取与跨报告问答。"
+      },
+      {
+        "name": "结果字段说明",
+        "path": "input/schema.json",
+        "format": "JSON",
+        "bytes": 410,
+        "description": "结果字段说明，用于企业年度报告批量抽取与跨报告问答。"
+      },
+      {
+        "name": "重复处理清单",
+        "path": "input/validation.json",
+        "format": "JSON",
+        "bytes": 83,
+        "description": "重复处理清单，用于企业年度报告批量抽取与跨报告问答。"
+      },
+      {
+        "name": "企业年度报告资料",
+        "path": "input/filings/",
+        "format": "目录",
+        "bytes": 574959,
+        "description": "企业年度报告资料，共 19 个文件。"
+      }
+    ],
+    "inputFileCount": 22,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "extractions/",
+        "path": "output/extractions/",
+        "format": "目录",
+        "description": "18 份结构化财务指标 JSON。"
+      },
+      {
+        "name": "raw_extractions/",
+        "path": "output/raw_extractions/",
+        "format": "目录",
+        "description": "对应报告的原文摘录。"
+      },
+      {
+        "name": "qa_answers.json",
+        "path": "output/qa_answers.json",
+        "format": "JSON",
+        "description": "三项跨报告问题的答案。"
+      },
+      {
+        "name": "run2_extractions/",
+        "path": "output/run2_extractions/",
+        "format": "目录",
+        "description": "指定五份报告再次处理的结果。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "指标抽取",
+          "weight": 60,
+          "rule": "逐报告比对财务字段，金额绝对容差为 0.01，按报告平均正确比例计分。"
+        },
+        {
+          "name": "原文覆盖",
+          "weight": 10,
+          "rule": "逐份检查公司、年度及利润、现金流和营收相关原文，按完整报告比例计分。"
+        },
+        {
+          "name": "跨报告问答",
+          "weight": 20,
+          "rule": "按答案字段比对计算结果，金额绝对容差为 0.01。"
+        },
+        {
+          "name": "重复处理",
+          "weight": 10,
+          "rule": "对五份指定报告再次比对字段，按平均正确比例计分。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  },
+  {
+    "taskId": "2-06/individual-income-tax-return",
+    "title": "居民个人综合所得年度汇算申报",
+    "brief": "依据收入、扣除与预缴材料计算年度汇算结果，在申报页面完成三位居民的逐项填报并保存结果。",
+    "language": "zh-CN",
+    "version": "0.2.0",
+    "category": "2-06",
+    "occupation": {
+      "code": "2-06-05-00",
+      "name": "税务专业人员"
+    },
+    "scene": "你是税务业务人员，需要按照任务提供的汇算规则，为三位居民整理年度申报和补退税结果。",
+    "taskPrompt": "你是税务业务人员，需要按照任务提供的汇算规则，为三位居民整理年度申报和补退税结果。\n\n1. 核对每位居民的工资、扣除和预缴凭证\n2. 计算应纳税所得、应纳税额及补退税差额\n3. 在申报页面填写并保存三份申报结果和截图\n\n交付成果：\n- returns/T001.json～T003.json：三位居民的汇算申报字段与金额。\n- screenshots/T001.png～T003.png：各份申报保存后的页面截图。",
+    "agentMustDo": [
+      "核对每位居民的工资、扣除和预缴凭证",
+      "计算应纳税所得、应纳税额及补退税差额",
+      "在申报页面填写并保存三份申报结果和截图"
+    ],
+    "software": [
+      "浏览器",
+      "计算与表格工具"
+    ],
+    "materials": "三名居民的 12 个月收入与扣除凭证、预缴记录、规则和申报页面。",
+    "inputFiles": [
+      {
+        "name": "T001_deductions.pdf",
+        "path": "input/T001_deductions.pdf",
+        "format": "PDF",
+        "bytes": 24982,
+        "description": "T001_deductions.pdf，用于居民个人综合所得年度汇算申报。"
+      },
+      {
+        "name": "T001_payroll.csv",
+        "path": "input/T001_payroll.csv",
+        "format": "CSV",
+        "bytes": 424,
+        "description": "T001_payroll.csv，用于居民个人综合所得年度汇算申报。"
+      },
+      {
+        "name": "T002_deductions.pdf",
+        "path": "input/T002_deductions.pdf",
+        "format": "PDF",
+        "bytes": 24986,
+        "description": "T002_deductions.pdf，用于居民个人综合所得年度汇算申报。"
+      },
+      {
+        "name": "T002_payroll.csv",
+        "path": "input/T002_payroll.csv",
+        "format": "CSV",
+        "bytes": 556,
+        "description": "T002_payroll.csv，用于居民个人综合所得年度汇算申报。"
+      },
+      {
+        "name": "T003_deductions.pdf",
+        "path": "input/T003_deductions.pdf",
+        "format": "PDF",
+        "bytes": 24982,
+        "description": "T003_deductions.pdf，用于居民个人综合所得年度汇算申报。"
+      },
+      {
+        "name": "T003_payroll.csv",
+        "path": "input/T003_payroll.csv",
+        "format": "CSV",
+        "bytes": 544,
+        "description": "T003_payroll.csv，用于居民个人综合所得年度汇算申报。"
+      },
+      {
+        "name": "tax_form.html",
+        "path": "input/tax_form.html",
+        "format": "HTML",
+        "bytes": 1706,
+        "description": "tax_form.html，用于居民个人综合所得年度汇算申报。"
+      },
+      {
+        "name": "tax_rules.md",
+        "path": "input/tax_rules.md",
+        "format": "MD",
+        "bytes": 985,
+        "description": "tax_rules.md，用于居民个人综合所得年度汇算申报。"
+      }
+    ],
+    "inputFileCount": 8,
+    "inputManifest": "materials.json",
+    "referenceFiles": [
+      {
+        "name": "returns/T001.json～T003.json",
+        "path": "output/returns/T001.json～T003.json",
+        "format": "JSON",
+        "description": "三位居民的汇算申报字段与金额。"
+      },
+      {
+        "name": "screenshots/T001.png～T003.png",
+        "path": "output/screenshots/T001.png～T003.png",
+        "format": "PNG",
+        "description": "各份申报保存后的页面截图。"
+      }
+    ],
+    "evaluation": {
+      "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+      "criteria": [
+        {
+          "name": "申报计算",
+          "weight": 95,
+          "rule": "逐人逐字段比对收入、扣除、应税所得、税额、预缴和差额，金额容差 0.01；按三人平均正确比例计分。"
+        },
+        {
+          "name": "申报截图",
+          "weight": 5,
+          "rule": "三张截图均可读取，且宽至少 800、高至少 500 像素，取得本项分数。"
+        }
+      ],
+      "notes": "",
+      "scoreRange": [
+        0,
+        100
+      ]
+    }
+  }
+]

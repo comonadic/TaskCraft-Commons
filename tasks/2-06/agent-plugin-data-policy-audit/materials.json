@@ -1,0 +1,22 @@
+[
+  {
+    "path": "input/action_data_entities.json",
+    "bytes": 107779,
+    "sha256": "3a6bdef6038a727ac92460118016586bd9115471b2a49c78f79523c383135230"
+  },
+  {
+    "path": "input/action_metadata.json",
+    "bytes": 27203,
+    "sha256": "616d0e9e768dbb75d81e94bbcd9a041a5cc820b59f00217911a6cd5d4d9c42ab"
+  },
+  {
+    "path": "input/taxonomy.csv",
+    "bytes": 284,
+    "sha256": "e2ea04f2605e94781f502f1b10ca992d6e984102b731fa1f312e53546995b11d"
+  },
+  {
+    "path": "input/usage_policy.md",
+    "bytes": 503,
+    "sha256": "707d7a0b1da64865afb0464894fb3942c853fe5f448139682093db554e07ba19"
+  }
+]

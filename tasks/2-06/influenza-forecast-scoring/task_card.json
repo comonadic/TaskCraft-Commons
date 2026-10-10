@@ -1,0 +1,90 @@
+{
+  "taskId": "2-06/influenza-forecast-scoring",
+  "title": "流感住院预测评分与模型比较",
+  "brief": "复算多模型的流感住院预测表现，整理逐预测单元的误差、区间覆盖率和模型汇总排名。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-06",
+  "occupation": {
+    "code": "2-06-02-00",
+    "name": "统计专业人员"
+  },
+  "scene": "你是预测评估分析人员，需要把不同模型的预测与观测值对齐，形成可比较的评分表。",
+  "taskPrompt": "你是预测评估分析人员，需要把不同模型的预测与观测值对齐，形成可比较的评分表。\n\n1. 根据时间和可用性规则对齐预测与观测值\n2. 为共同预测单元计算 WIS、MAE 和区间覆盖率\n3. 按模型汇总指标，计算相对基线表现\n\n交付成果：\n- per_cell_scores.csv：逐模型、地区、日期及预测期的评分明细。\n- submission.csv：各模型的单元数、平均误差、覆盖率及相对 WIS。",
+  "agentMustDo": [
+    "根据时间和可用性规则对齐预测与观测值",
+    "为共同预测单元计算 WIS、MAE 和区间覆盖率",
+    "按模型汇总指标，计算相对基线表现"
+  ],
+  "software": [
+    "Python",
+    "表格与文档阅读工具"
+  ],
+  "materials": "五个模型的分位数预测、12 个地区的观测记录、18 周数据及评分规则。",
+  "inputFiles": [
+    {
+      "name": "forecast_archive.parquet",
+      "path": "input/forecast_archive.parquet",
+      "format": "PARQUET",
+      "bytes": 1006318,
+      "description": "forecast_archive.parquet，用于流感住院预测评分与模型比较。"
+    },
+    {
+      "name": "quantiles.json",
+      "path": "input/quantiles.json",
+      "format": "JSON",
+      "bytes": 180,
+      "description": "quantiles.json，用于流感住院预测评分与模型比较。"
+    },
+    {
+      "name": "scoring.md",
+      "path": "input/scoring.md",
+      "format": "MD",
+      "bytes": 579,
+      "description": "scoring.md，用于流感住院预测评分与模型比较。"
+    },
+    {
+      "name": "truth.csv",
+      "path": "input/truth.csv",
+      "format": "CSV",
+      "bytes": 21281,
+      "description": "truth.csv，用于流感住院预测评分与模型比较。"
+    }
+  ],
+  "inputFileCount": 4,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "per_cell_scores.csv",
+      "path": "output/per_cell_scores.csv",
+      "format": "CSV",
+      "description": "逐模型、地区、日期及预测期的评分明细。"
+    },
+    {
+      "name": "submission.csv",
+      "path": "output/submission.csv",
+      "format": "CSV",
+      "description": "各模型的单元数、平均误差、覆盖率及相对 WIS。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "逐单元评分",
+        "weight": 75,
+        "rule": "按模型、地区、日期和预测期联合定位记录，比对 WIS、MAE 和覆盖率，绝对容差为 0.000001。"
+      },
+      {
+        "name": "模型汇总",
+        "weight": 25,
+        "rule": "逐模型比较单元数量、平均指标与相对 WIS，按字段正确比例计分。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

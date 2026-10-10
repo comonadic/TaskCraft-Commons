@@ -1,0 +1,12 @@
+[
+  {
+    "path": "input/patients.csv",
+    "bytes": 298978,
+    "sha256": "8d153207c72a4d63a9a5a74e8c1d95852d57178d01f6e1cb1156c3450ae2d1da"
+  },
+  {
+    "path": "input/protocol.md",
+    "bytes": 562,
+    "sha256": "546958813adde808886def68f4b43373c22299ccb6fc1f5ee4541c4fde009bb8"
+  }
+]

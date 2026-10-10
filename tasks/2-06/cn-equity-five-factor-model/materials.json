@@ -1,0 +1,17 @@
+[
+  {
+    "path": "input/methodology.md",
+    "bytes": 854,
+    "sha256": "38bd42a5c77ac4e47a5d47a68079dce0775f6ee9e302b11b0265f5b966dacdcd"
+  },
+  {
+    "path": "input/monthly_stock_panel.csv",
+    "bytes": 1888745,
+    "sha256": "1546ec5c310da85c061b32cb9605c27de7a0356b03bcfb32e5e7f3230e6982d1"
+  },
+  {
+    "path": "input/risk_free.csv",
+    "bytes": 2539,
+    "sha256": "292ff222c9b7635303aa639a47f491c80128a95f2ec7202406b4c4746f8f975c"
+  }
+]

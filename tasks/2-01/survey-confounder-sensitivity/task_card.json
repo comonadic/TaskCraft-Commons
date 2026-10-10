@@ -1,0 +1,97 @@
+{
+  "taskId": "2-01/survey-confounder-sensitivity",
+  "title": "调查队列混杂敏感性分析",
+  "brief": "连接调查队列和用药事件数据，重建分析样本，并比较加入不同混杂因素后的关联估计。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-01",
+  "occupation": {
+    "code": "2-01-08-00",
+    "name": "医学研究人员"
+  },
+  "scene": "你是医学研究分析人员，需要检验幽门螺杆菌与 NSAID 用药等因素对目标关联估计的影响。",
+  "taskPrompt": "你是医学研究分析人员，需要检验幽门螺杆菌与 NSAID 用药等因素对目标关联估计的影响。\n\n1. 连接四张数据表，整理符合条件的完整病例\n2. 拟合三组逐步调整混杂因素的模型\n3. 比较样本量、优势比、置信区间与变化幅度，交付分析表\n\n交付成果：\n- hpyl_nsaid_subset.csv：逐人的分析样本及研究变量。\n- sensitivity_summary.csv：三个模型的样本量、估计值、区间、P 值和变化比例。",
+  "agentMustDo": [
+    "连接四张数据表，整理符合条件的完整病例",
+    "拟合三组逐步调整混杂因素的模型",
+    "比较样本量、优势比、置信区间与变化幅度，交付分析表"
+  ],
+  "software": [
+    "Python",
+    "表格与文档阅读工具"
+  ],
+  "materials": "5,000 人的调查队列、用药事件和变量定义。",
+  "inputFiles": [
+    {
+      "name": "demographics.csv",
+      "path": "input/demographics.csv",
+      "format": "CSV",
+      "bytes": 153994,
+      "description": "demographics.csv，用于调查队列混杂敏感性分析。"
+    },
+    {
+      "name": "labs.csv",
+      "path": "input/labs.csv",
+      "format": "CSV",
+      "bytes": 52863,
+      "description": "labs.csv，用于调查队列混杂敏感性分析。"
+    },
+    {
+      "name": "medications.csv",
+      "path": "input/medications.csv",
+      "format": "CSV",
+      "bytes": 170038,
+      "description": "medications.csv，用于调查队列混杂敏感性分析。"
+    },
+    {
+      "name": "protocol.md",
+      "path": "input/protocol.md",
+      "format": "MD",
+      "bytes": 666,
+      "description": "protocol.md，用于调查队列混杂敏感性分析。"
+    },
+    {
+      "name": "questionnaire.csv",
+      "path": "input/questionnaire.csv",
+      "format": "CSV",
+      "bytes": 148031,
+      "description": "questionnaire.csv，用于调查队列混杂敏感性分析。"
+    }
+  ],
+  "inputFileCount": 5,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "hpyl_nsaid_subset.csv",
+      "path": "output/hpyl_nsaid_subset.csv",
+      "format": "CSV",
+      "description": "逐人的分析样本及研究变量。"
+    },
+    {
+      "name": "sensitivity_summary.csv",
+      "path": "output/sensitivity_summary.csv",
+      "format": "CSV",
+      "description": "三个模型的样本量、估计值、区间、P 值和变化比例。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "分析样本",
+        "weight": 40,
+        "rule": "按个体 ID 比对病例集合和变量，按记录与字段的正确比例计分。"
+      },
+      {
+        "name": "模型结果",
+        "weight": 60,
+        "rule": "按模型比对估计值、置信区间、P 值与变化比例，绝对容差为 0.00001。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

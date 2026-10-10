@@ -1,0 +1,91 @@
+{
+  "taskId": "2-10/library-marc-folio-remediation",
+  "title": "图书馆书目修复与 FOLIO 覆盖计划",
+  "brief": "按照编目政策修复 MARC 书目，判断 FOLIO 中的覆盖、新建与隔离动作，并整理导入计划和质量报告。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-10",
+  "occupation": {
+    "code": "2-10-06-01",
+    "name": "文献信息专业人员"
+  },
+  "scene": "你是图书馆文献信息人员，需要把批量书目中的字段问题修复为可导入的记录，并说明每条处理决定。",
+  "taskPrompt": "你是图书馆文献信息人员，需要把批量书目中的字段问题修复为可导入的记录，并说明每条处理决定。\n\n1. 结合权威映射、馆藏和编目政策修复字段\n2. 与 FOLIO 记录匹配，逐记录确定处理动作\n3. 生成导入计划、质量报告和可复用的处理程序\n\n交付成果：\n- submission/scripts/remediate_catalog.py：支持输入与输出目录参数的书目处理程序。\n- submission/outputs/public_case/：修复 XML、处理决策 CSV、导入计划 JSON、QA 报告与修复摘要。",
+  "agentMustDo": [
+    "结合权威映射、馆藏和编目政策修复字段",
+    "与 FOLIO 记录匹配，逐记录确定处理动作",
+    "生成导入计划、质量报告和可复用的处理程序"
+  ],
+  "software": [
+    "Python",
+    "MARC/XML 阅读工具"
+  ],
+  "materials": "400 条书目、作者权威映射、馆藏资料、FOLIO 快照和编目政策。",
+  "inputFiles": [
+    {
+      "name": "case 资料",
+      "path": "input/case/",
+      "format": "目录",
+      "bytes": 254342,
+      "description": "case 资料，共 5 个文件。"
+    },
+    {
+      "name": "starter_project 资料",
+      "path": "input/starter_project/",
+      "format": "目录",
+      "bytes": 90,
+      "description": "starter_project 资料，共 1 个文件。"
+    }
+  ],
+  "inputFileCount": 6,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "submission/scripts/remediate_catalog.py",
+      "path": "output/submission/scripts/remediate_catalog.py",
+      "format": "PY",
+      "description": "支持输入与输出目录参数的书目处理程序。"
+    },
+    {
+      "name": "submission/outputs/public_case/",
+      "path": "output/submission/outputs/public_case/",
+      "format": "目录",
+      "description": "修复 XML、处理决策 CSV、导入计划 JSON、QA 报告与修复摘要。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "书目字段",
+        "weight": 30,
+        "rule": "按记录 ID 比对 ISBN、作者、题名、语言、链接和馆藏字段，按正确比例计分。"
+      },
+      {
+        "name": "处理决策",
+        "weight": 20,
+        "rule": "比对覆盖、新建、隔离、复核和跳过等动作及目标记录，按正确比例计分。"
+      },
+      {
+        "name": "导入计划",
+        "weight": 10,
+        "rule": "比对记录、动作、目标实例和分馆，按正确比例计分。"
+      },
+      {
+        "name": "质量与程序",
+        "weight": 10,
+        "rule": "检查决策数量、400 条变化记录、修复摘要与程序文件。"
+      },
+      {
+        "name": "新增案例处理",
+        "weight": 30,
+        "rule": "将程序用于另外 80 条案例；字段修复、处理决策、导入计划按 40%、40%、20% 加权计分。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

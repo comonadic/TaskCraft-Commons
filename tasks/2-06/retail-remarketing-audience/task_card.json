@@ -1,0 +1,101 @@
+{
+  "taskId": "2-06/retail-remarketing-audience",
+  "title": "零售企业再营销受众与渠道资格",
+  "brief": "结合交易、邮件与客服记录筛选再营销受众，判定可联系渠道，并分析新受众与现有分群的重叠。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-06",
+  "occupation": {
+    "code": "2-06-07-02",
+    "name": "市场营销专业人员"
+  },
+  "scene": "你是零售企业营销分析人员，需要为下一轮活动准备一份符合客户授权和业务规则的受众名单。",
+  "taskPrompt": "你是零售企业营销分析人员，需要为下一轮活动准备一份符合客户授权和业务规则的受众名单。\n\n1. 连接客户、交易、邮件及工单资料\n2. 按活动规则筛选受众，逐客户确定可用渠道\n3. 整理分群定义、受众名单和与现有分群的重叠结果\n\n交付成果：\n- segment_definition.json：分群规则、人数和关键统计。\n- audience_roster.csv：受众名单及逐客户渠道资格。\n- overlap_report.tsv：与现有分群的重叠人数和比例。",
+  "agentMustDo": [
+    "连接客户、交易、邮件及工单资料",
+    "按活动规则筛选受众，逐客户确定可用渠道",
+    "整理分群定义、受众名单和与现有分群的重叠结果"
+  ],
+  "software": [
+    "Python",
+    "表格与文档阅读工具"
+  ],
+  "materials": "客户与交易记录、邮件活动数据、工单记录、授权规则及既有分群。",
+  "inputFiles": [
+    {
+      "name": "brief.md",
+      "path": "input/brief.md",
+      "format": "MD",
+      "bytes": 757,
+      "description": "brief.md，用于零售企业再营销受众与渠道资格。"
+    },
+    {
+      "name": "existing_segments.csv",
+      "path": "input/existing_segments.csv",
+      "format": "CSV",
+      "bytes": 133993,
+      "description": "existing_segments.csv，用于零售企业再营销受众与渠道资格。"
+    },
+    {
+      "name": "governance.yaml",
+      "path": "input/governance.yaml",
+      "format": "YAML",
+      "bytes": 142,
+      "description": "governance.yaml，用于零售企业再营销受众与渠道资格。"
+    },
+    {
+      "name": "unified_profiles.parquet",
+      "path": "input/unified_profiles.parquet",
+      "format": "PARQUET",
+      "bytes": 154608,
+      "description": "unified_profiles.parquet，用于零售企业再营销受众与渠道资格。"
+    }
+  ],
+  "inputFileCount": 4,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "segment_definition.json",
+      "path": "output/segment_definition.json",
+      "format": "JSON",
+      "description": "分群规则、人数和关键统计。"
+    },
+    {
+      "name": "audience_roster.csv",
+      "path": "output/audience_roster.csv",
+      "format": "CSV",
+      "description": "受众名单及逐客户渠道资格。"
+    },
+    {
+      "name": "overlap_report.tsv",
+      "path": "output/overlap_report.tsv",
+      "format": "TSV",
+      "description": "与现有分群的重叠人数和比例。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "受众与渠道",
+        "weight": 65,
+        "rule": "按客户 ID 比对入选名单和渠道资格，按记录与字段的正确比例计分。"
+      },
+      {
+        "name": "分群摘要",
+        "weight": 15,
+        "rule": "比对分群定义与统计字段，按正确比例计分。"
+      },
+      {
+        "name": "重叠分析",
+        "weight": 20,
+        "rule": "按既有分群 ID 比较重叠人数及比例，数值绝对容差为 0.000001。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

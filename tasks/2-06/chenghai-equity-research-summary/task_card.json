@@ -1,0 +1,124 @@
+{
+  "taskId": "2-06/chenghai-equity-research-summary",
+  "title": "澄海精密权益研究摘要工作簿",
+  "brief": "整合行情与财报信息，完成六板块权益研究摘要，保留关键计算公式及资料对应的时间和出处。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-06",
+  "occupation": {
+    "code": "2-06-11-03",
+    "name": "证券投资专业人员"
+  },
+  "scene": "你是证券研究人员，需要把澄海精密的市场与财务信息整理进统一研究模板，供团队进一步分析。",
+  "taskPrompt": "你是证券研究人员，需要把澄海精密的市场与财务信息整理进统一研究模板，供团队进一步分析。\n\n1. 读取行情、统计及年报页面，提取指定时点的数据\n2. 填入研究摘要模板，建立派生指标公式\n3. 检查工作簿计算结果并整理资料索引\n\n交付成果：\n- CN_Financial_Summary.xlsx：“研究摘要”工作表，包含输入值、派生指标和动态公式。\n- sources.json：行情时点、公司、币种与资料页面索引。",
+  "agentMustDo": [
+    "读取行情、统计及年报页面，提取指定时点的数据",
+    "填入研究摘要模板，建立派生指标公式",
+    "检查工作簿计算结果并整理资料索引"
+  ],
+  "software": [
+    "Python",
+    "LibreOffice Calc",
+    "文档阅读工具"
+  ],
+  "materials": "行情页面、公司统计页面、年度报告和六板块工作簿模板。",
+  "inputFiles": [
+    {
+      "name": "annual_report.html",
+      "path": "input/annual_report.html",
+      "format": "HTML",
+      "bytes": 816,
+      "description": "annual_report.html，用于澄海精密权益研究摘要工作簿。"
+    },
+    {
+      "name": "formula_contract.md",
+      "path": "input/formula_contract.md",
+      "format": "MD",
+      "bytes": 270,
+      "description": "formula_contract.md，用于澄海精密权益研究摘要工作簿。"
+    },
+    {
+      "name": "output_contract.json",
+      "path": "input/output_contract.json",
+      "format": "JSON",
+      "bytes": 1049,
+      "description": "output_contract.json，用于澄海精密权益研究摘要工作簿。"
+    },
+    {
+      "name": "quote.html",
+      "path": "input/quote.html",
+      "format": "HTML",
+      "bytes": 735,
+      "description": "quote.html，用于澄海精密权益研究摘要工作簿。"
+    },
+    {
+      "name": "statistics.html",
+      "path": "input/statistics.html",
+      "format": "HTML",
+      "bytes": 663,
+      "description": "statistics.html，用于澄海精密权益研究摘要工作簿。"
+    },
+    {
+      "name": "template.xlsx",
+      "path": "input/template.xlsx",
+      "format": "XLSX",
+      "bytes": 4466,
+      "description": "template.xlsx，用于澄海精密权益研究摘要工作簿。"
+    },
+    {
+      "name": "template.xlsx.inspect.ndjson",
+      "path": "input/template.xlsx.inspect.ndjson",
+      "format": "NDJSON",
+      "bytes": 10839,
+      "description": "template.xlsx.inspect.ndjson，用于澄海精密权益研究摘要工作簿。"
+    },
+    {
+      "name": "template.xlsx.png",
+      "path": "input/template.xlsx.png",
+      "format": "PNG",
+      "bytes": 65446,
+      "description": "template.xlsx.png，用于澄海精密权益研究摘要工作簿。"
+    }
+  ],
+  "inputFileCount": 8,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "CN_Financial_Summary.xlsx",
+      "path": "output/CN_Financial_Summary.xlsx",
+      "format": "XLSX",
+      "description": "“研究摘要”工作表，包含输入值、派生指标和动态公式。"
+    },
+    {
+      "name": "sources.json",
+      "path": "output/sources.json",
+      "format": "JSON",
+      "description": "行情时点、公司、币种与资料页面索引。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "数据与计算结果",
+        "weight": 65,
+        "rule": "比较模板单元格的输入与派生数值，按正确比例计分。"
+      },
+      {
+        "name": "动态公式",
+        "weight": 25,
+        "rule": "在四组输入变化下重新检查公式结果，按与要求公式等价的比例计分。"
+      },
+      {
+        "name": "资料索引",
+        "weight": 10,
+        "rule": "比对行情时点、公司、币种和三个资料页面，按字段正确比例计分。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

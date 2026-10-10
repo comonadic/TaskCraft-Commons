@@ -1,0 +1,111 @@
+{
+  "taskId": "4-08/factory-tower-3d-reconstruction",
+  "title": "厂房与塔楼图纸三维重建",
+  "brief": "根据建筑平面、立面和剖面图重建厂房与塔楼，整理构件名称与尺寸，并交付可继续编辑的三维模型。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "4-08",
+  "occupation": {
+    "code": "4-08-08-23",
+    "name": "建筑信息模型技术员"
+  },
+  "scene": "你是建筑信息模型技术员，需要依据六张建筑图纸搭建包含大厅与塔楼的三维模型，供设计团队查看和后续使用。",
+  "taskPrompt": "你是建筑信息模型技术员，需要依据六张建筑图纸搭建包含大厅与塔楼的三维模型，供设计团队查看和后续使用。\n\n1. 阅读总平面、楼层、立面与剖面图，确认轴网和构件尺寸\n2. 在统一毫米坐标系中建立柱、梁、楼板、墙体、玻璃与塔楼构件\n3. 按图纸标签命名构件，导出 Rhino 原生模型和 OBJ 模型\n\n交付成果：\n- model.3dm：Rhino 原生模型，采用毫米单位并保留命名构件。\n- model.obj：与原生模型对应的实体模型，供跨工具查看。",
+  "agentMustDo": [
+    "阅读总平面、楼层、立面与剖面图，确认轴网和构件尺寸",
+    "在统一毫米坐标系中建立柱、梁、楼板、墙体、玻璃与塔楼构件",
+    "按图纸标签命名构件，导出 Rhino 原生模型和 OBJ 模型"
+  ],
+  "software": [
+    "Rhino 或 rhino3dm",
+    "PDF 阅读工具"
+  ],
+  "materials": "六张 PDF 建筑图纸，以及构件名称与尺寸说明。",
+  "inputFiles": [
+    {
+      "name": "01总平面.pdf",
+      "path": "input/01总平面.pdf",
+      "format": "PDF",
+      "bytes": 15739,
+      "description": "01总平面.pdf，用于厂房与塔楼图纸三维重建。"
+    },
+    {
+      "name": "02首层平面.pdf",
+      "path": "input/02首层平面.pdf",
+      "format": "PDF",
+      "bytes": 15853,
+      "description": "02首层平面.pdf，用于厂房与塔楼图纸三维重建。"
+    },
+    {
+      "name": "03屋面平面.pdf",
+      "path": "input/03屋面平面.pdf",
+      "format": "PDF",
+      "bytes": 15738,
+      "description": "03屋面平面.pdf，用于厂房与塔楼图纸三维重建。"
+    },
+    {
+      "name": "04南立面.pdf",
+      "path": "input/04南立面.pdf",
+      "format": "PDF",
+      "bytes": 15655,
+      "description": "04南立面.pdf，用于厂房与塔楼图纸三维重建。"
+    },
+    {
+      "name": "05东立面.pdf",
+      "path": "input/05东立面.pdf",
+      "format": "PDF",
+      "bytes": 15551,
+      "description": "05东立面.pdf，用于厂房与塔楼图纸三维重建。"
+    },
+    {
+      "name": "06剖面.pdf",
+      "path": "input/06剖面.pdf",
+      "format": "PDF",
+      "bytes": 15565,
+      "description": "06剖面.pdf，用于厂房与塔楼图纸三维重建。"
+    },
+    {
+      "name": "建筑构件与尺寸说明",
+      "path": "input/drawing_schedule.md",
+      "format": "MD",
+      "bytes": 998,
+      "description": "建筑构件与尺寸说明，用于厂房与塔楼图纸三维重建。"
+    }
+  ],
+  "inputFileCount": 7,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "model.3dm",
+      "path": "output/model.3dm",
+      "format": "3DM",
+      "description": "Rhino 原生模型，采用毫米单位并保留命名构件。"
+    },
+    {
+      "name": "model.obj",
+      "path": "output/model.obj",
+      "format": "OBJ",
+      "description": "与原生模型对应的实体模型，供跨工具查看。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "原生模型",
+        "weight": 50,
+        "rule": "检查毫米单位和闭合构件；按构件名称比对位置与尺寸，允许 1 mm 绝对误差，按正确构件比例计分。"
+      },
+      {
+        "name": "OBJ 模型",
+        "weight": 50,
+        "rule": "检查顶点、闭合实体与构件名称，并按位置和尺寸正确的构件比例计分；最少包含 1,000 个顶点。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

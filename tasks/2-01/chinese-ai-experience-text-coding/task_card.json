@@ -1,0 +1,86 @@
+{
+  "taskId": "2-01/chinese-ai-experience-text-coding",
+  "title": "中文 AI 使用体验文本心理编码",
+  "brief": "依据心理编码手册标注中文 AI 使用体验文本，判断叙述焦点和行为概念，完成统一格式的编码工作簿。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-01",
+  "occupation": {
+    "code": "2-01-04-02",
+    "name": "心理学研究人员"
+  },
+  "scene": "你是心理研究文本编码人员，需要让每条文本的标注可与团队使用的编码体系一致比较。",
+  "taskPrompt": "你是心理研究文本编码人员，需要让每条文本的标注可与团队使用的编码体系一致比较。\n\n1. 阅读编码手册，理解概念定义和排除情形\n2. 逐条判断文本焦点及行为标签\n3. 将 95 条文本的 39 项布尔标注填写到工作簿\n\n交付成果：\n- ai_addiction_annotations_output.xlsx：“文本编码”工作表，保留文本元信息并填写 3,705 个布尔标注。",
+  "agentMustDo": [
+    "阅读编码手册，理解概念定义和排除情形",
+    "逐条判断文本焦点及行为标签",
+    "将 95 条文本的 39 项布尔标注填写到工作簿"
+  ],
+  "software": [
+    "LibreOffice Calc",
+    "文本阅读工具"
+  ],
+  "materials": "95 条中文文本、编码手册及工作簿模板。",
+  "inputFiles": [
+    {
+      "name": "codebook.pdf",
+      "path": "input/codebook.pdf",
+      "format": "PDF",
+      "bytes": 79245,
+      "description": "codebook.pdf，用于中文 AI 使用体验文本心理编码。"
+    },
+    {
+      "name": "column_dictionary.json",
+      "path": "input/column_dictionary.json",
+      "format": "JSON",
+      "bytes": 5034,
+      "description": "column_dictionary.json，用于中文 AI 使用体验文本心理编码。"
+    },
+    {
+      "name": "posts.xlsx",
+      "path": "input/posts.xlsx",
+      "format": "XLSX",
+      "bytes": 20861,
+      "description": "posts.xlsx，用于中文 AI 使用体验文本心理编码。"
+    },
+    {
+      "name": "posts.xlsx.inspect.ndjson",
+      "path": "input/posts.xlsx.inspect.ndjson",
+      "format": "NDJSON",
+      "bytes": 229960,
+      "description": "posts.xlsx.inspect.ndjson，用于中文 AI 使用体验文本心理编码。"
+    },
+    {
+      "name": "posts.xlsx.png",
+      "path": "input/posts.xlsx.png",
+      "format": "PNG",
+      "bytes": 587381,
+      "description": "posts.xlsx.png，用于中文 AI 使用体验文本心理编码。"
+    }
+  ],
+  "inputFileCount": 5,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "ai_addiction_annotations_output.xlsx",
+      "path": "output/ai_addiction_annotations_output.xlsx",
+      "format": "XLSX",
+      "description": "“文本编码”工作表，保留文本元信息并填写 3,705 个布尔标注。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "文本编码",
+        "weight": 100,
+        "rule": "先检查原始五列与模板一致、每行焦点三选一、标签为布尔值；随后按 3,705 个单元格的正确比例计分。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

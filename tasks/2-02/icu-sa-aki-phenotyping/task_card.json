@@ -1,0 +1,104 @@
+{
+  "taskId": "2-02/icu-sa-aki-phenotyping",
+  "title": "医院多系统事件表 SA-AKI 表型提取",
+  "brief": "连接 ICU 住院与临床事件记录，按时间窗识别 SA-AKI 表型，交付患者名单和逐住院判定记录。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-02",
+  "occupation": {
+    "code": "2-02-30-09",
+    "name": "数据分析处理工程技术人员"
+  },
+  "scene": "你是医学数据分析人员，需要将分散在不同系统的事件整理为一致的住院时间线和表型结果。",
+  "taskPrompt": "你是医学数据分析人员，需要将分散在不同系统的事件整理为一致的住院时间线和表型结果。\n\n1. 连接 720 次 ICU 住院的感染、器官功能与肾功能事件\n2. 按给定 Sepsis-3、KDIGO 和七天时间窗规则判定\n3. 整理唯一患者名单，记录每次住院的起始时间与判定理由\n\n交付成果：\n- sa_aki_patients.csv：符合条件的唯一 subject_id 名单。\n- phenotype_audit.csv：逐 stay_id 的起始时间、资格与判定理由。",
+  "agentMustDo": [
+    "连接 720 次 ICU 住院的感染、器官功能与肾功能事件",
+    "按给定 Sepsis-3、KDIGO 和七天时间窗规则判定",
+    "整理唯一患者名单，记录每次住院的起始时间与判定理由"
+  ],
+  "software": [
+    "Python",
+    "表格与文档阅读工具"
+  ],
+  "materials": "600 人的 ICU 住院、感染、SOFA、肌酐与尿量事件表和判定规则。",
+  "inputFiles": [
+    {
+      "name": "his_icu_stays.csv",
+      "path": "input/his_icu_stays.csv",
+      "format": "CSV",
+      "bytes": 40080,
+      "description": "his_icu_stays.csv，用于医院多系统事件表 SA-AKI 表型提取。"
+    },
+    {
+      "name": "infection_orders.csv",
+      "path": "input/infection_orders.csv",
+      "format": "CSV",
+      "bytes": 10113,
+      "description": "infection_orders.csv，用于医院多系统事件表 SA-AKI 表型提取。"
+    },
+    {
+      "name": "lis_labs.csv",
+      "path": "input/lis_labs.csv",
+      "format": "CSV",
+      "bytes": 1813617,
+      "description": "lis_labs.csv，用于医院多系统事件表 SA-AKI 表型提取。"
+    },
+    {
+      "name": "nursing_urine.csv",
+      "path": "input/nursing_urine.csv",
+      "format": "CSV",
+      "bytes": 3173105,
+      "description": "nursing_urine.csv，用于医院多系统事件表 SA-AKI 表型提取。"
+    },
+    {
+      "name": "protocol.md",
+      "path": "input/protocol.md",
+      "format": "MD",
+      "bytes": 1019,
+      "description": "protocol.md，用于医院多系统事件表 SA-AKI 表型提取。"
+    },
+    {
+      "name": "sofa_assessments.csv",
+      "path": "input/sofa_assessments.csv",
+      "format": "CSV",
+      "bytes": 11560,
+      "description": "sofa_assessments.csv，用于医院多系统事件表 SA-AKI 表型提取。"
+    }
+  ],
+  "inputFileCount": 6,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "sa_aki_patients.csv",
+      "path": "output/sa_aki_patients.csv",
+      "format": "CSV",
+      "description": "符合条件的唯一 subject_id 名单。"
+    },
+    {
+      "name": "phenotype_audit.csv",
+      "path": "output/phenotype_audit.csv",
+      "format": "CSV",
+      "description": "逐 stay_id 的起始时间、资格与判定理由。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "患者名单",
+        "weight": 65,
+        "rule": "与参考患者集合计算 F1，按 65 × F1 计分；患者 ID 唯一且列名为 subject_id。"
+      },
+      {
+        "name": "时间线与判定",
+        "weight": 35,
+        "rule": "按住院 ID 比对起始时间、资格和理由，按记录与字段正确比例计分。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

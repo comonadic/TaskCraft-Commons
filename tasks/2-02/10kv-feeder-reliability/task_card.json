@@ -1,0 +1,112 @@
+{
+  "taskId": "2-02/10kv-feeder-reliability",
+  "title": "10kV 馈线双口径可靠性分析",
+  "brief": "依据馈线拓扑与设备参数计算负荷点可靠性，分别整理等权和用户加权口径下的系统指标。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-02",
+  "occupation": {
+    "code": "2-02-12-02",
+    "name": "供用电工程技术人员"
+  },
+  "scene": "你是供用电工程人员，需要分析一条 10kV 馈线的停电风险，说明指标口径与计划停电的处理。",
+  "taskPrompt": "你是供用电工程人员，需要分析一条 10kV 馈线的停电风险，说明指标口径与计划停电的处理。\n\n1. 读取 CIM/XML 和拓扑图，确认路径与设备参数\n2. 累计各负荷点的故障率、停电时长与供电参数\n3. 计算 SAIFI、SAIDI、CAIDI、ASAI 和 ENS，交付双口径报告\n\n交付成果：\n- loadpoint_metrics.csv：逐变压器故障率、停电时长、用户数与负荷。\n- reliability_indices.json：等权口径的系统可靠性指标。\n- cn_reliability_report.json：用户加权口径指标及用户总数。\n- method.md：路径累计、计划停电和指标口径说明。",
+  "agentMustDo": [
+    "读取 CIM/XML 和拓扑图，确认路径与设备参数",
+    "累计各负荷点的故障率、停电时长与供电参数",
+    "计算 SAIFI、SAIDI、CAIDI、ASAI 和 ENS，交付双口径报告"
+  ],
+  "software": [
+    "Python",
+    "表格与文档阅读工具"
+  ],
+  "materials": "80 段线路、80 个变压器的拓扑、设备参数和计算规则。",
+  "inputFiles": [
+    {
+      "name": "feeder_cim.xml",
+      "path": "input/feeder_cim.xml",
+      "format": "XML",
+      "bytes": 10636,
+      "description": "feeder_cim.xml，用于10kV 馈线双口径可靠性分析。"
+    },
+    {
+      "name": "业务规则说明",
+      "path": "input/rules.md",
+      "format": "MD",
+      "bytes": 728,
+      "description": "业务规则说明，用于10kV 馈线双口径可靠性分析。"
+    },
+    {
+      "name": "topology.svg",
+      "path": "input/topology.svg",
+      "format": "SVG",
+      "bytes": 8436,
+      "description": "topology.svg，用于10kV 馈线双口径可靠性分析。"
+    },
+    {
+      "name": "transformers.csv",
+      "path": "input/transformers.csv",
+      "format": "CSV",
+      "bytes": 1360,
+      "description": "transformers.csv，用于10kV 馈线双口径可靠性分析。"
+    }
+  ],
+  "inputFileCount": 4,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "loadpoint_metrics.csv",
+      "path": "output/loadpoint_metrics.csv",
+      "format": "CSV",
+      "description": "逐变压器故障率、停电时长、用户数与负荷。"
+    },
+    {
+      "name": "reliability_indices.json",
+      "path": "output/reliability_indices.json",
+      "format": "JSON",
+      "description": "等权口径的系统可靠性指标。"
+    },
+    {
+      "name": "cn_reliability_report.json",
+      "path": "output/cn_reliability_report.json",
+      "format": "JSON",
+      "description": "用户加权口径指标及用户总数。"
+    },
+    {
+      "name": "method.md",
+      "path": "output/method.md",
+      "format": "MD",
+      "description": "路径累计、计划停电和指标口径说明。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "负荷点结果",
+        "weight": 40,
+        "rule": "按变压器 ID 比对路径累计结果和参数，按记录与字段正确比例计分。"
+      },
+      {
+        "name": "等权指标",
+        "weight": 25,
+        "rule": "逐字段比对系统等权指标，按正确比例计分。"
+      },
+      {
+        "name": "用户加权指标",
+        "weight": 30,
+        "rule": "逐字段比对加权指标与用户总数，按正确比例计分。"
+      },
+      {
+        "name": "方法说明",
+        "weight": 5,
+        "rule": "方法正文至少 60 字，取得本项分数。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

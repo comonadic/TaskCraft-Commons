@@ -1,0 +1,112 @@
+[
+  {
+    "path": "input/filings/CN001_2022.pdf",
+    "bytes": 32147,
+    "sha256": "944d611d1b264bade3ca77434b419a04307c337805b96fd95d819247fbcd11c5"
+  },
+  {
+    "path": "input/filings/CN001_2023.pdf",
+    "bytes": 32268,
+    "sha256": "26ce409da3cdcefd4f2cf05be9ba03f25e9b5e970ec8e05b9a0df95535a97ebf"
+  },
+  {
+    "path": "input/filings/CN001_2024.pdf",
+    "bytes": 32151,
+    "sha256": "58060252f2d5139cae0fbbd038c74746a2cf94436cc1bba6730033e91862da06"
+  },
+  {
+    "path": "input/filings/CN002_2022.pdf",
+    "bytes": 31934,
+    "sha256": "e3d50294df9e1dd448110a97f1147d88f436555c2bf9d6b77fd9f32d16e1d9f9"
+  },
+  {
+    "path": "input/filings/CN002_2023.pdf",
+    "bytes": 31807,
+    "sha256": "654cfd6bd9362cfa6e98b2bcef68c39d7c5b65387c70440814e0b4d3417127ad"
+  },
+  {
+    "path": "input/filings/CN002_2024.pdf",
+    "bytes": 31929,
+    "sha256": "9c8800cc22868784e589024d12e229753207d094296c7e5ad080f9b147784e6b"
+  },
+  {
+    "path": "input/filings/CN003_2022.pdf",
+    "bytes": 31819,
+    "sha256": "804f6b93382a9d507d7bdff0210dd6edf4263a0f4d5d5b15def9eed3a781ab8e"
+  },
+  {
+    "path": "input/filings/CN003_2023.pdf",
+    "bytes": 31937,
+    "sha256": "78184abf7a88f3fa7b05fd70acb70f896942576bbf5658079ace089cde1b7906"
+  },
+  {
+    "path": "input/filings/CN003_2024.pdf",
+    "bytes": 31818,
+    "sha256": "15052d4c219679644d2c6091ac11e0e34c862c0afa32d836062a2d1acc6306fd"
+  },
+  {
+    "path": "input/filings/CN004_2022.pdf",
+    "bytes": 31472,
+    "sha256": "a8e7b7a11c4e1fddd23e823cd191cbd3b0393ca5996f02b941032150e04c69ed"
+  },
+  {
+    "path": "input/filings/CN004_2023.pdf",
+    "bytes": 31345,
+    "sha256": "66a7ebb84e79441d87ae4036859bd87da03af5f290943fe840e3fe04b2286293"
+  },
+  {
+    "path": "input/filings/CN004_2024.pdf",
+    "bytes": 31472,
+    "sha256": "3d0f247ecd5fbdb6884cb6892298fa612729319a458014f473d8dc0c8d80c605"
+  },
+  {
+    "path": "input/filings/CN005_2022.pdf",
+    "bytes": 31727,
+    "sha256": "ed9b0a8ec3b895125067b45743e5c6dde02875be3f74b9d0ec79a40e3d0f1060"
+  },
+  {
+    "path": "input/filings/CN005_2023.pdf",
+    "bytes": 31849,
+    "sha256": "1407632ee9a32c12690b8b14ece959ebefcc15e4f11f902793fc0baacd5e79c6"
+  },
+  {
+    "path": "input/filings/CN005_2024.pdf",
+    "bytes": 31732,
+    "sha256": "4fc41f3e9d15693117406f4d51e64b298a3181aaf9c6c84c9a425405e326fd35"
+  },
+  {
+    "path": "input/filings/CN006_2022.pdf",
+    "bytes": 31729,
+    "sha256": "a99a9e1ed0305a975c31f07507b20b765276984a7b41e33ebbd4584ba38da8d4"
+  },
+  {
+    "path": "input/filings/CN006_2023.pdf",
+    "bytes": 31606,
+    "sha256": "0f49650c61a9f0987fae0c1471eb41dc8311ff213e5365fc2d47bbd91f07395e"
+  },
+  {
+    "path": "input/filings/CN006_2024.pdf",
+    "bytes": 31721,
+    "sha256": "ed3484d31e313902bf4c0f18d7f7b9483ae75b0ab0de8e56cb34a33f6df3ee3e"
+  },
+  {
+    "path": "input/filings/manifest.json",
+    "bytes": 2496,
+    "sha256": "0a45435802ec751c8ab719042da000fa942d2a7bfe8f5e06c66d439a371f839f"
+  },
+  {
+    "path": "input/questions.json",
+    "bytes": 218,
+    "sha256": "ccd5314e88cda613643892d0b368b0ed2eb9a6126885cd4d43113b1e670cb552"
+  },
+  {
+    "path": "input/schema.json",
+    "bytes": 410,
+    "sha256": "2a12b17a0f3facef9f0bf0a4351fc953b07ae938cc3c94a4ed6c56e9bedc3b84"
+  },
+  {
+    "path": "input/validation.json",
+    "bytes": 83,
+    "sha256": "fe21839d2d72c6e4e723a7350ebd3e5ec98a51d9376876fef82e6ee4af36675e"
+  }
+]

@@ -1,0 +1,82 @@
+{
+  "taskId": "2-02/county-crop-rotation-audit",
+  "title": "县域十年地块轮作资格审计",
+  "brief": "依据十年作物记录与轮作规则，判断地块资格，整理风险地块，并交付可用于 GIS 的审计成果。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-02",
+  "occupation": {
+    "code": "2-02-02-07",
+    "name": "地理信息系统工程技术人员"
+  },
+  "scene": "你负责县域农业地块数据审计，需要将逐年的种植记录转为可追踪的资格和风险结果。",
+  "taskPrompt": "你负责县域农业地块数据审计，需要将逐年的种植记录转为可追踪的资格和风险结果。\n\n1. 读取地块和年度作物数据，按规则处理缺失与未知编码\n2. 为符合条件的地块计算八项审计字段\n3. 分别导出合格地块及风险子集，保留地块空间信息\n\n交付成果：\n- eligible_units.gpkg：合格地块图层，包含原始属性与八项审计字段。\n- flagged_units.gpkg：需要关注的风险地块图层。",
+  "agentMustDo": [
+    "读取地块和年度作物数据，按规则处理缺失与未知编码",
+    "为符合条件的地块计算八项审计字段",
+    "分别导出合格地块及风险子集，保留地块空间信息"
+  ],
+  "software": [
+    "Python",
+    "GeoPandas",
+    "GIS 阅读工具"
+  ],
+  "materials": "地块 GeoPackage、作物编码字典和轮作审计规则。",
+  "inputFiles": [
+    {
+      "name": "业务规则说明",
+      "path": "input/rules.md",
+      "format": "MD",
+      "bytes": 841,
+      "description": "业务规则说明，用于县域十年地块轮作资格审计。"
+    },
+    {
+      "name": "seq1524_cn.gpkg",
+      "path": "input/seq1524_cn.gpkg",
+      "format": "GPKG",
+      "bytes": 438272,
+      "description": "seq1524_cn.gpkg，用于县域十年地块轮作资格审计。"
+    }
+  ],
+  "inputFileCount": 2,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "eligible_units.gpkg",
+      "path": "output/eligible_units.gpkg",
+      "format": "GPKG",
+      "description": "合格地块图层，包含原始属性与八项审计字段。"
+    },
+    {
+      "name": "flagged_units.gpkg",
+      "path": "output/flagged_units.gpkg",
+      "format": "GPKG",
+      "description": "需要关注的风险地块图层。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "资格与审计字段",
+        "weight": 60,
+        "rule": "按地块 ID 比对资格和八项字段，按记录与字段的正确比例计分。"
+      },
+      {
+        "name": "空间信息",
+        "weight": 20,
+        "rule": "检查地块 ID 集合、原始字段、几何和 EPSG:4547 坐标系；全部一致取得本项分数。"
+      },
+      {
+        "name": "风险地块",
+        "weight": 20,
+        "rule": "比对风险子集的地块和审计字段，按正确比例计分。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

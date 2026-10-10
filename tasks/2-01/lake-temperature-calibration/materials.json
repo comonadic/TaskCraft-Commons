@@ -1,0 +1,22 @@
+[
+  {
+    "path": "input/README.md",
+    "bytes": 334,
+    "sha256": "b0ebed4da0144a29b3a02e06294f8ad54747fc16df28c840ba82a1259f30e85a"
+  },
+  {
+    "path": "input/forcing.csv",
+    "bytes": 172248,
+    "sha256": "ec3c2f03be6a846bb9f193b259998489ec8760a8d42258e547d222ca91835d5e"
+  },
+  {
+    "path": "input/initial.nml",
+    "bytes": 53,
+    "sha256": "b068fafcb8d35942385741744f43cc1100a73f0481480a4754c1e91ab86b0c4a"
+  },
+  {
+    "path": "input/observations.csv",
+    "bytes": 77337,
+    "sha256": "360533325ba60c376d1b1fca2eda2646608a858a3db9df22756bb212b7c32a78"
+  }
+]

@@ -1,0 +1,120 @@
+{
+  "taskId": "2-07/equity-transfer-consistency-review",
+  "title": "四份股权转让公告一致性审阅",
+  "brief": "交叉阅读股权转让相关公告，找出实质信息冲突，并为每项发现提供两份文件中的原文依据。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-07",
+  "occupation": {
+    "code": "2-07-08-00",
+    "name": "法律顾问"
+  },
+  "scene": "你是法律与交易文件审核人员，需要帮助团队识别公告之间影响交易理解的信息差异。",
+  "taskPrompt": "你是法律与交易文件审核人员，需要帮助团队识别公告之间影响交易理解的信息差异。\n\n1. 阅读四份公告，按交易事项对齐金额、股份与日期等信息\n2. 判断哪些差异构成实质冲突\n3. 为每项发现记录两份文件的页码与原文，编写审核报告\n\n交付成果：\n- audit_report.md：按“发现”分节的一致性审核报告。\n- findings.json：每项发现的事项、字段、冲突值与双文档证据。",
+  "agentMustDo": [
+    "阅读四份公告，按交易事项对齐金额、股份与日期等信息",
+    "判断哪些差异构成实质冲突",
+    "为每项发现记录两份文件的页码与原文，编写审核报告"
+  ],
+  "software": [
+    "Python",
+    "表格与文档阅读工具"
+  ],
+  "materials": "四份股权转让公告 PDF 和审核字段说明。",
+  "inputFiles": [
+    {
+      "name": "A.html",
+      "path": "input/A.html",
+      "format": "HTML",
+      "bytes": 1282,
+      "description": "A.html，用于四份股权转让公告一致性审阅。"
+    },
+    {
+      "name": "A.pdf",
+      "path": "input/A.pdf",
+      "format": "PDF",
+      "bytes": 31648,
+      "description": "A.pdf，用于四份股权转让公告一致性审阅。"
+    },
+    {
+      "name": "B.html",
+      "path": "input/B.html",
+      "format": "HTML",
+      "bytes": 1269,
+      "description": "B.html，用于四份股权转让公告一致性审阅。"
+    },
+    {
+      "name": "B.pdf",
+      "path": "input/B.pdf",
+      "format": "PDF",
+      "bytes": 33444,
+      "description": "B.pdf，用于四份股权转让公告一致性审阅。"
+    },
+    {
+      "name": "C.html",
+      "path": "input/C.html",
+      "format": "HTML",
+      "bytes": 1336,
+      "description": "C.html，用于四份股权转让公告一致性审阅。"
+    },
+    {
+      "name": "C.pdf",
+      "path": "input/C.pdf",
+      "format": "PDF",
+      "bytes": 33192,
+      "description": "C.pdf，用于四份股权转让公告一致性审阅。"
+    },
+    {
+      "name": "D.html",
+      "path": "input/D.html",
+      "format": "HTML",
+      "bytes": 1269,
+      "description": "D.html，用于四份股权转让公告一致性审阅。"
+    },
+    {
+      "name": "D.pdf",
+      "path": "input/D.pdf",
+      "format": "PDF",
+      "bytes": 32812,
+      "description": "D.pdf，用于四份股权转让公告一致性审阅。"
+    },
+    {
+      "name": "evidence_contract.md",
+      "path": "input/evidence_contract.md",
+      "format": "MD",
+      "bytes": 363,
+      "description": "evidence_contract.md，用于四份股权转让公告一致性审阅。"
+    }
+  ],
+  "inputFileCount": 9,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "audit_report.md",
+      "path": "output/audit_report.md",
+      "format": "MD",
+      "description": "按“发现”分节的一致性审核报告。"
+    },
+    {
+      "name": "findings.json",
+      "path": "output/findings.json",
+      "format": "JSON",
+      "description": "每项发现的事项、字段、冲突值与双文档证据。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "冲突识别与证据",
+        "weight": 100,
+        "rule": "四项有效发现各计 25 分；每项需有两个不同文件的原文、页码，并在报告中引用。额外无效发现每项扣 20 分，报告分节数与发现数每差一项再扣 20 分；最低为 0 分。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}

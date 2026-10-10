@@ -1,0 +1,12 @@
+[
+  {
+    "path": "input/rules.md",
+    "bytes": 841,
+    "sha256": "7785a9bcb3ee13461417db16977e4c3b542f5bf5add0a4b47ee407150449641f"
+  },
+  {
+    "path": "input/seq1524_cn.gpkg",
+    "bytes": 438272,
+    "sha256": "a241d4169fe204bd40b6c7ee7a434e224746c26b4ec4f2373fbb4417a3a8f8a9"
+  }
+]

@@ -1,0 +1,111 @@
+{
+  "taskId": "2-02/building-model-predictive-control",
+  "title": "建筑节费与削峰模型预测控制",
+  "brief": "识别建筑热力模型，分别设计节费与削峰控制策略，比较能耗表现并保持占用期间的舒适度。",
+  "language": "zh-CN",
+  "version": "0.2.0",
+  "category": "2-02",
+  "occupation": {
+    "code": "2-02-07-07",
+    "name": "自动控制工程技术人员"
+  },
+  "scene": "你是建筑控制工程师，需要在 15 分钟控制周期下比较基线、节费和削峰三种策略。",
+  "taskPrompt": "你是建筑控制工程师，需要在 15 分钟控制周期下比较基线、节费和削峰三种策略。\n\n1. 利用辨识数据估计空气与墙体温度模型\n2. 设计两种滚动控制策略并运行 672 步评估\n3. 整理温度、动作、费用、峰值和舒适度指标，提交控制器\n\n交付成果：\n- identified_model.json：辨识得到的模型系数。\n- rc_diagnostics.json：训练误差与诊断。\n- *_timeseries.csv / *_actions.csv：基线、节费、削峰温度轨迹和控制动作。\n- metrics.json：三种策略的费用、峰值和舒适度指标。\n- controller.py：可复现控制结果的程序。",
+  "agentMustDo": [
+    "利用辨识数据估计空气与墙体温度模型",
+    "设计两种滚动控制策略并运行 672 步评估",
+    "整理温度、动作、费用、峰值和舒适度指标，提交控制器"
+  ],
+  "software": [
+    "Python",
+    "表格与文档阅读工具"
+  ],
+  "materials": "480 步辨识数据、672 步天气与电价数据，以及建筑热力与舒适度规则。",
+  "inputFiles": [
+    {
+      "name": "calibration.csv",
+      "path": "input/calibration.csv",
+      "format": "CSV",
+      "bytes": 65541,
+      "description": "calibration.csv，用于建筑节费与削峰模型预测控制。"
+    },
+    {
+      "name": "contract.json",
+      "path": "input/contract.json",
+      "format": "JSON",
+      "bytes": 466,
+      "description": "contract.json，用于建筑节费与削峰模型预测控制。"
+    },
+    {
+      "name": "eval_weather.csv",
+      "path": "input/eval_weather.csv",
+      "format": "CSV",
+      "bytes": 26253,
+      "description": "eval_weather.csv，用于建筑节费与削峰模型预测控制。"
+    }
+  ],
+  "inputFileCount": 3,
+  "inputManifest": "materials.json",
+  "referenceFiles": [
+    {
+      "name": "identified_model.json",
+      "path": "output/identified_model.json",
+      "format": "JSON",
+      "description": "辨识得到的模型系数。"
+    },
+    {
+      "name": "rc_diagnostics.json",
+      "path": "output/rc_diagnostics.json",
+      "format": "JSON",
+      "description": "训练误差与诊断。"
+    },
+    {
+      "name": "*_timeseries.csv / *_actions.csv",
+      "path": "output/*_timeseries.csv / *_actions.csv",
+      "format": "CSV",
+      "description": "基线、节费、削峰温度轨迹和控制动作。"
+    },
+    {
+      "name": "metrics.json",
+      "path": "output/metrics.json",
+      "format": "JSON",
+      "description": "三种策略的费用、峰值和舒适度指标。"
+    },
+    {
+      "name": "controller.py",
+      "path": "output/controller.py",
+      "format": "PY",
+      "description": "可复现控制结果的程序。"
+    }
+  ],
+  "evaluation": {
+    "method": "读取提交成果，按以下规则逐项计算分数。总分为各项得分之和，范围为 0～100 分。",
+    "criteria": [
+      {
+        "name": "温度与指标",
+        "weight": 60,
+        "rule": "独立执行 672 步动力学，逐步比对温度、动作及指标；数值绝对容差为 0.00001，并检查舒适度约束。"
+      },
+      {
+        "name": "节费与削峰",
+        "weight": 25,
+        "rule": "费用与峰值改进各占本项一半；相对基线改进达到 1% 时该半项满分，较低改进按比例计分。"
+      },
+      {
+        "name": "模型辨识",
+        "weight": 10,
+        "rule": "比对模型系数，绝对容差为 0.000001。"
+      },
+      {
+        "name": "程序复现与诊断",
+        "weight": 5,
+        "rule": "训练 RMSE 小于 0.00001，并重新执行控制器、比对指标结果。"
+      }
+    ],
+    "notes": "",
+    "scoreRange": [
+      0,
+      100
+    ]
+  }
+}
